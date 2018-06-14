@@ -1,9 +1,18 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-<title th:text="'Monitoring de microservices'">Spring 4 MVC</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-</head>
-<body>
-<h2 th:text="'Vue de la solution'">Spring 4 MVC</h2>
-</body>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="default">
+    <head>
+        <title>titre de la page index thymeleaf</title>
+        <link rel="stylesheet" href="/css/hello.css"/>
+    </head>
+    <body>
+        <div layout:fragment="content">
+            <h1>Le contenu de la page index de thymeleaf est correct</h1>
+        </div>
+    </body>
+    <th:block layout:fragment="scripts">
+        <script src="/js/hello.js"></script>
+    </th:block>
+</html>

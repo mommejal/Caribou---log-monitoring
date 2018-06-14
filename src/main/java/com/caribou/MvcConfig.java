@@ -17,11 +17,11 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
     @Description("Thymeleaf template resolver serving HTML 5")
     public ClassLoaderTemplateResolver templateResolver() {        
         ClassLoaderTemplateResolver templateResolver = new ClassLoaderTemplateResolver();       
-        templateResolver.setPrefix("mytemplates/");
+        templateResolver.setPrefix("templates/");
         templateResolver.setCacheable(false);
         templateResolver.setSuffix(".html");        
         templateResolver.setTemplateMode("HTML5");
-        templateResolver.setCharacterEncoding("UTF-8");
+        templateResolver.setCharacterEncoding("ISO-8859-1");
         return templateResolver;
     }
 
@@ -38,7 +38,7 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
     public ViewResolver viewResolver() {
         ThymeleafViewResolver viewResolver = new ThymeleafViewResolver();
         viewResolver.setTemplateEngine(templateEngine());
-        viewResolver.setCharacterEncoding("UTF-8");
+        viewResolver.setCharacterEncoding("ISO-8859-1");
         return viewResolver;
     }    
 
