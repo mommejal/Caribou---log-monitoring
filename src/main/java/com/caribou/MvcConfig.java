@@ -1,18 +1,36 @@
 package com.caribou;
 
+import com.logs.GeneLog;
+import com.logs.logXMLTest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Description;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.thymeleaf.spring4.SpringTemplateEngine;
 import org.thymeleaf.spring4.view.ThymeleafViewResolver;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
+import java.util.ArrayList;
+import java.util.List;
+import com.logs.ListeDeLogs;
 
 @Configuration
 public class MvcConfig extends WebMvcConfigurerAdapter {
     
+	@Bean
+	public ModelAndView getModelAndView()
+	//Pour l'instant j'en crée un uniquement pour liste logs
+	{
+		return new ModelAndView("listeLogs");
+	}
+	
+	@Bean
+	public ListeDeLogs getListeDeLogs(){
+	    return new ListeDeLogs();
+	}
+	
     @Bean
     @Description("Thymeleaf template resolver serving HTML 5")
     public ClassLoaderTemplateResolver templateResolver() {        

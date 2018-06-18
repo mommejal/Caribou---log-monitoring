@@ -9,10 +9,18 @@
     </head>
     <body>
         <div layout:fragment="content">
-            <h1>Le contenu de la page index de thymeleaf est correct</h1>
+            <h1>Bienvenue dans l'application web de monitoring des microservices </h1>
+            <p>Get your greeting <a href="/greeting">here</a></p>
+            <p>Affiche un <a href="/afficherUnLog">log</a></p>
+            <p>Affiche la <a href="/listeLogs"> liste des logs </a></p>            
         </div>
+        <form method="get">
+        	<input type="text" id="id"></input>
+        	<button type="submit"> Quel est l'id du log que vous voulez voir ?</button>
+    	</form>
+    	<form method="get">
+        	<button type="submit"> Afficher tous les logs</button>
+    	</form>
     </body>
-    <th:block layout:fragment="scripts">
-        <script src="/js/hello.js"></script>
-    </th:block>
+    
 </html>
