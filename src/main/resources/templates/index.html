@@ -14,14 +14,19 @@
             <p>Affiche un <a href="/afficherUnLog">log</a></p>
             <p>Affiche la <a href="/listeLogs"> liste des logs </a></p>            
         </div>
-        <form action="#" th:action="@{/listeLogs}" th:object="${filter}" method="post">
-        	<select size="4" name="filtre" multiple="multiple">
-			 	<option selected="selected" value="nofilter">nofilter</option>
-			 	<option value="datefilter">datefilter</option>
-			 	<option value="severitylvlfilter">severityfilter</option>
-			 	<option value="hostnamefilter">hostnamefilter</option>
+        <form th:action="@{/listeLogs}" th:object="${listeLogs}"  method="get"> <!-- action="#" -->
+        	<select  size="4" name="filter" multiple="multiple">
+			 	<option selected="selected" value="noFilter">noFilter</option>
+			 	<option value="dateFilter">dateFilter</option>
+			 	<option value="severityLvlFilter">severityFilter</option>
+			 	<option value="hostnameFilter">hostnameFilter</option>
 			</select>
-        	<button type="submit"> Veuillez choisir le type de filtre voulu</button>
+ <!-- 		<input type="text" th:field="*{datebeginning}" />
+			<input type="text" th:field="*{dateend}" /> -->
+<!-- 			<input type="text"  name="datebeginning" th:value="*{datebeginning}" />
+ 			<input type="text" id="dateend" name="dateend" th:value="*{dateend}" /> -->
+			
+        	<button  type="submit"> Veuillez choisir le type de filtre voulu</button>
     	</form>
     	<form method="get">
         	<button type="submit"> Afficher tous les logs</button>
