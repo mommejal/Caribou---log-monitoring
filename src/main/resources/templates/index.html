@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="default">
+    <head>
+        <title>titre de la page index thymeleaf</title>
+        <link rel="stylesheet" href="/css/hello.css"/>
+    </head>
+    <body>
+        <div layout:fragment="content">
+            <h1>Bienvenue dans l'application web de monitoring des microservices </h1>
+            <p>Get your greeting <a href="/greeting">here</a></p>
+            <p>Affiche un <a href="/afficherUnLog">log</a></p>
+            <p>Affiche la <a href="/listeLogs"> liste des logs </a></p>            
+        </div>
+        <form action="#" th:action="@{/listeLogs}" th:object="${filter}" method="post">
+        	<select size="4" name="filtre" multiple="multiple">
+			 	<option selected="selected" value="nofilter">nofilter</option>
+			 	<option value="datefilter">datefilter</option>
+			 	<option value="severitylvlfilter">severityfilter</option>
+			 	<option value="hostnamefilter">hostnamefilter</option>
+			</select>
+        	<button type="submit"> Veuillez choisir le type de filtre voulu</button>
+    	</form>
+    	<form method="get">
+        	<button type="submit"> Afficher tous les logs</button>
+    	</form>
+    </body>
+    
+</html>
