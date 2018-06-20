@@ -14,9 +14,14 @@
             <p>Affiche un <a href="/afficherUnLog">log</a></p>
             <p>Affiche la <a href="/listeLogs"> liste des logs </a></p>            
         </div>
-        <form method="get">
-        	<input type="text" id="id"></input>
-        	<button type="submit"> Quel est l'id du log que vous voulez voir ?</button>
+        <form action="#" th:action="@{/listeLogs}" th:object="${filter}" method="post">
+        	<select size="4" name="filtre" multiple="multiple">
+			 	<option selected="selected" value="nofilter">nofilter</option>
+			 	<option value="datefilter">datefilter</option>
+			 	<option value="severitylvlfilter">severityfilter</option>
+			 	<option value="hostnamefilter">hostnamefilter</option>
+			</select>
+        	<button type="submit"> Veuillez choisir le type de filtre voulu</button>
     	</form>
     	<form method="get">
         	<button type="submit"> Afficher tous les logs</button>

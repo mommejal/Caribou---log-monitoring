@@ -1,12 +1,11 @@
 package com.dao;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.stereotype.*;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
 import com.logs.GeneLog;
 import com.logs.logXMLTest;
-import java.lang.String;
-import java.util.Date;
 
 @Repository
 public class GeneLogDaoImpl implements LogDao {

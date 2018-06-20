@@ -1,6 +1,5 @@
 package com.dao;
 import com.logs.GeneLog; // GeneLog est abstraite, ca engendrera peut etre des pbs
-import com.logs.logXMLTest;
 import java.util.List;
 
 public interface LogDao {

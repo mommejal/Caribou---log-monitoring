@@ -3,7 +3,7 @@ package com.logs;
 import java.util.ArrayList;
 import java.util.List;
 public class ListeDeLogs {
-    private List<GeneLog> listeDeLogs;
+    public List<GeneLog> listeDeLogs;
 
     public void ListeDeLogsWrapper() {
          this.listeDeLogs = new ArrayList<GeneLog>();

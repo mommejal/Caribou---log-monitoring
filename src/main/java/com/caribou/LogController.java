@@ -1,20 +1,21 @@
 package com.caribou;
-import org.springframework.web.bind.annotation.*;
-import com.logs.logXMLTest;
-import com.logs.GeneLog;
-import com.dao.LogDao;
-import com.logs.ListeDeLogs;
-import com.dao.GeneLogDaoImpl;
-import org.springframework.stereotype.*;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.ui.Model;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.LinkedList;
-//import java.lang.String;
-import java.util.Date;
-import com.caribou.MvcConfig;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.dao.LogDao;
+import com.logs.GeneLog;
+import com.logs.ListeDeLogs;
+import com.logs.logXMLTest;
 
 @RestController
 @Controller
@@ -69,9 +70,10 @@ public class LogController {
             return model;
         }
 //
-	    @RequestMapping(value="/listeLogs", method=RequestMethod.GET)
+	    @RequestMapping(value="/listeLogs",method=RequestMethod.POST)
+	    @ResponseBody
 	    ModelAndView
-	    listeLogs(ArrayList <GeneLog> logs, ModelAndView mav) {
+	    listeLogs(ArrayList <GeneLog> logs, ModelAndView mav,@RequestParam(value="filter",required=false, defaultValue="nofilter") String filter) {
 	    	// On veut afficher une liste de logs pour l'instant on affiche uniquement les messages
 //	    	ModelAndView mav = new ModelAndView("listeLogs");
 //	    	ArrayList <logXMLTest> logs = new ArrayList<logXMLTest>();
@@ -80,27 +82,28 @@ public class LogController {
 	        logs.add(new logXMLTest(new String("<![LOG[Exiting Microsoft::EmbeddedDeviceManager::Deployment::UwfManager::GetVolumeProtectionInfos...]LOG]!><time=\"13:03:11.840-120\" date=\"06-02-2018\" component=\"MaintenanceCoordinator\" context=\"\" type=\"0\" thread=\"2188\" file=\"uwfmanager.cpp:258\">"))); 
 	        logs.add(new logXMLTest(new String("<![LOG[Exiting Microsoft::EmbeddedDeviceManager::Deployment::UwfManager::SuspendProtection...]LOG]!><time=\"13:03:11.855-120\" date=\"06-02-2018\" component=\"MaintenanceCoordinator\" context=\"\" type=\"0\" thread=\"2188\" file=\"uwfmanager.cpp:124\">")));
 	        //On constate qu'une méthode get sur chaque log suffit à afficher le bon truc
-	        System.out.println("On passe par le addROw");
+	        System.out.println("On passe par le liste Logs");
 	        mav.addObject("logs",logs);
+	        mav.addObject("filter",filter);
 	        mav.setViewName("listeLogs");
 	        return mav;
 	        //	        return logdao.findAll();
 	    }
 	    
-	    @RequestMapping(path="/listeLogs", params={"addRow"},method=RequestMethod.GET)
-	    @ResponseBody
-	    ModelAndView
-	    /*LinkedList <GeneLog> logs, GeneLog logaajouter,*/
-	    addRow(/*@RequestParam("addRow") boolean addRow,*/ ArrayList <GeneLog> logs, ModelAndView mav) {
-//	    	List <GeneLog> logs = new LinkedList<GeneLog>();
-//	    	if (addRow) {
-	    	logs.add(new logXMLTest(new String("<![LOG[JE SUIS LE LOG RAJOUTE PAR addRow::EmbeddedDeviceManager::Deployment::UwfManager::SuspendProtection...]LOG]!><time=\"13:03:11.855-120\" date=\"06-02-2018\" component=\"MaintenanceCoordinator\" context=\"\" type=\"0\" thread=\"2188\" file=\"uwfmanager.cpp:124\">")));
-//	    	}
-	    	System.out.println("On passe par le addROw");
-	    	mav.addObject("logs",logs);
-	    	mav.setViewName("listeLogs");
-	    	return mav;
-	    }
+//	    @RequestMapping(path="/listeLogs", params={"addRow"},method=RequestMethod.GET)
+//	    @ResponseBody
+//	    ModelAndView
+//	    /*LinkedList <GeneLog> logs, GeneLog logaajouter,*/
+//	    addRow(/*@RequestParam("addRow") boolean addRow,*/ ArrayList <GeneLog> logs, ModelAndView mav) {
+////	    	List <GeneLog> logs = new LinkedList<GeneLog>();
+////	    	if (addRow) {
+//	    	logs.add(new logXMLTest(new String("<![LOG[JE SUIS LE LOG RAJOUTE PAR addRow::EmbeddedDeviceManager::Deployment::UwfManager::SuspendProtection...]LOG]!><time=\"13:03:11.855-120\" date=\"06-02-2018\" component=\"MaintenanceCoordinator\" context=\"\" type=\"0\" thread=\"2188\" file=\"uwfmanager.cpp:124\">")));
+////	    	}
+//	    	System.out.println("On passe par le addROw");
+//	    	mav.addObject("logs",logs);
+//	    	mav.setViewName("listeLogs");
+//	    	return mav;
+//	    }
 
 //	    @RequestMapping(value="/listeLogs", params={"removeRow"})
 //	    ModelAndView
@@ -122,5 +125,5 @@ public class LogController {
 	    	logXMLTest log = new logXMLTest(new String("Contenu du log d'Id="));
 	        return (log.getData()+log.getID());
 	    }	    
-
+	    
 }
