@@ -7,16 +7,16 @@ import java.util.logging.Logger;
 
 import com.LogReader.WatcherFactory;
 
-
 public class MainAgent {
-	private static final String OUTPUT_PATH = "localhost.8080/suprise.mother.fucker";
+	private static final String OUTPUT_PATH = "http://localhost:8080";
 	// private static final String LOG_PATH = Paths.get("logs.log").toString();
 	private Path logPath = Paths.get("logs.log");
-	
+
 	public static void main(String[] args) {
 		try {
-			//EnhancedLogScanner scanner = new EnhancedLogScanner(Paths.get(LOG_PATH),Paths.get(OUTPUT_PATH));
-			//scanner.run();
+			// EnhancedLogScanner scanner = new
+			// EnhancedLogScanner(Paths.get(LOG_PATH),Paths.get(OUTPUT_PATH));
+			// scanner.run();
 			// new Streamer(LOG_PATH).execute();
 			new MainAgent().scan();
 		} catch (Exception e) {
@@ -26,8 +26,7 @@ public class MainAgent {
 	}
 
 	public void scan() throws Exception {
-		new WatcherFactory(logPath).addMyWatcher(".*", Paths.get(OUTPUT_PATH));
+		new WatcherFactory(logPath).addMyWatcher(".*", OUTPUT_PATH);
 	}
-	
-	
+
 }

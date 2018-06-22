@@ -16,6 +16,10 @@ public class MainLogGenerator {
 	    	//Création de l'objet de lecture
 	    	fr = new FileReader(fileInput);
 	    	
+	    	// on vide le fichier
+	    	fw = new FileWriter(fileOutput);
+			fw.close();
+	    	
 	    	String str = null;
 	    	boolean t = true;
 	    	while (t) {

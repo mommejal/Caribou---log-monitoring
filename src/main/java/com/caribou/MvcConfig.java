@@ -23,13 +23,13 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
     
 	@Bean
 	public ModelAndViewLogs getModelAndViewLogs()
-	//Pour l'instant j'en crée un uniquement pour liste logs
+	//Pour l'instant j'en crï¿½e un uniquement pour liste logs
 	{
 		ModelAndViewLogs mavl;
 		mavl = new ModelAndViewLogs();
 		mavl.modelAndView = new ModelAndView("listeLogs");
 		mavl.logs = new ArrayList<GeneLog>();
-		mavl.logs.add(new logXMLTest("Début de la liste de logs"));
+		mavl.logs.add(new logXMLTest("Dï¿½but de la liste de logs"));
 		return mavl;
 //		logs.logsVide();
 //		mav.addObject("logs", logs);
@@ -39,14 +39,23 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 	
 	@Bean
 	public ModelAndView getModelAndView()
-	//Pour l'instant j'en crée un uniquement pour liste logs
+	//Pour l'instant j'en crï¿½e un uniquement pour liste logs
 	{
 	return new ModelAndView("listeLogs");	
 	}
 	
+	//TODO est ce que tout ces beans ont leut place ici ??
+	
+	
+	//TODO ListeDeLogs est une abbÃ©ration, faut que je t'explique un truc lÃ 
 	@Bean
 	public ListeDeLogs getListeDeLogs(){
 	    return new ListeDeLogs();
+	}
+	
+	@Bean
+	public String getRegexAgent() {
+		return ".*apache.*";
 	}
 	
     @Bean
