@@ -76,7 +76,7 @@ public class LogController {
 	    @RequestMapping(value="/listeLogs",method=RequestMethod.GET)
 	    @ResponseBody
 	    ModelAndView
-	    listeLogs(ArrayList <GeneLog> logs, ModelAndView mav,@RequestParam(value="filter",required=true/*, defaultValue="nofilter"*/) String filter/*,@RequestParam(value="datebeginning") String datebeginning,@RequestParam(value="dateend") String dateend*/) {
+	    listeLogs(ArrayList <GeneLog> logs, ModelAndView mav,@RequestParam(value="filter",required=true/*, defaultValue="nofilter"*/) String filter,@RequestParam(value="datebeginning") String datebeginning,@RequestParam(value="dateend") String dateend) {
 	    	// On veut afficher une liste de logs pour l'instant on affiche uniquement les messages
 //	    	ModelAndView mav = new ModelAndView("listeLogs");
 //	    	ArrayList <logXMLTest> logs = new ArrayList<logXMLTest>();
@@ -88,8 +88,8 @@ public class LogController {
 	        System.out.println("On passe par le liste Logs");
 	        mav.addObject("logs",logs);
 	        mav.addObject("filter",filter);
-//	        mav.addObject("datebeginning", datebeginning);
-//	        mav.addObject("dateend", dateend);
+	        mav.addObject("datebeginning", datebeginning);
+	        mav.addObject("dateend", dateend);
 	        mav.setViewName("listeLogs");
 	        return mav;
 	        //	        return logdao.findAll();

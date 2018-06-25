@@ -14,7 +14,7 @@
             <p>Affiche un <a href="/afficherUnLog">log</a></p>
             <p>Affiche la <a href="/listeLogs"> liste des logs </a></p>            
         </div>
-        <form th:action="@{/listeLogs}" th:object="${listeLogs}"  method="get"> <!-- action="#" -->
+        <form th:action="@{/listeLogs?{datebeginning}(datebeginning=${datebeginning}){dateend}(dateend=${dateend}])" th:object="${listeLogs}"  method="get"> <!-- action="#" -->
         	<select  size="4" name="filter" multiple="multiple">
 			 	<option selected="selected" value="noFilter">noFilter</option>
 			 	<option value="dateFilter">dateFilter</option>
