@@ -8,8 +8,9 @@
     </head>
     <body>
         <h2>Liste des logs</h2>
-        <span th:text="${filter}">est le filtre sélectionné</span>
-
+        <span th:text="${filter}">est le filtre sélectionné</span>\n
+<span th:text="${datebeginning} ?: 'début par défaut'"> est la date de début sélectionné</span>\n
+<span th:text="${dateend} ?: 'fin par défaut'"> est la date de fin sélectionné</span>\n
         <table>
             <tr>
 <!--                 <th>Id</th>
@@ -20,7 +21,7 @@
                 <th>MSG</th>
             </tr>
             <tr th:each="log : ${logs}">
-<!--                 <td th:text="${log.ID}">id</td>
+<!--            <td th:text="${log.ID}">id</td>
                 <td th:text="${log.date}">date</td>
                 <td th:text="${log.hostname}">hostname</td>
                 <td th:text="${log.facility}">facility</td>                
