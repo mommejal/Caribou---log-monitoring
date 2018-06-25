@@ -10,29 +10,26 @@
     <body>
         <div layout:fragment="content">
             <h1>Bienvenue dans l'application web de monitoring des microservices </h1>
-            <p>Get your greeting <a href="/greeting">here</a></p>
+<!--             <p>Get your greeting <a href="/greeting">here</a></p>
             <p>Affiche un <a href="/afficherUnLog">log</a></p>
-            <p>Affiche la <a href="/listeLogs"> liste des logs </a></p>
+            <p>Affiche la <a href="/listeLogs"> liste des logs </a></p> -->
          
         </div>
          <form th:action="@{/listeLogs(filter=${filter},datebeginning=${datebeginning},sdateend=${dateend})}" th:with="filter=${filter}, datebeginning=${datebeginning}, dateend=${dateend}"  method="get"> <!-- action="#" -->
    <!--  <form th:action="@{/listeLogs(filter=${filter)(datebeginning=${datebeginning})(dateend=${dateend})" th:object="${listeLogs}"  method="get"> action="#" -->
-            <input type="text"  name="datebeginning" th:value="*{datebeginning}" />
- 			<input type="text" id="dateend" name="dateend" th:value="*{dateend}" />   
+   			Veuillez choisir la date de début de la recherche <br/>
+            <input type="text"  name="datebeginning" th:value="*{datebeginning}" /><br/>
+            Veuillez choisir la date de fin de la recherche <br/>
+ 			<input type="text" id="dateend" name="dateend" th:value="*{dateend}" />   <br/>
+ 			Sélectionnez un ou plusieurs filtres <br/>
         	<select  size="4" name="filter" multiple="multiple">
 			 	<option selected="selected" value="noFilter">noFilter</option>
 			 	<option value="dateFilter">dateFilter</option>
 			 	<option value="severityLvlFilter">severityFilter</option>
 			 	<option value="hostnameFilter">hostnameFilter</option>
 			</select>
- <!-- 		<input type="text" th:field="*{datebeginning}" />
-			<input type="text" th:field="*{dateend}" /> -->
-
-			
+			<br/>	
         	<button  type="submit"> Veuillez choisir le type de filtre voulu</button>
-    	</form>
-    	<form method="get">
-        	<button type="submit"> Afficher tous les logs</button>
     	</form>
     </body>
     
