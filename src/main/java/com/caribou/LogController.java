@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.dao.LogDao;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.logs.GeneLog;
 import com.logs.ListeDeLogs;
 import com.logs.logXMLTest;
@@ -140,12 +142,24 @@ public class LogController {
 	@RequestMapping(value = "/logIncome", method = RequestMethod.POST)
 	@ResponseBody
 	void logIncome(@RequestBody String newlog) {
-		System.out.println("je reçois :\n" + newlog);
+		System.out.println("je reçois :");
+		try {
+			System.out.println(new ObjectMapper().writerWithDefaultPrettyPrinter()
+				     .writeValueAsString(newlog));
+		} catch (JsonProcessingException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@RequestMapping(value = "/regexOutput", method = RequestMethod.GET)
 	String regexOutcome() {
 		return regexAgent;
+	}
+	
+	@RequestMapping(value = "/getParamAgent", method = RequestMethod.GET)
+	String paramOutcome() {
+		// TODO
+		return "";
 	}
 
 	@GetMapping(value = "/SeverityLvl/{lvl}")

@@ -23,7 +23,7 @@ public class MainLogGenerator {
 	    	String str = null;
 	    	boolean t = true;
 	    	while (t) {
-	    		Thread.sleep((long) (2000*Math.random()));
+	    		Thread.sleep((long) (10*Math.random()));
 	    		str = readLine(fr);
 	    		System.out.println("j'écris :" + str);
 	    		if (str=="")

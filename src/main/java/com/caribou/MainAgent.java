@@ -5,7 +5,7 @@ import java.nio.file.Paths;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.LogReader.WatcherFactory;
+import com.agent.logreader.WatcherFactory;
 
 public class MainAgent {
 	private static final String OUTPUT_PATH = "http://localhost:8080";
