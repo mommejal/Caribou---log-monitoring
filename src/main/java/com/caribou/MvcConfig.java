@@ -37,8 +37,6 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 		mavl.logs = new ArrayList<GeneLog>();
 		mavl.logs.add(new logXMLTest("Début de la liste de logs"));
 		return mavl;
-		// logs.logsVide();
-		// mav.addObject("logs", logs);
 
 	}
 
@@ -58,7 +56,7 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 	CommandLineRunner commandLineRunner(LogsRepository logsRepository) {
 		return strings -> {
 			logsRepository.save(new Logs(1, "Contenu du premier Log"));
-			logsRepository.save(new Logs(2, "Contenu du second Log"));
+			logsRepository.save(new Logs(3, "Il devrait y avoir un log d'id 2 au dessus"));
 		};
 	}
 

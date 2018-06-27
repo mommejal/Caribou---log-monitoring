@@ -10,13 +10,10 @@
     <body>
         <div layout:fragment="content">
             <h1>Bienvenue dans l'application web de monitoring des microservices </h1>
-<!--             <p>Get your greeting <a href="/greeting">here</a></p>
-            <p>Affiche un <a href="/afficherUnLog">log</a></p>
-            <p>Affiche la <a href="/listeLogs"> liste des logs </a></p> -->
+
          
         </div>
          <form th:action="@{/listeLogs(filter=${filter},datebeginning=${datebeginning},sdateend=${dateend})}" th:with="filter=${filter}, datebeginning=${datebeginning}, dateend=${dateend}"  method="get"> <!-- action="#" -->
-   <!--  <form th:action="@{/listeLogs(filter=${filter)(datebeginning=${datebeginning})(dateend=${dateend})" th:object="${listeLogs}"  method="get"> action="#" -->
    			Veuillez choisir la date de début de la recherche <br/>
             <input type="text"  name="datebeginning" th:value="*{datebeginning}" /><br/>
             Veuillez choisir la date de fin de la recherche <br/>
