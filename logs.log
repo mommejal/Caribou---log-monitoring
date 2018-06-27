@@ -1,0 +1,126 @@
+10:37:35,391 INFO  [stdout] (default task-146) ***************************************************
+10:37:35,392 INFO  [stdout] (default task-146) FR
+10:37:35,392 INFO  [stdout] (default task-146) ***************************************************
+10:37:35,545 INFO  [stdout] (default task-146) AXA-EIP_1310_FISCAL_OPT----------------------------- reserveAtTerm after Tax: 56869.66338327483
+10:37:35,760 INFO  [stdout] (default task-146) AXA-EIP_1310_FISCAL_OPT----------------------------- reserveAtTerm after Tax: 56870.86012891239
+10:37:35,870 INFO  [stdout] (default task-146) AXA-EIP_1310_FISCAL_OPT----------------------------- reserveAtTerm after Tax: 61295.786828610144
+10:37:35,980 INFO  [stdout] (default task-146) AXA-EIP_1310_FISCAL_OPT----------------------------- reserveAtTerm after Tax: 61293.904001113
+10:37:35,982 INFO  [org.apache.cxf.interceptor.LoggingOutInterceptor] (default task-146) Outbound Message
+---------------------------
+ID: 1025
+Response-Code: 200
+Content-Type: application/json
+Headers: {Content-Type=[application/json], Date=[Mon, 11 Jun 2018 08:37:35 GMT]}
+Payload: 50084.71738381462
+--------------------------------------
+10:37:36,068 INFO  [org.apache.cxf.interceptor.LoggingInInterceptor] (default task-144) Inbound Message
+----------------------------
+ID: 1026
+Address: http://SALES-FLOW:18080/SalesFlow/services/rest/projection/goalseek
+Encoding: ISO-8859-1
+Http-Method: POST
+Content-Type: application/json
+Headers: {Accept=[application/json], Authorization=[Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJPMy15R25uN1IweVQzYjNxTkZUR2FIYVFtVWV0NXZRWUJnS1RsTmRnRnd3In0.eyJqdGkiOiJjOGQ3MmExNC01MjE1LTQ3NDctODUxOC1kMWJhY2YyZDNiMzgiLCJleHAiOjE1Mjg3MDY1NTQsIm5iZiI6MCwiaWF0IjoxNTI4NzA2MjU0LCJpc3MiOiJodHRwOi8vU0VDVVJJVFk6OTA4MC9hdXRoL3JlYWxtcy9SZWFsbUFYQSIsImF1ZCI6InB1YmxpYy1jbGllbnQiLCJzdWIiOiI0YTkzNWJjYi0yOGZiLTQwZTUtYjFlYi01ZjQ1YjM4YWJhN2MiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJwdWJsaWMtY2xpZW50IiwiYXV0aF90aW1lIjowLCJzZXNzaW9uX3N0YXRlIjoiOTNmODhmMTMtYTkzYy00OWI1LThjZjktMGNkNjExMDk2ZGM0IiwiYWNyIjoiMSIsImNsaWVudF9zZXNzaW9uIjoiNDYwNmY5ZjAtOGNmMC00ZWFjLTg0ZGQtOTEwN2ViYjg3NmI2IiwiYWxsb3dlZC1vcmlnaW5zIjpbXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIk1pZC1PZmZpY2VyIiwiYWRtaW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJ2aWV3LXByb2ZpbGUiXX19LCJyb2xlcyI6WyJNaWQtT2ZmaWNlciIsIm9mZmxpbmVfYWNjZXNzIiwiYWRtaW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdLCJuYW1lIjoiIiwiZ3JvdXBzIjpbXSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYnJva2VyMSJ9.xVvJBrQl_GIY3yeYXlihgbWMXEcggGfAWrvt8Hih2xv-FY_WLSsBjZP3Bhd-mkI9bP0Tb1DwK1nPjHo8XyAY0uEM1ChEos4cydGNPuaT0xPByEuy-8DCUWNmsYUH9rlMWU9a4ADl2M2ormCFfKY8fS03PatDDzlaaNMqx5igWDJi3r1C2mq2J0F1czPaV6pUalNxA5HaTIiTLj3-7-rbv3RqvTRkeTZv525SGv005MK5iuXfOTckLUcLfTqNII6QyL0_ZHf2dI4DLDvCEXTOHXysiOZDPiP6c3XoX-QTcBSlSDBd7stkbM7dHVYqHs3NCXphy2MwNUXPnXH9SffnsA], Cache-Control=[no-cache], connection=[keep-alive], content-type=[application/json], correlationId=[125dbfdc-49ba-4cd5-9844-6c919c9ba488], Host=[SALES-FLOW:18080], Pragma=[no-cache], transfer-encoding=[chunked], User-Agent=[Apache-CXF/3.1.7], User-Profile=[FR]}
+Payload: {
+  "type" : "com.vermeg.projection.api.goalseek.input.ProjectionGoalSeekInput",
+  "errorMax" : 1.0,
+  "secondHypothesis" : 7916.066405837139,
+  "targetResult" : 267409.66000000003,
+  "computationPurpose" : "regularPremium",
+  "firstHypothesis" : 7915.066405837139,
+  "projectionInput" : {
+    "type" : "com.vermeg.projection.api.input.ProjectionInput",
+    "simulationInput" : {
+      "type" : "com.vermeg.projection.api.input.SimulationInput",
+      "proratedRegPremAtEnd" : false,
+      "startDate" : "06/11/2018T00:00:00.000+0200",
+      "capitalAmount" : 0.0,
+      "indexationRate" : 0.0,
+      "proratedRegularPremiumAmountAtBegin" : 6623.05,
+      "proratedRegPremAtBegin" : false,
+      "smoker" : false,
+      "regularPremium" : 267409.66000000003,
+      "endDate" : "01/31/2047T00:00:00.000+0100",
+      "proratedRegularPremiumAmountAtEnd" : 0.0,
+      "uniquePremium" : 50084.72,
+      "yearlyPremiumPaidMonthly" : false,
+      "insuredAmount" : [ {
+        "type" : "com.vermeg.projection.api.input.Amount",
+        "amount" : 100000.0,
+        "amountType" : "RSK_DEATH_INV_COMPLEMENT_AXA"
+      } ],
+      "initialReserves" : [ {
+        "type" : "com.vermeg.projection.api.input.Amount",
+        "amount" : 1000.0,
+        "amountType" : "MAIN"
+      }, {
+        "type" : "com.vermeg.projection.api.input.Amount",
+        "amount" : 0.0,
+        "amountType" : "PS"
+      } ],
+      "strategyRate" : [ {
+        "type" : "com.vermeg.projection.api.input.StrategyRate",
+        "rate" : 0.01,
+        "reserveType" : "total"
+      }, {
+        "type" : "com.vermeg.projection.api.input.StrategyRate",
+        "rate" : 0.01,
+        "reserveType" : "main"
+      }, {
+        "type" : "com.vermeg.projection.api.input.StrategyRate",
+        "rate" : 0.0,
+        "reserveType" : "ps"
+      } ]
+    },
+    "projectionCalculationRule" : [ {
+      "type" : "com.vermeg.projection.api.input.ProjectionCalculationRule",
+      "projectionInput$order" : 0,
+      "expression" : "function yearFrac(sdate, edate){\n    // Lookup years, months, and days\n    var syear = sdate.getYear();\n    var smonth = sdate.getMonth();\n    var sday = sdate.getDate();\n    var eyear = edate.getYear();\n    var emonth = edate.getMonth();\n    var eday = edate.getDate();\n\n    var sdaysInMonth = daysInMonth(syear, smonth, sday);\n    var edaysInMonth = daysInMonth(eyear, emonth, eday);\n\n    if (sday === 31 && eday === 31) {\n        sday = 30;\n        eday = 30;\n    } else if (sday === 31) {\n        sday = 30;\n    } else if (sday === 30 && eday === 31) {\n        eday = 30;\n    } else if (smonth === 1 && emonth === 1 && sdaysInMonth === sday && edaysInMonth === eday) {\n        sday = 30;\n        eday = 30;\n    } else if (smonth === 1 && sdaysInMonth === sday) {\n\n        sday = 30;\n    }\n\n    return ((eday + emonth * 30 + eyear * 360) - (sday + smonth * 30 + syear * 360)) / 360;\n\n}\n\nfunction daysInMonth(year, month, day) {\n    var mycal = new java.util.GregorianCalendar(year, month, day);\n\n    // Get the number of days in that month\n    var daysInMonth = mycal.getActualMaximum(java.util.Calendar.DAY_OF_MONTH);\n\n    return daysInMonth;\n}\n\n    return yearFrac;",
+      "displayed" : true,
+      "resultType" : "Other",
+      "identifier" : "yearFrac",
+      "ruleOrder" : 0
+    }, {
+      "type" : "com.vermeg.projection.api.input.ProjectionCalculationRule",
+      "projectionInput$order" : 1,
+      "expression" : "return simulationDate.equals(input.simulationInput.endDate);",
+      "displayed" : false,
+      "resultType" : "Other",
+      "identifier" : "isEndDate",
+      "ruleOrder" : 1
+    }, {
+      "type" : "com.vermeg.projection.api.input.ProjectionCalculationRule",
+      "projectionInput$order" : 2,
+      "expression" : "var reserve = 0.0;\n\nif(i==0){\n\treserve =  input.simulationInput.initialReserves.get(\"MAIN\");\n} else {\n\treserve=vMainEndPeriod;\n}\n\n\nreturn reserve != null ? reserve : 0.0;",
+      "displayed" : true,
+      "resultType" : "BeginReserveMain",
+      "identifier" : "vInitMain",
+      "ruleOrder" : 2
+    }, {
+      "type" : "com.vermeg.projection.api.input.ProjectionCalculationRule",
+      "projectionInput$order" : 3,
+      "expression" : "if(i==0){\n\treserve =  input.simulationInput.initialReserves.get(\"PS\");\n} else {\n\treserve=vPSEndPeriod;\n}\n\nreturn reserve != null ? reserve : 0.0;",
+      "displayed" : true,
+      "resultType" : "BeginReservePs",
+      "identifier" : "vInitPS",
+      "ruleOrder" : 3
+    }, {
+      "type" : "com.vermeg.projection.api.input.ProjectionCalculationRule",
+      "projectionInput$order" : 4,
+      "expression" : "return vInitMain+vInitPS;",
+      "displayed" : true,
+      "resultType" : "BeginReserveTotal",
+      "identifier" : "vInitTot",
+      "ruleOrder" : 4
+    }, {
+      "type" : "com.vermeg.projection.api.input.ProjectionCalculationRule",
+      "projectionInput$order" : 5,
+      "expression" : "if (i==0) {\n\treturn input.simulationInput.uniquePremium;\n}\n\nreturn 0;",
+      "displayed" : true,
+      "resultType" : "UniquePremium",
+      "identifier" : "uniquePremium",
+      "ruleOrder" : 5
+    }, {
+      "type" : "com.vermeg.projection.api.input.ProjectionCalculationRule",
+      "projectionInput$order" : 6,
+      "expression" : "if(isEndDate) return 0.0;\nvar startDate =  input.simulationInput.startDate;\nvar endDate =  input.simulationInput.endDate;\n\nvar sdate = simulationDate;\n\nvar yp =0.0;\n\n// first iteration\nif (i==0 &&  input.simulationInput.regularPremium== 0) return 0;\nif(i==0){\nif(input.simulationInput.proratedRegPremAtbegin){\nif(input.simulationInput.proratedRegularPremiumAmountAtBegin !=null)\n\n{ return input.simulationInput.proratedRegularPremiumAmountAtBegin; }\n}\nreturn input.simulationInput.regularPremium;\n}\n\n// last iteration\nif(i >= endDate.getYear()-startDate.getYear()){\n\tvar ratio =1;\n\tif(input.simulationInput.proratedRegPremAtEnd){\t \n\t\tratio = yearFrac(simulationDate, endDate);\n\t}\n\n\treturn yearlyPremium*(1+input.simulationInput.indexationRate) * ratio;\n}\n\n// Second year should be indexed based on the not prorated regular premium\nif(i==1){\n\typ = input.simulationInput.regularPremium;\n} else {\n\typ = yearlyPremium;\n}\n\n// regular premium calculation\nreturn yp * (1+ input.simulationInput.indexationRate);",
