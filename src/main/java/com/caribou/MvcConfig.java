@@ -17,11 +17,8 @@ import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
 import com.logs.GeneLog;
-import com.logs.ListeDeLogs;
 import com.logs.ModelAndViewLogs;
 import com.logs.logXMLTest;
-import com.caribou.LogsRepository;
-import com.caribou.Logs;
 
 @SuppressWarnings("deprecation")
 @EnableMongoRepositories(basePackageClasses = LogsRepository.class)
@@ -49,11 +46,6 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 	// Pour l'instant j'en crée un uniquement pour liste logs
 	{
 		return new ModelAndView("listeLogs");
-	}
-
-	@Bean
-	public ListeDeLogs getListeDeLogs() {
-		return new ListeDeLogs();
 	}
 
 	@Bean
