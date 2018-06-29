@@ -1,12 +1,11 @@
 package com.caribou;
 
-import java.util.ArrayList;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Description;
+import org.springframework.data.mongodb.MongoDbFactory;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.ViewResolver;
@@ -16,9 +15,7 @@ import org.thymeleaf.spring5.SpringTemplateEngine;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
-import com.logs.GeneLog;
-import com.logs.ModelAndViewLogs;
-import com.logs.logXMLTest;
+import com.mongodb.Mongo;
 
 @SuppressWarnings("deprecation")
 @EnableMongoRepositories(basePackageClasses = LogsRepository.class)
@@ -27,19 +24,9 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 
 	@Autowired
 	LogsRepository logsRepository;
-
-	@Bean
-	public ModelAndViewLogs getModelAndViewLogs()
-	// Pour l'instant j'en crée un uniquement pour liste logs
-	{
-		ModelAndViewLogs mavl;
-		mavl = new ModelAndViewLogs();
-		mavl.modelAndView = new ModelAndView("listeLogs");
-		mavl.logs = new ArrayList<GeneLog>();
-		mavl.logs.add(new logXMLTest("Début de la liste de logs"));
-		return mavl;
-
-	}
+	
+	@Autowired Mongo mongo;
+	@Autowired MongoDbFactory mongoDbFactory;
 
 	@Bean
 	public ModelAndView getModelAndView()
@@ -51,11 +38,16 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 	@Bean
 	CommandLineRunner commandLineRunner(LogsRepository logsRepository) {
 		return strings -> {
-			logsRepository.save(new Logs(1, "Contenu du premier Log"));
+			logsRepository.save(new Logs(8, "Logs du nouveau endroit line runner"));
 			logsRepository.save(new Logs(3, "Il devrait y avoir un log d'id 2 au dessus"));
 			logsRepository.save(new Logs(4, "J'ajoute un log d'id 4 en ayant mis le logs repositorty autowired dans la config "));
 		};
 	}
+//    @Override
+//    protected String getDatabaseName() {
+//        // TODO Auto-generated method stub
+//        return mongoDB;
+//    }
 
 	@Bean
 	@Description("Thymeleaf template resolver serving HTML 5")

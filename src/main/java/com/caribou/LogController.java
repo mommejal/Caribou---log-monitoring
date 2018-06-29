@@ -3,6 +3,7 @@ package com.caribou;
 import java.util.ArrayDeque;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.MongoDbFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.bdd.RemplirBdd;
+import com.mongodb.Mongo;
 
 @RestController
 @Controller
@@ -21,6 +23,8 @@ public class LogController {
 	ModelAndView mav;
 	@Autowired
 	LogsRepository logsRepository;
+	@Autowired Mongo mongo;
+	@Autowired MongoDbFactory mongoDbFactory;
 
 	public void LogsResource(LogsRepository logsRepository) {
 		this.logsRepository = logsRepository;
@@ -98,8 +102,13 @@ public class LogController {
 //				+ "Payload: {\r\n" + "  \"type\" : \"com.vermeg.webservice.SalesFlowResponse\",\r\n"
 //				+ "  \"data\" : {\r\n" + "    \"type\" : \"com.vermeg.webservice.SalesFlowIdentifier\",\r\n"
 				+ "    \"identifier\" : 640007027\r\n" + "  }\r\n" + "}" + "---------------------------");
-//		ad.addFirst("Log d'id 102 issu de la méthode remplir");
+		ad.addFirst("Log du controller à mettre au nouvel endroit");
 		objremplirbdd.remplir(ad,logsRepository);
+//		objremplirbdd.viderBdd(logsRepository);
+		mongo.dropDatabase(mongoDbFactory.getDb().getName());
+		objremplirbdd.ajouterLogBdd(logsRepository, new Logs(20,"LE seul log affiché devrait etre celui ci"));
+		objremplirbdd.ajouterLogBdd(logsRepository, new Logs(21,"LE deuxieme seul log affiché devrait etre celui ci"));
+
 		mav.addObject("logs", logsRepository.findAll());
 		mav.addObject("filter", filter);
 		mav.addObject("datebeginning", datebeginning);

@@ -1,9 +1,10 @@
 package com.caribou;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
 public class Logs {
@@ -20,10 +21,10 @@ public class Logs {
 		this.msg = msg;
 	}
 
-//	public Logs(String msg) {
-////		super();
-//		this.msg = msg;
-//	}
+	// public Logs(String msg) {
+	//// super();
+	// this.msg = msg;
+	// }
 
 	// public Integer getId() {
 	// return id;
@@ -63,11 +64,13 @@ public class Logs {
 	public String getSeverityLvl() {
 		pattern = Pattern.compile(".{12} ");
 		matcher = pattern.matcher(msg);
-		if (matcher.find()) {
-			int debut = matcher.end();
-			pattern = Pattern.compile(".{12} [a-zA-Z]*");
-			matcher = pattern.matcher(msg);
-			matcher.find();
+		matcher.find();
+		int debut = matcher.end();
+		pattern = Pattern.compile(".{12} [a-zA-Z]*");
+		matcher = pattern.matcher(msg);
+		// LES && sont très moches faire attention
+		if (matcher.find() && (msg.charAt(2) == ':') && (msg.charAt(5) == ':')) {
+
 			int fin = matcher.end();
 			String res = new String();
 			res = msg.substring(debut, fin);
@@ -78,6 +81,10 @@ public class Logs {
 	}
 
 	public String getDate() {
-		return msg.substring(0, 12);
+		if ((msg.charAt(2) == ':') && (msg.charAt(5) == ':')) {
+			return msg.substring(0, 12);
+		} else {
+			return "UNKNOWN";
+		}
 	}
 }
