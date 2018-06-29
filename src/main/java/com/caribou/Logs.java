@@ -62,7 +62,7 @@ public class Logs {
 	}
 
 	public String getSeverityLvl() {
-		pattern = Pattern.compile("(INFO)|(DEBUG)|(ERROR)|(Exception)|(EXCEPTION)");
+		pattern = Pattern.compile("(INFO)|(DEBUG)|(ERROR)|(Exception)|(EXCEPTION)|(WARN )|(WARNING)");
 		matcher = pattern.matcher(msg);
 		
 		int debut = 0;
