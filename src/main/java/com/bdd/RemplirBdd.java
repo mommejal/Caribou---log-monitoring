@@ -24,9 +24,7 @@ public class RemplirBdd /* implements CommandLineRunner */ {
 		logsRepository.save(log);
 	}
 
-	 public void viderBdd() {
-			mongo.dropDatabase(mongoDbFactory.getDb().getName());
-	 }
+
 
 //	public void remplir(ArrayDeque<String> logs, LogsRepository logsRepository) {
 //		String contenu = logs.pollLast();

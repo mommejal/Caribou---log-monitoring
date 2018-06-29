@@ -62,16 +62,15 @@ public class Logs {
 	}
 
 	public String getSeverityLvl() {
-		pattern = Pattern.compile(".{12} ");
+		pattern = Pattern.compile("(INFO)|(DEBUG)|(ERROR)|(Exception)|(EXCEPTION)");
 		matcher = pattern.matcher(msg);
-		matcher.find();
-		int debut = matcher.end();
-		pattern = Pattern.compile(".{12} [a-zA-Z]*");
-		matcher = pattern.matcher(msg);
+		
+		int debut = 0;
+		int fin = 0;
 		// LES && sont très moches faire attention
-		if (matcher.find() && (msg.charAt(2) == ':') && (msg.charAt(5) == ':')) {
-
-			int fin = matcher.end();
+		if (matcher.find()) {
+			debut = matcher.start();
+			fin = matcher.end();
 			String res = new String();
 			res = msg.substring(debut, fin);
 			return res;
@@ -81,8 +80,15 @@ public class Logs {
 	}
 
 	public String getDate() {
-		if ((msg.charAt(2) == ':') && (msg.charAt(5) == ':')) {
-			return msg.substring(0, 12);
+		// Detecte la date de type heure:minute:seconde.millisecondes
+		pattern = Pattern.compile("[0-9][0-9]:[0-9][0-9]:[0-9][0-9][.,][0-9][0-9][0-9]");
+		matcher = pattern.matcher(msg);
+		int debut = 0;
+		int fin = 0;
+		if (matcher.find()) {
+			debut = matcher.start();
+			fin = matcher.end();
+			return msg.substring(debut, fin);
 		} else {
 			return "UNKNOWN";
 		}
