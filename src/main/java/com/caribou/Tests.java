@@ -6,8 +6,9 @@ import java.util.regex.Pattern;
 public class Tests {
 
 	public static void main(String[] args) {
-//		String pattern = "([.\\s]+?-{10,}){2}"
-		String pattern = "([(?s).&&[^-]]*(-{1,9}[(?s).&&[^-]]+)*-{10,}){4}";
+		System.out.println(Pattern.compile("").matcher("dcsdsc").find());
+//		String pattern = "((?s).*-{10,}+){4}";
+		String pattern = "(((?s)[^-])*+(-{1,9}((?s)[^-])+)*+-++){4}";
 //		String pattern = "((.*[\r\n]?)*?-{10,40}+){4}";
 		System.out.println(pattern);
 		Matcher a = Pattern.compile(pattern).matcher(
@@ -37,7 +38,7 @@ public class Tests {
 						+ "Headers: {Content-Type=[application/json], Date=[Mon, 11 Jun 2018 08:55:48 GMT]}\r\n"
 						+ "Payload: {\r\n" + "  \"type\" : \"com.vermeg.webservice.SalesFlowResponse\",\r\n"
 						+ "  \"data\" : {\r\n" + "    \"type\" : \"com.vermeg.webservice.SalesFlowIdentifier\",\r\n"
-						+ "    \"identifier\" : 640007027\r\n" + "  }\r\n" + "}"
+						+ "    \"identifier\" : 640007027\r\n" + "  }\r\n" + "}\r\n"
 						+ "---------------------------"
 						);
 		System.out.println(a.find());

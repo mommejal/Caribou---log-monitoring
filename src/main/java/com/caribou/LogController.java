@@ -1,6 +1,7 @@
 package com.caribou;
 
 import java.util.ArrayList;
+import java.util.Queue;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,9 +15,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
 import com.dao.LogDao;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.logs.GeneLog;
 import com.logs.ListeDeLogs;
 import com.logs.logXMLTest;
@@ -25,6 +27,9 @@ import com.logs.logXMLTest;
 @Controller
 public class LogController {
 
+	@Autowired
+	Gson gson;
+	
 	@Autowired
 	ListeDeLogs logs;
 	// logs.add(new logXMLTest(new String("<![LOG[Exiting
@@ -143,11 +148,13 @@ public class LogController {
 	@ResponseBody
 	void logIncome(@RequestBody String newlog) {
 		System.out.println("je reçois :");
-		try {
-			System.out.println(new ObjectMapper().writerWithDefaultPrettyPrinter()
-				     .writeValueAsString(newlog));
-		} catch (JsonProcessingException e) {
-			e.printStackTrace();
+
+		Queue<Queue<String>> logs = gson.fromJson(newlog, new TypeToken<Queue<Queue<String>>>() {
+		}.getType());
+		
+		for(Queue<String> log : logs ) {
+			for(String line : log)
+				System.out.println(line);
 		}
 	}
 
@@ -155,7 +162,7 @@ public class LogController {
 	String regexOutcome() {
 		return regexAgent;
 	}
-	
+
 	@RequestMapping(value = "/getParamAgent", method = RequestMethod.GET)
 	String paramOutcome() {
 		// TODO

@@ -14,7 +14,7 @@ public class PostREST {
 		conn.setDoOutput(true);
 		conn.setRequestMethod("POST");
 		conn.setRequestProperty("Content-Type", "text/plain");
-
+ 
 		OutputStreamWriter os = new OutputStreamWriter(conn.getOutputStream());
 		os.write(input);
 		os.flush();

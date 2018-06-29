@@ -11,20 +11,17 @@ public class ParamAgent {
 
 	protected String regexDebutLog;
 	protected String regexFinLog;
-	protected String regexFiltre;
 	protected int tpsVieMinStock;
-	protected int tpsAttenteLog;
-	protected int tpsCheckLog;
+	protected int nbLignesDeSuite;
 
-	public ParamAgent(String regexDebutLog, String regexFinLog, String regexFiltre, int tpsVieMinStock,
-			int tpsAttenteLog, int tpsCheckLog) {
+
+	public ParamAgent(String regexDebutLog, String regexFinLog, int tpsVieMinStock,
+				int nbLignesDeSuite) {
 		super();
 		this.regexDebutLog = regexDebutLog;
 		this.regexFinLog = regexFinLog;
-		this.regexFiltre = regexFiltre;
 		this.tpsVieMinStock = tpsVieMinStock;
-		this.tpsAttenteLog = tpsAttenteLog;
-		this.tpsCheckLog = tpsCheckLog;
+		this.nbLignesDeSuite = nbLignesDeSuite;
 	}
 
 	public int majParam(String source) {
@@ -35,10 +32,8 @@ public class ParamAgent {
 			if (!nvParam.isEmpty()) {
 				regexDebutLog = nvParam.poll();
 				regexFinLog = nvParam.poll();
-				regexFiltre = nvParam.poll();
 				tpsVieMinStock = Integer.parseInt(nvParam.poll());
-				tpsAttenteLog = Integer.parseInt(nvParam.poll());
-				tpsCheckLog = Integer.parseInt(nvParam.poll());
+				nbLignesDeSuite = Integer.parseInt(nvParam.poll());
 			}
 
 		} catch (MalformedURLException e) {
@@ -60,12 +55,12 @@ public class ParamAgent {
 		return 0;
 	}
 
-	public int getTpsCheckLog() {
-		return tpsCheckLog;
+	public int getNbLignesDeSuite() {
+		return nbLignesDeSuite;
 	}
 
-	public void setTpsCheckLog(int tpsCheckLog) {
-		this.tpsCheckLog = tpsCheckLog;
+	public void setNbLignesDeSuite(int nbLignesDeSuite) {
+		this.nbLignesDeSuite = nbLignesDeSuite;
 	}
 
 	public String getRegexDebutLog() {
@@ -84,27 +79,11 @@ public class ParamAgent {
 		this.regexFinLog = regexFinLog;
 	}
 
-	public String getRegexFiltre() {
-		return regexFiltre;
-	}
-
-	public void setRegexFiltre(String regexFiltre) {
-		this.regexFiltre = regexFiltre;
-	}
-
 	public int getTpsVieMinStock() {
 		return tpsVieMinStock;
 	}
 
 	public void setTpsVieMinStock(int tpsVieMinStock) {
 		this.tpsVieMinStock = tpsVieMinStock;
-	}
-
-	public int getTpsAttenteLog() {
-		return tpsAttenteLog;
-	}
-
-	public void setTpsAttenteLog(int tpsAttenteLog) {
-		this.tpsAttenteLog = tpsAttenteLog;
 	}
 }

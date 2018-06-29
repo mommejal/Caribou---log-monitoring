@@ -1,5 +1,6 @@
 package com.caribou;
 
+import com.google.gson.Gson;
 import com.logs.GeneLog;
 import com.logs.ListeDeLogs;
 import com.logs.logXMLTest;
@@ -36,6 +37,10 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 		
 	}
 	
+	@Bean
+	public Gson getGson() {
+		return new Gson();
+	}
 	
 	@Bean
 	public ModelAndView getModelAndView()
