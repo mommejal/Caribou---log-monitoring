@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.bdd.RemplirBdd;
+import com.mongodb.DB;
 import com.mongodb.Mongo;
+import com.mongodb.MongoClient;
 
 @RestController
 @Controller
@@ -214,6 +216,10 @@ public class LogController {
 						// \"com.vermeg.webservice.SalesFlowIdentifier\",\r\n"
 						+ "    \"identifier\" : 640007027\r\n" + "  }\r\n" + "}" + "---------------------------");
 		ad.addFirst("Log du controller à mettre au nouvel endroit");
+//		MongoClient mongoClient = new MongoClient("localhost", 27017);
+//		@SuppressWarnings("deprecation")
+//		DB db = mongoClient.getDB("logsRepository");
+//		db.logsRepository.save(new Logs(25,"Logs issus de db.logs.save"));
 		objremplirbdd.remplir(ad, logsRepository);
 		mav.addObject("logs", logsRepository.findAll());
 		mav.addObject("filter", filter);
@@ -223,19 +229,26 @@ public class LogController {
 		return mav;
 	}
 
-	
 	@RequestMapping(value = "/gestionBdd", method = RequestMethod.GET)
 	ModelAndView gestionBdd(ModelAndView mav) {
 		mav.setViewName("gestionBdd");
 		return mav;
 	}
-	
-	
+
 	@RequestMapping(value = "/gestionBdd/viderBdd", method = RequestMethod.GET)
 	ModelAndView viderBdd(ModelAndView mav) {
 		mongo.dropDatabase(mongoDbFactory.getDb().getName());
 		mav.setViewName("gestionBdd");
 		return mav;
 	}
+
+//	@RequestMapping(value = "/gestionBdd/creerBdd", method = RequestMethod.GET)
+//	ModelAndView viderBdd(ModelAndView mav,
+//			@RequestParam(value = "bddname", required = false, defaultValue = "logsRepository") String bddname) {
+//		// CHECKER SI CA SUPPRIME PAS SI Y EN A DEJA UNE
+//		mongo.getCollection(bddname);
+//		mav.setViewName("gestionBdd");
+//		return mav;
+//	}
 
 }
