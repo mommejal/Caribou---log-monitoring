@@ -1,40 +1,38 @@
 package com.caribou;
 
 import com.google.gson.Gson;
-import com.logs.GeneLog;
-import com.logs.ListeDeLogs;
-import com.logs.logXMLTest;
-
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Description;
+import org.springframework.data.mongodb.MongoDbFactory;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
-import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-import org.thymeleaf.spring4.SpringTemplateEngine;
-import org.thymeleaf.spring4.view.ThymeleafViewResolver;
+import org.thymeleaf.spring5.SpringTemplateEngine;
+import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
-import java.util.ArrayList;
-import com.logs.ModelAndViewLogs;
+
+import com.mongodb.Mongo;
 
 @SuppressWarnings("deprecation")
+@EnableMongoRepositories(basePackageClasses = LogsRepository.class)
 @Configuration
 public class MvcConfig extends WebMvcConfigurerAdapter {
-    
+
+	@Autowired
+	LogsRepository logsRepository;
+	
+	@Autowired Mongo mongo;
+	@Autowired MongoDbFactory mongoDbFactory;
+
 	@Bean
-	public ModelAndViewLogs getModelAndViewLogs()
-	//Pour l'instant j'en cr�e un uniquement pour liste logs
+	public ModelAndView getModelAndView()
 	{
-		ModelAndViewLogs mavl;
-		mavl = new ModelAndViewLogs();
-		mavl.modelAndView = new ModelAndView("listeLogs");
-		mavl.logs = new ArrayList<GeneLog>();
-		mavl.logs.add(new logXMLTest("D�but de la liste de logs"));
-		return mavl;
-//		logs.logsVide();
-//		mav.addObject("logs", logs);
-		
+		return new ModelAndView("listeLogs");
 	}
 	
 	@Bean
@@ -42,22 +40,18 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 		return new Gson();
 	}
 	
-	@Bean
-	public ModelAndView getModelAndView()
-	//Pour l'instant j'en cr�e un uniquement pour liste logs
-	{
-	return new ModelAndView("listeLogs");	
+	CommandLineRunner commandLineRunner(LogsRepository logsRepository) {
+		return strings -> {
+			logsRepository.save(new Logs(8, "Logs du nouveau endroit line runner"));
+			logsRepository.save(new Logs(3, "Il devrait y avoir un log d'id 2 au dessus"));
+			logsRepository.save(new Logs(4, "J'ajoute un log d'id 4 en ayant mis le logs repositorty autowired dans la config "));
+		};
 	}
-	
-	//TODO est ce que tout ces beans ont leut place ici ??
-	
-	
-	//TODO ListeDeLogs est une abbération, faut que je t'explique un truc là
-	@Bean
-	public ListeDeLogs getListeDeLogs(){
-	    return new ListeDeLogs();
-	}
-	
+//    @Override
+//    protected String getDatabaseName() {
+//        // TODO Auto-generated method stub
+//        return mongoDB;
+//    }	
 	@Bean
 	public String getRegexAgent() {
 		return ".*apache.*";
