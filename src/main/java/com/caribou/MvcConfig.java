@@ -42,9 +42,9 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 	
 	CommandLineRunner commandLineRunner(LogsRepository logsRepository) {
 		return strings -> {
-			logsRepository.save(new Logs(8, "Logs du nouveau endroit line runner"));
-			logsRepository.save(new Logs(3, "Il devrait y avoir un log d'id 2 au dessus"));
-			logsRepository.save(new Logs(4, "J'ajoute un log d'id 4 en ayant mis le logs repositorty autowired dans la config "));
+//			logsRepository.save(new Logs(8, "Logs du nouveau endroit line runner"));
+//			logsRepository.save(new Logs(3, "Il devrait y avoir un log d'id 2 au dessus"));
+//			logsRepository.save(new Logs(4, "J'ajoute un log d'id 4 en ayant mis le logs repositorty autowired dans la config "));
 		};
 	}
 //    @Override

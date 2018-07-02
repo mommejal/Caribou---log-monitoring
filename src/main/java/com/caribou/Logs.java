@@ -10,27 +10,28 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Logs {
 
 	@Id
-	private Integer id;
+	private String _id;
+	private Integer idlog;
 	private String msg;
 	private static Pattern pattern;
 	private static Matcher matcher;
 
-	public Logs(Integer id, String msg) {
-		super();
-		this.id = id;
-		this.msg = msg;
-	}
+//	public Logs(Integer idlog, String msg) {
+//		super();
+//		this.idlog = idlog;
+//		this.msg = msg;
+//	}
 
-	// public Logs(String msg) {
-	//// super();
-	// this.msg = msg;
-	// }
+	 public Logs(String msg) {
+//	 super();
+	 this.msg = msg;
+	 }
 
 	// public Integer getId() {
 	// return id;
 	// }
 
-	public Integer getId() {
+	public Integer getIdlog() {
 
 		pattern = Pattern.compile("(?:(?s).*)-{10,}\r\nID: ");
 		matcher = pattern.matcher(msg);
@@ -45,12 +46,12 @@ public class Logs {
 			res = msg.substring(debut, fin);
 			return Integer.parseInt(res);
 		} else {
-			return id;
+			return idlog;
 		}
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setIdlog(Integer idlog) {
+		this.idlog = idlog;
 	}
 
 	public String getMsg() {
@@ -67,7 +68,6 @@ public class Logs {
 		
 		int debut = 0;
 		int fin = 0;
-		// LES && sont très moches faire attention
 		if (matcher.find()) {
 			debut = matcher.start();
 			fin = matcher.end();

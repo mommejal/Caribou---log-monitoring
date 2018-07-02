@@ -1,6 +1,5 @@
 package com.caribou;
 
-import java.util.ArrayDeque;
 import java.util.Queue;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +16,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.bdd.RemplirBdd;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.mongodb.Mongo;
@@ -40,22 +38,22 @@ public class LogController {
 	MongoDbFactory mongoDbFactory;
 	@Autowired
 	ModelAndView mav;
-	
+
 	@RequestMapping(value = "/logIncome", method = RequestMethod.POST)
 	@ResponseBody
 	void logIncome(@RequestBody String newlog) {
+		//Fonction qui convertit le json en objet java pour sauvegarder les résulats dans la BDD
 		System.out.println("je reÃ§ois :");
-		int id = 0;
-		Logs tmp = new Logs(id,"");
+		Logs tmp;
+		int id;
 		Queue<Queue<String>> logs = gson.fromJson(newlog, new TypeToken<Queue<Queue<String>>>() {
 		}.getType());
-		
-		for(Queue<String> log : logs ) {
-			for(String line : log) {
-				tmp = new Logs(id, line);
-//				id = tmp.getId();
-//				tmp.setId(id);
-				id++;
+
+		for (Queue<String> log : logs) {
+			for (String line : log) {
+				tmp = new Logs(line);
+				id = tmp.getIdlog();
+				tmp.setIdlog(id);
 				logsRepository.save(tmp);
 			}
 		}
@@ -71,15 +69,14 @@ public class LogController {
 		// TODO
 		return "";
 	}
-	
+
 	public void LogsResource(LogsRepository logsRepository) {
 		this.logsRepository = logsRepository;
 	}
 
 	@RequestMapping(method = RequestMethod.GET)
-	ModelAndView
-
-			index() {
+	ModelAndView index() {
+		//Retourne à l'acceuil
 		mav.setViewName("index");
 		return mav;
 	}
@@ -90,29 +87,15 @@ public class LogController {
 			@RequestParam(value = "filter", required = true/* , defaultValue="nofilter" */) String filter,
 			@RequestParam(value = "datebeginning", required = false) String datebeginning,
 			@RequestParam(value = "dateend", required = false) String dateend) {
+		// Fonction qui affiche tous les logs de la base de données, à terme elle devra
+		// afficher seuelement selon les filtres
 		// On veut afficher une liste de logs pour l'instant on affiche uniquement les
 		// ID et les messages
 		// On constate qu'une méthode get sur chaque log suffit à afficher le bon truc
-		RemplirBdd objremplirbdd = new RemplirBdd();
-		ArrayDeque<String> ad = new ArrayDeque<String>(1000); // De base l'array deque en contient 16
-		ad.addFirst(
-				"10:55:47,539 INFO  [org.apache.cxf.interceptor.LoggingInInterceptor] (default task-158) Inbound Message\r\n"
-						+ "----------------------------\r\n" + "ID: 1041\r\n"
-						+ "--------------------------------------\r\n"
-						+ "---------------------------\r\n" + "ID: 1041\r\n" + "Response-Code: 200\r\n"
-						+ "    \"identifier\" : 640007027\r\n" + "  }\r\n" + "}" + "---------------------------");
-		ad.addFirst(
-				"10:55:47,539 DEBUG  [org.apache.cxf.interceptor.LoggingInInterceptor] (default task-158) Inbound Message\r\n"
-						+ "----------------------------\r\n" + "ID: 1041\r\n"
-						+ "--------------------------------------\r\n"
-						+ "---------------------------\r\n" + "ID: 1041\r\n" + "Response-Code: 200\r\n"
-						+ "    \"identifier\" : 640007027\r\n" + "  }\r\n" + "}" + "---------------------------");
-		ad.addFirst("Log du controller à mettre au nouvel endroit");
-//		MongoClient mongoClient = new MongoClient("localhost", 27017);
-//		@SuppressWarnings("deprecation")
-//		DB db = mongoClient.getDB("logsRepository");
-//		db.logsRepository.save(new Logs(25,"Logs issus de db.logs.save"));
-		objremplirbdd.remplir(ad, logsRepository);
+		// MongoClient mongoClient = new MongoClient("localhost", 27017);
+		// @SuppressWarnings("deprecation")
+		// DB db = mongoClient.getDB("logsRepository");
+		// db.logsRepository.save(new Logs(25,"Logs issus de db.logs.save"));
 		mav.addObject("logs", logsRepository.findAll());
 		mav.addObject("filter", filter);
 		mav.addObject("datebeginning", datebeginning);
@@ -123,26 +106,27 @@ public class LogController {
 
 	@RequestMapping(value = "/gestionBdd", method = RequestMethod.GET)
 	ModelAndView gestionBdd(ModelAndView mav) {
+		// Fait accéder à l'écran de gestion de la BDD
 		mav.setViewName("gestionBdd");
 		return mav;
 	}
 
 	@RequestMapping(value = "/gestionBdd/viderBdd", method = RequestMethod.GET)
 	ModelAndView viderBdd(ModelAndView mav) {
+		// EN un clic sur le bouton vide toute la BDD
 		mongo.dropDatabase(mongoDbFactory.getDb().getName());
 		mav.setViewName("gestionBdd");
 		return mav;
 	}
 
-//	@RequestMapping(value = "/gestionBdd/creerBdd", method = RequestMethod.GET)
-//	ModelAndView viderBdd(ModelAndView mav,
-//			@RequestParam(value = "bddname", required = false, defaultValue = "logsRepository") String bddname) {
-//		// CHECKER SI CA SUPPRIME PAS SI Y EN A DEJA UNE
-//		mongo.getCollection(bddname);
-//		mav.setViewName("gestionBdd");
-//		return mav;
-//	}
+	// @RequestMapping(value = "/gestionBdd/creerBdd", method = RequestMethod.GET)
+	// ModelAndView viderBdd(ModelAndView mav,
+	// @RequestParam(value = "bddname", required = false, defaultValue =
+	// "logsRepository") String bddname) {
+	// // CHECKER SI CA SUPPRIME PAS SI Y EN A DEJA UNE
+	// mongo.getCollection(bddname);
+	// mav.setViewName("gestionBdd");
+	// return mav;
+	// }
 
 }
-
-
