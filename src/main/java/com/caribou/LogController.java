@@ -95,7 +95,6 @@ public class LogController{
 		// @SuppressWarnings("deprecation")
 		// DB db = mongoClient.getDB("logsRepository");
 		// db.logsRepository.save(new Logs(25,"Logs issus de db.logs.save"));
-		System.out.println(filter);
 		mav=recherche.filter(filter,mav);
 //		mav.addObject("logs", logsRepository.findAll());
 		mav.addObject("datebeginning", datebeginning);
