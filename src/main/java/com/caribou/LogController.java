@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.bdd.Recherche;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.mongodb.Mongo;
@@ -25,7 +26,7 @@ import com.mongodb.Mongo;
 @Component
 @EnableMongoRepositories(basePackageClasses = com.caribou.LogsRepository.class)
 @Repository
-public class LogController {
+public class LogController{
 	@Autowired
 	Gson gson;
 	@Autowired
@@ -38,19 +39,18 @@ public class LogController {
 	MongoDbFactory mongoDbFactory;
 	@Autowired
 	ModelAndView mav;
+	@Autowired
+	Recherche recherche;
 
 	@RequestMapping(value = "/logIncome", method = RequestMethod.POST)
 	@ResponseBody
 	void logIncome(@RequestBody String newlog) {
-		//Fonction qui convertit le json en objet java pour sauvegarder les résulats dans la BDD
+		// Fonction qui convertit le json en objet java pour sauvegarder les résulats
+		// dans la BDD
 		System.out.println("je reÃ§ois :");
 		Queue<Queue<String>> logs = gson.fromJson(newlog, new TypeToken<Queue<Queue<String>>>() {
 		}.getType());
-
 		for (Queue<String> log : logs) {
-			System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAA");
-			System.out.println(log.toString());
-			System.out.println("BBBBBBBBBBBBBBBBBBBBBBBBBBB");
 			logsRepository.save(new Logs(log.toString()));
 		}
 	}
@@ -72,7 +72,7 @@ public class LogController {
 
 	@RequestMapping(method = RequestMethod.GET)
 	ModelAndView index() {
-		//Retourne à l'acceuil
+		// Retourne à l'acceuil
 		mav.setViewName("index");
 		return mav;
 	}
@@ -83,6 +83,9 @@ public class LogController {
 			@RequestParam(value = "filter", required = true/* , defaultValue="nofilter" */) String filter,
 			@RequestParam(value = "datebeginning", required = false) String datebeginning,
 			@RequestParam(value = "dateend", required = false) String dateend) {
+//		MongoClient mongoClient = new MongoClient("localhost", 27017);
+//		MongoDatabase database = mongoClient.getDatabase("logsRepository");
+//		Document buildInfoResults = database.runCommand(new Document("logsRepository", 1));
 		// Fonction qui affiche tous les logs de la base de données, à terme elle devra
 		// afficher seuelement selon les filtres
 		// On veut afficher une liste de logs pour l'instant on affiche uniquement les
@@ -92,8 +95,9 @@ public class LogController {
 		// @SuppressWarnings("deprecation")
 		// DB db = mongoClient.getDB("logsRepository");
 		// db.logsRepository.save(new Logs(25,"Logs issus de db.logs.save"));
-		mav.addObject("logs", logsRepository.findAll());
-		mav.addObject("filter", filter);
+		System.out.println(filter);
+		mav=recherche.filter(filter,mav);
+//		mav.addObject("logs", logsRepository.findAll());
 		mav.addObject("datebeginning", datebeginning);
 		mav.addObject("dateend", dateend);
 		mav.setViewName("listeLogs");
@@ -114,15 +118,4 @@ public class LogController {
 		mav.setViewName("gestionBdd");
 		return mav;
 	}
-
-	// @RequestMapping(value = "/gestionBdd/creerBdd", method = RequestMethod.GET)
-	// ModelAndView viderBdd(ModelAndView mav,
-	// @RequestParam(value = "bddname", required = false, defaultValue =
-	// "logsRepository") String bddname) {
-	// // CHECKER SI CA SUPPRIME PAS SI Y EN A DEJA UNE
-	// mongo.getCollection(bddname);
-	// mav.setViewName("gestionBdd");
-	// return mav;
-	// }
-
 }

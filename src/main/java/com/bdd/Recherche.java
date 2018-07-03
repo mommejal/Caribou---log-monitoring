@@ -6,12 +6,13 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.caribou.LogController;
 import com.caribou.LogsRepository;
 import com.mongodb.Mongo;
 
 @Component
 @EnableMongoRepositories(basePackageClasses = com.caribou.LogsRepository.class)
-public class Recherche {
+public class Recherche{
 	// Une classe destinée à traiter les requetes de filtrage des Logs
 	// Va probablement utiliser JQUERY
 	public LogsRepository logsRepository;
@@ -19,9 +20,12 @@ public class Recherche {
 	@Autowired MongoDbFactory mongoDbFactory;
 	public String Filtre;
 	
-	public ModelAndView noFilter(String filter, ModelAndView mav) {
+	public Recherche(LogsRepository input) {
+		logsRepository=input;
+	}
+	
+	public ModelAndView noFilter(ModelAndView mav) {
 		mav.addObject("logs", logsRepository.findAll());
-		mav.addObject("filter", filter);
 		return mav;
 	}
 	
@@ -30,16 +34,29 @@ public class Recherche {
 		return 0;
 	}
 	
-	public ModelAndView filterbySeverityLvl(String severitylvl, ModelAndView mav) {
-//		mongo.dropDatabase(mongoDbFactory.getDb().getName());
+	public ModelAndView filterBySeverityLvl(String severitylvl, ModelAndView mav) {
+		mav.addObject("logs", logsRepository.findLogsBySeveritylvl(severitylvl));
 		return mav;
 	}
 	
-	public ModelAndView filterbyDate(String datebeginning,String dateend, ModelAndView mav) {
+	public ModelAndView filterByDate(String datebeginning,String dateend, ModelAndView mav) {
 		return mav;
 	}
 	
-	public ModelAndView filterbyId(int idbeginning, int idend, ModelAndView mav) {
+	public ModelAndView filterById(int idbeginning, int idend, ModelAndView mav) {
 		return mav;
+	}
+	
+	public ModelAndView filter(String filter, ModelAndView mav) {
+		mav.addObject("filter", filter);
+		System.out.println(filter);
+		if (filter.equals("severityLvlFilter")) {
+			System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaa");
+			String severitylvl = "DEBUG"; // A changer pour récupérer le parametre de Corentin
+			return filterBySeverityLvl(severitylvl,mav);
+		}
+		else {
+			return noFilter(mav);
+		}
 	}
 }

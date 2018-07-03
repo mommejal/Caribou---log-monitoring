@@ -1,6 +1,5 @@
 package com.caribou;
 
-import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
@@ -16,6 +15,8 @@ import org.thymeleaf.spring5.SpringTemplateEngine;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
+import com.bdd.Recherche;
+import com.google.gson.Gson;
 import com.mongodb.Mongo;
 
 @SuppressWarnings("deprecation")
@@ -35,6 +36,10 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 		return new ModelAndView("listeLogs");
 	}
 	
+	@Bean Recherche getRecherche()
+	{
+		return new Recherche(logsRepository);
+	}
 	@Bean
 	public Gson getGson() {
 		return new Gson();

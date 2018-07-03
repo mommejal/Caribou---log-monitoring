@@ -11,21 +11,27 @@ public class Logs {
 
 	@Id
 	private String _id;
+	@SuppressWarnings("unused")
 	private Integer idlog;
 	private String msg;
+	@SuppressWarnings("unused")
+	private String severitylvl;
 	private static Pattern pattern;
 	private static Matcher matcher;
 
-//	public Logs(Integer idlog, String msg) {
-//		super();
-//		this.idlog = idlog;
-//		this.msg = msg;
-//	}
+	// public Logs(Integer idlog, String msg) {
+	// super();
+	// this.idlog = idlog;
+	// this.msg = msg;
+	// }
 
-	 public Logs(String msg) {
-//	 super();
-	 this.msg = msg;
-	 }
+	public Logs(String msg) {
+		// super();
+		this.msg = msg;
+		this.idlog = this.getIdlog();
+		this.severitylvl = this.getSeverityLvl();
+
+	}
 
 	// public Integer getId() {
 	// return id;
@@ -54,6 +60,10 @@ public class Logs {
 		this.idlog = idlog;
 	}
 
+	public void setSeveritylvl(String input) {
+		this.severitylvl = input;
+	}
+
 	public String getMsg() {
 		return msg;
 	}
@@ -65,7 +75,7 @@ public class Logs {
 	public String getSeverityLvl() {
 		pattern = Pattern.compile("(INFO)|(DEBUG)|(ERROR)|(Exception)|(EXCEPTION)|(WARN )|(WARNING)");
 		matcher = pattern.matcher(msg);
-		
+
 		int debut = 0;
 		int fin = 0;
 		if (matcher.find()) {
@@ -88,8 +98,8 @@ public class Logs {
 		if (matcher.find()) {
 			debut = matcher.start();
 			fin = matcher.end();
-			if (msg.charAt(debut)=='[') {
-				debut=debut+1;
+			if (msg.charAt(debut) == '[') {
+				debut = debut + 1;
 			}
 			return msg.substring(debut, fin);
 		} else {
