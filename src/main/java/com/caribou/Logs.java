@@ -46,7 +46,7 @@ public class Logs {
 			res = msg.substring(debut, fin);
 			return Integer.parseInt(res);
 		} else {
-			return idlog;
+			return 0;
 		}
 	}
 
@@ -81,13 +81,16 @@ public class Logs {
 
 	public String getDate() {
 		// Detecte la date de type heure:minute:seconde.millisecondes
-		pattern = Pattern.compile("[0-9][0-9]:[0-9][0-9]:[0-9][0-9][.,][0-9][0-9][0-9]");
+		pattern = Pattern.compile("[0-9\\[][0-9]:[0-9][0-9]:[0-9][0-9][.,][0-9][0-9][0-9]");
 		matcher = pattern.matcher(msg);
 		int debut = 0;
 		int fin = 0;
 		if (matcher.find()) {
 			debut = matcher.start();
 			fin = matcher.end();
+			if (msg.charAt(debut)=='[') {
+				debut=debut+1;
+			}
 			return msg.substring(debut, fin);
 		} else {
 			return "UNKNOWN";

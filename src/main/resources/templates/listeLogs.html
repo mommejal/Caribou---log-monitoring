@@ -22,19 +22,19 @@
 	<br />
 	<table>
 		<tr>
-			<!--         <th>Id</th>  -->
-			<th>Date</th>
+			        <th>Id</th> 
+	 		<th>Date</th>
 			<!--               <th>Hostname</th>
                 <th>Facility</th>-->
 			<th>Severity Level</th>
 			<th>MSG</th>
 		</tr>
-		<tr th:each="log : ${logs}">
-			<!--           <td th:text="${log.getId()}">id</td>  -->
-			<td th:text="${log.getDate()}">date</td>
-			<!--                <td th:text="${log.hostname}">hostname</td>
+		<tr th:each="log : *{logs}">
+			<td th:text="${log.getIdlog()}">id</td>
+ 			<td th:text="${log.getDate()}">date</td>
+  			<!--                <td th:text="${log.hostname}">hostname</td>
                 <td th:text="${log.facility}">facility</td>              -->
-			<td th:text="${log.getSeverityLvl()}">severitylvl</td>
+		 	<td th:text="${log.getSeverityLvl()}">severitylvl</td>
 			<td th:text="${log.getMsg()}">MSG</td>
 		</tr>
 	</table>

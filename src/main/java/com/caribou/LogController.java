@@ -44,18 +44,14 @@ public class LogController {
 	void logIncome(@RequestBody String newlog) {
 		//Fonction qui convertit le json en objet java pour sauvegarder les résulats dans la BDD
 		System.out.println("je reÃ§ois :");
-		Logs tmp;
-		int id;
 		Queue<Queue<String>> logs = gson.fromJson(newlog, new TypeToken<Queue<Queue<String>>>() {
 		}.getType());
 
 		for (Queue<String> log : logs) {
-			for (String line : log) {
-				tmp = new Logs(line);
-				id = tmp.getIdlog();
-				tmp.setIdlog(id);
-				logsRepository.save(tmp);
-			}
+			System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAA");
+			System.out.println(log.toString());
+			System.out.println("BBBBBBBBBBBBBBBBBBBBBBBBBBB");
+			logsRepository.save(new Logs(log.toString()));
 		}
 	}
 
