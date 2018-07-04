@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="default">
+<head>
+<title>Log en particulier</title>
+<link rel="stylesheet" href="/css/hello.css" />
+</head>
+<body>
+	<table>
+		<tr>
+			        <th>Id</th> 
+	 		<th>Date</th>
+			<!--               <th>Hostname</th>
+                <th>Facility</th>-->
+			<th>Severity Level</th>
+			<th>MSG</th>
+		</tr>
+		<tr th:each="log : *{logs}">
+			<td th:text="${log.getIdlog()}">id</td>
+ 			<td th:text="${log.getDate()}">date</td>
+  			<!--                <td th:text="${log.hostname}">hostname</td>
+                <td th:text="${log.facility}">facility</td>              -->
+		 	<td th:text="${log.getSeverityLvl()}">severitylvl</td>
+			<td th:text="${log.getMsg()}">MSG</td>
+		</tr>
+	</table>
+</body>
+</html>

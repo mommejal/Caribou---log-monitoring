@@ -6,9 +6,8 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.caribou.LogController;
 import com.caribou.LogsRepository;
-import com.mongodb.Mongo;
+import com.mongodb.Mongo;	
 
 @Component
 @EnableMongoRepositories(basePackageClasses = com.caribou.LogsRepository.class)
@@ -43,7 +42,7 @@ public class Recherche{
 		return mav;
 	}
 	
-	public ModelAndView filterById(int idbeginning, int idend, ModelAndView mav) {
+	public ModelAndView filterByIdlog(int idbeginning, int idend, ModelAndView mav) {
 		return mav;
 	}
 	
@@ -51,7 +50,6 @@ public class Recherche{
 		mav.addObject("filter", filter);
 		System.out.println(filter);
 		if (filter.equals("severityLvlFilter")) {
-			System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaa");
 			String severitylvl = "DEBUG"; // A changer pour récupérer le parametre de Corentin
 			return filterBySeverityLvl(severitylvl,mav);
 		}
@@ -59,4 +57,5 @@ public class Recherche{
 			return noFilter(mav);
 		}
 	}
+	
 }

@@ -8,6 +8,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -15,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.data.querydsl.QuerydslPredicateExecutor;
+
 
 import com.bdd.Recherche;
 import com.google.gson.Gson;
@@ -41,7 +44,9 @@ public class LogController{
 	ModelAndView mav;
 	@Autowired
 	Recherche recherche;
-
+//	@Autowired
+//	QuerydslPredicateExecutor<Logs> test;
+	
 	@RequestMapping(value = "/logIncome", method = RequestMethod.POST)
 	@ResponseBody
 	void logIncome(@RequestBody String newlog) {
@@ -51,7 +56,11 @@ public class LogController{
 		Queue<Queue<String>> logs = gson.fromJson(newlog, new TypeToken<Queue<Queue<String>>>() {
 		}.getType());
 		for (Queue<String> log : logs) {
-			logsRepository.save(new Logs(log.toString()));
+			String res = "";
+			for (String tmp : log) {
+				res+=tmp;
+			}
+			logsRepository.save(new Logs(res));
 		}
 	}
 
@@ -83,25 +92,23 @@ public class LogController{
 			@RequestParam(value = "filter", required = true/* , defaultValue="nofilter" */) String filter,
 			@RequestParam(value = "datebeginning", required = false) String datebeginning,
 			@RequestParam(value = "dateend", required = false) String dateend) {
-//		MongoClient mongoClient = new MongoClient("localhost", 27017);
-//		MongoDatabase database = mongoClient.getDatabase("logsRepository");
-//		Document buildInfoResults = database.runCommand(new Document("logsRepository", 1));
 		// Fonction qui affiche tous les logs de la base de données, à terme elle devra
 		// afficher seuelement selon les filtres
 		// On veut afficher une liste de logs pour l'instant on affiche uniquement les
 		// ID et les messages
-		// On constate qu'une méthode get sur chaque log suffit à afficher le bon truc
-		// MongoClient mongoClient = new MongoClient("localhost", 27017);
-		// @SuppressWarnings("deprecation")
-		// DB db = mongoClient.getDB("logsRepository");
-		// db.logsRepository.save(new Logs(25,"Logs issus de db.logs.save"));
 		mav=recherche.filter(filter,mav);
-//		mav.addObject("logs", logsRepository.findAll());
 		mav.addObject("datebeginning", datebeginning);
 		mav.addObject("dateend", dateend);
 		mav.setViewName("listeLogs");
 		return mav;
 	}
+	
+	@GetMapping(value= "/listeLogs/afficherunLog")
+	ModelAndView afficherUnLog(ModelAndView mav, @RequestParam(value="idlog") int idlog) {
+		mav.addObject("logs", logsRepository.findOneByIdlog(idlog));
+		mav.setViewName("listeLogs");
+        return mav;
+    }
 
 	@RequestMapping(value = "/gestionBdd", method = RequestMethod.GET)
 	ModelAndView gestionBdd(ModelAndView mav) {
@@ -117,4 +124,10 @@ public class LogController{
 		mav.setViewName("gestionBdd");
 		return mav;
 	}
+	
+	@RequestMapping(value= "/parametres_recherche", method = RequestMethod.GET)
+	ModelAndView parametresRecherche(ModelAndView mav, @RequestParam(value="motifachercher", required=false) String motifachercher) {
+		return mav;
+	}
+	
 }

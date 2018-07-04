@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Description;
 import org.springframework.data.mongodb.MongoDbFactory;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
+import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
@@ -47,16 +48,11 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 	
 	CommandLineRunner commandLineRunner(LogsRepository logsRepository) {
 		return strings -> {
-//			logsRepository.save(new Logs(8, "Logs du nouveau endroit line runner"));
-//			logsRepository.save(new Logs(3, "Il devrait y avoir un log d'id 2 au dessus"));
-//			logsRepository.save(new Logs(4, "J'ajoute un log d'id 4 en ayant mis le logs repositorty autowired dans la config "));
+			logsRepository.save(new Logs("Logs du nouveau endroit line runner DEBUG  ID: 55"));
+			logsRepository.save(new Logs("Il devrait y avoir un log d'id 2 au dessus DEBUG  ID: 55"));
+			logsRepository.save(new Logs("J'ajoute un log d'id 4 en ayant mis le logs repositorty autowired dans la config INFO ID: 37"));
 		};
 	}
-//    @Override
-//    protected String getDatabaseName() {
-//        // TODO Auto-generated method stub
-//        return mongoDB;
-//    }	
 	@Bean
 	public String getRegexAgent() {
 		return ".*apache.*";

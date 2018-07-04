@@ -20,6 +20,15 @@
 	<span th:text="${dateend} ?: 'fin par défaut'"></span> est la date de
 	fin sélectionné
 	<br />
+	<form
+		th:action="@{/listeLogs/afficherUnLog(idlog=${idlog})}"
+		th:with="idlog=${idlog}"
+		method="get">
+		<!-- action="#" -->
+		Sélectionnez l'id d'une queue de log à voir en particulier <br /> <input
+			type="text" name="idlog" th:value="*{idlog}" /><br />
+		<button type="submit">afficher un Log</button>
+	</form>
 	<table>
 		<tr>
 			        <th>Id</th> 

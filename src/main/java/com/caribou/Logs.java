@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document
+@Document(collection="logsRepository")
 public class Logs {
 
 	@Id
@@ -30,7 +30,6 @@ public class Logs {
 		this.msg = msg;
 		this.idlog = this.getIdlog();
 		this.severitylvl = this.getSeverityLvl();
-
 	}
 
 	// public Integer getId() {
@@ -73,9 +72,8 @@ public class Logs {
 	}
 
 	public String getSeverityLvl() {
-		pattern = Pattern.compile("(INFO)|(DEBUG)|(ERROR)|(Exception)|(EXCEPTION)|(WARN )|(WARNING)");
+		pattern = Pattern.compile("( INFO )|( DEBUG )|( ERROR )|( Exception )|( EXCEPTION )|( WARN )|(WARNING)");
 		matcher = pattern.matcher(msg);
-
 		int debut = 0;
 		int fin = 0;
 		if (matcher.find()) {
@@ -105,5 +103,11 @@ public class Logs {
 		} else {
 			return "UNKNOWN";
 		}
+	}
+	
+	public boolean rechercheMotif(String motifachercher) {
+		pattern = Pattern.compile(motifachercher);
+		matcher = pattern.matcher(msg);
+		return matcher.find();
 	}
 }
