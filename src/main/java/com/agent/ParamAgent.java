@@ -3,6 +3,7 @@ package com.agent;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayDeque;
 import java.util.Queue;
 
 import com.agent.exchanges.GetREST;
@@ -23,12 +24,16 @@ public class ParamAgent {
 		this.tpsVieMinStock = tpsVieMinStock;
 		this.nbLignesDeSuite = nbLignesDeSuite;
 	}
-
-	public int majParam(String source) {
+	
+	public String toSend() {
+		return regexDebutLog + System.lineSeparator() + regexFinLog + System.lineSeparator() + tpsVieMinStock
+				+ System.lineSeparator() +nbLignesDeSuite;
+	}
+	
+	public int maj(String source) {
 		Queue<String> nvParam;
 		try {
-			nvParam = GetREST.getAll(new URL(source + "/getParamAgent"));
-			
+			nvParam = GetREST.getAll(new URL(source + "/getParamAgent"));		
 			if (!nvParam.isEmpty()) {
 				regexDebutLog = nvParam.poll();
 				regexFinLog = nvParam.poll();
@@ -51,6 +56,8 @@ public class ParamAgent {
 			e.printStackTrace();
 			return 3;
 		}
+		
+		System.out.println("ParamMaj : " + toString());
 
 		return 0;
 	}
@@ -86,4 +93,49 @@ public class ParamAgent {
 	public void setTpsVieMinStock(int tpsVieMinStock) {
 		this.tpsVieMinStock = tpsVieMinStock;
 	}
+
+	@Override
+	public String toString() {
+		return "ParamAgent [regexDebutLog=" + regexDebutLog + ", regexFinLog=" + regexFinLog + ", tpsVieMinStock="
+				+ tpsVieMinStock + ", nbLignesDeSuite=" + nbLignesDeSuite + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + nbLignesDeSuite;
+		result = prime * result + ((regexDebutLog == null) ? 0 : regexDebutLog.hashCode());
+		result = prime * result + ((regexFinLog == null) ? 0 : regexFinLog.hashCode());
+		result = prime * result + tpsVieMinStock;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ParamAgent other = (ParamAgent) obj;
+		if (nbLignesDeSuite != other.nbLignesDeSuite)
+			return false;
+		if (regexDebutLog == null) {
+			if (other.regexDebutLog != null)
+				return false;
+		} else if (!regexDebutLog.equals(other.regexDebutLog))
+			return false;
+		if (regexFinLog == null) {
+			if (other.regexFinLog != null)
+				return false;
+		} else if (!regexFinLog.equals(other.regexFinLog))
+			return false;
+		if (tpsVieMinStock != other.tpsVieMinStock)
+			return false;
+		return true;
+	}
+	
+
 }

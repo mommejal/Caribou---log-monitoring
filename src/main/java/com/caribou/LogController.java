@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.agent.ParamAgent;
 import com.bdd.ParametresRecherche;
 import com.bdd.Recherche;
 import com.google.gson.Gson;
@@ -30,12 +31,19 @@ import com.mongodb.Mongo;
 @EnableMongoRepositories(basePackageClasses = com.caribou.LogsRepository.class)
 @Repository
 public class LogController {
+
+	private static final String DEFAULT_STRING = "RIP_F-ZERO";
+
 	@Autowired
 	ParametresRecherche param;
 	@Autowired
 	Gson gson;
 	@Autowired
 	String regexAgent;
+
+	@Autowired
+	ParamAgent paramAgent;
+
 	@Autowired
 	LogsRepository logsRepository;
 	@Autowired
@@ -68,7 +76,9 @@ public class LogController {
 			if (i>1)
 				System.out.println("Nb d'élements dans la queue" +i);
 			logsRepository.save(new Logs(res));
+			System.out.println("-----");
 		}
+		System.out.println("--------------");
 	}
 
 	@RequestMapping(value = "/regexOutput", method = RequestMethod.GET)
@@ -81,8 +91,7 @@ public class LogController {
 		// TODO
 		return "";
 	}
-
-	public void LogsResource(LogsRepository logsRepository) {
+	public void setLogsResource(LogsRepository logsRepository) {
 		this.logsRepository = logsRepository;
 	}
 
@@ -93,7 +102,7 @@ public class LogController {
 		return mav;
 	}
 
-	@RequestMapping(value = "/listeLogs", method = RequestMethod.GET)
+	@RequestMapping(value = "/AffLogs/afficher_listes_logs", method = RequestMethod.GET)
 	@ResponseBody
 	ModelAndView listeLogs(ModelAndView mav,
 			@RequestParam(value = "selectedfilters", required = false,defaultValue="") String selectedfilters,
@@ -123,37 +132,77 @@ public class LogController {
 		}
 		mav.addObject("datebeginning", datebeginning);
 		mav.addObject("dateend", dateend);
-		mav.setViewName("listeLogs");
+		mav.setViewName("/AffLogs/afficher_listes_logs");
 		return mav;
 	}
 
-	@GetMapping(value = "/listeLogs/afficherunLog")
+	@GetMapping(value = "AffLogs/afficher_listes_logs/afficherunLog")
 	ModelAndView afficherUnLog(ModelAndView mav, @RequestParam(value = "idlog") int idlog) {
+		// Je voudrais afficher uniquement les logs qui ont cet ID
+		mav.clear();
 		mav.addObject("logs", logsRepository.findOneByIdlog(idlog));
-		mav.setViewName("listeLogs");
+		mav.setViewName("/AffLogs/afficher_listes_logs");
 		return mav;
 	}
 
-	@RequestMapping(value = "/gestionBdd", method = RequestMethod.GET)
+	@RequestMapping(value = "/technique/gestionBdd", method = RequestMethod.GET)
 	ModelAndView gestionBdd(ModelAndView mav) {
 		// Fait accéder à l'écran de gestion de la BDD
-		mav.setViewName("gestionBdd");
+		mav.setViewName("technique/gestionBdd");
 		return mav;
 	}
 
-	@RequestMapping(value = "/gestionBdd/viderBdd", method = RequestMethod.GET)
+	@RequestMapping(value = "/technique/gestionBdd/viderBdd", method = RequestMethod.GET)
 	ModelAndView viderBdd(ModelAndView mav) {
 		// EN un clic sur le bouton vide toute la BDD
 		mongo.dropDatabase(mongoDbFactory.getDb().getName());
-		mav.setViewName("gestionBdd");
+		mav.setViewName("technique/gestionBdd");
 		return mav;
 	}
 
-	@RequestMapping(value = "/parametres_recherche", method = RequestMethod.GET)
+	@RequestMapping(value = "/AffLogs/parametres_recherche", method = RequestMethod.GET)
 	ModelAndView parametresRecherche(ModelAndView mav)
 	{
 		mav.setViewName("parametres_recherche");
 		return mav;
 	}
 	
+
+	
+	@RequestMapping(value = "/agents/modifParam", method = RequestMethod.GET)
+	ModelAndView modifParam(ModelAndView mav,
+			@RequestParam(value = "regexDebut", required = false, defaultValue = DEFAULT_STRING) String regexDebut,
+			@RequestParam(value = "regexFin", required = false, defaultValue = DEFAULT_STRING) String regexFin,
+			@RequestParam(value = "tpsVieMinStock", required = false, defaultValue = DEFAULT_STRING) String tpsVieMinStock,
+			@RequestParam(value = "nbLignesLog", required = false, defaultValue = DEFAULT_STRING) String nbLignesLog) {
+		
+		int oldHashCode = paramAgent.hashCode();
+		
+		if (!regexDebut.equals(DEFAULT_STRING))
+			paramAgent.setRegexDebutLog(regexDebut);
+		if (!regexFin.equals(DEFAULT_STRING))
+			paramAgent.setRegexFinLog(regexFin);
+		
+		
+		try {
+			paramAgent.setTpsVieMinStock(Integer.parseInt(tpsVieMinStock));
+			paramAgent.setNbLignesDeSuite(Integer.parseInt(nbLignesLog));
+			mav.addObject("error_message","");
+			
+		} catch (Exception e){
+			if (!tpsVieMinStock.equals(DEFAULT_STRING) || !nbLignesLog.equals(DEFAULT_STRING))
+				mav.addObject("error_message","Les valeurs entrÃ©es ne sont pas toutes correctes");
+			else
+				mav.addObject("error message","");
+		}
+		
+		mav.addObject("changement",oldHashCode != paramAgent.hashCode());
+		
+		mav.addObject("regexDebut", paramAgent.getRegexDebutLog());
+		mav.addObject("regexFin", paramAgent.getRegexFinLog());
+		mav.addObject("tpsVieMinStock", paramAgent.getTpsVieMinStock());
+		mav.addObject("nbLignesLog", paramAgent.getNbLignesDeSuite());
+		mav.setViewName("agents/modifParam");
+		return mav;
+	}
 }

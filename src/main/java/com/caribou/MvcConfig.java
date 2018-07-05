@@ -15,6 +15,7 @@ import org.thymeleaf.spring5.SpringTemplateEngine;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
+import com.agent.ParamAgent;
 import com.bdd.ParametresRecherche;
 import com.bdd.Recherche;
 import com.google.gson.Gson;
@@ -24,6 +25,10 @@ import com.mongodb.Mongo;
 @EnableMongoRepositories(basePackageClasses = LogsRepository.class)
 @Configuration
 public class MvcConfig extends WebMvcConfigurerAdapter {
+
+	private static final String regexDebutLogDefault = "^\\d?\\d:\\d\\d:\\d\\d";
+
+	private static final String regexFinLogDefault = "";
 
 	@Autowired
 	LogsRepository logsRepository;
@@ -58,6 +63,13 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 			logsRepository.save(new Logs("J'ajoute un log d'id 4 en ayant mis le logs repositorty autowired dans la config INFO ID: 37"));
 		};
 	}
+	
+	@Bean
+	public ParamAgent paramAgent() {
+		ParamAgent res = new ParamAgent(regexDebutLogDefault, regexFinLogDefault, 3000, 1000);
+		return res;
+	}
+
 	@Bean
 	public String getRegexAgent() {
 		return ".*apache.*";
