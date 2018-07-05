@@ -8,7 +8,7 @@
 <body>
 	MENU DE SELECTION DES PARAMETRES DE RECHERCHE
 	<form
-		th:action="@{/afficher_listes_logs(selectedfilters=${selectedfilters},selectedseveritylvls=${selectedseveritylvls},selectedregexps=${selectedregexps},detectiondate=${detectiondate},detectionidlog=${detectionidlog},agent=${agent},datebeginning=${datebeginning},dateend=${dateend})}"
+		th:action="@{/AffLogs/afficher_listes_logs(selectedfilters=${selectedfilters},selectedseveritylvls=${selectedseveritylvls},selectedregexps=${selectedregexps},detectiondate=${detectiondate},detectionidlog=${detectionidlog},agent=${agent},datebeginning=${datebeginning},dateend=${dateend})}"
 		th:with="selectedfilters=${selectedfilters},selectedseveritylvls=${selectedseveritylvls},selectedregexps=${selectedregexps},detectiondate=${detectiondate},detectionidlog=${detectionidlog},agent=${agent},datebeginning=${datebeginning},dateend=${dateend}"
 		method="get">
 		<!-- action="#" -->

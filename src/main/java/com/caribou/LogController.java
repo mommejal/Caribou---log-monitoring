@@ -121,13 +121,14 @@ public class LogController {
 		mav.clear();
 		param.setSelectedfilters(Arrays.asList(selectedfilters.split("\\,")));
 		param.setSelectedregexps(Arrays.asList(selectedregexps.split("\\,")));
+		param.setSelectedseveritylvls(Arrays.asList(selectedseveritylvls.split("\\,")));
 		for (String filt : param.getSelectedfilters()) {
 			if (filt.equals("regexpFilter")) {
 				for (String regexp : param.getSelectedregexps()){
 					recherche.filterByRegex(regexp, mav);
 				}
 			} else {
-				mav = recherche.filter(filt, mav);
+				mav = recherche.filter(filt, mav, param.getSelectedseveritylvls());
 			}
 		}
 		mav.addObject("datebeginning", datebeginning);
@@ -136,11 +137,11 @@ public class LogController {
 		return mav;
 	}
 
-	@GetMapping(value = "AffLogs/afficher_listes_logs/afficherunLog")
+	@GetMapping(value = "/AffLogs/afficher_listes_logs/afficherunLog")
 	ModelAndView afficherUnLog(ModelAndView mav, @RequestParam(value = "idlog") int idlog) {
 		// Je voudrais afficher uniquement les logs qui ont cet ID
 		mav.clear();
-		mav.addObject("logs", logsRepository.findOneByIdlog(idlog));
+		mav.addObject("logs", logsRepository.findLogsByIdlog(idlog));
 		mav.setViewName("/AffLogs/afficher_listes_logs");
 		return mav;
 	}
@@ -156,6 +157,7 @@ public class LogController {
 	ModelAndView viderBdd(ModelAndView mav) {
 		// EN un clic sur le bouton vide toute la BDD
 		mongo.dropDatabase(mongoDbFactory.getDb().getName());
+		System.out.println("SUPPPRESSION DE LA BDD");
 		mav.setViewName("technique/gestionBdd");
 		return mav;
 	}
@@ -163,7 +165,7 @@ public class LogController {
 	@RequestMapping(value = "/AffLogs/parametres_recherche", method = RequestMethod.GET)
 	ModelAndView parametresRecherche(ModelAndView mav)
 	{
-		mav.setViewName("parametres_recherche");
+		mav.setViewName("AffLogs/parametres_recherche");
 		return mav;
 	}
 	
@@ -197,7 +199,6 @@ public class LogController {
 		}
 		
 		mav.addObject("changement",oldHashCode != paramAgent.hashCode());
-		
 		mav.addObject("regexDebut", paramAgent.getRegexDebutLog());
 		mav.addObject("regexFin", paramAgent.getRegexFinLog());
 		mav.addObject("tpsVieMinStock", paramAgent.getTpsVieMinStock());

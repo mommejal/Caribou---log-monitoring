@@ -3,19 +3,16 @@ package com.caribou;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.springframework.core.annotation.Order;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-
-
-@Document(collection="logsRepository")
+@Document//(collection = "logsRepository")
 public class Logs {
 
 	@Id
 	private String _id;
 	private String agent;
-//	@Order
+	// @Order
 	private String date;
 	@SuppressWarnings("unused")
 	private Integer idlog;
@@ -24,18 +21,20 @@ public class Logs {
 	private String severitylvl;
 	private static Pattern pattern;
 	private static Matcher matcher;
+	private  boolean dateflag;
 
 	// public Logs(Integer idlog, String msg) {
 	// super();
 	// this.idlog = idlog;
 	// this.msg = msg;
 	// }
-	
+
 	public Logs(String msg) {
 		// super();
 		this.msg = msg;
 		this.idlog = this.getIdlog();
 		this.severitylvl = this.getSeverityLvl();
+		this.dateflag = true;
 		this.date = this.getDate();
 	}
 
@@ -104,22 +103,32 @@ public class Logs {
 
 	public String getDate() {
 		// Detecte la date de type heure:minute:seconde.millisecondes
-		pattern = Pattern.compile("[0-9\\[][0-9]:[0-9][0-9]:[0-9][0-9][.,][0-9][0-9][0-9]");
-		matcher = pattern.matcher(msg);
-		int debut = 0;
-		int fin = 0;
-		if (matcher.find()) {
-			debut = matcher.start();
-			fin = matcher.end();
-			if (msg.charAt(debut) == '[') {
-				debut = debut + 1;
+		if (dateflag) {
+			pattern = Pattern.compile("[0-9\\[][0-9]:[0-9][0-9]:[0-9][0-9][.,][0-9][0-9][0-9]");
+			matcher = pattern.matcher(msg);
+			int debut = 0;
+			int fin = 0;
+			dateflag = false;
+			if (matcher.find()) {
+				debut = matcher.start();
+				fin = matcher.end();
+				if (msg.charAt(debut) == '[') {
+					debut = debut + 1;
+				}
+				return msg.substring(debut, fin);
+			} else {
+				return "UNKNOWN";
 			}
-			return msg.substring(debut, fin);
 		} else {
-			return "UNKNOWN";
+			return date;
+
 		}
 	}
-	
+
+	public void setDate(String input) {
+		date = input;
+	}
+
 	public boolean rechercheMotif(String motifachercher) {
 		pattern = Pattern.compile(motifachercher);
 		matcher = pattern.matcher(msg);

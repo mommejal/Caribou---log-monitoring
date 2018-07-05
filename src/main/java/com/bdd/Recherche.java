@@ -8,7 +8,6 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.caribou.Logs;
 import com.caribou.LogsRepository;
 import com.mongodb.Mongo;	
 
@@ -55,12 +54,13 @@ public class Recherche{
 		return mav;
 	}
 	
-	public ModelAndView filter(String filter, ModelAndView mav) {
+	public ModelAndView filter(String filter, ModelAndView mav, List<String> selectedseveritylvls) {
 		mav.addObject("filter", filter);
 		System.out.println(filter);
 		if (filter.equals("severityLvlFilter")) {
-			String severitylvl = "DEBUG";
-			return filterBySeverityLvl(severitylvl,mav);
+			for (String severitylvl : selectedseveritylvls)
+				mav=filterBySeverityLvl(severitylvl,mav);
+			return mav;
 		}
 		else {
 			return noFilter(mav);
