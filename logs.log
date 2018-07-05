@@ -16912,3 +16912,328 @@ Payload: {
           "xParameter" : "133.0"
         }, {
           "type" : "com.vermeg.projection.api.input.FactorTableElement",
+        "summary" : false,
+      "ruleOrder" : 26
+    }, {
+      "type" : "com.vermeg.projection.api.input.ProjectionCalculationRule",
+        "scope" : "Investment-1|Global",
+      "projectionInput$order" : 27,
+        "form$order" : 4,
+      "expression" : "if(isEndDate) {\nvar reserveAtTerm = vPSEndPeriod + vMainEndPeriod;\nreturn reserveAtTerm ;\n}\nreturn 0;",
+      "displayed" : true,
+        "mandatory" : false,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daOverrideBeginDate|Investment-1|Global",
+      "resultType" : "EndReserveTotBeforeTax",
+      "identifier" : "reserveAtTermBeforeTax",
+        "label" : "overrideBeginDate",
+      "ruleOrder" : 27
+        "identifier" : "daOverrideBeginDate",
+    }, {
+        "editable" : true,
+        "answer" : {
+          "type" : "com.Answer"
+        }
+      "type" : "com.vermeg.projection.api.input.ProjectionCalculationRule",
+      }, {
+        "type" : "com.Question",
+      "projectionInput$order" : 28,
+      "expression" : "importPackage(com.vermeg.salesflow.projection.output.model);\nimportPackage(com.vermeg.salesflow.projection.code);\nif (isEndDate) {\n    var result = new java.util.ArrayList();\n\n    var taxesOnMain = 0.0;\n\n    var taxInputs = input.packageInput.taxInputs\n    for (j = 0; j < taxInputs.size(); j++) {\n        var taxInput = taxInputs.get(j);\n        if (taxInput.taxType == \"APPLY_ON_TOTAL_RESERVE_AT_TERM\") {\n        \tvar taxOnMain = +(vMainEndPeriod * taxInput.rate).toFixed(2) + taxInput.taxAmount;\n            taxesOnMain += taxOnMain;\n            result.add(new TaxValue(TaxType.APPLY_ON_MAIN_RESERVE_AT_TERM, taxInput.getDescription()+\"_taxOnMain\", taxOnMain));\n\n            var taxOnPS = +(vPSEndPeriod * taxInput.rate).toFixed(2) + taxInput.taxAmount;\n            result.add(new TaxValue(TaxType.APPLY_ON_PS_RESERVE_AT_TERM, taxInput.getDescription()+\"_taxOnPS\", taxOnPS) );\n\n        }\n    }\n\n    for (j = 0; j < taxInputs.size(); j++) {\n        var taxInput = taxInputs.get(j);\n        if (taxInput.taxType == \"APPLY_ON_MAIN_RESERVE_AT_TERM\") {\n        \tvar taxOnMain = +((vMainEndPeriod - taxesOnMain) * taxInput.rate).toFixed(2) + taxInput.taxAmount\n            result.add(new TaxValue(TaxType.APPLY_ON_MAIN_RESERVE_AT_TERM, taxInput.getDescription()+\"_taxOnMain\", taxOnMain));\n        }\n    }\n\n    return result;\n}",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 5,
+      "displayed" : true,
+        "mandatory" : true,
+      "resultType" : "TaxAtTerm",
+        "answerType" : "Date",
+      "identifier" : "taxesAtTerm",
+      "ruleOrder" : 28
+        "definitionIdentifier" : "daRidersBeginDate|Investment-1|Global",
+    }, {
+        "label" : "daRidersBeginDate",
+      "type" : "com.vermeg.projection.api.input.ProjectionCalculationRule",
+        "identifier" : "daRidersBeginDate",
+        "editable" : false,
+      "projectionInput$order" : 29,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+      "expression" : "if(isEndDate)  {\nvar reserveAtTerm = vPSEndPeriod + vMainEndPeriod;\n\n    var taxInputs = input.packageInput.taxInputs\n    var taxes = 0.0;\n\n    for(var j=0; j<taxesAtTerm.size(); j++){\n        var taxAtTerm= taxesAtTerm.get(j);\n        taxes += +taxAtTerm.getAmount();\n    }\n\n    var result = reserveAtTerm - taxes;\n    console.println(\"AXA-EIP_1310_FISCAL_OPT----------------------------- reserveAtTerm after Tax: \"+ result);\n    return result;\n}",
+          "expression" : "false",
+      "displayed" : true,
+          "behaviorImpact" : "VISIBLE"
+        } ],
+      "resultType" : "EndReserveTotAfterTax",
+      "identifier" : "reserveAtTermAfterTax",
+      "ruleOrder" : 29
+        "answer" : {
+    } ],
+          "type" : "com.Answer",
+          "answerValue" : "2018-06-11"
+        }
+      }, {
+    "packageInput" : {
+      "type" : "com.vermeg.projection.api.input.PackageInput",
+      "productId" : "AXA-EIP_1310",
+        "type" : "com.Question",
+        "summary" : false,
+      "taxInput" : [ {
+        "scope" : "Investment-1|Global",
+        "type" : "com.vermeg.projection.api.input.TaxInput",
+        "taxAmount" : 0.0,
+        "form$order" : 6,
+        "rate" : 0.0,
+        "description" : "Inami Tax",
+        "mandatory" : true,
+        "taxType" : "applyOnTotalReserveAtTerm"
+      }, {
+        "answerType" : "Date",
+        "type" : "com.vermeg.projection.api.input.TaxInput",
+        "definitionIdentifier" : "daBeginDate|Investment-1|Global",
+        "taxAmount" : 0.0,
+        "label" : "Date effet",
+        "rate" : 0.044,
+        "identifier" : "daBeginDate",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+        "description" : "Tax on Yearly Premium",
+        "taxType" : "applyOnYearlyPremium"
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+      }, {
+        } ],
+        "type" : "com.vermeg.projection.api.input.TaxInput",
+        "answer" : {
+          "type" : "com.Answer",
+        "taxAmount" : 0.0,
+          "answerValue" : "2018-06-11"
+        }
+      }, {
+        "rate" : 0.044,
+        "type" : "com.Question",
+        "description" : "Tax on Unique Premium",
+        "summary" : false,
+        "taxType" : "applyOnUniquePremium"
+        "scope" : "Investment-1|Global",
+        "form$order" : 7,
+      }, {
+        "type" : "com.vermeg.projection.api.input.TaxInput",
+        "taxAmount" : 0.0,
+        "mandatory" : true,
+        "rate" : 0.0,
+        "answerType" : "Date",
+        "description" : "Social Tax",
+        "definitionIdentifier" : "daReferenceDate|Investment-1|Global",
+        "label" : "Fiscal period reference date",
+        "identifier" : "daReferenceDate",
+        "taxType" : "applyOnTotalReserveAtTerm"
+        "editable" : false,
+        "behaviorExpressions" : [ {
+      }, {
+        "type" : "com.vermeg.projection.api.input.TaxInput",
+          "type" : "com.BehaviorExpression",
+        "taxAmount" : 0.0,
+        "rate" : 0.0,
+          "expression" : "false",
+        "description" : "Term Tax",
+        "taxType" : "applyOnMainReserveAtTerm"
+          "behaviorImpact" : "VISIBLE"
+        } ],
+      } ],
+      "riskInput" : [ {
+        "answer" : {
+        "type" : "com.vermeg.projection.api.input.RiskInput",
+        "rate" : 0.0,
+          "type" : "com.Answer",
+        "riskId" : "RSK_DEATH_INV_COMPLEMENT_AXA",
+          "answerValue" : "2019-01-01"
+        "description" : "Death risk premium",
+        "feeAmount" : 0.0,
+        }
+        "factorTableName" : "Qx_NotSmoker_Smoker_Charged",
+      }, {
+        "sARType" : "basedOnTotalCapital",
+        "type" : "com.Question",
+        "summary" : false,
+        "personParam" : [ {
+        "scope" : "Investment-1|Global",
+          "type" : "com.vermeg.projection.api.input.PersonParam",
+          "smokerParam" : false,
+        "form$order" : 8,
+          "birthDateParam" : "01/01/1980T00:00:00.000+0100"
+        "mandatory" : true,
+        "answerType" : "Amount",
+        } ],
+        "definitionIdentifier" : "refIncome|Investment-1|Global",
+        "factorTableElement" : [ {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+        "label" : "Revenu professionnel annuel brut de l'assuré",
+        "identifier" : "refIncome",
+          "factorValue" : 0.00241364954993051,
+          "yParameter" : "1.0",
+        "editable" : true,
+          "xParameter" : "379.0"
+        "answer" : {
+          "type" : "com.Answer",
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "answerValue" : "50000"
+          "factorValue" : 0.00177412875917571,
+        }
+          "yParameter" : "0.0",
+          "xParameter" : "110.0"
+      }, {
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+        "type" : "com.Question",
+          "factorValue" : 0.00200971738633016,
+        "summary" : false,
+        "scope" : "Global",
+          "yParameter" : "1.0",
+        "form$order" : 9,
+        "mandatory" : false,
+        "answerType" : "Amount",
+          "xParameter" : "37.0"
+        "definitionIdentifier" : "amtInternalProvision4BS|null|Global",
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+        "label" : "Provision interne transférée (pour Backservice)",
+        "identifier" : "amtInternalProvision4BS",
+          "factorValue" : 0.90079594007412,
+        "editable" : true,
+          "yParameter" : "0.0",
+        "answer" : {
+          "xParameter" : "1332.0"
+          "type" : "com.Answer",
+          "answerValue" : "1000"
+        }
+        }, {
+      }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00182293167247538,
+          "yParameter" : "0.0",
+        "type" : "com.Question",
+        "summary" : false,
+          "xParameter" : "230.0"
+        }, {
+        "scope" : "Investment-1|Global",
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+        "form$order" : 10,
+        "mandatory" : true,
+          "factorValue" : 0.00255168754258606,
+        "answerType" : "String",
+          "yParameter" : "0.0",
+        "definitionIdentifier" : "FREQUENCY|Investment-1|Global",
+          "xParameter" : "491.0"
+        "label" : "Périodicité",
+        }, {
+        "identifier" : "FREQUENCY",
+        "editable" : true,
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+        "behaviorExpressions" : [ {
+          "factorValue" : 0.995017425654647,
+          "type" : "com.BehaviorExpression",
+          "yParameter" : "0.0",
+          "expression" : "true",
+          "xParameter" : "1436.0"
+          "expressionOrder" : 0,
+          "behaviorImpact" : "possibleValues",
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "possibleValues" : [ {
+            "type" : "com.Answer",
+          "factorValue" : 0.00505324368555515,
+          "yParameter" : "1.0",
+          "xParameter" : "593.0"
+            "behaviorExpression$order" : 0,
+        }, {
+            "answerValue" : "ANN"
+          }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+            "type" : "com.Answer",
+          "factorValue" : 0.658914020252848,
+            "behaviorExpression$order" : 1,
+          "yParameter" : "0.0",
+          "xParameter" : "1259.0"
+            "answerValue" : "QUA"
+          }, {
+        }, {
+            "type" : "com.Answer",
+            "behaviorExpression$order" : 2,
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+            "answerValue" : "MON"
+          } ]
+        } ],
+          "factorValue" : 0.0199510452353504,
+          "yParameter" : "1.0",
+          "xParameter" : "788.0"
+        "answer" : {
+        }, {
+          "type" : "com.Answer",
+          "label" : "Annuelle",
+          "answerValue" : "ANN"
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+        }
+          "factorValue" : 0.995017425654647,
+          "yParameter" : "0.0",
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+          "xParameter" : "1433.0"
+        "scope" : "Investment-1|Global",
+        }, {
+        "form$order" : 11,
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.87455446331594,
+        "mandatory" : true,
+        "answerType" : "String",
+          "yParameter" : "0.0",
+        "definitionIdentifier" : "strIssuingMonthInit|Investment-1|Global",
+          "xParameter" : "1327.0"
+        "label" : "initialIssuingMonth",
+        "identifier" : "strIssuingMonthInit",
+        "editable" : false,
+        }, {
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00181517089978456,
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+          "yParameter" : "0.0",
+        "answer" : {
+          "xParameter" : "227.0"
+        }, {
+          "type" : "com.Answer",
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "label" : "Juin",
+          "answerValue" : "JUN"
+          "factorValue" : 0.00383112910548289,
+          "yParameter" : "0.0",
+        }
+          "xParameter" : "591.0"
+      }, {
+        "type" : "com.Question",
+        }, {
+        "summary" : false,
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+        "scope" : "Investment-1|Global",
+          "factorValue" : 0.00200789461234552,
+        "form$order" : 12,
+          "yParameter" : "1.0",
+        "mandatory" : true,
+          "xParameter" : "34.0"
+        }, {
+        "answerType" : "String",
+        "definitionIdentifier" : "eMonth|Investment-1|Global",
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.699370204224099,
+        "label" : "Echéance",
+          "yParameter" : "0.0",
+        "identifier" : "eMonth",
+          "xParameter" : "1262.0"
+        "editable" : true,
+        "answer" : {
+        }, {
+          "type" : "com.Answer",
