@@ -3,14 +3,20 @@ package com.caribou;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.springframework.core.annotation.Order;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+
 
 @Document(collection="logsRepository")
 public class Logs {
 
 	@Id
 	private String _id;
+	private String agent;
+	@Order
+	private String date;
 	@SuppressWarnings("unused")
 	private Integer idlog;
 	private String msg;
@@ -24,17 +30,26 @@ public class Logs {
 	// this.idlog = idlog;
 	// this.msg = msg;
 	// }
-
+	
 	public Logs(String msg) {
 		// super();
 		this.msg = msg;
 		this.idlog = this.getIdlog();
 		this.severitylvl = this.getSeverityLvl();
+		this.date = this.getDate();
 	}
 
 	// public Integer getId() {
 	// return id;
 	// }
+
+	public String getAgent() {
+		return agent;
+	}
+
+	public void setAgent(String agent) {
+		this.agent = agent;
+	}
 
 	public Integer getIdlog() {
 

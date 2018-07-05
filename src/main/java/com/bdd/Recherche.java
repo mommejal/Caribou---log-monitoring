@@ -1,11 +1,14 @@
 package com.bdd;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.MongoDbFactory;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.caribou.Logs;
 import com.caribou.LogsRepository;
 import com.mongodb.Mongo;	
 
@@ -24,6 +27,7 @@ public class Recherche{
 	}
 	
 	public ModelAndView noFilter(ModelAndView mav) {
+
 		mav.addObject("logs", logsRepository.findAll());
 		return mav;
 	}
@@ -46,11 +50,16 @@ public class Recherche{
 		return mav;
 	}
 	
+	public ModelAndView filterByRegex(String regexp, ModelAndView mav) {
+		mav.addObject("logs",logsRepository.findLogsByRegexpMsg(regexp));
+		return mav;
+	}
+	
 	public ModelAndView filter(String filter, ModelAndView mav) {
 		mav.addObject("filter", filter);
 		System.out.println(filter);
 		if (filter.equals("severityLvlFilter")) {
-			String severitylvl = "DEBUG"; // A changer pour récupérer le parametre de Corentin
+			String severitylvl = "DEBUG";
 			return filterBySeverityLvl(severitylvl,mav);
 		}
 		else {

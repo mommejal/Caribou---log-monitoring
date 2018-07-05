@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="default">
+<head>
+<title>Gestion des parametres de recherche</title>
+</head>
+<body>
+	MENU DE SELECTION DES PARAMETRES DE RECHERCHE
+	<form
+		th:action="@{/listeLogs(selectedfilters=${selectedfilters},selectedseveritylvls=${selectedseveritylvls},selectedregexps=${selectedregexps},detectiondate=${detectiondate},detectionidlog=${detectionidlog},agent=${agent},datebeginning=${datebeginning},dateend=${dateend})}"
+		th:with="selectedfilters=${selectedfilters},selectedseveritylvls=${selectedseveritylvls},selectedregexps=${selectedregexps},detectiondate=${detectiondate},detectionidlog=${detectionidlog},agent=${agent},datebeginning=${datebeginning},dateend=${dateend}"
+		method="get">
+		<!-- action="#" -->
+		Veuillez sélectionnez les filtres à appliquer aux logs <select
+			size="5" name="selectedfilters" multiple="multiple">
+			<option selected="selected" value="noFilter">noFilter</option>
+			<option value="dateFilter">dateFilter</option>
+			<option value="severityLvlFilter">severityFilter</option>
+			<option value="hostnameFilter">hostnameFilter</option>
+			<option value="regexpFilter">regexpFilter</option>
+		</select> <br /> <br />
+		Choisissez l'expression régulière à utiliser pour rechercher le Severity Lvl en cas de SeverityLvlFilter,les séparer par des \, <input 
+			type="text" name="selectedseveritylvls" th:value="*{selectedseveritylvls}" /><br /> 
+		Selectionnez les expressions régulières à rechercher dans les Logs, les séparer \, <br />
+		<input 
+			type="text" name="selectedregexps" th:value="*{selectedregexps}" /><br /> 
+		Ecrire l'expression régulière pour détecter la date <br /> <input
+			type="text" name="detectiondate" th:value="*{detectiondate}" /><br />
+		Ecrire l'expression régulière pour détecter les ID du Log <br /> <input
+			type="text" name="detectionidlog" th:value="*{detectionidlog}" /><br />
+		Veuillez choisir quels agents vous souhaitez voir à séparer avec \,<br /> <input
+			type="text" name="agent" th:value="*{agent}" /> <br />
+		Veuillez choisir la date de début de la recherche <br /> <input
+			type="text" name="datebeginning" th:value="*{datebeginning}" /><br />
+		Veuillez choisir la date de fin de la recherche <br /> <input
+			type="text" id="dateend" name="dateend" th:value="*{dateend}" /> <br />
+		<button type="submit">Mettre à jour les paramètres</button>
+	</form>
+
+</body>
+</html>

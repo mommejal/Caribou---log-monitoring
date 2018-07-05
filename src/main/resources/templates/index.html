@@ -14,10 +14,12 @@
 
 	</div>
 	<form
-		th:action="@{/listeLogs(filter=${filter},datebeginning=${datebeginning},sdateend=${dateend})}"
-		th:with="filter=${filter}, datebeginning=${datebeginning}, dateend=${dateend}"
+		th:action="@{/listeLogs(filter=${filter},datebeginning=${datebeginning},dateend=${dateend},regexp=${regexp})}"
+		th:with="filter=${filter}, datebeginning=${datebeginning}, dateend=${dateend}, regexp=${regexp}"
 		method="get">
 		<!-- action="#" -->
+		Veuillez choisir une regexp à chercher à l'intérieur du log  <br /> <input
+			type="text" name="regexp" th:value="*{regexp}" /><br />
 		Veuillez choisir la date de début de la recherche <br /> <input
 			type="text" name="datebeginning" th:value="*{datebeginning}" /><br />
 		Veuillez choisir la date de fin de la recherche <br /> <input
@@ -28,6 +30,7 @@
 			<option value="dateFilter">dateFilter</option>
 			<option value="severityLvlFilter">severityFilter</option>
 			<option value="hostnameFilter">hostnameFilter</option>
+			<option value="regexpFilter">regexpFilter</option>
 		</select> <br />
 		<button type="submit">Veuillez choisir le type de filtre
 			voulu</button>

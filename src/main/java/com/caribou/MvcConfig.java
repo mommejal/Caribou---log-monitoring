@@ -7,7 +7,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Description;
 import org.springframework.data.mongodb.MongoDbFactory;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
-import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
@@ -16,6 +15,7 @@ import org.thymeleaf.spring5.SpringTemplateEngine;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
+import com.bdd.ParametresRecherche;
 import com.bdd.Recherche;
 import com.google.gson.Gson;
 import com.mongodb.Mongo;
@@ -27,10 +27,15 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 
 	@Autowired
 	LogsRepository logsRepository;
+
 	
 	@Autowired Mongo mongo;
 	@Autowired MongoDbFactory mongoDbFactory;
-
+	
+	@Bean
+	public ParametresRecherche getParametresRecherche() {
+		return new ParametresRecherche();
+	}
 	@Bean
 	public ModelAndView getModelAndView()
 	{
