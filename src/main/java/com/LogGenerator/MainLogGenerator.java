@@ -8,7 +8,7 @@ import java.io.IOException;
 public class MainLogGenerator {
 
 	public static void main(String[] args) {
-		File fileInput = new File("server.log");
+		File fileInput = new File("server4.log");
 	    File fileOutput = new File("logs.log");
 		FileReader fr;
 		FileWriter fw;
@@ -26,7 +26,7 @@ public class MainLogGenerator {
 	    		Thread.sleep((long) (10*Math.random())); //10 = nombre de ms max entre chaque ligne
 	    		str = readLine(fr);
 	    		System.out.println("j'écris :" + str);
-	    		if (str=="")
+	    		if (str==null) //null permet de lire le ficheir meme en cas de saut de ligne en recanche la lecture ne s'arrete jamaais
 	    			t = false;
 	    		else {
 	    			fw = new FileWriter(fileOutput,true);

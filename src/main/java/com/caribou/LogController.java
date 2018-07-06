@@ -76,9 +76,9 @@ public class LogController {
 			if (i>1)
 				System.out.println("Nb d'élements dans la queue" +i);
 			logsRepository.save(new Logs(res));
-			System.out.println("-----");
+//			System.out.println("-----");
 		}
-		System.out.println("--------------");
+//		System.out.println("--------------");
 	}
 
 	@RequestMapping(value = "/regexOutput", method = RequestMethod.GET)
@@ -107,7 +107,7 @@ public class LogController {
 	ModelAndView listeLogs(ModelAndView mav,
 			@RequestParam(value = "selectedfilters", required = false,defaultValue="") String selectedfilters,
 			@RequestParam(value = "selectedseveritylvls", required = false,defaultValue="") String selectedseveritylvls,
-			@RequestParam(value = "selectedregexsps", required = false,defaultValue="") String selectedregexps,
+			@RequestParam(value = "selectedregexp", required = false,defaultValue="") String selectedregexp,
 			@RequestParam(value = "detectiondate", required = false,defaultValue="") String detectiondate,
 			@RequestParam(value = "detectionidlog", required = false,defaultValue="") String detectionidlog,
 			@RequestParam(value = "agent", required = false,defaultValue="") String agent,
@@ -119,18 +119,10 @@ public class LogController {
 		// On veut afficher une liste de logs pour l'instant on affiche uniquement les
 		// ID et les messages
 		mav.clear();
-		param.setSelectedfilters(Arrays.asList(selectedfilters.split("\\,")));
-		param.setSelectedregexps(Arrays.asList(selectedregexps.split("\\,")));
+		param.setSelectedfilters(Arrays.asList(selectedfilters.split(",")));
 		param.setSelectedseveritylvls(Arrays.asList(selectedseveritylvls.split("\\,")));
-		for (String filt : param.getSelectedfilters()) {
-			if (filt.equals("regexpFilter")) {
-				for (String regexp : param.getSelectedregexps()){
-					recherche.filterByRegex(regexp, mav);
-				}
-			} else {
-				mav = recherche.filter(filt, mav, param.getSelectedseveritylvls());
-			}
-		}
+		param.setSelectedregexp(selectedregexp);
+		mav = recherche.filter(mav,param);
 		mav.addObject("datebeginning", datebeginning);
 		mav.addObject("dateend", dateend);
 		mav.setViewName("/AffLogs/afficher_listes_logs");
@@ -155,7 +147,7 @@ public class LogController {
 
 	@RequestMapping(value = "/technique/gestionBdd/viderBdd", method = RequestMethod.GET)
 	ModelAndView viderBdd(ModelAndView mav) {
-		// EN un clic sur le bouton vide toute la BDD
+		// En un clic sur le bouton vide toute la BDD
 		mongo.dropDatabase(mongoDbFactory.getDb().getName());
 		System.out.println("SUPPPRESSION DE LA BDD");
 		mav.setViewName("technique/gestionBdd");

@@ -21,21 +21,13 @@ public class Logs {
 	private String severitylvl;
 	private static Pattern pattern;
 	private static Matcher matcher;
-	private  boolean dateflag;
-
-	// public Logs(Integer idlog, String msg) {
-	// super();
-	// this.idlog = idlog;
-	// this.msg = msg;
-	// }
 
 	public Logs(String msg) {
 		// super();
 		this.msg = msg;
-		this.idlog = this.getIdlog();
-		this.severitylvl = this.getSeverityLvl();
-		this.dateflag = true;
-		this.date = this.getDate();
+//		setIdlog();
+		setSeverityLvl();
+		setDate();
 	}
 
 	// public Integer getId() {
@@ -50,12 +42,11 @@ public class Logs {
 		this.agent = agent;
 	}
 
-	public Integer getIdlog() {
+	public void setIdlog() {
 
 		pattern = Pattern.compile("(?:(?s).*)-{10,}\r\nID: ");
 		matcher = pattern.matcher(msg);
 		if (matcher.find()) {
-
 			int debut = matcher.end();
 			pattern = Pattern.compile("(?s).*------\r\nID: [0-9]*\r\n");
 			matcher = pattern.matcher(msg);
@@ -63,18 +54,14 @@ public class Logs {
 			int fin = matcher.end();
 			String res = new String();
 			res = msg.substring(debut, fin);
-			return Integer.parseInt(res);
+			this.idlog = Integer.parseInt(res);
 		} else {
-			return 0;
+			this.idlog = 0;
 		}
 	}
 
 	public void setIdlog(Integer idlog) {
 		this.idlog = idlog;
-	}
-
-	public void setSeveritylvl(String input) {
-		this.severitylvl = input;
 	}
 
 	public String getMsg() {
@@ -86,7 +73,11 @@ public class Logs {
 	}
 
 	public String getSeverityLvl() {
-		pattern = Pattern.compile("( INFO )|( DEBUG )|( ERROR )|( Exception )|( EXCEPTION )|( WARN )|(WARNING)");
+		return severitylvl;
+	}
+
+	public void setSeverityLvl() {
+		pattern = Pattern.compile("( INFO )|( DEBUG )|( ERROR )|( WARN )");
 		matcher = pattern.matcher(msg);
 		int debut = 0;
 		int fin = 0;
@@ -95,38 +86,32 @@ public class Logs {
 			fin = matcher.end();
 			String res = new String();
 			res = msg.substring(debut, fin);
-			return res;
+			this.severitylvl=res;
 		} else {
-			return "UNKNOWN";
+			this.severitylvl="UNKNOWN";
 		}
 	}
 
-	public String getDate() {
+	public void setDate() {
 		// Detecte la date de type heure:minute:seconde.millisecondes
-		if (dateflag) {
 			pattern = Pattern.compile("[0-9\\[][0-9]:[0-9][0-9]:[0-9][0-9][.,][0-9][0-9][0-9]");
 			matcher = pattern.matcher(msg);
 			int debut = 0;
 			int fin = 0;
-			dateflag = false;
 			if (matcher.find()) {
 				debut = matcher.start();
 				fin = matcher.end();
 				if (msg.charAt(debut) == '[') {
 					debut = debut + 1;
 				}
-				return msg.substring(debut, fin);
+				this.date = msg.substring(debut, fin);
 			} else {
-				return "UNKNOWN";
-			}
-		} else {
-			return date;
-
+				this.date = "UNKNOWN";
 		}
 	}
 
-	public void setDate(String input) {
-		date = input;
+	public String getDate() {
+		return date;
 	}
 
 	public boolean rechercheMotif(String motifachercher) {

@@ -5,7 +5,7 @@ import java.util.List;
 public class ParametresRecherche {
 	private List<String> selectedfilters;
 	private List<String> selectedseveritylvls;
-	private List<String> selectedregexps;
+	private String selectedregexp;
 	private long datebeginning;
 	private long dateend;
 	private String detectiondate;
@@ -26,11 +26,11 @@ public class ParametresRecherche {
 	public void setSelectedseveritylvls(List<String> selectedseveritylvls) {
 		this.selectedseveritylvls = selectedseveritylvls;
 	}
-	public List<String> getSelectedregexps() {
-		return selectedregexps;
+	public String getSelectedregexp() {
+		return selectedregexp;
 	}
-	public void setSelectedregexps(List<String> selectedregexps) {
-		this.selectedregexps = selectedregexps;
+	public void setSelectedregexp(String selectedregexp) {
+		this.selectedregexp = selectedregexp;
 	}
 	public long getDatebeginning() {
 		return datebeginning;

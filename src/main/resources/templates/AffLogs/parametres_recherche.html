@@ -8,8 +8,8 @@
 <body>
 	MENU DE SELECTION DES PARAMETRES DE RECHERCHE
 	<form
-		th:action="@{/AffLogs/afficher_listes_logs(selectedfilters=${selectedfilters},selectedseveritylvls=${selectedseveritylvls},selectedregexps=${selectedregexps},detectiondate=${detectiondate},detectionidlog=${detectionidlog},agent=${agent},datebeginning=${datebeginning},dateend=${dateend})}"
-		th:with="selectedfilters=${selectedfilters},selectedseveritylvls=${selectedseveritylvls},selectedregexps=${selectedregexps},detectiondate=${detectiondate},detectionidlog=${detectionidlog},agent=${agent},datebeginning=${datebeginning},dateend=${dateend}"
+		th:action="@{/AffLogs/afficher_listes_logs(selectedfilters=${selectedfilters},selectedseveritylvls=${selectedseveritylvls},selectedregexp=${selectedregexp},detectiondate=${detectiondate},detectionidlog=${detectionidlog},agent=${agent},datebeginning=${datebeginning},dateend=${dateend})}"
+		th:with="selectedfilters=${selectedfilters},selectedseveritylvls=${selectedseveritylvls},selectedregexp=${selectedregexp},detectiondate=${detectiondate},detectionidlog=${detectionidlog},agent=${agent},datebeginning=${datebeginning},dateend=${dateend}"
 		method="get">
 		<!-- action="#" -->
 		Veuillez sélectionnez les filtres à appliquer aux logs <select
@@ -20,11 +20,12 @@
 			<option value="hostnameFilter">hostnameFilter</option>
 			<option value="regexpFilter">regexpFilter</option>
 		</select> <br /> <br />
-		Choisissez l'expression régulière à utiliser pour rechercher le Severity Lvl en cas de SeverityLvlFilter,les séparer par des \, <input 
+		Choisissez l'expression régulière à utiliser pour rechercher le Severity Lvl en cas de SeverityLvlFilter,les séparer par des \, 
+		<br/> Par ex : INFO \, DEBUG \, ERROR \, Exception \, EXCEPTION \, WARN \, WARNING <input 
 			type="text" name="selectedseveritylvls" th:value="*{selectedseveritylvls}" /><br /> 
 		Selectionnez les expressions régulières à rechercher dans les Logs, les séparer \, <br />
 		<input 
-			type="text" name="selectedregexps" th:value="*{selectedregexps}" /><br /> 
+			type="text" name="selectedregexp" th:value="*{selectedregexp}" /><br /> 
 		Ecrire l'expression régulière pour détecter la date <br /> <input
 			type="text" name="detectiondate" th:value="*{detectiondate}" /><br />
 		Ecrire l'expression régulière pour détecter les ID du Log <br /> <input

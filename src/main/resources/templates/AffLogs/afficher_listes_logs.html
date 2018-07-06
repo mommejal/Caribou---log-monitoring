@@ -12,7 +12,7 @@
 	<form action="/">
 		<input type="submit" value="Acceuil" />
 	</form>
-	<span th:text="${selectedfilters}"></span> est le filtre sélectionné
+	<!-- <span th:text="${selectedfilters.toString()}"></span> est le filtre sélectionné -->
 	<br />
 	<span th:text="${datebeginning} ?: 'début par défaut'"></span> est la
 	date de début sélectionné
@@ -31,7 +31,7 @@
 	</form>
 	<table>
 		<tr>
-			        <th>Id</th> 
+			       <!--  <th>Id</th>  -->
 	 		<th>Date</th>
 			<!--               <th>Hostname</th>
                 <th>Facility</th>-->
@@ -39,7 +39,7 @@
 			<th>MSG</th>
 		</tr>
 		<tr th:each="log : *{logs}">
-			<td th:text="${log.getIdlog()}">id</td>
+		<!-- 	<td th:text="${log.getIdlog()}">id</td> -->
  			<td th:text="${log.getDate()}">date</td>
   			<!--                <td th:text="${log.hostname}">hostname</td>
                 <td th:text="${log.facility}">facility</td>              -->
