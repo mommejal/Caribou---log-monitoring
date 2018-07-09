@@ -17,5 +17,4 @@ public class WatcherFactory {
 		} else
 			return null;
 	}
-
 }

@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.FileSystems;
 import java.nio.file.Path;
 import java.nio.file.WatchEvent;
 import java.nio.file.WatchKey;
@@ -27,14 +28,15 @@ public class MyWatcher {
 
 	protected ParamAgent param;
 
-	MyWatcher(ParamAgent param) {
-		super();
+	MyWatcher(ParamAgent param) throws IOException {
+		this.service = FileSystems.getDefault().newWatchService();
 		this.param = param;
 	}
 
 	public WatchService getService() {
 		return service;
 	}
+	
 
 	public void run() throws Exception {
 
@@ -112,9 +114,12 @@ public class MyWatcher {
 
 	public boolean connect() {
 		try {
+			System.out.println(param.getOutputPath() + "/newAgent");
+			System.out.println(param.getId());
 			PostREST.postString(param.getId(), new URL(param.getOutputPath() + "/newAgent"));
 			param.majStandard();
 		} catch (IOException exception) {
+			exception.printStackTrace();
 			return false;
 		}
 		return true;
