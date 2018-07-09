@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
-import java.nio.file.FileSystems;
 import java.nio.file.Path;
 import java.nio.file.WatchEvent;
 import java.nio.file.WatchKey;
@@ -20,23 +19,17 @@ import com.fasterxml.jackson.databind.ObjectWriter;
 
 public class MyWatcher {
 
+	protected String idAgent;
+	
 	protected WatchService service;
 	protected int lines = 0;
 	protected int characters = 0;
 
 	protected ParamAgent param;
-	protected Path logPath;
-	protected String output;
 
-	MyWatcher(Path logPath, ParamAgent paramDefault, String outputURL) throws IOException {
+	MyWatcher(ParamAgent param) {
 		super();
-		this.service = FileSystems.getDefault().newWatchService();
-		this.param = paramDefault;
-		this.logPath = logPath;
-		this.output = outputURL;
-
-		// TODO retour si echec ?
-		param.maj(output);
+		this.param = param;
 	}
 
 	public WatchService getService() {
@@ -57,7 +50,7 @@ public class MyWatcher {
 					@SuppressWarnings("unchecked")
 					WatchEvent<Path> pathEvent = (WatchEvent<Path>) event;
 					Path path = pathEvent.context();
-					if (path.equals(logPath)) {
+					if (path.equals(param.getLogPath())) {
 						try (BufferedReader in = new BufferedReader(new FileReader(pathEvent.context().toFile()))) {
 							in.skip(characters);
 
@@ -95,16 +88,16 @@ public class MyWatcher {
 										}
 									} else 
 										logs.add(message);
-								}								
+								}
 							}
 							
 							if (!logs.isEmpty() && System.currentTimeMillis() - chrono > param.getTpsVieMinStock()) {
 								System.out.println("j'envoie ça");
 								System.out.println(ow.writeValueAsString(logs));
-								PostREST.postString(ow.writeValueAsString(logs), new URL(output + "/logIncome"));
+								PostREST.postString(ow.writeValueAsString(logs), new URL(param.getOutputPath() + "/logIncome"));
 								chrono = System.currentTimeMillis();
 							}
-							param.maj(output);
+							param.majStandard();
 						}
 					}
 					key.reset();
@@ -115,5 +108,15 @@ public class MyWatcher {
 			// ex.getMessage(), ex);
 			ex.printStackTrace();
 		}
+	}
+
+	public boolean connect() {
+		try {
+			PostREST.postString(param.getId(), new URL(param.getOutputPath() + "/newAgent"));
+			param.majStandard();
+		} catch (IOException exception) {
+			return false;
+		}
+		return true;
 	}
 }

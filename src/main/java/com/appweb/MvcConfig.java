@@ -1,6 +1,6 @@
-package com.caribou;
+package com.appweb;
 
-import com.agent.ParamAgent;
+import com.agent.AgentManager;
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -23,10 +23,6 @@ import com.mongodb.Mongo;
 @EnableMongoRepositories(basePackageClasses = LogsRepository.class)
 @Configuration
 public class MvcConfig extends WebMvcConfigurerAdapter {
-
-	private static final String regexDebutLogDefault = "^\\d?\\d:\\d\\d:\\d\\d";
-
-	private static final String regexFinLogDefault = "";
 
 	@Autowired
 	LogsRepository logsRepository;
@@ -60,13 +56,14 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 	// // TODO Auto-generated method stub
 	// return mongoDB;
 	// }
-	
-	@Bean
-	public ParamAgent paramAgent() {
-		ParamAgent res = new ParamAgent(regexDebutLogDefault, regexFinLogDefault, 3000, 1000);
-		return res;
-	}
 
+	@Bean
+	@Description("Stock général des agents")
+	public AgentManager getAgentManager() {
+		return new AgentManager();
+	}
+	
+	
 	@Bean
 	@Description("Thymeleaf template resolver serving HTML 5")
 	public ClassLoaderTemplateResolver templateResolver() {

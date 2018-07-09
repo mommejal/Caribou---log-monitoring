@@ -1,4 +1,4 @@
-package com.caribou;
+package com.appweb;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 

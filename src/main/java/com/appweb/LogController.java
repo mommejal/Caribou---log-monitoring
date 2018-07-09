@@ -1,4 +1,4 @@
-package com.caribou;
+package com.appweb;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.agent.AgentManager;
 import com.agent.ParamAgent;
 import com.bdd.RemplirBdd;
 import com.google.gson.Gson;
@@ -26,7 +27,7 @@ import com.mongodb.Mongo;
 @RestController
 @Controller
 @Component
-@EnableMongoRepositories(basePackageClasses = com.caribou.LogsRepository.class)
+@EnableMongoRepositories(basePackageClasses = com.appweb.LogsRepository.class)
 @Repository
 public class LogController {
 
@@ -36,7 +37,7 @@ public class LogController {
 	Gson gson;
 
 	@Autowired
-	ParamAgent paramAgent;
+	AgentManager agents;
 
 	@Autowired
 	LogsRepository logsRepository;
@@ -50,6 +51,14 @@ public class LogController {
 	@Autowired
 	ModelAndView mav;
 
+	@RequestMapping(value = "/newAgent", method = RequestMethod.POST)
+	@ResponseBody
+	void newAgent(@RequestBody String newAgentId) {
+		System.out.println("naissance de :" + newAgentId);
+		ParamAgent newParamAgent = new ParamAgent(newAgentId);
+		agents.insert(newParamAgent);
+	}
+	
 	@RequestMapping(value = "/logIncome", method = RequestMethod.POST)
 	@ResponseBody
 	void logIncome(@RequestBody String newlog) {
@@ -74,8 +83,8 @@ public class LogController {
 	}
 
 	@RequestMapping(value = "/getParamAgent", method = RequestMethod.GET)
-	String paramOutcome() {
-		return paramAgent.toSend();
+	String paramOutcome(@RequestParam(value = "idAgent", required = false, defaultValue = DEFAULT_STRING) String idAgent) {
+		return agents.get(idAgent).toSendStandard();
 	}
 
 	public void setLogsResource(LogsRepository logsRepository) {
@@ -140,37 +149,53 @@ public class LogController {
 	
 	@RequestMapping(value = "/agents/modifParam", method = RequestMethod.GET)
 	ModelAndView modifParam(ModelAndView mav,
+			@RequestParam(value = "agentId", required = false, defaultValue = DEFAULT_STRING) String agentId,
 			@RequestParam(value = "regexDebut", required = false, defaultValue = DEFAULT_STRING) String regexDebut,
 			@RequestParam(value = "regexFin", required = false, defaultValue = DEFAULT_STRING) String regexFin,
 			@RequestParam(value = "tpsVieMinStock", required = false, defaultValue = DEFAULT_STRING) String tpsVieMinStock,
 			@RequestParam(value = "nbLignesLog", required = false, defaultValue = DEFAULT_STRING) String nbLignesLog) {
 		
-		int oldHashCode = paramAgent.hashCode();
+		//récupère un agent au hazard, dans le doute
+		int oldHashCode = agents.values().toArray()[0].hashCode();
+
+		ParamAgent agent = agents.get(agentId);
 		
-		if (!regexDebut.equals(DEFAULT_STRING))
-			paramAgent.setRegexDebutLog(regexDebut);
-		if (!regexFin.equals(DEFAULT_STRING))
-			paramAgent.setRegexFinLog(regexFin);
+		if (agentId != DEFAULT_STRING)
+			if (agents.containsKey(agentId)) {
+				
+				agent = agents.get(agentId);
+				
+				oldHashCode = agent.hashCode();
+				
+				if (!regexDebut.equals(DEFAULT_STRING))
+					agent.setRegexDebutLog(regexDebut);
+				if (!regexFin.equals(DEFAULT_STRING))
+					agent.setRegexFinLog(regexFin);
+				
+				
+				try {
+					agent.setTpsVieMinStock(Integer.parseInt(tpsVieMinStock));
+					agent.setNbLignesDeSuite(Integer.parseInt(nbLignesLog));
+					mav.addObject("error_message","");
+					
+				} catch (Exception e){
+					if (!tpsVieMinStock.equals(DEFAULT_STRING) || !nbLignesLog.equals(DEFAULT_STRING))
+						mav.addObject("error_message","Les valeurs entrées ne sont pas toutes correctes");
+					else
+						mav.addObject("error message","");
+				}
+				agents.replace(agentId, agent);
+			} else {
+				mav.addObject("error message", "cet agent n'existe pas !");
+			}
 		
+		mav.addObject(agents);
+		mav.addObject("changement",oldHashCode != agent.hashCode());
 		
-		try {
-			paramAgent.setTpsVieMinStock(Integer.parseInt(tpsVieMinStock));
-			paramAgent.setNbLignesDeSuite(Integer.parseInt(nbLignesLog));
-			mav.addObject("error_message","");
-			
-		} catch (Exception e){
-			if (!tpsVieMinStock.equals(DEFAULT_STRING) || !nbLignesLog.equals(DEFAULT_STRING))
-				mav.addObject("error_message","Les valeurs entrées ne sont pas toutes correctes");
-			else
-				mav.addObject("error message","");
-		}
-		
-		mav.addObject("changement",oldHashCode != paramAgent.hashCode());
-		
-		mav.addObject("regexDebut", paramAgent.getRegexDebutLog());
-		mav.addObject("regexFin", paramAgent.getRegexFinLog());
-		mav.addObject("tpsVieMinStock", paramAgent.getTpsVieMinStock());
-		mav.addObject("nbLignesLog", paramAgent.getNbLignesDeSuite());
+//		mav.addObject("regexDebut", paramAgent.getRegexDebutLog());
+//		mav.addObject("regexFin", paramAgent.getRegexFinLog());
+//		mav.addObject("tpsVieMinStock", paramAgent.getTpsVieMinStock());
+//		mav.addObject("nbLignesLog", paramAgent.getNbLignesDeSuite());
 		mav.setViewName("agents/modifParam");
 		return mav;
 	}

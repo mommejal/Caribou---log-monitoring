@@ -1,4 +1,4 @@
-package com.LogGenerator;
+package com.logs.loggenerator;
 
 import java.io.File;
 import java.io.FileReader;

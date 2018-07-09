@@ -3,37 +3,51 @@ package com.agent;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayDeque;
 import java.util.Queue;
 
 import com.agent.exchanges.GetREST;
 
 public class ParamAgent {
 
+	protected String id;
+	protected String logPath;
+	protected String outputPath;
+		
 	protected String regexDebutLog;
 	protected String regexFinLog;
 	protected int tpsVieMinStock;
 	protected int nbLignesDeSuite;
+	
 
-
-	public ParamAgent(String regexDebutLog, String regexFinLog, int tpsVieMinStock,
-				int nbLignesDeSuite) {
+	public ParamAgent(String id, String logPath, String outputPath, String regexDebutLog, String regexFinLog,
+			int tpsVieMinStock, int nbLignesDeSuite) {
 		super();
+		this.id = id;
+		this.logPath = logPath;
+		this.outputPath = outputPath;
 		this.regexDebutLog = regexDebutLog;
 		this.regexFinLog = regexFinLog;
 		this.tpsVieMinStock = tpsVieMinStock;
 		this.nbLignesDeSuite = nbLignesDeSuite;
 	}
 	
-	public String toSend() {
+	public ParamAgent(String id, String logPath, String outputPath) { // TODO voir sans logPath
+		this(id, logPath, outputPath, "^\\d?\\d:\\d\\d:\\d\\d", "", 3000, 500);		
+	}
+	
+	public ParamAgent(String newAgentId) {
+		this(newAgentId, "N/A", "N/A");
+	}
+
+	public String toSendStandard() {
 		return regexDebutLog + System.lineSeparator() + regexFinLog + System.lineSeparator() + tpsVieMinStock
 				+ System.lineSeparator() +nbLignesDeSuite;
 	}
 	
-	public int maj(String source) {
+	public int majStandard() {
 		Queue<String> nvParam;
 		try {
-			nvParam = GetREST.getAll(new URL(source + "/getParamAgent"));		
+			nvParam = GetREST.getAll(new URL(outputPath + "/getParamAgent"));		
 			if (!nvParam.isEmpty()) {
 				regexDebutLog = nvParam.poll();
 				regexFinLog = nvParam.poll();
@@ -61,39 +75,7 @@ public class ParamAgent {
 
 		return 0;
 	}
-
-	public int getNbLignesDeSuite() {
-		return nbLignesDeSuite;
-	}
-
-	public void setNbLignesDeSuite(int nbLignesDeSuite) {
-		this.nbLignesDeSuite = nbLignesDeSuite;
-	}
-
-	public String getRegexDebutLog() {
-		return regexDebutLog;
-	}
-
-	public void setRegexDebutLog(String regexDebutLog) {
-		this.regexDebutLog = regexDebutLog;
-	}
-
-	public String getRegexFinLog() {
-		return regexFinLog;
-	}
-
-	public void setRegexFinLog(String regexFinLog) {
-		this.regexFinLog = regexFinLog;
-	}
-
-	public int getTpsVieMinStock() {
-		return tpsVieMinStock;
-	}
-
-	public void setTpsVieMinStock(int tpsVieMinStock) {
-		this.tpsVieMinStock = tpsVieMinStock;
-	}
-
+	
 	@Override
 	public String toString() {
 		return "ParamAgent [regexDebutLog=" + regexDebutLog + ", regexFinLog=" + regexFinLog + ", tpsVieMinStock="
@@ -137,5 +119,55 @@ public class ParamAgent {
 		return true;
 	}
 	
+	public String getId() {
+		return id;
+	}
 
+	public String getLogPath() {
+		return logPath;
+	}
+
+	public void setLogPath(String logPath) {
+		this.logPath = logPath;
+	}
+
+	public String getOutputPath() {
+		return outputPath;
+	}
+
+	public void setOutputPath(String outputPath) {
+		this.outputPath = outputPath;
+	}
+
+	public int getNbLignesDeSuite() {
+		return nbLignesDeSuite;
+	}
+
+	public void setNbLignesDeSuite(int nbLignesDeSuite) {
+		this.nbLignesDeSuite = nbLignesDeSuite;
+	}
+
+	public String getRegexDebutLog() {
+		return regexDebutLog;
+	}
+
+	public void setRegexDebutLog(String regexDebutLog) {
+		this.regexDebutLog = regexDebutLog;
+	}
+
+	public String getRegexFinLog() {
+		return regexFinLog;
+	}
+
+	public void setRegexFinLog(String regexFinLog) {
+		this.regexFinLog = regexFinLog;
+	}
+
+	public int getTpsVieMinStock() {
+		return tpsVieMinStock;
+	}
+
+	public void setTpsVieMinStock(int tpsVieMinStock) {
+		this.tpsVieMinStock = tpsVieMinStock;
+	}
 }

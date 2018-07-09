@@ -1,4 +1,4 @@
-package com.caribou;
+package com.appweb;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -67,7 +67,7 @@ public class Logs {
 		
 		int debut = 0;
 		int fin = 0;
-		// LES && sont très moches faire attention
+		// LES && sont trï¿½s moches faire attention
 		if (matcher.find()) {
 			debut = matcher.start();
 			fin = matcher.end();
