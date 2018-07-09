@@ -56,7 +56,7 @@ public class Recherche {
 
 	public ModelAndView filter(ModelAndView mav, ParametresRecherche param) {
 		mav.clear();
-		mav.addObject("filter", param.getSelectedfilters());
+		mav.addObject("selectedfilters", param.getSelectedfilters());
 		System.out.println(param.getSelectedfilters());
 		for (String filt : param.getSelectedfilters()) {
 			System.out.println("je suis une itération de filt");

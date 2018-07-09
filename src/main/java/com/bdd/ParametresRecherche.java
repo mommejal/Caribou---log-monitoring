@@ -6,8 +6,8 @@ public class ParametresRecherche {
 	private List<String> selectedfilters;
 	private List<String> selectedseveritylvls;
 	private String selectedregexp;
-	private long datebeginning;
-	private long dateend;
+	private String datebeginning;
+	private String dateend;
 	private String detectiondate;
 	private String detectionidlog;
 	private String detectionseveritylvl;
@@ -32,16 +32,16 @@ public class ParametresRecherche {
 	public void setSelectedregexp(String selectedregexp) {
 		this.selectedregexp = selectedregexp;
 	}
-	public long getDatebeginning() {
+	public String getDatebeginning() {
 		return datebeginning;
 	}
-	public void setDatebeginning(long datebeginning) {
+	public void setDatebeginning(String datebeginning) {
 		this.datebeginning = datebeginning;
 	}
-	public long getDateend() {
+	public String getDateend() {
 		return dateend;
 	}
-	public void setDateend(long dateend) {
+	public void setDateend(String dateend) {
 		this.dateend = dateend;
 	}
 	

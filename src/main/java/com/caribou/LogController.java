@@ -104,27 +104,17 @@ public class LogController {
 
 	@RequestMapping(value = "/AffLogs/afficher_listes_logs", method = RequestMethod.GET)
 	@ResponseBody
-	ModelAndView listeLogs(ModelAndView mav,
-			@RequestParam(value = "selectedfilters", required = false,defaultValue="") String selectedfilters,
-			@RequestParam(value = "selectedseveritylvls", required = false,defaultValue="") String selectedseveritylvls,
-			@RequestParam(value = "selectedregexp", required = false,defaultValue="") String selectedregexp,
-			@RequestParam(value = "detectiondate", required = false,defaultValue="") String detectiondate,
-			@RequestParam(value = "detectionidlog", required = false,defaultValue="") String detectionidlog,
-			@RequestParam(value = "agent", required = false,defaultValue="") String agent,
-			@RequestParam(value = "datebeginning", required = false,defaultValue="defaultbeginning") String datebeginning,
-			@RequestParam(value = "dateend", required = false,defaultValue="defaultend") String dateend) {
+	ModelAndView listeLogs(ModelAndView mav
+) {
 		// TROUVEZ UN MOYEN DE COMPARER LES DATES
 		// Fonction qui affiche tous les logs de la base de données, à terme elle devra
 		// afficher seuelement selon les filtres
 		// On veut afficher une liste de logs pour l'instant on affiche uniquement les
 		// ID et les messages
-		mav.clear();
-		param.setSelectedfilters(Arrays.asList(selectedfilters.split(",")));
-		param.setSelectedseveritylvls(Arrays.asList(selectedseveritylvls.split("\\,")));
-		param.setSelectedregexp(selectedregexp);
+//		mav.clear();
 		mav = recherche.filter(mav,param);
-		mav.addObject("datebeginning", datebeginning);
-		mav.addObject("dateend", dateend);
+		mav.addObject("datebeginning", param.getDatebeginning());
+		mav.addObject("dateend", param.getDateend());
 		mav.setViewName("/AffLogs/afficher_listes_logs");
 		return mav;
 	}
@@ -155,8 +145,24 @@ public class LogController {
 	}
 
 	@RequestMapping(value = "/AffLogs/parametres_recherche", method = RequestMethod.GET)
-	ModelAndView parametresRecherche(ModelAndView mav)
+	ModelAndView parametresRecherche(ModelAndView mav,
+			@RequestParam(value = "selectedfilters", required = false,defaultValue="noFilter") String selectedfilters,
+			@RequestParam(value = "selectedseveritylvls", required = false,defaultValue="( INFO )|(DEBUG )|( ERROR )") String selectedseveritylvls,
+			@RequestParam(value = "selectedregexp", required = false,defaultValue="") String selectedregexp,
+			@RequestParam(value = "detectiondate", required = false,defaultValue="[0-9\\[][0-9]:[0-9][0-9]:[0-9][0-9][.,][0-9][0-9][0-9]") String detectiondate,
+			@RequestParam(value = "detectionidlog", required = false,defaultValue="ID: [0-9]*") String detectionidlog,
+			@RequestParam(value = "agent", required = false,defaultValue="agent") String agent,
+			@RequestParam(value = "datebeginning", required = false,defaultValue="defaultbeginning") String datebeginning,
+			@RequestParam(value = "dateend", required = false,defaultValue="defaultend") String dateend)
 	{
+		param.setSelectedfilters(Arrays.asList(selectedfilters.split(",")));
+		param.setSelectedseveritylvls(Arrays.asList(selectedseveritylvls.split("\\,")));
+		param.setSelectedregexp(selectedregexp);
+		param.setAgent(agent);
+		param.setDatebeginning(datebeginning);
+		param.setDateend(dateend);
+		param.setDetectionidlog(detectionidlog);
+//		param.setDetectionseveritylvl(detectionseveritylvl);
 		mav.setViewName("AffLogs/parametres_recherche");
 		return mav;
 	}

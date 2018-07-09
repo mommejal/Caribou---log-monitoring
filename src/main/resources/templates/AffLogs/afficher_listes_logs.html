@@ -12,7 +12,9 @@
 	<form action="/">
 		<input type="submit" value="Acceuil" />
 	</form>
-	<!-- <span th:text="${selectedfilters.toString()}"></span> est le filtre sélectionné -->
+	<a href="/AffLogs/parametres_recherche">acces aux parametres de recherche</a><br/>
+	
+	 <span th:text="${selectedfilters.toString()}"></span> est le filtre sélectionné
 	<br />
 	<span th:text="${datebeginning} ?: 'début par défaut'"></span> est la
 	date de début sélectionné

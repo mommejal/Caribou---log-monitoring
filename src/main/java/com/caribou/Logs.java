@@ -9,13 +9,14 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document//(collection = "logsRepository")
 public class Logs {
 
-	@Id
+	
 	private String _id;
 	private String agent;
 	// @Order
 	private String date;
 	@SuppressWarnings("unused")
 	private Integer idlog;
+	@Id
 	private String msg;
 	@SuppressWarnings("unused")
 	private String severitylvl;
