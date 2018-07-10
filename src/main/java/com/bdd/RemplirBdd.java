@@ -38,16 +38,16 @@ public class RemplirBdd /* implements CommandLineRunner */ {
 //		}
 //	}
 
-	 public void remplir(ArrayDeque<String> logs, LogsRepository logsRepository) {
-	 String contenu = logs.pollLast();
-	// int id = getId(contenu);
-	 int id=10;
-	 while (contenu != null) {
-	 Logs tmp = new Logs(contenu);
-	 tmp.setIdlog(id);
-	 ajouterLogBdd(logsRepository, tmp);
-	 contenu = logs.pollLast();
-	 id++;
-	 }
-	 }
+//	 public void remplir(ArrayDeque<String> logs, LogsRepository logsRepository) {
+//	 String contenu = logs.pollLast();
+//	// int id = getId(contenu);
+//	 int id=10;
+//	 while (contenu != null) {
+//	 Logs tmp = new Logs(contenu);
+//	 tmp.setIdlog(id);
+//	 ajouterLogBdd(logsRepository, tmp);
+//	 contenu = logs.pollLast();
+//	 id++;
+//	 }
+//	 }
 }

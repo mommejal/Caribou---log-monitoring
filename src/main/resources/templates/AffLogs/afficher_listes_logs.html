@@ -33,7 +33,7 @@
 	</form>
 	<table>
 		<tr>
-			       <!--  <th>Id</th>  -->
+			         <th>Id de test</th>  
 	 		<th>Date</th>
 			<!--               <th>Hostname</th>
                 <th>Facility</th>-->
@@ -41,7 +41,7 @@
 			<th>MSG</th>
 		</tr>
 		<tr th:each="log : *{logs}">
-		<!-- 	<td th:text="${log.getIdlog()}">id</td> -->
+		 	<td th:text="${log.get_id()}">id</td>
  			<td th:text="${log.getDate()}">date</td>
   			<!--                <td th:text="${log.hostname}">hostname</td>
                 <td th:text="${log.facility}">facility</td>              -->

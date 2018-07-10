@@ -3,28 +3,33 @@ package com.caribou;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import com.bdd.ParametresRecherche;
 
 @Document//(collection = "logsRepository")
 public class Logs {
 
-	
-	private String _id;
+	@Autowired ParametresRecherche param;
+	@Id
+	private int _id;
 	private String agent;
 	// @Order
 	private String date;
 	@SuppressWarnings("unused")
 	private Integer idlog;
-	@Id
+
 	private String msg;
 	@SuppressWarnings("unused")
 	private String severitylvl;
 	private static Pattern pattern;
 	private static Matcher matcher;
 
-	public Logs(String msg) {
+	public Logs(int _id,String msg) {
 		// super();
+		this._id= _id;
 		this.msg = msg;
 //		setIdlog();
 		setSeverityLvl();
@@ -34,6 +39,9 @@ public class Logs {
 	// public Integer getId() {
 	// return id;
 	// }
+	public int get_id() {
+		return _id;
+	}
 
 	public String getAgent() {
 		return agent;

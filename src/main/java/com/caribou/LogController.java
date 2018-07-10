@@ -66,6 +66,11 @@ public class LogController {
 		System.out.println("je re√ßois :");
 		Queue<Queue<String>> logs = gson.fromJson(newlog, new TypeToken<Queue<Queue<String>>>() {
 		}.getType());
+		int _id = 0;
+//		_id = logsRepository.findFirstLogsBy_id().get(0).get_id();
+//		if (_id==null)
+//			_id=0;
+		System.out.println("L 'ID est :"+_id);
 		for (Queue<String> log : logs) {
 			String res = "";
 			int i =0;
@@ -75,7 +80,8 @@ public class LogController {
 			}
 			if (i>1)
 				System.out.println("Nb d'Èlements dans la queue" +i);
-			logsRepository.save(new Logs(res));
+			logsRepository.save(new Logs(_id,res));
+			_id++;
 //			System.out.println("-----");
 		}
 //		System.out.println("--------------");
