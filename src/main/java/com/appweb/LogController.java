@@ -97,7 +97,7 @@ public class LogController {
 		return mav;
 	}
 
-	@RequestMapping(value = "/listeLogs", method = RequestMethod.GET)
+	@RequestMapping(value = "afflogs/afficher_listes_logs", method = RequestMethod.GET)
 	@ResponseBody
 	ModelAndView listeLogs(ModelAndView mav,
 			@RequestParam(value = "filter", required = true/* , defaultValue="nofilter" */) String filter,
@@ -130,20 +130,25 @@ public class LogController {
 		mav.addObject("filter", filter);
 		mav.addObject("datebeginning", datebeginning);
 		mav.addObject("dateend", dateend);
-		mav.setViewName("listeLogs");
+		mav.setViewName("affLogs/afficher_listes_logs");
 		return mav;
 	}
 
-	@RequestMapping(value = "/gestionBdd", method = RequestMethod.GET)
+	@RequestMapping(value = "/technique/gestionBdd", method = RequestMethod.GET)
 	ModelAndView gestionBdd(ModelAndView mav) {
-		mav.setViewName("gestionBdd");
+		mav.setViewName("technique/gestionBdd");
 		return mav;
 	}
+	
+	@RequestMapping(value = "/error", method = RequestMethod.GET)
+	String error(ModelAndView mav) {
+		return "une erreur est survenue";
+	}
 
-	@RequestMapping(value = "/gestionBdd/viderBdd", method = RequestMethod.GET)
+	@RequestMapping(value = "/technique/gestionBdd/viderBdd", method = RequestMethod.GET)
 	ModelAndView viderBdd(ModelAndView mav) {
 		mongo.dropDatabase(mongoDbFactory.getDb().getName());
-		mav.setViewName("gestionBdd");
+		mav.setViewName("technique/gestionBdd");
 		return mav;
 	}
 	
