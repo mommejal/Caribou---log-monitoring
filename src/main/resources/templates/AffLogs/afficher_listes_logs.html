@@ -7,13 +7,24 @@
 <meta charset="ISO-8859-1" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
+<style>
+table {
+border: medium solid #000000;
+width: 50%;
+}
+td, th {
+border: thin solid #6495ed;
+width: 50%;
+}
+</style>
 <body>
 	<h2>Liste des logs</h2>
 	<form action="/">
 		<input type="submit" value="Acceuil" />
 	</form>
-	<a href="/AffLogs/parametres_recherche">acces aux parametres de recherche</a><br/>
-	
+	<form action="/AffLogs/parametres_recherche">
+		<input type="submit" value="Nouvelle Recherche">
+	</form>
 	 <span th:text="${selectedfilters.toString()}"></span> est le filtre sélectionné
 	<br />
 	<span th:text="${datebeginning} ?: 'début par défaut'"></span> est la
@@ -33,12 +44,12 @@
 	</form>
 	<table>
 		<tr>
-			         <th>Id de test</th>  
+			<th>Id de BDD</th>  
 	 		<th>Date</th>
 			<!--               <th>Hostname</th>
                 <th>Facility</th>-->
 			<th>Severity Level</th>
-			<th>MSG</th>
+			<th  style="text-align:left">   MSG</th>
 		</tr>
 		<tr th:each="log : *{logs}">
 		 	<td th:text="${log.get_id()}">id</td>

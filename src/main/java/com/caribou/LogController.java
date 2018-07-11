@@ -7,9 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.MongoDbFactory;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Repository;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -26,7 +24,7 @@ import com.google.gson.reflect.TypeToken;
 import com.mongodb.Mongo;
 
 @RestController
-@Controller
+//@Controller
 @Component
 @EnableMongoRepositories(basePackageClasses = com.caribou.LogsRepository.class)
 @Repository
@@ -66,8 +64,11 @@ public class LogController {
 		System.out.println("je re√ßois :");
 		Queue<Queue<String>> logs = gson.fromJson(newlog, new TypeToken<Queue<Queue<String>>>() {
 		}.getType());
-		int _id = 0;
-//		_id = logsRepository.findFirstLogsBy_id().get(0).get_id();
+		int _id = 0; // _id va servir de @Id pour les Logs pour les classer facilement par ordre d'arrivÈe
+		logsRepository.insert(new Logs(-1,String.valueOf(_id))); // DE cette maniere on le fait que quand il n'y a rien ‡ cet ID
+		System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAA");
+		_id = Integer.parseInt(logsRepository.findLogsBy_id(-1).get(0).getMsg());
+		System.out.println("BBBBBBBBBBBBBBBBBBBBBBBBBB");
 //		if (_id==null)
 //			_id=0;
 		System.out.println("L 'ID est :"+_id);
@@ -81,6 +82,7 @@ public class LogController {
 			if (i>1)
 				System.out.println("Nb d'Èlements dans la queue" +i);
 			logsRepository.save(new Logs(_id,res));
+			logsRepository.save(new Logs(-1,String.valueOf(_id)));
 			_id++;
 //			System.out.println("-----");
 		}
@@ -125,14 +127,14 @@ public class LogController {
 		return mav;
 	}
 
-	@GetMapping(value = "/AffLogs/afficher_listes_logs/afficherunLog")
-	ModelAndView afficherUnLog(ModelAndView mav, @RequestParam(value = "idlog") int idlog) {
-		// Je voudrais afficher uniquement les logs qui ont cet ID
-		mav.clear();
-		mav.addObject("logs", logsRepository.findLogsByIdlog(idlog));
-		mav.setViewName("/AffLogs/afficher_listes_logs");
-		return mav;
-	}
+//	@GetMapping(value = "/AffLogs/afficher_listes_logs/afficherunLog")
+//	ModelAndView afficherUnLog(ModelAndView mav, @RequestParam(value = "idlog") int idlog) {
+//		// Je voudrais afficher uniquement les logs qui ont cet ID
+//		mav.clear();
+//		mav.addObject("logs", logsRepository.findLogsByIdlog(idlog));
+//		mav.setViewName("/AffLogs/afficher_listes_logs");
+//		return mav;
+//	}
 
 	@RequestMapping(value = "/technique/gestionBdd", method = RequestMethod.GET)
 	ModelAndView gestionBdd(ModelAndView mav) {
