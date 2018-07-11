@@ -24,12 +24,12 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.mongodb.Mongo;
 
-@RestController
+
 @Controller
 @Component
 @EnableMongoRepositories(basePackageClasses = com.appweb.LogsRepository.class)
 @Repository
-public class LogController {
+public class CaribouRESTController {
 
 	private static final String DEFAULT_STRING = "RIP_F-ZERO";
 

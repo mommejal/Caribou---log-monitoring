@@ -38,6 +38,7 @@ public class MyWatcher {
 	}
 	
 
+	@SuppressWarnings("unlikely-arg-type")
 	public void run() throws Exception {
 
 		Queue<Queue<String>> logs = new ArrayDeque<>();
