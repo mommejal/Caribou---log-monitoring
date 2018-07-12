@@ -66,21 +66,15 @@ public class LogController {
 		}.getType());
 		int _id = 0; // _id va servir de @Id pour les Logs pour les classer facilement par ordre d'arrivée
 //		logsRepository.insert(new Logs(-1,String.valueOf(_id))); // DE cette maniere on le fait que quand il n'y a rien à cet ID
-		System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAA");
 //		_id = Integer.parseInt(logsRepository.findLogsBy_id(-1).get(0).getMsg());
-		System.out.println("BBBBBBBBBBBBBBBBBBBBBBBBBB");
 //		if (_id==null)
 //			_id=0;
 		System.out.println("L 'ID est :"+_id);
 		for (Queue<String> log : logs) {
 			String res = "";
-			int i =0;
 			for (String tmp : log) {
 				res += tmp;
-				i++;
 			}
-			if (i>1)
-				System.out.println("Nb d'élements dans la queue" +i);
 			logsRepository.save(new Logs(_id,res));
 //			logsRepository.save(new Logs(-1,String.valueOf(_id)));
 			_id++;
