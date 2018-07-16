@@ -32,10 +32,6 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 
 	@Autowired
 	LogsRepository logsRepository;
-
-	
-	@Autowired Mongo mongo;
-	@Autowired MongoDbFactory mongoDbFactory;
 	
 	@Bean
 	public ParametresRecherche getParametresRecherche() {
@@ -56,13 +52,13 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 		return new Gson();
 	}
 	
-	CommandLineRunner commandLineRunner(LogsRepository logsRepository) {
-		return strings -> {
-//			logsRepository.save(new Logs("Logs du nouveau endroit line runner DEBUG  ID: 55"));
-//			logsRepository.save(new Logs("Il devrait y avoir un log d'id 2 au dessus DEBUG  ID: 55"));
-//			logsRepository.save(new Logs("J'ajoute un log d'id 4 en ayant mis le logs repositorty autowired dans la config INFO ID: 37"));
-		};
-	}
+//	CommandLineRunner commandLineRunner(LogsRepository logsRepository) {
+//		return strings -> {
+////			logsRepository.save(new Logs("Logs du nouveau endroit line runner DEBUG  ID: 55"));
+////			logsRepository.save(new Logs("Il devrait y avoir un log d'id 2 au dessus DEBUG  ID: 55"));
+////			logsRepository.save(new Logs("J'ajoute un log d'id 4 en ayant mis le logs repositorty autowired dans la config INFO ID: 37"));
+//		};
+//	}
 	
 	@Bean
 	public ParamAgent paramAgent() {

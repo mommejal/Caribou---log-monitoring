@@ -12,6 +12,9 @@ public interface LogsRepository extends MongoRepository<Logs, String>/* , Queryd
 	public List<Logs> findLogsBy_id(int id);
 
 	@Query("{ 'msg' : { $regex: ?0 } }")
-	HashSet<Logs> findLogsByRegexpMsg(String regexp);
+	HashSet<Logs> findLogsByRegexpMsgOrderBy_id(String regexp);
+	@Query
+	boolean existsBy_id(int id);
+	void delete(Logs log); // A voir si j'ai besoin de ca
 	// @Query("{ '_id' : )
 }

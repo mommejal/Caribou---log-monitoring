@@ -8,6 +8,7 @@ import org.springframework.data.mongodb.MongoDbFactory;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -38,10 +39,8 @@ public class LogController {
 	Gson gson;
 	@Autowired
 	String regexAgent;
-
 	@Autowired
 	ParamAgent paramAgent;
-
 	@Autowired
 	LogsRepository logsRepository;
 	@Autowired
@@ -61,14 +60,13 @@ public class LogController {
 	void logIncome(@RequestBody String newlog) {
 		// Fonction qui convertit le json en objet java pour sauvegarder les résulats
 		// dans la BDD
-		System.out.println("je reÃ§ois :");
+		System.out.println("je reçois :");
 		Queue<Queue<String>> logs = gson.fromJson(newlog, new TypeToken<Queue<Queue<String>>>() {
 		}.getType());
 		int _id = 0; // _id va servir de @Id pour les Logs pour les classer facilement par ordre d'arrivée
-//		logsRepository.insert(new Logs(-1,String.valueOf(_id))); // DE cette maniere on le fait que quand il n'y a rien à cet ID
-//		_id = Integer.parseInt(logsRepository.findLogsBy_id(-1).get(0).getMsg());
-//		if (_id==null)
-//			_id=0;
+		if (logsRepository.existsBy_id(-1)) {
+			_id = Integer.parseInt(logsRepository.findLogsBy_id(-1).get(0).getMsg());
+		} // DE cette maniere on le fait que quand il n'y a rien à cet ID
 		System.out.println("L 'ID est :"+_id);
 		for (Queue<String> log : logs) {
 			String res = "";
@@ -76,7 +74,7 @@ public class LogController {
 				res += tmp;
 			}
 			logsRepository.save(new Logs(_id,res));
-//			logsRepository.save(new Logs(-1,String.valueOf(_id)));
+			logsRepository.save(new Logs(-1,String.valueOf(_id)));
 			_id++;
 //			System.out.println("-----");
 		}
@@ -93,9 +91,9 @@ public class LogController {
 		// TODO
 		return "";
 	}
-	public void setLogsResource(LogsRepository logsRepository) {
-		this.logsRepository = logsRepository;
-	}
+//	public void setLogsResource(LogsRepository logsRepository) {
+//		this.logsRepository = logsRepository;
+//	}
 
 	@RequestMapping(method = RequestMethod.GET)
 	ModelAndView index() {
@@ -121,14 +119,16 @@ public class LogController {
 		return mav;
 	}
 
-//	@GetMapping(value = "/AffLogs/afficher_listes_logs/afficherunLog")
-//	ModelAndView afficherUnLog(ModelAndView mav, @RequestParam(value = "idlog") int idlog) {
-//		// Je voudrais afficher uniquement les logs qui ont cet ID
+	@GetMapping(value = "/AffLogs/afficher_listes_logs/afficherUnLog")
+	ModelAndView afficherUnLog(ModelAndView mav, @RequestParam(value = "idlog") int idlog) {
+		// Je voudrais afficher uniquement les logs qui ont cet ID
 //		mav.clear();
-//		mav.addObject("logs", logsRepository.findLogsByIdlog(idlog));
-//		mav.setViewName("/AffLogs/afficher_listes_logs");
-//		return mav;
-//	}
+		mav.addObject("logs", logsRepository.findLogsBy_id(idlog));
+		mav.addObject("datebeginning", param.getDatebeginning());
+		mav.addObject("dateend", param.getDateend());
+		mav.setViewName("/AffLogs/afficher_listes_logs");
+		return mav;
+	}
 
 	@RequestMapping(value = "/technique/gestionBdd", method = RequestMethod.GET)
 	ModelAndView gestionBdd(ModelAndView mav) {
@@ -169,6 +169,7 @@ public class LogController {
 		return mav;
 	}
 	
+
 
 	
 	@RequestMapping(value = "/agents/modifParam", method = RequestMethod.GET)
