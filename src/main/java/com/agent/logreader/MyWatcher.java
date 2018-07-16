@@ -19,14 +19,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 
 public class MyWatcher {
-
-	protected String idAgent;
 	
-	protected WatchService service;
-	protected int lines = 0;
-	protected int characters = 0;
+	private WatchService service;
+	private int lines = 0;
+	private int characters = 0;
 
-	protected ParamAgent param;
+	private ParamAgent param;
 
 	MyWatcher(ParamAgent param) throws IOException {
 		this.service = FileSystems.getDefault().newWatchService();

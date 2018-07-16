@@ -7,7 +7,7 @@ import com.agent.logreader.WatcherFactory;
 
 public class Agent {
 	
-	protected ParamAgent param;
+	private ParamAgent param;
 	
 	public Agent(ParamAgent param) {
 		super();
@@ -26,7 +26,7 @@ public class Agent {
 		}
 	}
 
-	public void scan() throws Exception {
+	private void scan() throws Exception {
 		WatcherFactory.addMyWatcher(param);
 	}
 

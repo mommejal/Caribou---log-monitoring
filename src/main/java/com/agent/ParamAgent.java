@@ -9,14 +9,14 @@ import com.agent.exchanges.GetREST;
 
 public class ParamAgent {
 
-	protected String id;
-	protected String logPath;
-	protected String outputPath;
+	private String id;
+	private String logPath;
+	private String outputPath;
 		
-	protected String regexDebutLog;
-	protected String regexFinLog;
-	protected int tpsVieMinStock;
-	protected int nbLignesDeSuite;
+	private String regexDebutLog;
+	private String regexFinLog;
+	private int tpsVieMinStock;
+	private int nbLignesDeSuite;
 	
 
 	public ParamAgent(String id, String logPath, String outputPath, String regexDebutLog, String regexFinLog,
