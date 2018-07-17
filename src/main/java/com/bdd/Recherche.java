@@ -50,7 +50,7 @@ public class Recherche {
 	}
 
 	public ModelAndView filterByRegex(String regexp, ModelAndView mav) {
-		mav.addObject("logs", logsRepository.findLogsByRegexpMsg(regexp));
+		mav.addObject("logs", logsRepository.findLogsByRegexpMsgOrderBy_id(regexp));
 		return mav;
 	}
 
