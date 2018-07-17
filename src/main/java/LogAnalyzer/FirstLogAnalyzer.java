@@ -17,8 +17,10 @@ public class FirstLogAnalyzer extends LogAnalyzer {
 	}
 
 	public FirstLogAnalyzer(LightLog content) {
-		this.source = content.getSource();
-		this.id = content.getId();
+//		this.source = content.getSource();
+//		this.id = content.getId();
+//		this.content = content.getContent();
+		super();
 	}
 
 	@Override
