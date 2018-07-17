@@ -1,38 +1,38 @@
 package LogAnalyzer;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Map;
 
-public class LogAnalyzerCustom extends AbstractLogAnalyzer{
+public class LogAnalyzerCustom extends LogAnalyzer{
 	private ParamLogAnalyzerCustom paramLog;
-
-	@Override
-	public String getSource() {
-		// TODO Auto-generated method stub
-		return null;
+	
+//	Map<String, String> map = ...
+//			for (Map.Entry<String, String> entry : map.entrySet())
+//			{
+//			    System.out.println(entry.getKey() + "/" + entry.getValue());
+//			}
+	public void LogAnalyzerCustom() {
+		//TODO faire le constructeur
 	}
 
 	@Override
 	public Collection<String> getAvailableDatas() {
+		ArrayList<String> res = new ArrayList<String>();
+		Map<String, DataCatcher> map = paramLog.getDatacatchers();
+		for (Map.Entry<String, DataCatcher> entry : map.entrySet())
+		{
+		    res.add(entry.getValue().catchData(""+content));
+		}
+		res.add(this.getSource());
+		res.add(""+this.getContent());
+		return res;
+	}
+
+	@Override
+	public String getData(String data) {
 		// TODO Auto-generated method stub
 		return null;
-	}
-
-	@Override
-	public Object getData() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public boolean isBefore(AbstractLogAnalyzer log, String data) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean hasSame(AbstractLogAnalyzer log, String data) {
-		// TODO Auto-generated method stub
-		return false;
 	}
 
 	@Override
@@ -40,5 +40,7 @@ public class LogAnalyzerCustom extends AbstractLogAnalyzer{
 		// TODO Auto-generated method stub
 		return 0;
 	}
+	
+	
 	
 }

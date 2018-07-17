@@ -8,19 +8,19 @@ public class LightLog {
 	
 	@Id
 	protected String id;
-	protected Collection<String> Content;
+	protected Collection<String> content;
 	protected String source;
 	
 	@Override
 	public String toString() {
-		return "LightLog [id=" + id + ", Content=" + Content + ", source=" + source + "]";
+		return "LightLog [id=" + id + ", content=" + content + ", source=" + source + "]";
 	}
 	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((Content == null) ? 0 : Content.hashCode());
+		result = prime * result + ((content == null) ? 0 : content.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((source == null) ? 0 : source.hashCode());
 		return result;
@@ -35,10 +35,10 @@ public class LightLog {
 		if (getClass() != obj.getClass())
 			return false;
 		LightLog other = (LightLog) obj;
-		if (Content == null) {
-			if (other.Content != null)
+		if (content == null) {
+			if (other.content != null)
 				return false;
-		} else if (!Content.equals(other.Content))
+		} else if (!content.equals(other.content))
 			return false;
 		if (id == null) {
 			if (other.id != null)
@@ -53,8 +53,17 @@ public class LightLog {
 		return true;
 	}
 	
+	
 	public String getSource() {
 		return source;
+	}
+	
+	public String getId() {
+		return id;
+	}
+	
+	public Collection<String> getContent() {
+		return content;
 	}
 }
 	
