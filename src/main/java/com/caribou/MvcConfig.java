@@ -109,5 +109,3 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
         registry.addViewController("/").setViewName("index");
     }
 }
-
-
