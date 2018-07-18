@@ -15,7 +15,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.agent.AgentManager;
 import com.agent.paramagent.ParamAgentToManage;
-import com.bdd.RemplirBdd;
 import com.google.gson.Gson;
 import com.mongodb.Mongo;
 
@@ -65,7 +64,7 @@ public class CaribouWebController {
 		// On veut afficher une liste de logs pour l'instant on affiche uniquement les
 		// ID et les messages
 		// On constate qu'une m�thode get sur chaque log suffit � afficher le bon truc
-		RemplirBdd objremplirbdd = new RemplirBdd();
+		//  RemplirBdd objremplirbdd = new RemplirBdd();
 		ArrayDeque<String> ad = new ArrayDeque<String>(1000); // De base l'array deque en contient 16
 		ad.addFirst(
 				"10:55:47,539 INFO  [org.apache.cxf.interceptor.LoggingInInterceptor] (default task-158) Inbound Message\r\n"
@@ -84,7 +83,8 @@ public class CaribouWebController {
 		// @SuppressWarnings("deprecation")
 		// DB db = mongoClient.getDB("logsRepository");
 		// db.logsRepository.save(new Logs(25,"Logs issus de db.logs.save"));
-		objremplirbdd.remplir(ad, logsRepository);
+		
+		// objremplirbdd.remplir(ad, logsRepository);
 		mav.addObject("logs", logsRepository.findAll());
 		mav.addObject("filter", filter);
 		mav.addObject("datebeginning", datebeginning);

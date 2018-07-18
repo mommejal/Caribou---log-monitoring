@@ -59,7 +59,7 @@ public class Recherche {
 		mav.addObject("selectedfilters", param.getSelectedfilters());
 		System.out.println(param.getSelectedfilters());
 		for (String filt : param.getSelectedfilters()) {
-			System.out.println("je suis une itération de filt");
+			System.out.println("je suis une itï¿½ration de filt");
 			System.out.println(filt);
 			if (filt.equals("regexpFilter")) {
 				System.out.println("Je fais filterbyregexp");

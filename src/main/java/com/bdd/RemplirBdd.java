@@ -1,7 +1,5 @@
 package com.bdd;
 
-import java.util.ArrayDeque;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.MongoDbFactory;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
@@ -21,7 +19,7 @@ public class RemplirBdd /* implements CommandLineRunner */ {
 	@Autowired MongoDbFactory mongoDbFactory;
 
 	public void ajouterLogBdd(LogsRepository logsRepository, Logs log) {
-		logsRepository.save(log);
+		// logsRepository.save(log);
 	}
 
 
