@@ -24,10 +24,6 @@ import com.google.gson.Gson;
 @Configuration
 public class MvcConfig extends WebMvcConfigurerAdapter {
 
-	private static final String regexDebutLogDefault = "^\\d?\\d:\\d\\d:\\d\\d";
-
-	private static final String regexFinLogDefault = "";
-
 	@Autowired
 	LogDAO dao;
 	
