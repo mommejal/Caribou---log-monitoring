@@ -1,27 +1,24 @@
 package com.bdd;
 
-import java.util.ArrayDeque;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.MongoDbFactory;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
-import com.caribou.Logs;
-import com.caribou.LogsRepository;
+import com.dao.LogDAO;
 import com.mongodb.Mongo;
 
 @Component
-@EnableMongoRepositories(basePackageClasses = com.caribou.LogsRepository.class)
+@EnableMongoRepositories(basePackageClasses = com.dao.LogDAO.class)
 @Repository
 public class RemplirBdd /* implements CommandLineRunner */ {
-	public LogsRepository logsRepository;
+	public LogDAO dao;
 	@Autowired Mongo mongo;
 	@Autowired MongoDbFactory mongoDbFactory;
 
-	public void ajouterLogBdd(LogsRepository logsRepository, Logs log) {
-		logsRepository.save(log);
+	public void ajouterLogBdd(LogDAO dao, LightLog log) {
+		dao.save(log);
 	}
 
 

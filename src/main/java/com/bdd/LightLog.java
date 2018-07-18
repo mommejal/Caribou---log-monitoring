@@ -7,13 +7,36 @@ import org.springframework.data.annotation.Id;
 public class LightLog {
 	
 	@Id
-	protected String id;
+	protected String _id;
 	protected Collection<String> content;
 	protected String source;
 	
+	public LightLog() {
+	}
+	
+	public LightLog(Collection<String> content) {
+		super();
+		this.content = content;
+	}
+
+	public LightLog(String id, Collection<String> content, String source) {
+		super();
+		this._id = id;
+		this.content = content;
+		this.source = source;
+	}
+
+	public LightLog(String id, Collection<String> content) {
+		super();
+		this._id = id;
+		this.content = content;
+	}
+
+
+
 	@Override
 	public String toString() {
-		return "LightLog [id=" + id + ", content=" + content + ", source=" + source + "]";
+		return "LightLog [id=" + _id + ", content=" + content + ", source=" + source + "]";
 	}
 	
 	@Override
@@ -21,7 +44,7 @@ public class LightLog {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((content == null) ? 0 : content.hashCode());
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + ((_id == null) ? 0 : _id.hashCode());
 		result = prime * result + ((source == null) ? 0 : source.hashCode());
 		return result;
 	}
@@ -40,10 +63,10 @@ public class LightLog {
 				return false;
 		} else if (!content.equals(other.content))
 			return false;
-		if (id == null) {
-			if (other.id != null)
+		if (_id == null) {
+			if (other._id != null)
 				return false;
-		} else if (!id.equals(other.id))
+		} else if (!_id.equals(other._id))
 			return false;
 		if (source == null) {
 			if (other.source != null)
@@ -59,7 +82,7 @@ public class LightLog {
 	}
 	
 	public String getId() {
-		return id;
+		return _id;
 	}
 	
 	public Collection<String> getContent() {

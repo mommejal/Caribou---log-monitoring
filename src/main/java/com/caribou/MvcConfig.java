@@ -1,11 +1,9 @@
 package com.caribou;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Description;
-import org.springframework.data.mongodb.MongoDbFactory;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.ViewResolver;
@@ -18,11 +16,11 @@ import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 import com.agent.ParamAgent;
 import com.bdd.ParametresRecherche;
 import com.bdd.Recherche;
+import com.dao.LogDAO;
 import com.google.gson.Gson;
-import com.mongodb.Mongo;
 
 @SuppressWarnings("deprecation")
-@EnableMongoRepositories(basePackageClasses = LogsRepository.class)
+@EnableMongoRepositories(basePackageClasses = LogDAO.class)
 @Configuration
 public class MvcConfig extends WebMvcConfigurerAdapter {
 
@@ -31,7 +29,7 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 	private static final String regexFinLogDefault = "";
 
 	@Autowired
-	LogsRepository logsRepository;
+	LogDAO dao;
 	
 	@Bean
 	public ParametresRecherche getParametresRecherche() {
@@ -45,7 +43,7 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 	
 	@Bean Recherche getRecherche()
 	{
-		return new Recherche(logsRepository);
+		return new Recherche(dao);
 	}
 	@Bean
 	public Gson getGson() {

@@ -6,28 +6,28 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.caribou.LogsRepository;
+import com.dao.LogDAO;
 import com.mongodb.Mongo;
 
 @Component
-@EnableMongoRepositories(basePackageClasses = com.caribou.LogsRepository.class)
+@EnableMongoRepositories(basePackageClasses = com.dao.LogDAO.class)
 public class Recherche {
 	// Une classe destinée à traiter les requetes de filtrage des Logs
 	// Va probablement utiliser JQUERY
-	public LogsRepository logsRepository;
+	public LogDAO dao;
 	@Autowired
 	Mongo mongo;
 	@Autowired
 	MongoDbFactory mongoDbFactory;
 	public String Filtre;
 
-	public Recherche(LogsRepository input) {
-		logsRepository = input;
+	public Recherche(LogDAO input) {
+		dao = input;
 	}
 
 	public ModelAndView noFilter(ModelAndView mav) {
 
-		mav.addObject("logs", logsRepository.findAll());
+		mav.addObject("logs", dao.findAll());
 		return mav;
 	}
 
@@ -36,10 +36,10 @@ public class Recherche {
 		return 0;
 	}
 
-	public ModelAndView filterBySeverityLvl(String severitylvl, ModelAndView mav) {
-		mav.addObject("logs", logsRepository.findLogsBySeveritylvl(severitylvl));
-		return mav;
-	}
+//	public ModelAndView filterBySeverityLvl(String severitylvl, ModelAndView mav) {
+//		mav.addObject("logs", dao.findLightLogBySeveritylvl(severitylvl));
+//		return mav; TODO
+//	}
 
 	public ModelAndView filterByDate(String datebeginning, String dateend, ModelAndView mav) {
 		return mav;
@@ -50,7 +50,7 @@ public class Recherche {
 	}
 
 	public ModelAndView filterByRegex(String regexp, ModelAndView mav) {
-		mav.addObject("logs", logsRepository.findLogsByRegexpMsgOrderBy_id(regexp));
+		mav.addObject("logs", dao.findLightLogByRegexpContentOrderBy_id(regexp));
 		return mav;
 	}
 
@@ -69,7 +69,7 @@ public class Recherche {
 			else if (filt.equals("severityLvlFilter")) {
 				for (String severitylvl : param.getSelectedseveritylvls()) {
 					System.out.println("Je fais filterbySeveritylvl");
-					mav=filterBySeverityLvl(severitylvl,mav);
+//		TODO			mav=filterBySeverityLvl(severitylvl,mav);
 				}
 			}		
 			else {

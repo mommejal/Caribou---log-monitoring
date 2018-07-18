@@ -5,10 +5,12 @@ import java.util.Collection;
 import com.bdd.LightLog;
 
 public abstract class LogAnalyzer extends LightLog {
-	
-	public void LogAnalyzer(LightLog content) {
+	public LogAnalyzer() {
+		super();
+	}
+	public LogAnalyzer(LightLog content) {
 			this.source = content.getSource();
-			this.id = content.getId();
+			this._id = content.getId();
 			this.content = content.getContent();
 	}
 
