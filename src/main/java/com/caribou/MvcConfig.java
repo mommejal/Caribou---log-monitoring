@@ -1,4 +1,4 @@
-package com.appweb;
+package com.caribou;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -13,7 +13,7 @@ import org.thymeleaf.spring5.SpringTemplateEngine;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
-import com.agent.AgentManager;
+import com.agent.ParamAgent;
 import com.bdd.ParametresRecherche;
 import com.bdd.Recherche;
 import com.dao.LogDAO;
@@ -57,10 +57,16 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 ////			logsRepository.save(new Logs("J'ajoute un log d'id 4 en ayant mis le logs repositorty autowired dans la config INFO ID: 37"));
 //		};
 //	}
+	
+	@Bean
+	public ParamAgent paramAgent() {
+		ParamAgent res = new ParamAgent(regexDebutLogDefault, regexFinLogDefault, 3000, 1000);
+		return res;
+	}
 
 	@Bean
-	public AgentManager getAgentManager() {
-		return new AgentManager();
+	public String getRegexAgent() {
+		return ".*apache.*";
 	}
 	
     @Bean
