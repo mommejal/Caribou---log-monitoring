@@ -13,36 +13,30 @@ import java.util.ArrayDeque;
 import java.util.Queue;
 import java.util.regex.Pattern;
 
-import com.agent.ParamAgent;
 import com.agent.exchanges.PostREST;
+import com.agent.paramagent.ParamAgentToWork;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 
 public class MyWatcher {
+	
+	private WatchService service;
+	private int lines = 0;
+	private int characters = 0;
 
-	protected WatchService service;
-	protected int lines = 0;
-	protected int characters = 0;
+	private ParamAgentToWork param;
 
-	protected ParamAgent param;
-	protected Path logPath;
-	protected String output;
-
-	MyWatcher(Path logPath, ParamAgent paramDefault, String outputURL) throws IOException {
-		super();
+	MyWatcher(ParamAgentToWork param) throws IOException {
 		this.service = FileSystems.getDefault().newWatchService();
-		this.param = paramDefault;
-		this.logPath = logPath;
-		this.output = outputURL;
-
-		// TODO retour si echec ?
-		param.maj(output);
+		this.param = param;
 	}
 
 	public WatchService getService() {
 		return service;
 	}
+	
 
+	@SuppressWarnings("unlikely-arg-type")
 	public void run() throws Exception {
 
 		Queue<Queue<String>> logs = new ArrayDeque<>();
@@ -57,7 +51,7 @@ public class MyWatcher {
 					@SuppressWarnings("unchecked")
 					WatchEvent<Path> pathEvent = (WatchEvent<Path>) event;
 					Path path = pathEvent.context();
-					if (path.equals(logPath)) {
+					if (path.equals(param.getLogPath())) {
 						try (BufferedReader in = new BufferedReader(new FileReader(pathEvent.context().toFile()))) {
 							in.skip(characters);
 
@@ -95,16 +89,16 @@ public class MyWatcher {
 										}
 									} else 
 										logs.add(message);
-								}								
+								}
 							}
 							
 							if (!logs.isEmpty() && System.currentTimeMillis() - chrono > param.getTpsVieMinStock()) {
 								System.out.println("j'envoie ça");
 								System.out.println(ow.writeValueAsString(logs));
-								PostREST.postString(ow.writeValueAsString(logs), new URL(output + "/logIncome"));
+								PostREST.postString(ow.writeValueAsString(logs), new URL(param.getOutputPath() + "/logIncome"));
 								chrono = System.currentTimeMillis();
 							}
-							param.maj(output);
+							param.majStandard();
 						}
 					}
 					key.reset();
@@ -115,5 +109,18 @@ public class MyWatcher {
 			// ex.getMessage(), ex);
 			ex.printStackTrace();
 		}
+	}
+
+	public boolean connect() {
+		try {
+			System.out.println(param.getOutputPath() + "/newAgent");
+			System.out.println(param.birthAnnouncement());
+			PostREST.postString(param.birthAnnouncement(), new URL(param.getOutputPath() + "/newAgent"));
+			param.majStandard();
+		} catch (IOException exception) {
+			exception.printStackTrace();
+			return false;
+		}
+		return true;
 	}
 }

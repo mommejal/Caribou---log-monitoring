@@ -6,13 +6,13 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.caribou.LogsRepository;
+import com.appweb.LogsRepository;
 import com.mongodb.Mongo;
 
 @Component
-@EnableMongoRepositories(basePackageClasses = com.caribou.LogsRepository.class)
+@EnableMongoRepositories(basePackageClasses = com.appweb.LogsRepository.class)
 public class Recherche {
-	// Une classe destinée à traiter les requetes de filtrage des Logs
+	// Une classe destinï¿½e ï¿½ traiter les requetes de filtrage des Logs
 	// Va probablement utiliser JQUERY
 	public LogsRepository logsRepository;
 	@Autowired

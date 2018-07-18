@@ -8,12 +8,12 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
-import com.caribou.Logs;
-import com.caribou.LogsRepository;
+import com.appweb.Logs;
+import com.appweb.LogsRepository;
 import com.mongodb.Mongo;
 
 @Component
-@EnableMongoRepositories(basePackageClasses = com.caribou.LogsRepository.class)
+@EnableMongoRepositories(basePackageClasses = com.appweb.LogsRepository.class)
 @Repository
 public class RemplirBdd /* implements CommandLineRunner */ {
 	public LogsRepository logsRepository;

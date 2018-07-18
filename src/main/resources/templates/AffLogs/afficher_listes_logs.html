@@ -7,25 +7,12 @@
 <meta charset="ISO-8859-1" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
-<style>
-table {
-border: medium solid #000000;
-width: 50%;
-}
-td, th {
-border: thin solid #6495ed;
-width: 50%;
-}
-</style>
 <body>
 	<h2>Liste des logs</h2>
 	<form action="/">
 		<input type="submit" value="Acceuil" />
 	</form>
-	<form action="/AffLogs/parametres_recherche">
-		<input type="submit" value="Nouvelle Recherche">
-	</form>
-	 <span th:text="${selectedfilters.toString()}"></span> est le filtre sélectionné
+	<span th:text="${filter}"></span> est le filtre sélectionné
 	<br />
 	<span th:text="${datebeginning} ?: 'début par défaut'"></span> est la
 	date de début sélectionné
@@ -33,30 +20,21 @@ width: 50%;
 	<span th:text="${dateend} ?: 'fin par défaut'"></span> est la date de
 	fin sélectionné
 	<br />
-	<form
-		th:action="@{/listeLogs/afficherUnLog(idlog=${idlog})}"
-		th:with="idlog=${idlog}"
-		method="get">
-		<!-- action="#" -->
-		Sélectionnez l'id d'une queue de log à voir en particulier <br /> <input
-			type="text" name="idlog" th:value="*{idlog}" /><br />
-		<button type="submit">afficher un Log</button>
-	</form>
 	<table>
 		<tr>
-			<th>Id de BDD</th>  
-	 		<th>Date</th>
+			<!--         <th>Id</th>  -->
+			<th>Date</th>
 			<!--               <th>Hostname</th>
                 <th>Facility</th>-->
 			<th>Severity Level</th>
-			<th  style="text-align:left">   MSG</th>
+			<th>MSG</th>
 		</tr>
-		<tr th:each="log : *{logs}">
-		 	<td th:text="${log.get_id()}">id</td>
- 			<td th:text="${log.getDate()}">date</td>
-  			<!--                <td th:text="${log.hostname}">hostname</td>
+		<tr th:each="log : ${logs}">
+			<!--           <td th:text="${log.getId()}">id</td>  -->
+			<td th:text="${log.getDate()}">date</td>
+			<!--                <td th:text="${log.hostname}">hostname</td>
                 <td th:text="${log.facility}">facility</td>              -->
-		 	<td th:text="${log.getSeverityLvl()}">severitylvl</td>
+			<td th:text="${log.getSeverityLvl()}">severitylvl</td>
 			<td th:text="${log.getMsg()}">MSG</td>
 		</tr>
 	</table>

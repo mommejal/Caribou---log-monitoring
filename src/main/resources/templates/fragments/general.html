@@ -8,13 +8,17 @@
 <body>
 	<div th:fragment="header">
 		<header>
-			<h1>Ici le futur menu de Caribou !</h1>
+			<div class="topnav">
+				<a class="active" href="/">Home</a> 
+				<a href="/agents/modifParam">Agents</a>
+				<a href="/affLogs/afficher_lists_logs">Visualiser les logs</a>
+			</div>
 		</header>
 	</div>
 	<div th:fragment="footer">
-		<footer> 
-			By Corentin Lafond & Leonard Mommeja <br/>
-			dans le cadre de leur stage chez Vermeg		
+		<footer>
+			By Corentin Lafond & Leonard Mommeja <br /> 
+			dans le cadre de leur stage chez Vermeg
 		</footer>
 	</div>
 </body>
