@@ -1,20 +1,19 @@
 package com.agent;
 
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.agent.logreader.WatcherFactory;
+import com.agent.paramagent.ParamAgent;
+import com.agent.paramagent.ParamAgentToWork;
 
 public class Agent {
-	protected String OUTPUT_PATH = "http://localhost:8080";
-	// private static final String LOG_PATH = Paths.get("logs.log").toString();
-	protected Path logPath = Paths.get("logs.log");
-	private final String ID;
 	
-	public Agent(final String ID){
-		this.ID = ID;
+	private ParamAgentToWork param;
+	
+	public Agent(ParamAgentToWork param) {
+		super();
+		this.param = param;
 	}
 
 	public void run() {
@@ -29,12 +28,17 @@ public class Agent {
 		}
 	}
 
-	public void scan() throws Exception {
-		new WatcherFactory(logPath).addMyWatcher(".*", OUTPUT_PATH);
-	}
-	
-	public String getID() {
-		return ID;
+	private void scan() throws Exception {
+		WatcherFactory.addMyWatcher(param);
 	}
 
+	public ParamAgent getParam() {
+		return param;
+	}
+
+	public void setParam(ParamAgentToWork param) {
+		this.param = param;
+	}
+	
+	
 }

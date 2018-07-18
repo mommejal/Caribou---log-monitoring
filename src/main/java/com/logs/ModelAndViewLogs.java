@@ -3,6 +3,8 @@ package com.logs;
 import java.util.ArrayList;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.logs.loggenerator.GeneLog;
+
 
 
 public class ModelAndViewLogs {
