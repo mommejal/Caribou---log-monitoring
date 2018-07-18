@@ -1,27 +1,22 @@
 package com.appweb;
 
 import java.util.ArrayDeque;
-import java.util.Queue;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.MongoDbFactory;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Repository;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.agent.AgentManager;
-import com.agent.ParamAgent;
+import com.agent.paramagent.ParamAgentToManage;
 import com.bdd.RemplirBdd;
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import com.mongodb.Mongo;
 
 
@@ -29,7 +24,7 @@ import com.mongodb.Mongo;
 @Component
 @EnableMongoRepositories(basePackageClasses = com.appweb.LogsRepository.class)
 @Repository
-public class CaribouController {
+public class CaribouWebController {
 
 	private static final String DEFAULT_STRING = "RIP_F-ZERO";
 
@@ -50,42 +45,6 @@ public class CaribouController {
 
 	@Autowired
 	ModelAndView mav;
-
-	@RequestMapping(value = "/newAgent", method = RequestMethod.POST)
-	@ResponseBody
-	void newAgent(@RequestBody String newAgentId) {
-		System.out.println("naissance de :" + newAgentId);
-		ParamAgent newParamAgent = new ParamAgent(newAgentId);
-		agents.insert(newParamAgent);
-	}
-	
-	@RequestMapping(value = "/logIncome", method = RequestMethod.POST)
-	@ResponseBody
-	void logIncome(@RequestBody String newlog) {
-		System.out.println("reception de :");
-		int id = 0;
-		Logs tmp = new Logs(id, "");
-		Queue<Queue<String>> logs = gson.fromJson(newlog, new TypeToken<ArrayDeque<ArrayDeque<String>>>() {
-		}.getType());
-
-		for (Queue<String> log : logs) {
-			for (String line : log) {
-				System.out.println(line);
-				tmp = new Logs(id, line);
-				// id = tmp.getId();
-				// tmp.setId(id);
-				id++;
-				logsRepository.save(tmp);
-			}
-			System.out.println("-----");
-		}
-		System.out.println("--------------");
-	}
-
-	@RequestMapping(value = "/getParamAgent", method = RequestMethod.GET)
-	String paramOutcome(@RequestParam(value = "idAgent", required = false, defaultValue = DEFAULT_STRING) String idAgent) {
-		return agents.get(idAgent).toSendStandard();
-	}
 
 	public void setLogsResource(LogsRepository logsRepository) {
 		this.logsRepository = logsRepository;
@@ -163,7 +122,7 @@ public class CaribouController {
 		//récupère un agent au hazard, dans le doute
 		int oldHashCode = agents.values().toArray()[0].hashCode();
 
-		ParamAgent agent = agents.get(agentId);
+		ParamAgentToManage agent = agents.get(agentId);
 		
 		if (agentId != DEFAULT_STRING)
 			if (agents.containsKey(agentId)) {

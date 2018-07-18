@@ -4,12 +4,14 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.agent.logreader.WatcherFactory;
+import com.agent.paramagent.ParamAgent;
+import com.agent.paramagent.ParamAgentToWork;
 
 public class Agent {
 	
-	private ParamAgent param;
+	private ParamAgentToWork param;
 	
-	public Agent(ParamAgent param) {
+	public Agent(ParamAgentToWork param) {
 		super();
 		this.param = param;
 	}
@@ -34,7 +36,7 @@ public class Agent {
 		return param;
 	}
 
-	public void setParam(ParamAgent param) {
+	public void setParam(ParamAgentToWork param) {
 		this.param = param;
 	}
 	

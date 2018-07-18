@@ -13,8 +13,8 @@ import java.util.ArrayDeque;
 import java.util.Queue;
 import java.util.regex.Pattern;
 
-import com.agent.ParamAgent;
 import com.agent.exchanges.PostREST;
+import com.agent.paramagent.ParamAgentToWork;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 
@@ -24,9 +24,9 @@ public class MyWatcher {
 	private int lines = 0;
 	private int characters = 0;
 
-	private ParamAgent param;
+	private ParamAgentToWork param;
 
-	MyWatcher(ParamAgent param) throws IOException {
+	MyWatcher(ParamAgentToWork param) throws IOException {
 		this.service = FileSystems.getDefault().newWatchService();
 		this.param = param;
 	}
@@ -114,8 +114,8 @@ public class MyWatcher {
 	public boolean connect() {
 		try {
 			System.out.println(param.getOutputPath() + "/newAgent");
-			System.out.println(param.getId());
-			PostREST.postString(param.getId(), new URL(param.getOutputPath() + "/newAgent"));
+			System.out.println(param.birthAnnouncement());
+			PostREST.postString(param.birthAnnouncement(), new URL(param.getOutputPath() + "/newAgent"));
 			param.majStandard();
 		} catch (IOException exception) {
 			exception.printStackTrace();
