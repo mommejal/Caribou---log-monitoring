@@ -6,8 +6,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
-import com.appweb.Logs;
-import com.appweb.LogsRepository;
+import com.dao.LogDAO;
 import com.mongodb.Mongo;
 
 @Component
