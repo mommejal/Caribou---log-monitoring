@@ -1,5 +1,6 @@
 package com.log;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 import org.springframework.data.annotation.Id;
@@ -15,6 +16,15 @@ public class LightLog {
 		super();
 		this._id = id;
 		this.content = content;
+		this.source = source;
+	}
+	
+	public LightLog(String id, String content, String source) {
+		super();
+		this._id = id;
+		ArrayList<String> ar = new ArrayList<String>();
+		ar.add(content);
+		this.content = ar;
 		this.source = source;
 	}
 
