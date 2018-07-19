@@ -2,6 +2,7 @@ package com.appweb;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Description;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
@@ -22,6 +23,7 @@ import com.google.gson.Gson;
 @SuppressWarnings("deprecation")
 @EnableMongoRepositories(basePackageClasses = LogDAO.class)
 @Configuration
+@ComponentScan(basePackages= {"com" ,"com.appweb.controllers"})
 public class MvcConfig extends WebMvcConfigurerAdapter {
 
 	@Autowired

@@ -1,6 +1,5 @@
 package com.appweb.mavoutput.technique;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,7 +12,7 @@ import com.appweb.controllers.Displayer;
 @Controller
 @Component
 public class GestionBDD extends Displayer {
-	@Autowired ModelAndView mav;
+//	@Autowired ModelAndView mav;
 	@RequestMapping(value = "/technique/gestionBdd", method = RequestMethod.GET)
 	@ResponseBody
 	public ModelAndView gestionBDD(ModelAndView mav) {
