@@ -1,10 +1,10 @@
-package com.loganalyzer;
+package com.log.loganalyzer;
 
 import java.util.Map;
 
-import com.loganalyzer.datacatcher.BetweenRegexCatcher;
-import com.loganalyzer.datacatcher.DataCatcher;
-import com.loganalyzer.datacatcher.RegexCatcher;
+import com.log.loganalyzer.datacatcher.BetweenRegexCatcher;
+import com.log.loganalyzer.datacatcher.DataCatcher;
+import com.log.loganalyzer.datacatcher.RegexCatcher;
 
 public class ParamLogAnalyzerCustom {
 	Map<String, DataCatcher> datacatchers;

@@ -1,4 +1,4 @@
-package com.bdd;
+package com.log;
 
 import java.util.Collection;
 
@@ -10,14 +10,6 @@ public class LightLog {
 	protected String _id;
 	protected Collection<String> content;
 	protected String source;
-	
-	public LightLog() {
-	}
-	
-	public LightLog(Collection<String> content) {
-		super();
-		this.content = content;
-	}
 
 	public LightLog(String id, Collection<String> content, String source) {
 		super();
@@ -25,14 +17,6 @@ public class LightLog {
 		this.content = content;
 		this.source = source;
 	}
-
-	public LightLog(String id, Collection<String> content) {
-		super();
-		this._id = id;
-		this.content = content;
-	}
-
-
 
 	@Override
 	public String toString() {
@@ -88,5 +72,15 @@ public class LightLog {
 	public Collection<String> getContent() {
 		return content;
 	}
+
+	public void setContent(Collection<String> content) {
+		this.content = content;
+	}
+
+	public void setSource(String source) {
+		this.source = source;
+	}
+	
+	
 }
 	

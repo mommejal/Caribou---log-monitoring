@@ -1,21 +1,24 @@
-package com.loganalyzer;
+package com.log.loganalyzer;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Map;
 
-import com.bdd.LightLog;
+import com.log.LightLog;
 
 public class LogAnalyzerBuilder {
 	
 	public Map <String, ParamLogAnalyzerCustom> customedParamLogs;
-	public LogAnalyzer buildLog(LightLog content, String type) {
+	
+	public LogAnalyzer buildLog(LightLog log, String type) {
 		// Si on a un nouveau type d eLogs � ajouter, il suffit d'ajouter un case qui renvoie le new <Object>()
 		switch (type) {
 		case "FirstLogAnalyzer": 
-			return new FirstLogAnalyzer(content);
+			return new FirstLogAnalyzer(log.getId(), log.getContent(), log.getSource());
 		case "LogAnalyzerCustom":
-			return new LogAnalyzerCustom(content, customedParamLogs.get(type));
+			return new LogAnalyzerCustom(type, log.getId(), log.getContent(), log.getSource(), customedParamLogs.get(type));
 		default: //error handling
-			throw new IllegalArgumentException("Le type : "+type+" n'a pas encore �t� d�fini");
+			throw new IllegalArgumentException("Le type : "+type+" n'a pas encore été défini");
 		}
 		
 		// Eventuellement cette version est plus automatique mais aussi plus dangereuse au cas ou l'argument est mauvais ou du meme nom qu'une classe d�j� utilis�e
@@ -29,6 +32,12 @@ public class LogAnalyzerBuilder {
 //	      }
 	   }
 		
+	public Collection<LogAnalyzer> buildLogAnalyzer(Collection<LightLog> logs, String type){
+		ArrayList<LogAnalyzer> res = new ArrayList<LogAnalyzer>();
+		for (LightLog log : logs)
+			res.add(buildLog(log, type));
+		return res;
+	}
 	
 	
 	

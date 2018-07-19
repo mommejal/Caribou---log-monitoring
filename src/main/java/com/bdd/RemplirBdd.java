@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import com.dao.LogDAO;
+import com.log.LightLog;
 import com.mongodb.Mongo;
 
 @Component

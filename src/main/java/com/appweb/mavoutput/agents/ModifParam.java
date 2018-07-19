@@ -9,7 +9,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class ModifParam {
+	
 	private static final String DEFAULT_STRING = "RIP_F-ZERO";
+	
 	@RequestMapping(value = "/agents/modifParam", method = RequestMethod.GET)
 	@ResponseBody
 	ModelAndView modifParam(ModelAndView mav,

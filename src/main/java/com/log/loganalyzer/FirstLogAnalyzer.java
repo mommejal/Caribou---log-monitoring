@@ -1,34 +1,36 @@
-package com.loganalyzer;
+package com.log.loganalyzer;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.bdd.LightLog;
-
 public class FirstLogAnalyzer extends LogAnalyzer {
+	
 	private static Pattern pattern;
 	private static Matcher matcher;
+	
+	private final static String name = "FirstLogAnalyzer";
 
-	public FirstLogAnalyzer(String source, Collection<String> content) {
-		this.source = source;
-		this.content = content;
+	public FirstLogAnalyzer(String id, Collection<String> content, String source) {
+		super(name, id, content, source);
 	}
 
-	public FirstLogAnalyzer(LightLog content) {
-//		this.source = content.getSource();
-//		this.id = content.getId();
-//		this.content = content.getContent();
-		super();
-	}
-
+//	@Override
+//	public Collection<String> getAvailableDatas() {
+//		ArrayList<String> res = new ArrayList<String>();
+//		res.add(this.getSeverityLvl());
+//		res.add(this.getSource());
+//		res.add(""+this.getContent());
+//		return res;
+//	}
+	
 	@Override
 	public Collection<String> getAvailableDatas() {
 		ArrayList<String> res = new ArrayList<String>();
-		res.add(this.getSeverityLvl());
-		res.add(this.getSource());
-		res.add(""+this.getContent());
+		res.add("SeverityLvl");
+		res.add("Source");
+		res.add("Content");
 		return res;
 	}
 

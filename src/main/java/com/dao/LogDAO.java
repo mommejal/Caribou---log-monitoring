@@ -6,7 +6,7 @@ import java.util.List;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 
-import com.bdd.LightLog;
+import com.log.LightLog;
 
 public interface LogDAO extends MongoRepository<LightLog, String>/* , QuerydslPredicateExecutor<LightLog> */ {
 //	public HashSet<LightLog> findLightLogBySeveritylvl(String severitylvl);

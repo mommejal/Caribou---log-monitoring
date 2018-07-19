@@ -34,4 +34,6 @@ public class WebController extends AbstractController {
 	String error(ModelAndView mav) {
 		return "une erreur est survenue";
 	}
+	
+	
 }
