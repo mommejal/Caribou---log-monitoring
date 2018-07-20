@@ -10,7 +10,7 @@ public class ParamAgentToManage extends ParamAgent {
 		this.associatedAnalyzer = associatedAnalyzer;
 	}
 	
-	ParamAgentToManage(String id, String appName, String logPath, String outputPath) {
+	public ParamAgentToManage(String id, String appName, String logPath, String outputPath) {
 		super(id, appName, logPath, outputPath);
 	}
 

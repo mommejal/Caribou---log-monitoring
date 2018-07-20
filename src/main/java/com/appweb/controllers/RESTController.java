@@ -28,9 +28,7 @@ import com.mongodb.Mongo;
 @Component
 @EnableMongoRepositories(basePackageClasses = com.dao.LogDAO.class)
 @Repository
-public class CaribouRESTController extends AbstractController {
-
-	//private static final String DEFAULT_STRING = "RIP_F-ZERO";
+public class RESTController extends AbstractController {
 
 	@Autowired
 	Gson gson;
@@ -57,23 +55,25 @@ public class CaribouRESTController extends AbstractController {
 	
 	@RequestMapping(value = "/logIncome", method = RequestMethod.POST)
 	@ResponseBody
-	void logIncome(@RequestBody String newlog) {
+	void logIncome(@RequestBody String newlog,
+			@RequestParam(value = "idAgent", required = true) String idAgent) {
 		// Fonction qui convertit le json en objet java pour sauvegarder les r�sulats
 		// dans la BDD
-		System.out.println("je re�ois :");
+		System.out.println("je reçois :");
 		Queue<Queue<String>> logs = gson.fromJson(newlog, new TypeToken<Queue<Queue<String>>>() {
 		}.getType());
 		for (Queue<String> log : logs) {
-//			dao.save(new LightLog(log));
-			System.out.println(log.toString());
-			System.out.println("-----");
+			dao.save(new LightLog("id",log, idAgent));
+//			System.out.println(log.toString());
+//			System.out.println("-----");
 		}
-		System.out.println("--------------");
+//		System.out.println("--------------");
 	}
 	
 
 	@RequestMapping(value = "/getParamAgent", method = RequestMethod.GET)
 	String paramOutcome(@RequestParam(value = "idAgent", required = true) String idAgent) {
+//		System.out.println(idAgent + " maj ses params");
 		return agents.get(idAgent).toSendStandard();
 	}
 	

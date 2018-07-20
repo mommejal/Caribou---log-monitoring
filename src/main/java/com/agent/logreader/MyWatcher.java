@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.nio.file.FileSystems;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.nio.file.WatchEvent;
 import java.nio.file.WatchKey;
 import java.nio.file.WatchService;
@@ -19,7 +20,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 
 public class MyWatcher {
-	
+
 	private WatchService service;
 	private int lines = 0;
 	private int characters = 0;
@@ -34,9 +35,7 @@ public class MyWatcher {
 	public WatchService getService() {
 		return service;
 	}
-	
 
-	@SuppressWarnings("unlikely-arg-type")
 	public void run() throws Exception {
 
 		Queue<Queue<String>> logs = new ArrayDeque<>();
@@ -51,8 +50,9 @@ public class MyWatcher {
 					@SuppressWarnings("unchecked")
 					WatchEvent<Path> pathEvent = (WatchEvent<Path>) event;
 					Path path = pathEvent.context();
-					if (path.equals(param.getLogPath())) {
+					if (path.equals(Paths.get(param.getLogPath()))) {
 						try (BufferedReader in = new BufferedReader(new FileReader(pathEvent.context().toFile()))) {
+
 							in.skip(characters);
 
 							String line;
@@ -65,8 +65,11 @@ public class MyWatcher {
 							while ((line = in.readLine()) != null && lines < param.getNbLignesDeSuite()) {
 								lines++;
 								characters += line.length() + System.lineSeparator().length();
+								
+								System.out.println("dans : " + line);
 								if (startPattern.matcher(line).find()) {
-
+									
+									
 									Queue<String> message = new ArrayDeque<>();
 
 									message.add(line);
@@ -91,14 +94,15 @@ public class MyWatcher {
 										logs.add(message);
 								}
 							}
-							
+							System.out.println("ouais je passe ici, on a " + logs.toString() + (System.currentTimeMillis() - chrono) + ">" + param.getTpsVieMinStock());
 							if (!logs.isEmpty() && System.currentTimeMillis() - chrono > param.getTpsVieMinStock()) {
 								System.out.println("j'envoie ça");
 								System.out.println(ow.writeValueAsString(logs));
-								PostREST.postString(ow.writeValueAsString(logs), new URL(param.getOutputPath() + "/logIncome"));
+								PostREST.postString(ow.writeValueAsString(logs), new URL(param.getOutputPath() + "/logIncome?idAgent=" + param.getId()));
 								chrono = System.currentTimeMillis();
+								logs.clear();
 							}
-							param.majStandard();
+							param.majStandard(); //TODO trop souvent ?? mettre un 2eme chrono si trop lourd
 						}
 					}
 					key.reset();
@@ -113,8 +117,6 @@ public class MyWatcher {
 
 	public boolean connect() {
 		try {
-			System.out.println(param.getOutputPath() + "/newAgent");
-			System.out.println(param.birthAnnouncement());
 			PostREST.postString(param.birthAnnouncement(), new URL(param.getOutputPath() + "/newAgent"));
 			param.majStandard();
 		} catch (IOException exception) {
