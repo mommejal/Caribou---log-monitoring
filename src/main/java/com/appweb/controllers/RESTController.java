@@ -59,7 +59,7 @@ public class RESTController extends AbstractController {
 			@RequestParam(value = "idAgent", required = true) String idAgent) {
 		// Fonction qui convertit le json en objet java pour sauvegarder les r�sulats
 		// dans la BDD
-		System.out.println("je reçois :");
+//		System.out.println("je reçois :");
 		Queue<Queue<String>> logs = gson.fromJson(newlog, new TypeToken<Queue<Queue<String>>>() {
 		}.getType());
 		for (Queue<String> log : logs) {
