@@ -17,6 +17,10 @@ public class LightLog {
 		this.content = content;
 		this.source = source;
 	}
+	public LightLog() {
+		// Sert pour l'instant uniquement à LogAnalyzerBuilder pour construire getAvailableDataByType
+		super();
+	}
 
 	@Override
 	public String toString() {

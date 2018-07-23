@@ -39,6 +39,12 @@ public class LogAnalyzerBuilder {
 		return res;
 	}
 	
+	public Collection<String> getAvailableDataByType(String type){
+		LightLog tmplightlog = new LightLog();
+		LogAnalyzer tmp = buildLog(tmplightlog, type);
+		return tmp.getAvailableDatas();
+	}
+	
 	
 	
 //	public LogAnalyzerCustom buildCstmLog(LightLog log, HashMap<String,DataCatcher> param) {

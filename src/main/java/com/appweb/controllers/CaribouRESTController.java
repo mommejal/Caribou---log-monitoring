@@ -64,7 +64,7 @@ public class CaribouRESTController extends AbstractController {
 		Queue<Queue<String>> logs = gson.fromJson(newlog, new TypeToken<Queue<Queue<String>>>() {
 		}.getType());
 		for (Queue<String> log : logs) {
-//			dao.save(new LightLog(log));
+			dao.save(new LightLog("_id",log,"server4.log"));
 			System.out.println(log.toString());
 			System.out.println("-----");
 		}

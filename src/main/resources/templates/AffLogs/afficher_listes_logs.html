@@ -9,57 +9,134 @@
 </head>
 <style>
 table {
-border: medium solid #000000;
-width: 50%;
+	border: medium solid #000000;
+	width: 50%;
 }
+
 td, th {
-border: thin solid #6495ed;
-width: 50%;
+	border: thin solid #6495ed;
+	width: 50%;
 }
 </style>
 <body>
 	<h2>Liste des logs</h2>
-	<form action="/">
+<!-- 	<form action="/">
 		<input type="submit" value="Acceuil" />
 	</form>
 	<form action="/AffLogs/parametres_recherche">
 		<input type="submit" value="Nouvelle Recherche">
 	</form>
-	 <span th:text="${selectedfilters.toString()}"></span> est le filtre sélectionné
+	<span th:text="${selectedfilters.toString()}"></span> est le filtre
+	sélectionné
 	<br />
 	<span th:text="${datebeginning} ?: 'début par défaut'"></span> est la
 	date de début sélectionné
 	<br />
 	<span th:text="${dateend} ?: 'fin par défaut'"></span> est la date de
 	fin sélectionné
-	<br />
+	<br /> -->
 	<form
 		th:action="@{/AffLogs/afficher_listes_logs/afficherUnLog(idlog=${idlog})}"
-		th:with="idlog=${idlog}"
-		method="get">
+		th:with="idlog=${idlog}" method="get">
 		<!-- action="#" -->
 		Sélectionnez l'id d'une queue de log à voir en particulier <br /> <input
 			type="text" name="idlog" th:value="*{idlog}" /><br />
 		<button type="submit">afficher un Log</button>
 	</form>
-	<table>
+	<span th:text="${availabledata}"></span>
+	<span th:text="${logs}"></span>
+	
+	
+ 	<table>
 		<tr>
-			<th>Id de BDD</th>  
-	 		<th>Date</th>
-			<!--               <th>Hostname</th>
-                <th>Facility</th>-->
-			<th>Severity Level</th>
-			<th  style="text-align:left">   MSG</th>
+<!-- 		<th th:each="index: ${#numbers.sequence(0, 2)}">
+        <th th:text="${availabledata.get(index)}"> -->
+			<th>Severity Lvl</th>  
+	 		<th>Source</th>
+			<th style="text-align:left" th:text="${availabledata.get(2)}"> Contenu</th>
 		</tr>
 		<tr th:each="log : *{logs}">
-		 	<td th:text="${log.get_id()}">id</td>
- 			<td th:text="${log.getDate()}">date</td>
-  			<!--                <td th:text="${log.hostname}">hostname</td>
-                <td th:text="${log.facility}">facility</td>              -->
-		 	<td th:text="${log.getSeverityLvl()}">severitylvl</td>
-			<td th:text="${log.getMsg()}">MSG</td>
+<!-- 		<td th:text="${log.getData(${data})}"> ddd </td> -->
+		<!-- <th th:text="${log.getData(Content)}"> ... </th> -->
+		<th th:text="${log.getSeverityLvl()}"> ... </th>
+		<th th:text="${log.getSource()}"> ... </th>
+		<th th:text="${log.getContent()}"> ... </th>
+<!-- 		<th th:text="${log.getData(${availabledata.get(1)})}"> ... </th>
+		<th th:text="${log.getData(${availabledata.get(2)})}"> ... </th> -->
+<!-- 		<td th:text="${log.getData(Content)}"> ddddddddddddddddddddddddd </td> -->
+<!-- 			<td th:text="${log.getData(content)"> ddddddddddddddddddddddddd </td>
+		 	<th th:each="data : *{availabledata]" >
+		 		<td th:text="${log.getData(${data})}">
+ 			<td th:text="${log.getData(data)}">date</td>
+		 	<td th:text="${log.getData(content)}"> msg</td>-->
 		</tr>
 	</table>
+	 
+	
+<!-- 	
+	<table>
+	
+	<tr>
+     <td th:each="data : *{availabledata}">
+      <th th:text="${data}">Row</th>
+      <td th:text="${availabledata}">
+    </tr>
+   -->
+	<!-- <tr>
+		<th th:each="data : *{availabledata}">
+			<td th:text="${data}">Les tetes de colonnes</th>
+		 </th>
+	</tr> 	 -->	<!-- <tr th:each="log : *{logs}">
+	 	<th:each="${index: #numbers.sequence(0, yourList.length, 3)}"
+			<td th:text="${log.getData(data)}">...</td>
+		</tr> -->
+<!-- 		<tr th:each="data : *{availabledata}">
+			<td th:text="${data}">...</td>  
+		</tr> -->
+<!-- 		<th:block th:each="data : *{availabledata}">
+		<tr th:each="log : *{logs}">
+ 		<td th:each = "data : *{availabledata}">aaa</td>		
+		 	<td th:text="${log.getData(data)}">...</td>
+		 </tr>
+		</th:block>
+		 -->
+		
+<!-- 		<th:block th:each="log : *{logs}">
+		<tr th:each="data : *{availabledata}">
+			<tr>
+ 		<td th:each = "data : *{availabledata}">aaa</td>		
+		 	<td th:text="${log.getData(data)}">...</td>
+		 	</tr>
+		 
+		</th:block> -->
+<!-- 	</table> -->
+<!-- 		<table>
+    <span th:each="log : ${logs}">
+        <td>
+            <tr th:each="data: ${availabledata}">
+                <p th:text="${log.getData(data)}"></p>
+            </tr>
+        <td>
+    </span>
+</table> -->
 
+	
+<!--     <th:block th:each="log : ${logs}">
+		<tr>      
+            <td th:each="data: ${availabledata}">
+                <th th:text="${log.getData(${data})}">
+        </tr>
+    </th:block> -->
+<!-- <table>
+
+<tr th:each="log:${logs}">
+  <td>
+    <div th:each="data:${availabledata}">
+      <span th:text="${log.getData(Content)}"></span>
+    </div>
+  </td>
+</tr>
+
+</table> -->
 </body>
 </html>

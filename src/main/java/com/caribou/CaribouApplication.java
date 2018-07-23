@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @EnableAutoConfiguration
-@ComponentScan(basePackages= {"com" ,"com.appweb.controllers","com.appweb.mavoutput"})
+@ComponentScan(basePackages= {"com" /*,"com.appweb.controllers","com.appweb.mavoutput"*/})
 public class CaribouApplication {
 
 	public static void main(String[] args) {

@@ -37,6 +37,8 @@ public class FirstLogAnalyzer extends LogAnalyzer {
 	@Override
 	public String getData(String data) {
 		switch (data) {
+		case "Content":
+			return getContent().toString();
 		case "Date": 
 			return getDate();
 		case "SeverityLvl":

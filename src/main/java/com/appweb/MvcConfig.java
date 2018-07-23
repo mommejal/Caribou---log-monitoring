@@ -19,6 +19,7 @@ import com.bdd.ParametresRecherche;
 import com.bdd.Recherche;
 import com.dao.LogDAO;
 import com.google.gson.Gson;
+import com.log.loganalyzer.LogAnalyzerBuilder;
 
 @SuppressWarnings("deprecation")
 @EnableMongoRepositories(basePackageClasses = LogDAO.class)
@@ -47,6 +48,10 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 	@Bean
 	public Gson getGson() {
 		return new Gson();
+	}
+	@Bean
+	public LogAnalyzerBuilder getLogAnalyzerBuilder() {
+		return new LogAnalyzerBuilder();
 	}
 
 	// CommandLineRunner commandLineRunner(LogsRepository logsRepository) {
