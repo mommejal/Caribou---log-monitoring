@@ -1,17 +1,35 @@
-//package com.appweb.mavoutput.agents;
-//
-//import org.springframework.stereotype.Controller;
-//import org.springframework.web.bind.annotation.RequestMapping;
-//import org.springframework.web.bind.annotation.RequestMethod;
-//import org.springframework.web.bind.annotation.RequestParam;
-//import org.springframework.web.bind.annotation.ResponseBody;
-//import org.springframework.web.servlet.ModelAndView;
-//
-//@Controller
-//public class ModifParam {
-//	
+package com.appweb.mavoutput.agents;
+
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.agent.paramagent.ParamAgentToManage;
+
+@Controller
+public class AgentsMonitor {
+	
 //	private static final String DEFAULT_STRING = "RIP_F-ZERO";
-//	
+	
+	@Autowired
+	Map<String, ParamAgentToManage> agents;
+	
+	@RequestMapping(value = "/agents/selectAgent", method = RequestMethod.GET)
+	@ResponseBody
+	ModelAndView selectAgent(ModelAndView mav) {
+		mav.addObject("(agents",agents);
+		mav.setViewName("agents/selectAgent");
+		return mav;
+	}
+	
+	
 //	@RequestMapping(value = "/agents/modifParam", method = RequestMethod.GET)
 //	@ResponseBody
 //	ModelAndView modifParam(ModelAndView mav,
@@ -48,4 +66,4 @@
 //		mav.setViewName("agents/modifParam");
 //		return mav;
 //	}
-//}
+}

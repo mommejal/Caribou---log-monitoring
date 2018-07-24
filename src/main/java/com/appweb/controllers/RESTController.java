@@ -1,5 +1,6 @@
 package com.appweb.controllers;
 
+import java.util.Map;
 import java.util.Queue;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.agent.AgentManager;
 import com.agent.paramagent.ParamAgentToManage;
 import com.agent.paramagent.ParamAgentToManageBuilder;
 import com.google.gson.Gson;
@@ -34,7 +34,7 @@ public class RESTController extends AbstractController {
 	Gson gson;
 
 	@Autowired
-	AgentManager agents;
+	Map<String, ParamAgentToManage> agents;
 
 	@Autowired
 	Mongo mongo;
@@ -50,7 +50,7 @@ public class RESTController extends AbstractController {
 	void newAgent(@RequestBody String newAgentInfo) {
 		ParamAgentToManage newParamAgent = ParamAgentToManageBuilder.build(newAgentInfo);
 		System.out.println("naissance de :" + newParamAgent.toString());
-		agents.insert(newParamAgent);
+		agents.put(newParamAgent.getId(), newParamAgent);
 	}
 	
 	@RequestMapping(value = "/logIncome", method = RequestMethod.POST)

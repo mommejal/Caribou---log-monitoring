@@ -5,6 +5,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.applications.App;
 
-public abstract class Displayer extends App {
+public abstract class Displayer {
 	@Autowired public ModelAndView mav;
 }

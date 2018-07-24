@@ -1,5 +1,8 @@
 package com.appweb;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -14,11 +17,14 @@ import org.thymeleaf.spring5.SpringTemplateEngine;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
-import com.agent.AgentManager;
+import com.agent.paramagent.ParamAgentToManage;
+import com.alarm.Alarm;
 import com.bdd.ParametresRecherche;
 import com.bdd.Recherche;
 import com.dao.LogDAO;
 import com.google.gson.Gson;
+import com.log.loganalyzer.LogAnalyzerBuilder;
+import com.test.ContentTest;
 
 @SuppressWarnings("deprecation")
 @EnableMongoRepositories(basePackageClasses = LogDAO.class)
@@ -28,7 +34,7 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 
 	@Autowired
 	LogDAO dao;
-
+	
 	@Bean
 	public ParametresRecherche getParametresRecherche() {
 		return new ParametresRecherche();
@@ -61,9 +67,20 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 	// }
 
 	@Bean
-	public AgentManager getAgentManager() {
-		return new AgentManager();
+	public Map<String, ParamAgentToManage> getParamAgentStock() {
+		return new HashMap<String, ParamAgentToManage>();
 	}
+	
+	@Bean
+	public Map<String, Alarm> getAlarmStock() {
+		return new HashMap<String, Alarm>();
+	}
+	
+	public LogAnalyzerBuilder getLogAnalyzerBuilder() {
+		return new LogAnalyzerBuilder();
+	}
+	
+	
 
 	@Bean
 	@Description("Thymeleaf template resolver serving HTML 5")
