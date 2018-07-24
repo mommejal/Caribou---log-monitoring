@@ -30,12 +30,6 @@ public class AfficherListeLightLog extends Displayer {
 	public ModelAndView afficherListeLightLog(ModelAndView mav) {
 		// Fonction qui affiche tous les logs de la base de donnï¿½es, ï¿½ terme elle
 		String type = "FirstLogAnalyzer";
-		dao.save(new LightLog("id1", Arrays.asList("Conenu du log  1, suite du log 1 ,333333".split(",")), "source 1"));
-		dao.save(new LightLog("id2", Arrays.asList("Conenu du log  1, WARN ,dddddd".split(",")), "source 1"));
-		dao.save(new LightLog("id3", Arrays.asList("Conenu du log  1,gegeg ag ,3gageagea33".split(",")), "source 1"));
-		dao.save(new LightLog("id4", Arrays.asList(" INFO ice log numéro4".split(",")), "source 1"));
-		dao.save(new LightLog("id4", Arrays.asList(" FFFFFFFFFFFFFFFFFFFFFFFFFF".split(",")), "source 1"));
-
 		Collection<LogAnalyzer> logs = builder.buildLogAnalyzer(new HashSet<>(dao.findAll()), type); //Vérifier que la complexité soit pas trop grande
 		logs = (ArrayList<LogAnalyzer>) logs;
 
