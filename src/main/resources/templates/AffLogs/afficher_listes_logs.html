@@ -35,108 +35,41 @@ td, th {
 	<span th:text="${dateend} ?: 'fin par défaut'"></span> est la date de
 	fin sélectionné
 	<br /> -->
-	<form
+<!-- 	<form
 		th:action="@{/AffLogs/afficher_listes_logs/afficherUnLog(idlog=${idlog})}"
 		th:with="idlog=${idlog}" method="get">
-		<!-- action="#" -->
+		action="#"
 		Sélectionnez l'id d'une queue de log à voir en particulier <br /> <input
 			type="text" name="idlog" th:value="*{idlog}" /><br />
 		<button type="submit">afficher un Log</button>
 	</form>
 	<span th:text="${availabledata}"></span>
-	<span th:text="${logs}"></span>
-	
-	
+	<span th:text="${logs}"></span> -->
+<!-- 	<p th:each="log : *{logs}">
+		<table>
+		<tr>
+			<td style="text-align:left" th:text="${log.getData(${availabledata.get(0)})}"> Severity Lvl ?</td>
+	 		<td style="text-align:left" th:text="${availabledata.get(1)}"> Source ?</td>
+			<td style="text-align:left" th:text="${availabledata.get(2)}"> Contenu ?</td>
+		</tr>
+		</table>
+	 </p>	 
+	 -->
+<!-- TODO Demain essayer de faire un for de span-->
+	<br>
  	<table>
 		<tr>
-<!-- 		<th th:each="index: ${#numbers.sequence(0, 2)}">
-        <th th:text="${availabledata.get(index)}"> -->
-			<th>Severity Lvl</th>  
-	 		<th>Source</th>
-			<th style="text-align:left" th:text="${availabledata.get(2)}"> Contenu</th>
+			<th style="text-align:left" th:text="${availabledata.get(0)}"> Severity Lvl ?</th>
+	 		<th style="text-align:left" th:text="${availabledata.get(1)}"> Source ?</th>
+			<th style="text-align:left" th:text="${availabledata.get(2)}"> Contenu ?</th>
 		</tr>
 		<tr th:each="log : *{logs}">
-<!-- 		<td th:text="${log.getData(${data})}"> ddd </td> -->
-		<!-- <th th:text="${log.getData(Content)}"> ... </th> -->
-		<th th:text="${log.getSeverityLvl()}"> ... </th>
-		<th th:text="${log.getSource()}"> ... </th>
-		<th th:text="${log.getContent()}"> ... </th>
-<!-- 		<th th:text="${log.getData(${availabledata.get(1)})}"> ... </th>
-		<th th:text="${log.getData(${availabledata.get(2)})}"> ... </th> -->
-<!-- 		<td th:text="${log.getData(Content)}"> ddddddddddddddddddddddddd </td> -->
-<!-- 			<td th:text="${log.getData(content)"> ddddddddddddddddddddddddd </td>
-		 	<th th:each="data : *{availabledata]" >
-		 		<td th:text="${log.getData(${data})}">
- 			<td th:text="${log.getData(data)}">date</td>
-		 	<td th:text="${log.getData(content)}"> msg</td>-->
+		<td th:text="${log.get(0)}"> ... </td>
+		<td th:text="${log.get(1)}"> ... </td>
+		<td th:text="${log.get(2)}"> ... </td>
+<!-- 		<td th:text="${log.get(3)}"> ... </td> Ne  marche si out of array
+		<td th:text="${log.get(4)}"> ... </td> -->
 		</tr>
 	</table>
-	 
-	
-<!-- 	
-	<table>
-	
-	<tr>
-     <td th:each="data : *{availabledata}">
-      <th th:text="${data}">Row</th>
-      <td th:text="${availabledata}">
-    </tr>
-   -->
-	<!-- <tr>
-		<th th:each="data : *{availabledata}">
-			<td th:text="${data}">Les tetes de colonnes</th>
-		 </th>
-	</tr> 	 -->	<!-- <tr th:each="log : *{logs}">
-	 	<th:each="${index: #numbers.sequence(0, yourList.length, 3)}"
-			<td th:text="${log.getData(data)}">...</td>
-		</tr> -->
-<!-- 		<tr th:each="data : *{availabledata}">
-			<td th:text="${data}">...</td>  
-		</tr> -->
-<!-- 		<th:block th:each="data : *{availabledata}">
-		<tr th:each="log : *{logs}">
- 		<td th:each = "data : *{availabledata}">aaa</td>		
-		 	<td th:text="${log.getData(data)}">...</td>
-		 </tr>
-		</th:block>
-		 -->
-		
-<!-- 		<th:block th:each="log : *{logs}">
-		<tr th:each="data : *{availabledata}">
-			<tr>
- 		<td th:each = "data : *{availabledata}">aaa</td>		
-		 	<td th:text="${log.getData(data)}">...</td>
-		 	</tr>
-		 
-		</th:block> -->
-<!-- 	</table> -->
-<!-- 		<table>
-    <span th:each="log : ${logs}">
-        <td>
-            <tr th:each="data: ${availabledata}">
-                <p th:text="${log.getData(data)}"></p>
-            </tr>
-        <td>
-    </span>
-</table> -->
-
-	
-<!--     <th:block th:each="log : ${logs}">
-		<tr>      
-            <td th:each="data: ${availabledata}">
-                <th th:text="${log.getData(${data})}">
-        </tr>
-    </th:block> -->
-<!-- <table>
-
-<tr th:each="log:${logs}">
-  <td>
-    <div th:each="data:${availabledata}">
-      <span th:text="${log.getData(Content)}"></span>
-    </div>
-  </td>
-</tr>
-
-</table> -->
 </body>
 </html>

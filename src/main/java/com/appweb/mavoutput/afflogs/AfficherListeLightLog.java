@@ -3,6 +3,7 @@ package com.appweb.mavoutput.afflogs;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -36,18 +37,28 @@ public class AfficherListeLightLog extends Displayer {
 		dao.save(new LightLog("id3", Arrays.asList("Conenu du log  1,gegeg ag ,3gageagea33".split(",")), "source 1"));
 
 		Collection <LogAnalyzer> logs = builder.buildLogAnalyzer(dao.findAll(), type);
+		logs = (ArrayList<LogAnalyzer>) logs;
+
 //		Collection <String> availabledata = builder.getAvailableDataByType(type);
 		ArrayList<String>availabledata = new ArrayList<String>();
 		availabledata.add("SeverityLvl");
 		availabledata.add("Source");
 
 		availabledata.add("Content");
-
+		ArrayList<ArrayList<String>> contenttodisplay = new ArrayList<ArrayList<String>>();
+		for (LogAnalyzer log : logs) {
+			ArrayList<String> tmp = new ArrayList<String>();
+			for (String data :availabledata) {
+				tmp.add((String)log.getData(data));
+			}
+			contenttodisplay.add(tmp);
+		}
 		mav.addObject("availabledata", availabledata);
-		mav.addObject("logs", logs);
+		mav.addObject("logs", contenttodisplay);
 		mav.setViewName("/AffLogs/afficher_listes_logs");
 		System.out.println("Je sors de la fonction afficher liste light log");
 		
 		return mav;
 	}
 }
+;
