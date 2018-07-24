@@ -18,6 +18,7 @@ import com.agent.AgentManager;
 import com.bdd.ParametresRecherche;
 import com.bdd.Recherche;
 import com.dao.LogDAO;
+import com.filter.LogFinder;
 import com.google.gson.Gson;
 import com.log.loganalyzer.LogAnalyzerBuilder;
 
@@ -33,6 +34,11 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 	@Bean
 	public ParametresRecherche getParametresRecherche() {
 		return new ParametresRecherche();
+	}
+	
+	@Bean
+	public LogFinder getLogFinder() {
+		return new LogFinder();
 	}
 
 	@Bean

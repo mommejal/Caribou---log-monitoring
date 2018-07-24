@@ -25,26 +25,19 @@ td, th {
 	</form>
 	<form action="/AffLogs/parametres_recherche">
 		<input type="submit" value="Nouvelle Recherche">
-	</form> <!--
-	<span th:text="${selectedfilters.toString()}"></span> est le filtre
-	sélectionné
-	<br />
-	<span th:text="${datebeginning} ?: 'début par défaut'"></span> est la
-	date de début sélectionné
-	<br />
-	<span th:text="${dateend} ?: 'fin par défaut'"></span> est la date de
-	fin sélectionné
-	<br /> -->
-<!-- 	<form
-		th:action="@{/AffLogs/afficher_listes_logs/afficherUnLog(idlog=${idlog})}"
-		th:with="idlog=${idlog}" method="get">
-		action="#"
-		Sélectionnez l'id d'une queue de log à voir en particulier <br /> <input
-			type="text" name="idlog" th:value="*{idlog}" /><br />
-		<button type="submit">afficher un Log</button>
 	</form>
+	<form
+		th:action="@{/AffLogs/affiner_la_recherche(selectedregexp=${selectedregexp},selectedattribut=${selectedattribut})}"
+		th:with="selectedregexp=${selectedregexp},selectedattribut=${selectedattribut}"
+		method="get">
 
-<!-- TODO Demain essayer de faire un for de span-->
+		Selectionnez l'expression régulière à rechercher dans l'attribut souhaité <br /> 
+		<input 
+			type="text" name="selectedregexp" th:value="*{selectedregexp}" /><br /> 
+		Sur quel attribut affiner la recherche ? (contenu du log = Content)<br /> <input
+			type="text" name="selectedattribut" th:value="*{selectedattribut}" /> <br />
+		<button type="submit">Affiner La recherche</button>
+	</form> 
 	<br>
  	<table>
  		<tr>

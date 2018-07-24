@@ -8,18 +8,20 @@
 <body>
 	<h2>MENU DE SELECTION DES PARAMETRES DE RECHERCHE</h2>
 	<form
-		th:action="@{/AffLogs/parametres_recherche(selectedfilters=${selectedfilters},selectedseveritylvls=${selectedseveritylvls},selectedregexp=${selectedregexp},detectiondate=${detectiondate},detectionidlog=${detectionidlog},agent=${agent},datebeginning=${datebeginning},dateend=${dateend})}"
-		th:with="selectedfilters=${selectedfilters},selectedseveritylvls=${selectedseveritylvls},selectedregexp=${selectedregexp},detectiondate=${detectiondate},detectionidlog=${detectionidlog},agent=${agent},datebeginning=${datebeginning},dateend=${dateend}"
+		th:action="@{/AffLogs/afficher_listes_logs(selectedregexp=${selectedregexp},agent=${agent})}"
+		th:with="selectedregexp=${selectedregexp},agent=${agent}"
 		method="get">
-		<!-- action="#" -->
-		Veuillez sélectionnez les filtres à appliquer aux logs <select
+	<!-- 	th:action="@{/AffLogs/parametres_recherche(selectedfilters=${selectedfilters},selectedseveritylvls=${selectedseveritylvls},selectedregexp=${selectedregexp},detectiondate=${detectiondate},detectionidlog=${detectionidlog},agent=${agent},datebeginning=${datebeginning},dateend=${dateend})}"
+		th:with="selectedfilters=${selectedfilters},selectedseveritylvls=${selectedseveritylvls},selectedregexp=${selectedregexp},detectiondate=${detectiondate},detectionidlog=${detectionidlog},agent=${agent},datebeginning=${datebeginning},dateend=${dateend}"
+		method="get"> -->
+<!-- 		Veuillez sélectionnez les filtres à appliquer aux logs <select
 			size="4" name="selectedfilters" multiple="multiple">
 			<option selected="selected" value="noFilter">noFilter</option>
 			<option value="dateFilter">dateFilter</option>
 			<option value="severityLvlFilter">severityFilter</option>
-			<!-- <option value="hostnameFilter">hostnameFilter</option> -->
+			<option value="hostnameFilter">hostnameFilter</option>
 			<option value="regexpFilter">regexpFilter</option>
-		</select> <br /> <br /> <br />
+		</select> <br /> <br /> <br /> -->
 <!-- 		Choisissez l'expression régulière à utiliser pour rechercher le Severity Lvl en cas de SeverityLvlFilter,les séparer par des \, 
 		<br/> Par ex : INFO \, DEBUG \, ERROR \, Exception \, EXCEPTION \, WARN \, WARNING <input 
 			type="text" name="selectedseveritylvls" th:value="*{selectedseveritylvls}" /><br /> -->
@@ -30,8 +32,8 @@
 			type="text" name="detectiondate" th:value="*{detectiondate}" /><br />
 		Ecrire l'expression régulière pour détecter les ID du Log <br /> <input
 			type="text" name="detectionidlog" th:value="*{detectionidlog}" /><br /> -->
-		Veuillez choisir quels agents vous souhaitez voir<br /> <input
-			type="text" name="agent" th:value="*{agent}" /> <br />
+		<!-- Veuillez choisir quels agents vous souhaitez voir<br /> <input
+			type="text" name="agent" th:value="*{agent}" /> <br /> -->
 <!-- 		Veuillez choisir la date de début de la recherche <br /> <input
 			type="text" name="datebeginning" th:value="*{datebeginning}" /><br />
 		Veuillez choisir la date de fin de la recherche <br /> <input

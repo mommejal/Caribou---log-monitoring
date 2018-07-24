@@ -30,6 +30,7 @@ public class FirstLogAnalyzer extends LogAnalyzer {
 		ArrayList<String> res = new ArrayList<String>();
 		res.add("SeverityLvl");
 		res.add("Source");
+		res.add("Date");
 		res.add("Content");
 		return res;
 	}
