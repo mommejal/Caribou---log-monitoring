@@ -19,16 +19,6 @@ public class ParamAgentToWork extends ParamAgent {
 	}
 
 	
-	
-	/*
-	 * 			appName + System.lineSeparator()
-				+ logPath + System.lineSeparator()
-				+ outputPath + System.lineSeparator()
-				+ regexDebutLog + System.lineSeparator()
-				+ regexFinLog + System.lineSeparator()
-				+ tpsVieMinStock + System.lineSeparator()
-				+ nbLignesDeSuite;
-	 */
 	public String birthAnnouncement() {
 		return id + System.lineSeparator()
 			+ appName + System.lineSeparator()
@@ -39,7 +29,7 @@ public class ParamAgentToWork extends ParamAgent {
 	public int majStandard() {
 		Queue<String> nvParam;
 		try {
-			nvParam = GetREST.getAll(new URL(outputPath + "/getParamAgent"));		
+			nvParam = GetREST.getAll(new URL(outputPath + "/getParamAgent?idAgent=" + id));		
 			if (!nvParam.isEmpty()) {
 				appName = nvParam.poll();
 				logPath = nvParam.poll();

@@ -8,6 +8,10 @@ import java.io.IOException;
 public class MainLogGenerator {
 
 	public static void main(String[] args) {
+		generate(200);
+	}
+	
+	static void generate(int n)  {
 		File fileInput = new File("server4.log");
 	    File fileOutput = new File("logs.log");
 		FileReader fr;
@@ -23,9 +27,9 @@ public class MainLogGenerator {
 	    	String str = null;
 	    	boolean t = true;
 	    	while (t) {
-	    		Thread.sleep((long) (10*Math.random())); //10 = nombre de ms max entre chaque ligne
+	    		Thread.sleep((long) (n*Math.random())); //n = nombre de ms max entre chaque ligne
 	    		str = readLine(fr);
-	    		System.out.println("j'écris :" + str);
+	    		System.out.println("j'ecris : " + str);
 	    		if (str==null) //null permet de lire le ficheir meme en cas de saut de ligne en recanche la lecture ne s'arrete jamaais
 	    			t = false;
 	    		else {

@@ -7,7 +7,7 @@ public abstract class ParamAgent {
 	protected String logPath = "N/A";
 	protected String outputPath = "N/A";
 	
-	protected String regexDebutLog = "^\\d?:\\d\\d:\\d\\d";
+	protected String regexDebutLog = "\\d?:\\d\\d:\\d\\d";
 	protected String regexFinLog = "";
 	protected int tpsVieMinStock = 3000;
 	protected int nbLignesDeSuite = 500;

@@ -3,7 +3,7 @@ package com.caribou;
 import com.agent.Agent;
 import com.agent.paramagent.ParamAgentToWork;
 
-public class TestAgent {
+public class TestAgent2 {
 
 	public static void main(String[] args) {
 		

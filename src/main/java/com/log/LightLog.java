@@ -1,5 +1,6 @@
 package com.log;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 public class LightLog {
@@ -20,6 +21,15 @@ public class LightLog {
 	public LightLog() {
 		// Sert pour l'instant uniquement à LogAnalyzerBuilder pour construire getAvailableDataByType
 		super();
+	}
+	
+	public LightLog(String id, String content, String source) {
+		super();
+		this.idlog = id;
+		ArrayList<String> ar = new ArrayList<String>();
+		ar.add(content);
+		this.content = ar;
+		this.source = source;
 	}
 
 	@Override

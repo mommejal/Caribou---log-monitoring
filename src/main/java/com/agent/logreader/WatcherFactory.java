@@ -9,6 +9,7 @@ public class WatcherFactory {
 
 	public static MyWatcher addMyWatcher(ParamAgentToWork param) throws Exception {
 		MyWatcher watcher = new MyWatcher(param);
+		System.out.println(param.getLogPath());
 		Paths.get(param.getLogPath()).toAbsolutePath().getParent().register(watcher.getService(),
 				StandardWatchEventKinds.ENTRY_MODIFY);
 		if (watcher.connect()) {
