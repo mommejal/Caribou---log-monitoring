@@ -3,7 +3,7 @@ package com.appweb.mavoutput.afflogs;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.List;
+import java.util.HashSet;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,32 +24,33 @@ public class AfficherListeLightLog extends Displayer {
 	LogAnalyzerBuilder builder;
 	@Autowired
 	Recherche recherche;
+
 	@RequestMapping(value = "/AffLogs/afficher_listes_logs", method = RequestMethod.GET)
 	@ResponseBody
 	public ModelAndView afficherListeLightLog(ModelAndView mav) {
-		// Fonction qui affiche tous les logs de la base de donnï¿½es, ï¿½ terme elle devra
-		// afficher seuelement selon les filtres
-//		availabledata.add("source");
+		// Fonction qui affiche tous les logs de la base de donnï¿½es, ï¿½ terme elle
 		String type = "FirstLogAnalyzer";
-//		ArrayList tests= {""
 		dao.save(new LightLog("id1", Arrays.asList("Conenu du log  1, suite du log 1 ,333333".split(",")), "source 1"));
 		dao.save(new LightLog("id2", Arrays.asList("Conenu du log  1, WARN ,dddddd".split(",")), "source 1"));
 		dao.save(new LightLog("id3", Arrays.asList("Conenu du log  1,gegeg ag ,3gageagea33".split(",")), "source 1"));
+		dao.save(new LightLog("id4", Arrays.asList(" INFO ice log numéro4".split(",")), "source 1"));
+		dao.save(new LightLog("id4", Arrays.asList(" FFFFFFFFFFFFFFFFFFFFFFFFFF".split(",")), "source 1"));
 
-		Collection <LogAnalyzer> logs = builder.buildLogAnalyzer(dao.findAll(), type);
+		Collection<LogAnalyzer> logs = builder.buildLogAnalyzer(new HashSet<>(dao.findAll()), type); //Vérifier que la complexité soit pas trop grande
 		logs = (ArrayList<LogAnalyzer>) logs;
 
-//		Collection <String> availabledata = builder.getAvailableDataByType(type);
-		ArrayList<String>availabledata = new ArrayList<String>();
-		availabledata.add("SeverityLvl");
-		availabledata.add("Source");
-
-		availabledata.add("Content");
+		// Collection <String> availabledata = builder.getAvailableDataByType(type);
+		
 		ArrayList<ArrayList<String>> contenttodisplay = new ArrayList<ArrayList<String>>();
+		
+		ArrayList<String> availabledata = new ArrayList<String>();
+		LogAnalyzerBuilder tmptogetavailabledata = new LogAnalyzerBuilder(); 
+		availabledata = (ArrayList<String>) tmptogetavailabledata.getAvailableDataByType(type); // Permet de récuperer toutes les datas d'un type
+
 		for (LogAnalyzer log : logs) {
 			ArrayList<String> tmp = new ArrayList<String>();
-			for (String data :availabledata) {
-				tmp.add((String)log.getData(data));
+			for (String data : availabledata) {
+				tmp.add((String) log.getData(data));
 			}
 			contenttodisplay.add(tmp);
 		}
@@ -57,8 +58,7 @@ public class AfficherListeLightLog extends Displayer {
 		mav.addObject("logs", contenttodisplay);
 		mav.setViewName("/AffLogs/afficher_listes_logs");
 		System.out.println("Je sors de la fonction afficher liste light log");
-		
+
 		return mav;
 	}
-}
-;
+};

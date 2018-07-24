@@ -20,12 +20,12 @@ td, th {
 </style>
 <body>
 	<h2>Liste des logs</h2>
-<!-- 	<form action="/">
+ 	<form action="/">
 		<input type="submit" value="Acceuil" />
 	</form>
 	<form action="/AffLogs/parametres_recherche">
 		<input type="submit" value="Nouvelle Recherche">
-	</form>
+	</form> <!--
 	<span th:text="${selectedfilters.toString()}"></span> est le filtre
 	sélectionné
 	<br />
@@ -43,32 +43,18 @@ td, th {
 			type="text" name="idlog" th:value="*{idlog}" /><br />
 		<button type="submit">afficher un Log</button>
 	</form>
-	<span th:text="${availabledata}"></span>
-	<span th:text="${logs}"></span> -->
-<!-- 	<p th:each="log : *{logs}">
-		<table>
-		<tr>
-			<td style="text-align:left" th:text="${log.getData(${availabledata.get(0)})}"> Severity Lvl ?</td>
-	 		<td style="text-align:left" th:text="${availabledata.get(1)}"> Source ?</td>
-			<td style="text-align:left" th:text="${availabledata.get(2)}"> Contenu ?</td>
-		</tr>
-		</table>
-	 </p>	 
-	 -->
+
 <!-- TODO Demain essayer de faire un for de span-->
 	<br>
  	<table>
-		<tr>
-			<th style="text-align:left" th:text="${availabledata.get(0)}"> Severity Lvl ?</th>
-	 		<th style="text-align:left" th:text="${availabledata.get(1)}"> Source ?</th>
-			<th style="text-align:left" th:text="${availabledata.get(2)}"> Contenu ?</th>
+ 		<tr>
+		<th th:each="data : *{availabledata}">
+			<p th:inline="text">[[${data}]]</p>
 		</tr>
 		<tr th:each="log : *{logs}">
-		<td th:text="${log.get(0)}"> ... </td>
-		<td th:text="${log.get(1)}"> ... </td>
-		<td th:text="${log.get(2)}"> ... </td>
-<!-- 		<td th:text="${log.get(3)}"> ... </td> Ne  marche si out of array
-		<td th:text="${log.get(4)}"> ... </td> -->
+		<td th:each="elt : ${log}">
+			<p th:inline="text">[[${elt}]]</p>
+		</td>
 		</tr>
 	</table>
 </body>
