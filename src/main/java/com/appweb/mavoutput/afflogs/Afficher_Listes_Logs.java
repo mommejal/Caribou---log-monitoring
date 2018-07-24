@@ -71,7 +71,7 @@ public class Afficher_Listes_Logs extends Displayer {
 		availabledata = (ArrayList<String>) tmptogetavailabledata.getAvailableDataByType(type);
 		
 		
-		logs = (ArrayList<LogAnalyzer>) logs;
+//		logs = (ArrayList<LogAnalyzer>) logs;
 		// Permet de récuperer toutes les datas d'un type 			
 		// Collection <String> availabledata = builder.getAvailableDataByType(type);
 

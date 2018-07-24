@@ -1,5 +1,6 @@
 package com.filter;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.regex.Matcher;
@@ -17,7 +18,7 @@ public class LogFinder extends LogTool {
 	@Override
 	public Collection<LogAnalyzer> filterBy(Collection<LogAnalyzer> logs, String attribut, String filtreregexp) {
 //		HashSet<LogAnalyzer> res = new HashSet<>();
-		Collection<LogAnalyzer> res = new HashSet<LogAnalyzer>();
+		Collection<LogAnalyzer> res = new ArrayList<LogAnalyzer>();
 		Pattern pattern;
 		Matcher matcher;
 		for (LogAnalyzer log : logs) {
