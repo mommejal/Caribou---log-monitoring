@@ -6,46 +6,30 @@
 <meta charset="UTF-8" />
 <title>Caribou : Paramètres</title>
 <link rel="stylesheet" href="/css/hello.css" />
-<!-- <script>
-	function rempVar() {
-		var x = document.forms["formParam"]["choixAgent"].value;
-	      if (x==-1) {
-	          document.getElementById("matcher").innerHTML = "";
-	      } else {
-	          document.getElementById("matcher").innerHTML = <?php echo json_encode($tabAff); ?>[x];
-	      }
-
-		document.getElementbyId("regexDebut").text = 
-	}
-</script> -->
 </head>
+
 <body>
 
-	<div layout:fragment="content">
-		<h1>Modifier les paramètres de ${agent.getAppName()}</h1>
+	<div th:replace="fragments/general :: header">...</div>
 
-		<h3
-			th:text="${changement} ? 'Les valeurs ont bien été modifiées' : ''"></h3>
+	<div layout:fragment="content">
+		<h1 th:text="${'Modifier les paramètres de <i>' + agent.getAppName() + '</i>'}">...</h1>
+
+		<h3 th:text="${changement} ? 'Les valeurs ont bien été modifiées' : ''"></h3>
 		<h3 th:text="${error_message}"></h3>
 
 	</div>
-
-
-
 	<form name="formParam"
-		th:action="@{/agents/modifParamAct(agent=${agent.getId()},regexDebut=${regexDebut})}"
-		th:with=",regexDebut=${regexDebut}"
+		th:action="@{/agents/modifParamAct(idAgent=${agent.getId()})}"
 		method="get">
-		<!-- action="#" -->
-		<h4>Veuillez indiquer l'expression de début de log</h4>
-		<br /> <input type="text" id="regexDebut" th:value="*{agent.getRegexDebutLog()}" /><br />
-		
+
 
 		<button type="submit">Mettre à jour les paramètres</button>
 	</form>
 	<br />
 	<br />
-	<br />
+	<div th:replace="fragments/general :: footer">...</div>
+	
 </body>
 
 </html>

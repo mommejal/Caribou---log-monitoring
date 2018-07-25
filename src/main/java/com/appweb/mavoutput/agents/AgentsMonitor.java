@@ -56,7 +56,7 @@ public class AgentsMonitor {
 
 	@RequestMapping(value = "/agents/modifParamAct", method = RequestMethod.GET)
 	@ResponseBody
-	ModelAndView modifParamPlus(ModelAndView mav, @RequestParam(value = "selection", required = true) String idAgent,
+	ModelAndView modifParamPlus(ModelAndView mav, @RequestParam(value = "idAgent", required = true) String idAgent,
 			@RequestParam(value = "appName", required = true) String appName,
 			@RequestParam(value = "logPath", required = true) String logPath,
 			@RequestParam(value = "outputPath", required = true) String outputPath,
