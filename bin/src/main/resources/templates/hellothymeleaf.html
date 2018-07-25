@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="default">
+    <head>
+        <title>Hello world page</title>
+        <link rel="stylesheet" href="/css/hello.css"/>
+    </head>
+    <body>
+        <div layout:fragment="content">
+            <h1>le contenu de la page Hello world s'affiche correctement</h1>
+            <h1>la deuxieme ligne de contenu de la page Hello world s'affiche correctement</h1>
+<!--             <span th:text="${hello}" /></span> -->
+<!--          	<span th:text="${serverTime}" /></span> -->
+     </div>
+<!-- 		<span th:text="${logMSG"></span> -->
+	</body>
+    <th:block layout:fragment="scripts">
+        <script src="/js/hello.js"></script>
+    </th:block>
+</html>

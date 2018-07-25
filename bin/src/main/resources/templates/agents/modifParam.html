@@ -33,7 +33,7 @@
 
 
 	<form name="formParam"
-		th:action="@{/agents/modifParamAct(agent=${agent.getId()},regexDebut=${regexDebut})}"
+		th:action="@{/agents/modifParam(agent=${agent.getId()},regexDebut=${regexDebut})}"
 		th:with=",regexDebut=${regexDebut}"
 		method="get">
 		<!-- action="#" -->
@@ -42,7 +42,24 @@
 		
 
 		<button type="submit">Mettre à jour les paramètres</button>
-	</form>
+	</form>	
+
+	<!-- <form
+		th:action="@{/agents/modifParam(regexDebut=${regexDebut},regexFin=${regexFin},tpsVieMinStock=${TpsVieMinStock},nbLignesLog=${nbLignesLog})}"
+		th:with="regexDebut=${regexDebut},regexFin=${regexFin},tpsVieMinStock=${tpsVieMinStock},nbLignesLog=${nbLignesLog}"
+		method="get">
+		action="#"
+		Veuillez indiquer l'expression de début de log <br /> <input
+			type="text" name="regexDebut" th:value="*{regexDebut}" /><br />
+		Veuillez indiquer l'expression de fin de log si nécessaire <br /> <input
+			type="text" id="regexFin" name="regexFin" th:value="*{regexFin}" />
+		<br /> Veuillez indiquer la durée (en ms) d'attente des logs <br />
+		<input type="text" id="tpsVieMinStock" name="tpsVieMinStock"
+			th:value="*{tpsVieMinStock}" /> <br /> Veuillez indiquer la taille
+		maximale attendue des logs <br /> <input type="text" id="nbLignesLog"
+			name="nbLignesLog" th:value="*{nbLignesLog}" /> <br /> <br />
+		<button type="submit">Mettre à jour les paramètres</button>
+	</form> -->
 	<br />
 	<br />
 	<br />

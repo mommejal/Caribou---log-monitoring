@@ -1,0 +1,13 @@
+
+<div th:fragment="selectionner">
+	<form name="form" th:action="@{${target}(res=${selection})}"
+		th:with="selection=${selection}" method="get">
+		<!-- action="#" -->
+		<select size="1" name="selection">
+			<option th:each="elem : ${source}" th:value="${elem.__${getValue}__}"
+				th:text="${elem.__${getText}__}">...</option>
+		</select> <br /><br />
+		<button type="submit" th:text="${TextButton}"></button>
+	</form>
+</div>
+

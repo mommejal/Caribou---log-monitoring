@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Liste des logs</title>
+<!--         <link rel="stylesheet" th:href="@{/css/style.css}" />
+ -->
+<meta charset="ISO-8859-1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<style>
+table {
+	border: medium solid #000000;
+	width: 50%;
+}
+
+td, th {
+	border: thin solid #6495ed;
+	width: 50%;
+}
+</style>
+<body>
+	<h2>Liste des logs</h2>
+ 	<form action="/">
+		<input type="submit" value="Acceuil" />
+	</form>
+	<form action="/AffLogs/parametres_recherche">
+		<input type="submit" value="Nouvelle Recherche">
+	</form>
+	<form
+		th:action="@{/AffLogs/affiner_la_recherche(selectedregexp=${selectedregexp},selectedattribut=${selectedattribut})}"
+		th:with="selectedregexp=${selectedregexp},selectedattribut=${selectedattribut}"
+		method="get">
+
+		Selectionnez l'expression régulière à rechercher dans l'attribut souhaité <br /> 
+		<input 
+			type="text" name="selectedregexp" th:value="*{selectedregexp}" /><br /> 
+		Sur quel attribut affiner la recherche ? (Default = Content)<br /> <input
+			type="text" name="selectedattribut" th:value="*{selectedattribut}" /> <br />
+		<button type="submit">Affiner La recherche</button>
+	</form> 
+	<br>
+ 	<table>
+ 		<tr>
+		<th th:each="data : *{availabledata}">
+			<p th:inline="text">[[${data}]]</p>
+		</tr>
+		<tr th:each="log : *{logs}">
+		<td th:each="elt : ${log}">
+			<p th:inline="text">[[${elt}]]</p>
+		</td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -4,7 +4,6 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -55,7 +54,7 @@ public class AgentsMonitor {
 		return mav;
 	}
 
-	@RequestMapping(value = "/agents/modifParam", method = RequestMethod.GET)
+	@RequestMapping(value = "/agents/modifParamAct", method = RequestMethod.GET)
 	@ResponseBody
 	ModelAndView modifParamPlus(ModelAndView mav, @RequestParam(value = "selection", required = true) String idAgent,
 			@RequestParam(value = "appName", required = true) String appName,
@@ -86,27 +85,27 @@ public class AgentsMonitor {
 		return mav;
 	}
 	
-	@RequestMapping(value = "/agents/modifParam", method = RequestMethod.GET)
-	@ResponseBody
-	ModelAndView modifParamErr(ModelAndView mav, @RequestParam(value = "selection", required = true) String idAgent,
-			@RequestParam(value = "appName", required = false) String appName,
-			@RequestParam(value = "logPath", required = false) String logPath,
-			@RequestParam(value = "outputPath", required = false) String outputPath,
-			@RequestParam(value = "regexDebut", required = false) String regexDebut,
-			@RequestParam(value = "regexFin", required = false) String regexFin,
-			@RequestParam(value = "tpsVieMinStock", required = false) Integer tpsVieMinStock,
-			@RequestParam(value = "nbLignesDeSuite", required = false) Integer nbLignesDeSuite,
-			@RequestParam(value = "associatedAnalyzer", required = false) String associatedAnalyzer) {
-
-		ParamAgentToManage paramAgent = agents.get(idAgent);
-		if (paramAgent == null)
-			return problem(mav, "cet id n'est pas reconnu", "/agents/selectAgent");
-		mav.addObject("changement", false);
-		mav.addObject("error_message", "Un probleme est survenu. Les données reçues semblent corrompues");
-		mav.addObject("agent", paramAgent);
-		mav.setViewName("agents/modifParam");
-		return mav;
-	}
+//	@RequestMapping(value = "/agents/modifParam", method = RequestMethod.GET)
+//	@ResponseBody
+//	ModelAndView modifParamErr(ModelAndView mav, @RequestParam(value = "selection", required = true) String idAgent,
+//			@RequestParam(value = "appName", required = false) String appName,
+//			@RequestParam(value = "logPath", required = false) String logPath,
+//			@RequestParam(value = "outputPath", required = false) String outputPath,
+//			@RequestParam(value = "regexDebut", required = false) String regexDebut,
+//			@RequestParam(value = "regexFin", required = false) String regexFin,
+//			@RequestParam(value = "tpsVieMinStock", required = false) Integer tpsVieMinStock,
+//			@RequestParam(value = "nbLignesDeSuite", required = false) Integer nbLignesDeSuite,
+//			@RequestParam(value = "associatedAnalyzer", required = false) String associatedAnalyzer) {
+//
+//		ParamAgentToManage paramAgent = agents.get(idAgent);
+//		if (paramAgent == null)
+//			return problem(mav, "cet id n'est pas reconnu", "/agents/selectAgent");
+//		mav.addObject("changement", false);
+//		mav.addObject("error_message", "Un probleme est survenu. Les données reçues semblent corrompues");
+//		mav.addObject("agent", paramAgent);
+//		mav.setViewName("agents/modifParam");
+//		return mav;
+//	}
 
 	
 	
