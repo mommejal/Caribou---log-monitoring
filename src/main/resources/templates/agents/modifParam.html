@@ -22,7 +22,7 @@
 <body>
 
 	<div layout:fragment="content">
-		<h1>Modifier les paramètres de détection des logs</h1>
+		<h1>Modifier les paramètres de ${agent.getAppName()}</h1>
 
 		<h3
 			th:text="${changement} ? 'Les valeurs ont bien été modifiées' : ''"></h3>
@@ -33,33 +33,16 @@
 
 
 	<form name="formParam"
-		th:action="@{/agents/modifParam(agent=${selectedAgent},regexDebut=${regexDebut},regexFin=${regexFin},tpsVieMinStock=${TpsVieMinStock},nbLignesLog=${nbLignesLog})}"
-		th:with="agent=${selectedAgent},regexDebut=${regexDebut},regexFin=${regexFin},tpsVieMinStock=${tpsVieMinStock},nbLignesLog=${nbLignesLog}"
+		th:action="@{/agents/modifParam(agent=${agent.getId()},regexDebut=${regexDebut})}"
+		th:with=",regexDebut=${regexDebut}"
 		method="get">
 		<!-- action="#" -->
-		<select size="1" name="choixAgent" th:field="*{selectedAgent}"
-			th:onclick="
-		regexDebut=${agents.get(${selectedAgent}).getRegexDebutLog()},
-		regexFin=${agents.get(${selectedAgent}).getRegexFinLog()},
-		tpsVieMinStock=${agents.get(${selectedAgent}).getRegexDebutLog()},
-		nbLignesLog=${agents.get(${selectedAgent}).getRegexDebutLog()}">
-			<option th:each="agent : ${agents}" th:value="${agent.getId()}"
-				th:text="${agent.getId()}">Wireframe</option>
-		</select>
 		<h4>Veuillez indiquer l'expression de début de log</h4>
-		<br /> <input type="text" id="regexDebut" th:value="*{regexDebut}" /><br />
-		<h4>Veuillez indiquer l'expression de fin de log si nécessaire</h4>
-		<br /> <input type="text" id="regexFin" name="regexFin"
-			th:value="*{regexFin}" /> <br />
-		<h4>Veuillez indiquer la durée (en ms) d'attente des logs</h4>
-		<br /> <input type="text" id="tpsVieMinStock" name="tpsVieMinStock"
-			th:value="*{tpsVieMinStock}" /> <br />
-		<h4>Veuillez indiquer la taille maximale attendue des logs</h4>
-		<br /> <input type="text" id="nbLignesLog" name="nbLignesLog"
-			th:value="*{nbLignesLog}" /> <br /> <br />
+		<br /> <input type="text" id="regexDebut" th:value="*{agent.getRegexDebutLog()}" /><br />
+		
 
 		<button type="submit">Mettre à jour les paramètres</button>
-	</form>
+	</form>	
 
 	<!-- <form
 		th:action="@{/agents/modifParam(regexDebut=${regexDebut},regexFin=${regexFin},tpsVieMinStock=${TpsVieMinStock},nbLignesLog=${nbLignesLog})}"

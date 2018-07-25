@@ -7,13 +7,13 @@ import java.io.IOException;
 
 public class MainLogGenerator {
 
-	public static void main(String[] args) {
-		generate(200);
-	}
+//	public static void main(String[] args) {
+//		generate(200);
+//	}
 	
-	static void generate(int n)  {
-		File fileInput = new File("server4.log");
-	    File fileOutput = new File("logs.log");
+	public static void generate(int n, String input, String output)  {
+		File fileInput = new File(input);
+	    File fileOutput = new File(output);
 		FileReader fr;
 		FileWriter fw;
 	    try {

@@ -18,10 +18,6 @@ public class Agent {
 
 	public void run() {
 		try {
-			// EnhancedLogScanner scanner = new
-			// EnhancedLogScanner(Paths.get(LOG_PATH),Paths.get(OUTPUT_PATH));
-			// scanner.run();
-			// new Streamer(LOG_PATH).execute();
 			scan();
 		} catch (Exception e) {
 			Logger.getLogger(Agent.class.getName()).log(Level.SEVERE, e.getMessage(), e);

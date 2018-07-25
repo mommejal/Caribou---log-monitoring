@@ -14,18 +14,20 @@
 
 	<div th:replace="fragments/general :: header">...</div>
 
-	<div layout:fragment="content">
-		<h1>Sélectionnez l'agent que vous voulez paramétrer</h1>
+	<h1>Une erreur est survenue</h1>
+
+	<br />
+	<br />
+	<br />
+	<div>
+		<h3 th:text="${message}">...</h3>
+		<br /> <br />
+		<p>
+			Afin de remédier à ce problème vous devriez suivre <a
+				th:href="@{${sortie}}">ce lien</a>.
 	</div>
 
-	<br />
-	<br />
 
-	<div th:replace="fragments/monitors :: selectionner">...</div>
-
-	<br />
-	<br />
-	
 	<div th:replace="fragments/general :: footer">...</div>
 </body>
 

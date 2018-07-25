@@ -12,7 +12,7 @@ import com.appweb.controllers.Displayer;
 @Controller
 @Component
 public class Index extends Displayer{
-	@RequestMapping(method = RequestMethod.GET)
+	@RequestMapping(value ="/", method = RequestMethod.GET)
 	@ResponseBody
 	public ModelAndView  index(ModelAndView mav) {
 		// Retourne � l'acceuil
