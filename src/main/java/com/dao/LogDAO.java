@@ -10,13 +10,12 @@ import com.log.LightLog;
 
 public interface LogDAO extends MongoRepository<LightLog, String>/* , QuerydslPredicateExecutor<LightLog> */ {
 //	public HashSet<LightLog> findLightLogBySeveritylvl(String severitylvl);
+	public List<LightLog> findLightLogByIdlog(int id);
 
-	public List<LightLog> findLightLogBy_id(int id);
-
-	@Query("{ 'msg' : { $regex: ?0 } }")
-	HashSet<LightLog> findLightLogByRegexpContentOrderBy_id(String regexp);
+	@Query("{ 'Content' : { $regex: ?0 } }")
+	HashSet<LightLog> findLightLogByRegexpContent(String regexp);
 	@Query
-	boolean existsBy_id(int id);
+	boolean existsByIdlog(int id);
 	void delete(LightLog log); // A voir si j'ai besoin de ca
 	// @Query("{ '_id' : )
 }

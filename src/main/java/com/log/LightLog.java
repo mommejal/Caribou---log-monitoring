@@ -3,25 +3,29 @@ package com.log;
 import java.util.ArrayList;
 import java.util.Collection;
 
-import org.springframework.data.annotation.Id;
-
 public class LightLog {
 	
-	@Id
-	protected String _id;
+	
+	protected String idlog;
 	protected Collection<String> content;
 	protected String source;
+//	@Id
+//	protected String _id; //C'est L"id de la BDD Je l'ai commenté parce que je cast le dao.find en HashSet
 
 	public LightLog(String id, Collection<String> content, String source) {
 		super();
-		this._id = id;
+		this.idlog = id;
 		this.content = content;
 		this.source = source;
+	}
+	public LightLog() {
+		// Sert pour l'instant uniquement à LogAnalyzerBuilder pour construire getAvailableDataByType
+		super();
 	}
 	
 	public LightLog(String id, String content, String source) {
 		super();
-		this._id = id;
+		this.idlog = id;
 		ArrayList<String> ar = new ArrayList<String>();
 		ar.add(content);
 		this.content = ar;
@@ -30,7 +34,7 @@ public class LightLog {
 
 	@Override
 	public String toString() {
-		return "LightLog [id=" + _id + ", content=" + content + ", source=" + source + "]";
+		return "LightLog [id=" + idlog + ", content=" + content + ", source=" + source + "]";
 	}
 	
 	@Override
@@ -38,7 +42,7 @@ public class LightLog {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((content == null) ? 0 : content.hashCode());
-		result = prime * result + ((_id == null) ? 0 : _id.hashCode());
+		result = prime * result + ((idlog == null) ? 0 : idlog.hashCode());
 		result = prime * result + ((source == null) ? 0 : source.hashCode());
 		return result;
 	}
@@ -57,10 +61,10 @@ public class LightLog {
 				return false;
 		} else if (!content.equals(other.content))
 			return false;
-		if (_id == null) {
-			if (other._id != null)
+		if (idlog == null) {
+			if (other.idlog != null)
 				return false;
-		} else if (!_id.equals(other._id))
+		} else if (!idlog.equals(other.idlog))
 			return false;
 		if (source == null) {
 			if (other.source != null)
@@ -76,7 +80,7 @@ public class LightLog {
 	}
 	
 	public String getId() {
-		return _id;
+		return idlog;
 	}
 	
 	public Collection<String> getContent() {

@@ -30,6 +30,7 @@ public class FirstLogAnalyzer extends LogAnalyzer {
 		ArrayList<String> res = new ArrayList<String>();
 		res.add("SeverityLvl");
 		res.add("Source");
+		res.add("Date");
 		res.add("Content");
 		return res;
 	}
@@ -37,6 +38,8 @@ public class FirstLogAnalyzer extends LogAnalyzer {
 	@Override
 	public String getData(String data) {
 		switch (data) {
+		case "Content":
+			return getContent().toString();
 		case "Date": 
 			return getDate();
 		case "SeverityLvl":

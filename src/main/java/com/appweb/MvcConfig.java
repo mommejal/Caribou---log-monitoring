@@ -22,9 +22,9 @@ import com.alarm.Alarm;
 import com.bdd.ParametresRecherche;
 import com.bdd.Recherche;
 import com.dao.LogDAO;
+import com.filter.LogFinder;
 import com.google.gson.Gson;
 import com.log.loganalyzer.LogAnalyzerBuilder;
-import com.test.ContentTest;
 
 @SuppressWarnings("deprecation")
 @EnableMongoRepositories(basePackageClasses = LogDAO.class)
@@ -38,6 +38,11 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 	@Bean
 	public ParametresRecherche getParametresRecherche() {
 		return new ParametresRecherche();
+	}
+	
+	@Bean
+	public LogFinder getLogFinder() {
+		return new LogFinder();
 	}
 
 	@Bean
@@ -53,6 +58,10 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 	@Bean
 	public Gson getGson() {
 		return new Gson();
+	}
+	@Bean
+	public LogAnalyzerBuilder getLogAnalyzerBuilder() {
+		return new LogAnalyzerBuilder();
 	}
 
 	// CommandLineRunner commandLineRunner(LogsRepository logsRepository) {
@@ -75,11 +84,6 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 	public Map<String, Alarm> getAlarmStock() {
 		return new HashMap<String, Alarm>();
 	}
-	
-	public LogAnalyzerBuilder getLogAnalyzerBuilder() {
-		return new LogAnalyzerBuilder();
-	}
-	
 	
 
 	@Bean

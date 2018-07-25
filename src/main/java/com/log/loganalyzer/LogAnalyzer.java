@@ -42,6 +42,12 @@ public abstract class LogAnalyzer extends LightLog {
 		return true;
 	}
 
+	public String getType() {
+		return type;
+	}
+	
+	
+
 //	public int isBefore(LogAnalyzer log, String data) {
 //		return (log.getData(data).compareTo(this.getData(data)));
 //	}

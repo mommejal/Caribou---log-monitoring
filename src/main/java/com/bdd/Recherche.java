@@ -52,7 +52,7 @@ public class Recherche {
 
 
 	public ModelAndView filterByRegex(String regexp, ModelAndView mav) {
-		mav.addObject("logs", dao.findLightLogByRegexpContentOrderBy_id(regexp));
+		mav.addObject("logs", dao.findLightLogByRegexpContent(regexp));
 		return mav;
 	}
 
