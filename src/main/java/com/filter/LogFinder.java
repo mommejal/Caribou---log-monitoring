@@ -13,7 +13,7 @@ import com.log.loganalyzer.LogAnalyzer;
 public class LogFinder extends LogTool {
 	
 	@Autowired LogFinder logfinder;
-	Collection<LogAnalyzer> LogCache;
+	Collection<LogAnalyzer> LogCache; //Peut etre qu'un ensure capacity pourrait etre pratique
 	
 	@Override
 	public Collection<LogAnalyzer> filterBy(Collection<LogAnalyzer> logs, String attribut, String filtreregexp) {

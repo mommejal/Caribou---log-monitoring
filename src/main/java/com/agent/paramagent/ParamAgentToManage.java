@@ -13,6 +13,9 @@ public class ParamAgentToManage extends ParamAgent {
 	public ParamAgentToManage(String id, String appName, String logPath, String outputPath) {
 		super(id, appName, logPath, outputPath);
 	}
+	
+	public ParamAgentToManage() {
+	}
 
 	public String toSendStandard() {
 		return appName + System.lineSeparator()

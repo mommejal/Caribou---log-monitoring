@@ -49,7 +49,7 @@ public class Afficher_Listes_Logs extends Displayer {
 	}
 
 	public HashSet<LightLog> find(String selectedregexp) {
-		// Cette fonction dit quels Logs afficher sur la page html
+		// Cette fonction est utilisée pour la premiere recherches
 		HashSet<LightLog> res = new HashSet<LightLog>();
 		if (selectedregexp.equals("")) {
 			res = (new HashSet<LightLog>(dao.findAll()));
@@ -65,6 +65,7 @@ public class Afficher_Listes_Logs extends Displayer {
 	public ModelAndView affinerLaRecherche(ModelAndView mav,
 			@RequestParam(required = false, defaultValue = "") String selectedregexp,
 			@RequestParam(required = false, defaultValue = "Content") String selectedattribut) {
+		//Cette fonction va affiner encore plus la recherche du des logs en affinant le nombre contenu dans le cache de logFinder
 		logfinder.filterBy(selectedattribut, selectedregexp);
 		mav = formater(mav, "FirstLogAnalyzer", selectedregexp, selectedattribut,logfinder.getLogCache());
 		mav.setViewName("/AffLogs/afficher_listes_logs");

@@ -30,6 +30,9 @@ public abstract class ParamAgent {
 		this.nbLignesDeSuite = nbLignesDeSuite;
 	}
 	
+	public ParamAgent() {
+	}
+	
 	
 	public String getId() {
 		return id;

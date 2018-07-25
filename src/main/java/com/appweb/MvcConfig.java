@@ -19,6 +19,7 @@ import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
 import com.agent.paramagent.ParamAgentToManage;
 import com.alarm.Alarm;
+import com.bdd.DBMonitor;
 import com.bdd.ParametresRecherche;
 import com.bdd.Recherche;
 import com.dao.LogDAO;
@@ -63,7 +64,11 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 	public LogAnalyzerBuilder getLogAnalyzerBuilder() {
 		return new LogAnalyzerBuilder();
 	}
-
+	
+	@Bean
+	public DBMonitor getDBMonitor() {
+		return new DBMonitor();
+	}
 	// CommandLineRunner commandLineRunner(LogsRepository logsRepository) {
 	// return strings -> {
 	//// logsRepository.save(new Logs("Logs du nouveau endroit line runner DEBUG ID:

@@ -55,58 +55,58 @@ public class AgentsMonitor {
 		return mav;
 	}
 
-	@RequestMapping(value = "/agents/modifParam", method = RequestMethod.GET)
-	@ResponseBody
-	ModelAndView modifParamPlus(ModelAndView mav, @RequestParam(value = "selection", required = true) String idAgent,
-			@RequestParam(value = "appName", required = true) String appName,
-			@RequestParam(value = "logPath", required = true) String logPath,
-			@RequestParam(value = "outputPath", required = true) String outputPath,
-			@RequestParam(value = "regexDebut", required = true) String regexDebut,
-			@RequestParam(value = "regexFin", required = true) String regexFin,
-			@RequestParam(value = "tpsVieMinStock", required = true) Integer tpsVieMinStock,
-			@RequestParam(value = "nbLignesDeSuite", required = true) Integer nbLignesDeSuite,
-			@RequestParam(value = "associatedAnalyzer", required = true) String associatedAnalyzer) {
-
-		ParamAgentToManage paramAgent = agents.get(idAgent);
-		if (paramAgent == null)
-			return problem(mav, "cet id n'est pas reconnu", "/agents/selectAgent");
-		int pahc = paramAgent.hashCode();
-		paramAgent.setAppName(appName);
-		paramAgent.setLogPath(logPath);
-		paramAgent.setOutputPath(outputPath);
-		paramAgent.setRegexDebutLog(regexDebut);
-		paramAgent.setRegexFinLog(regexFin);
-		paramAgent.setTpsVieMinStock(tpsVieMinStock);
-		paramAgent.setNbLignesDeSuite(nbLignesDeSuite);
-		paramAgent.setAssociatedAnalyzer(associatedAnalyzer);
-		mav.addObject("changement", pahc != paramAgent.hashCode());
-		mav.addObject("error_message", "");
-		mav.addObject("agent", paramAgent);
-		mav.setViewName("agents/modifParam");
-		return mav;
-	}
-	
-	@RequestMapping(value = "/agents/modifParam", method = RequestMethod.GET)
-	@ResponseBody
-	ModelAndView modifParamErr(ModelAndView mav, @RequestParam(value = "selection", required = true) String idAgent,
-			@RequestParam(value = "appName", required = false) String appName,
-			@RequestParam(value = "logPath", required = false) String logPath,
-			@RequestParam(value = "outputPath", required = false) String outputPath,
-			@RequestParam(value = "regexDebut", required = false) String regexDebut,
-			@RequestParam(value = "regexFin", required = false) String regexFin,
-			@RequestParam(value = "tpsVieMinStock", required = false) Integer tpsVieMinStock,
-			@RequestParam(value = "nbLignesDeSuite", required = false) Integer nbLignesDeSuite,
-			@RequestParam(value = "associatedAnalyzer", required = false) String associatedAnalyzer) {
-
-		ParamAgentToManage paramAgent = agents.get(idAgent);
-		if (paramAgent == null)
-			return problem(mav, "cet id n'est pas reconnu", "/agents/selectAgent");
-		mav.addObject("changement", false);
-		mav.addObject("error_message", "Un probleme est survenu. Les données reçues semblent corrompues");
-		mav.addObject("agent", paramAgent);
-		mav.setViewName("agents/modifParam");
-		return mav;
-	}
+//	@RequestMapping(value = "/agents/modifParam", method = RequestMethod.GET)
+//	@ResponseBody
+//	ModelAndView modifParamPlus(ModelAndView mav, @RequestParam(value = "selection", required = true) String idAgent,
+//			@RequestParam(value = "appName", required = true) String appName,
+//			@RequestParam(value = "logPath", required = true) String logPath,
+//			@RequestParam(value = "outputPath", required = true) String outputPath,
+//			@RequestParam(value = "regexDebut", required = true) String regexDebut,
+//			@RequestParam(value = "regexFin", required = true) String regexFin,
+//			@RequestParam(value = "tpsVieMinStock", required = true) Integer tpsVieMinStock,
+//			@RequestParam(value = "nbLignesDeSuite", required = true) Integer nbLignesDeSuite,
+//			@RequestParam(value = "associatedAnalyzer", required = true) String associatedAnalyzer) {
+//
+//		ParamAgentToManage paramAgent = agents.get(idAgent);
+//		if (paramAgent == null)
+//			return problem(mav, "cet id n'est pas reconnu", "/agents/selectAgent");
+//		int pahc = paramAgent.hashCode();
+//		paramAgent.setAppName(appName);
+//		paramAgent.setLogPath(logPath);
+//		paramAgent.setOutputPath(outputPath);
+//		paramAgent.setRegexDebutLog(regexDebut);
+//		paramAgent.setRegexFinLog(regexFin);
+//		paramAgent.setTpsVieMinStock(tpsVieMinStock);
+//		paramAgent.setNbLignesDeSuite(nbLignesDeSuite);
+//		paramAgent.setAssociatedAnalyzer(associatedAnalyzer);
+//		mav.addObject("changement", pahc != paramAgent.hashCode());
+//		mav.addObject("error_message", "");
+//		mav.addObject("agent", paramAgent);
+//		mav.setViewName("agents/modifParam");
+//		return mav;
+//	}
+//	
+//	@RequestMapping(value = "/agents/modifParam", method = RequestMethod.GET)
+//	@ResponseBody
+//	ModelAndView modifParamErr(ModelAndView mav, @RequestParam(value = "selection", required = true) String idAgent,
+//			@RequestParam(value = "appName", required = false) String appName,
+//			@RequestParam(value = "logPath", required = false) String logPath,
+//			@RequestParam(value = "outputPath", required = false) String outputPath,
+//			@RequestParam(value = "regexDebut", required = false) String regexDebut,
+//			@RequestParam(value = "regexFin", required = false) String regexFin,
+//			@RequestParam(value = "tpsVieMinStock", required = false) Integer tpsVieMinStock,
+//			@RequestParam(value = "nbLignesDeSuite", required = false) Integer nbLignesDeSuite,
+//			@RequestParam(value = "associatedAnalyzer", required = false) String associatedAnalyzer) {
+//
+//		ParamAgentToManage paramAgent = agents.get(idAgent);
+//		if (paramAgent == null)
+//			return problem(mav, "cet id n'est pas reconnu", "/agents/selectAgent");
+//		mav.addObject("changement", false);
+//		mav.addObject("error_message", "Un probleme est survenu. Les données reçues semblent corrompues");
+//		mav.addObject("agent", paramAgent);
+//		mav.setViewName("agents/modifParam");
+//		return mav;
+//	}
 
 	
 	
