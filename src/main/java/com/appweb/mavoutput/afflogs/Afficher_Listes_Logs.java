@@ -14,7 +14,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.appweb.controllers.Displayer;
 import com.bdd.Recherche;
-import com.dao.LogDAO;
 import com.filter.LogFinder;
 import com.log.LightLog;
 import com.log.loganalyzer.LogAnalyzer;
@@ -22,18 +21,12 @@ import com.log.loganalyzer.LogAnalyzerBuilder;
 
 @Controller
 public class Afficher_Listes_Logs extends Displayer {
-	
 	@Autowired
 	LogAnalyzerBuilder builder;
-	
 	@Autowired
 	Recherche recherche;
-	
 	@Autowired
 	LogFinder logfinder;
-	
-	@Autowired
-	LogDAO dao;
 
 	@RequestMapping(value = "/AffLogs/afficher_listes_logs", method = RequestMethod.GET)
 	@ResponseBody
@@ -41,7 +34,7 @@ public class Afficher_Listes_Logs extends Displayer {
 			@RequestParam(required = false, defaultValue = "") String selectedregexp){
 		// Fonction qui affiche tous les logs de la base de donnï¿½es, ï¿½ terme elle
 		String type = "FirstLogAnalyzer";
-		Collection<LogAnalyzer> logs = builder.buildLogAnalyzer(find(selectedregexp), type);// Vï¿½rifier que la complexitï¿½ soit pas trop grande
+		Collection<LogAnalyzer> logs = builder.buildLogAnalyzer(find(selectedregexp), type);// Vérifier que la complexité soit pas trop grande
 		logfinder.setLogCache(logs);
 		mav = formater(mav, type, selectedregexp, "Content", logs);
 		mav.setViewName("/AffLogs/afficher_listes_logs");
@@ -79,7 +72,7 @@ public class Afficher_Listes_Logs extends Displayer {
 		
 		
 //		logs = (ArrayList<LogAnalyzer>) logs;
-		// Permet de rï¿½cuperer toutes les datas d'un type 			
+		// Permet de récuperer toutes les datas d'un type 			
 		// Collection <String> availabledata = builder.getAvailableDataByType(type);
 
 		HashSet<ArrayList<String>> contenttodisplay = new HashSet<ArrayList<String>>();

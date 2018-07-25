@@ -30,17 +30,12 @@ public class WebController extends AbstractController {
 		return mav;
 	}
 	
-
+	@RequestMapping(value = "/error", method = RequestMethod.GET)
+	String error(ModelAndView mav) {
+		return "une erreur est survenue";
+	}
 	
-//	@RequestMapping(value = "{page}", method = RequestMethod.GET)
-//	// @ResponseBody
-//	public ModelAndView hello(ModelAndView mav, @PathVariable("page") String page) {
-//		// Fait acc�der � l'�cran de gestion de la BDD
-//		mav.setViewName(page);
-//		return mav;
-//	}
 	
-
 }
 //@RestController
 ////@Controller

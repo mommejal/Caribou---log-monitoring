@@ -1,8 +1,5 @@
 package com.appweb;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -17,8 +14,7 @@ import org.thymeleaf.spring5.SpringTemplateEngine;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
-import com.agent.paramagent.ParamAgentToManage;
-import com.alarm.Alarm;
+import com.agent.AgentManager;
 import com.bdd.ParametresRecherche;
 import com.bdd.Recherche;
 import com.dao.LogDAO;
@@ -34,7 +30,7 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 
 	@Autowired
 	LogDAO dao;
-	
+
 	@Bean
 	public ParametresRecherche getParametresRecherche() {
 		return new ParametresRecherche();
@@ -76,15 +72,9 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 	// }
 
 	@Bean
-	public Map<String, ParamAgentToManage> getParamAgentStock() {
-		return new HashMap<String, ParamAgentToManage>();
+	public AgentManager getAgentManager() {
+		return new AgentManager();
 	}
-	
-	@Bean
-	public Map<String, Alarm> getAlarmStock() {
-		return new HashMap<String, Alarm>();
-	}
-	
 
 	@Bean
 	@Description("Thymeleaf template resolver serving HTML 5")
