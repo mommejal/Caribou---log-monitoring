@@ -1,4 +1,4 @@
-package com.appweb.mavoutput.agents;
+package com.appweb.mavoutput.monitors;
 
 import java.util.Map;
 
@@ -11,9 +11,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.agent.paramagent.ParamAgentToManage;
+import com.applications.monitor.AbstractMonitor;
 
 @Controller
-public class AgentsMonitor {
+public class AgentsMonitor extends AbstractMonitor {
 
 	// private static final String DEFAULT_STRING = "RIP_F-ZERO";
 
@@ -29,13 +30,6 @@ public class AgentsMonitor {
 		mav.addObject("getText", "getAppName()");
 		mav.addObject("TextButton", "selectionner cet agent");
 		mav.setViewName("agents/selectAgent");
-		return mav;
-	}
-
-	private ModelAndView problem(ModelAndView mav, String message, String retour) {
-		mav.addObject("message", message);
-		mav.addObject("sortie", retour);
-		mav.setViewName("agents/errorEncountered");
 		return mav;
 	}
 

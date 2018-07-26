@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="default">
+<head>
+<meta charset="UTF-8" />
+<title>Caribou : Paramètres</title>
+<link rel="stylesheet" href="/css/hello.css" />
+</head>
+
+<body>
+
+	<div th:replace="fragments/general :: header">...</div>
+
+	<div layout:fragment="content">
+		<h1 th:utext="${'Modifier les paramètres de <i>' + agent.getAppName()}">...</h1>
+
+		<h3
+			th:text="${changement} ? 'Les valeurs ont bien été modifiées' : ''"></h3>
+		<h3 th:text="${error_message}"></h3>
+
+	</div>
+	<form name="formAddDC"
+		th:action="@{/agents/modifAdd(idAgent=${idAgent},name=${name},
+			regexDebut=${regexDebut}, regexFin=${regexFin},type=${type})}"
+		th:with="idAgent=${idAgent},name=${name},nregexDebut=${regexDebut},
+			regexFin=${regexFin},type=${type}"
+		method="get">
+		<!-- action="#" -->
+		<input type="text" name="idAgent" th:value="*{agent.getId()}" disabled/><br />
+		<h4>Veuillez indiquer le nom du DataCatcher :</h4>
+		<input type="text" name="name"/><br />
+		<h4>Veuillez indiquer l'expression régulière de début de donnée :</h4>
+		<input type="text" name="regexDebut"/><br />
+		<h4>Veuillez indiquer l'expression régulière de fin de donnée (facultative)s</h4>
+		<input type="text" name="regexFin" /><br />
+		<h4>Veuillez indiquer le type retourné (ajouter un menu déroulant #ici, dispo : Integer Float, Date))</h4>
+		<input type="text" name="type"/><br />
+		
+		<button type="submit">Ajouter ce DataCatcher</button>
+	</form>
+	<br />
+	<br />
+	<div th:replace="fragments/monitors :: selectionner">...</div>
+	<br />
+	<br />
+	
+	<div th:replace="fragments/general :: footer">...</div>
+	
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="default">
+<head>
+<meta charset="UTF-8" />
+<title>Caribou : Paramètres</title>
+<link rel="stylesheet" href="/css/hello.css" />
+
+
+</head>
+
+<body>
+
+	<div th:replace="fragments/general :: header">...</div>
+
+	<div layout:fragment="content">
+		<h1>Sélectionnez un analyseur</h1>
+	</div>
+	
+
+	
+	<th:block if="${nonEmpty}">
+		<div th:replace="fragments/monitors :: selectionner">...</div>
+	</th:block>
+	
+	<br /> 
+	Ou
+	<br />
+	
+	<form name="nouveau"
+		th:action="@{${target}(res=${selectionnew},isNew=${isNew})}"
+		th:with="selectionnew=${selectionnew},isNew=true" method="get">
+		<!-- action="#" -->
+		<button type="submit">créer :</button>
+		<input name="selectionnew" value=""/> <br /> <br />
+	</form>
+
+	<br />
+	<br />
+
+	<div th:replace="fragments/general :: footer">...</div>
+</body>
+
+</html>

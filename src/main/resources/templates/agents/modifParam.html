@@ -13,7 +13,7 @@
 	<div th:replace="fragments/general :: header">...</div>
 
 	<div layout:fragment="content">
-		<h1 th:text="${'Modifier les paramètres de <i>' + agent.getAppName()}">...</h1>
+		<h1 th:utext="${'Modifier les paramètres de <i>' + agent.getAppName()}">...</h1>
 
 		<h3
 			th:text="${changement} ? 'Les valeurs ont bien été modifiées' : ''"></h3>

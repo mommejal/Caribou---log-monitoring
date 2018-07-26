@@ -8,8 +8,8 @@ public class RegexCatcher extends DataCatcher {
 	private Pattern pattern;
 
 	
-	public RegexCatcher(String regex) {
-		super();
+	public RegexCatcher(String name, String regex, String typeReturned) {
+		super(name, typeReturned);
 		this.regex = regex;
 		pattern = Pattern.compile(regex);
 	}

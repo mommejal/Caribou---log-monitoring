@@ -9,8 +9,8 @@ public class BetweenRegexCatcher extends DataCatcher {
 	private Pattern patternDebut;
 	private Pattern patternFin;
 
-	public BetweenRegexCatcher(String regexDebut, String regexFin) {
-		super();
+	public BetweenRegexCatcher(String name, String regexDebut, String regexFin, String typeReturned) {
+		super(name, typeReturned);
 		this.regexDebut = regexDebut;
 		patternDebut = Pattern.compile(regexDebut);
 		this.regexFin = regexFin;

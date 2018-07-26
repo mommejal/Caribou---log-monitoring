@@ -2,14 +2,21 @@ package com.log.loganalyzer;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.Map;
 
 import com.log.LightLog;
 
 public class LogAnalyzerBuilder {
 	
-	public Map <String, ParamLogAnalyzerCustom> customedParamLogs;
+	private Map <String, ParamLogAnalyzerCustom> customedParamLogs;
 	
+	
+	public LogAnalyzerBuilder() {
+		super();
+		this.customedParamLogs = new HashMap<String, ParamLogAnalyzerCustom>();
+	}
+
 	public LogAnalyzer buildLog(LightLog log, String type) {
 		// Si on a un nouveau type d eLogs � ajouter, il suffit d'ajouter un case qui renvoie le new <Object>()
 		switch (type) {
@@ -43,6 +50,14 @@ public class LogAnalyzerBuilder {
 		LightLog tmplightlog = new LightLog();
 		LogAnalyzer tmp = buildLog(tmplightlog, type);
 		return tmp.getAvailableDatas();
+	}
+
+	public Map<String, ParamLogAnalyzerCustom> getCustomedParamLogs() {
+		return customedParamLogs;
+	}
+
+	public void setCustomedParamLogs(Map<String, ParamLogAnalyzerCustom> customedParamLogs) {
+		this.customedParamLogs = customedParamLogs;
 	}
 	
 	
