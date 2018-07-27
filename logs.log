@@ -7445,3 +7445,220 @@ Payload: {
           "type" : "com.Answer",
           "answerValue" : "6"
         }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 19,
+        "mandatory" : true,
+        "answerType" : "Numeric",
+        "definitionIdentifier" : "issuingMonth|Investment-1|Global",
+        "label" : "Echéance",
+        "identifier" : "issuingMonth",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "6"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 20,
+        "mandatory" : true,
+        "answerType" : "Numeric",
+        "definitionIdentifier" : "legalPensionAge|Investment-1|Global",
+        "label" : "Legal pension age",
+        "identifier" : "legalPensionAge",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "67"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 21,
+        "mandatory" : true,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daIssuingDate|Investment-1|Global",
+        "label" : "Echéance",
+        "identifier" : "daIssuingDate",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "2019-06-01"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 22,
+        "mandatory" : true,
+        "answerType" : "Numeric",
+        "definitionIdentifier" : "contractDuration|Investment-1|Global",
+        "label" : "Contract duration",
+        "identifier" : "contractDuration",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "332"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 23,
+        "mandatory" : true,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daReferenceDate|Investment-1|Global",
+        "label" : "Fiscal period reference date",
+        "identifier" : "daReferenceDate",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "2019-01-01"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 24,
+        "mandatory" : true,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daTermDate|Investment-1|Global",
+        "label" : "Term Date",
+        "identifier" : "daTermDate",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "2047-01-31"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 25,
+        "mandatory" : true,
+        "answerType" : "Amount",
+        "definitionIdentifier" : "amtProrataEnd|Investment-1|Global",
+        "label" : "Prorata end",
+        "identifier" : "amtProrataEnd",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "265.59"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 26,
+        "mandatory" : true,
+        "answerType" : "Amount",
+        "definitionIdentifier" : "amtInvestedPremium|Investment-1|Global",
+        "label" : "First invested amount",
+        "identifier" : "amtInvestedPremium",
+        "editable" : true,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "200.0"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 27,
+        "mandatory" : true,
+        "answerType" : "Numeric",
+        "definitionIdentifier" : "amtSocialTaxWoPremium|Investment-1|Global",
+        "label" : "amtSocialTaxWoPremium",
+        "identifier" : "amtSocialTaxWoPremium",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "10249.99795"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 28,
+        "mandatory" : true,
+        "answerType" : "Numeric",
+        "definitionIdentifier" : "amtSocialTaxPremium|Investment-1|Global",
+        "label" : "amtSocialTaxPremium",
+        "identifier" : "amtSocialTaxPremium",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "9596.65475"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 29,
+        "mandatory" : true,
+        "answerType" : "Numeric",
+        "definitionIdentifier" : "amtIncome-SocialTax|Investment-1|Global",
+        "label" : "amtIncome-SocialTax",
+        "identifier" : "amtIncome-SocialTax",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {

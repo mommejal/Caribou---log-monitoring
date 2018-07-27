@@ -41,3 +41,12 @@ Bien que Caribou fonctionne en local pour l'instant, une application web a déjà 
 
 Les logs sont stockés sous une forme minimale LightLog pour économiser de l'espace dans une base de données de type NoSQL orientée documents MongoDB mais on peut facilement implémenter un autre type de base de données.
 
+## Installation et lancement
+
+Après une installation de Java 8 (ou plus) et Mango en règle il est nécessaire de 
+* faire une installation Maven depuis le fichier pom.xml, 
+* de créer une base de donnée Mango,
+* d'éxecuter `Caribou/target/java -jar Caribou-X.X.X-SNAPSHOT.jar`
+
+Vous pouvez ensuite créer des objects Agents sur les machines où se trouvent les logs à récupérer et d'appliquer leur méthode run(). Le fichier CAribou/TestAgnt.java contient un exemple lançant 2 Agents et des simulateurs de micro-services.
+
