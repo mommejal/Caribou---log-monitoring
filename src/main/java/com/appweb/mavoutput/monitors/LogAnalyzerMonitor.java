@@ -101,12 +101,14 @@ public class LogAnalyzerMonitor extends AbstractMonitor {
 	@RequestMapping(value = "/analyzers/modif/new", method = RequestMethod.GET)
 	@ResponseBody
 	ModelAndView modifParamNew(ModelAndView mav, @RequestParam(value = "selectionnew", required = true) String type) {
-		logAnalyzerBuilder.getCustomedParamLogs().put(type,
-				new ParamLogAnalyzerCustom(new HashMap<String, DataCatcher>()));
-
+		
 		ParamLogAnalyzerCustom logAn = logAnalyzerBuilder.getCustomedParamLogs().get(type);
 		if (logAn == null)
-			return problem(mav, "cet id n'est pas reconnu", "/analyzers/selection");
+			logAnalyzerBuilder.getCustomedParamLogs().put(type,
+				new ParamLogAnalyzerCustom(type, new HashMap<String, DataCatcher>()));
+//		else
+//			printerror;
+		logAn = logAnalyzerBuilder.getCustomedParamLogs().get(type);
 
 		mav.addObject("changement", false);
 		mav.addObject("error_message", "");
