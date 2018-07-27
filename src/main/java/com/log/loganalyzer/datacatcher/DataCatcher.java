@@ -15,17 +15,20 @@ public abstract class DataCatcher {
 
 	protected abstract String catchDataString(String input);
 
+	@SuppressWarnings("deprecation")
 	public Object catchData(String input) {
 		switch (typeReturned) {
 		case "Integer":
-			return (Integer) catchData(input);
+			return Integer.parseInt(catchDataString(input));
 		case "Date":
-			return (Date) catchData(input);
+			return Date.parse(catchDataString(input));
 		case "Float":
-			return (Float) catchData(input);
+			return Float.parseFloat(catchDataString(input));
+		case "String":
+			return catchDataString(input);
 		//etc
 		default:
-			throw new IllegalArgumentException("Le type demandé n'est pas disponible");
+			throw new IllegalArgumentException("Le type \"" + typeReturned + "\"demandé au DataCatcher "+ name + " n'est pas disponible");
 		}
 	}
 	

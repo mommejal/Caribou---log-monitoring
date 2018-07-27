@@ -29,7 +29,6 @@ public class FirstLogAnalyzer extends LogAnalyzer {
 	public Collection<String> getAvailableDatas() {
 		ArrayList<String> res = new ArrayList<String>();
 		res.add("SeverityLvl");
-		res.add("Source");
 		res.add("Date");
 		res.add("Content");
 		return res;
@@ -44,8 +43,6 @@ public class FirstLogAnalyzer extends LogAnalyzer {
 			return getDate();
 		case "SeverityLvl":
 			return getSeverityLvl();
-		case "Source":
-			return getSource();
 		default: //error handling
 			throw new IllegalArgumentException("Il n'y pas l'argument : "+data+" dans ce log");
 		}

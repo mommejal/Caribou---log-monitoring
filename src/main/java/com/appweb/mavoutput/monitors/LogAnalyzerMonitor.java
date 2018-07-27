@@ -29,7 +29,7 @@ public class LogAnalyzerMonitor extends AbstractMonitor {
 	ModelAndView selectAgent(ModelAndView mav) {
 		mav.addObject("nonEmpty", !logAnalyzerBuilder.getCustomedParamLogs().isEmpty());
 		mav.addObject("source", logAnalyzerBuilder.getCustomedParamLogs().values());
-		mav.addObject("target", "/agents/modif");
+		mav.addObject("target", "/analyzers/modif");
 		mav.addObject("getValue", "getType()");
 		mav.addObject("getText", "getType()");
 		mav.addObject("TextButton", "selectionner cet analyseur");
@@ -39,7 +39,7 @@ public class LogAnalyzerMonitor extends AbstractMonitor {
 
 	@RequestMapping(value = "/analyzers/modif", method = RequestMethod.GET)
 	@ResponseBody
-	ModelAndView modifParam(ModelAndView mav, @RequestParam(value = "res", required = true) String type) {
+	ModelAndView modifParam(ModelAndView mav, @RequestParam(value = "selection", required = true) String type) {
 
 		ParamLogAnalyzerCustom logAn = logAnalyzerBuilder.getCustomedParamLogs().get(type);
 		if (logAn == null)

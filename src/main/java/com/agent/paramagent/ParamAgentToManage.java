@@ -2,7 +2,7 @@ package com.agent.paramagent;
 
 public class ParamAgentToManage extends ParamAgent {
 
-	private String associatedAnalyzer = "N/A";
+	private String associatedAnalyzer = "FirstLogAnalyzer";
 	
 	public ParamAgentToManage(String id, String appName, String logPath, String outputPath, String regexDebutLog,
 			String regexFinLog, int tpsVieMinStock, int nbLignesDeSuite, String associatedAnalyzer) {

@@ -24,7 +24,7 @@
 	<form name="formAddDC"
 		th:action="@{/analyzers/modif/add(selection=${selection},name=${name},
 			regexDebut=${regexDebut}, regexFin=${regexFin},type=${type})}"
-		th:with="selection=${selection},name=${name},nregexDebut=${regexDebut},
+		th:with="selection=${selection},name=${name},regexDebut=${regexDebut},
 			regexFin=${regexFin},type=${type}"
 		method="get">
 		<!-- action="#" -->

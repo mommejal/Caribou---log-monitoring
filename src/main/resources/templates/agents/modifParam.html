@@ -22,8 +22,6 @@
 
 	</div>
 	<form name="formParam"
-		th:action="@{/agents/modifParamAct(idAgent=${idAgent})}"
-		th:with="idAgent=${agent.getId()}"
 		th:action="@{/agents/modifParamAct(idAgent=${idAgent},appName=${appName},logPath=${logPath},
 			outputPath=${outputPath},regexDebut=${regexDebut},regexFin=${regexFin},tpsVieMinStock=${tpsVieMinStock},
 			nbLignesDeSuite=${nbLignesDeSuite},associatedAnalyzer=${associatedAnalyzer})}"
