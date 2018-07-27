@@ -14,16 +14,45 @@
 	<div th:replace="fragments/general :: header">...</div>
 
 	<div layout:fragment="content">
-		<h1 th:text="${'Modifier les paramètres de <i>' + agent.getAppName() + '</i>'}">...</h1>
+		<h1 th:utext="${'Modifier les paramètres de <i>' + agent.getAppName()}">...</h1>
 
-		<h3 th:text="${changement} ? 'Les valeurs ont bien été modifiées' : ''"></h3>
+		<h3
+			th:text="${changement} ? 'Les valeurs ont bien été modifiées' : ''"></h3>
 		<h3 th:text="${error_message}"></h3>
 
 	</div>
 	<form name="formParam"
 		th:action="@{/agents/modifParamAct(idAgent=${idAgent})}"
 		th:with="idAgent=${agent.getId()}"
+		th:action="@{/agents/modifParamAct(idAgent=${idAgent},appName=${appName},logPath=${logPath},
+			outputPath=${outputPath},regexDebut=${regexDebut},regexFin=${regexFin},tpsVieMinStock=${tpsVieMinStock},
+			nbLignesDeSuite=${nbLignesDeSuite},associatedAnalyzer=${associatedAnalyzer})}"
+		th:with="idAgent=${idAgent},appName=${appName},logPath=${logPath},outputPath=${outputPath},regexDebut=${regexDebut},
+			regexFin=${regexFin},tpsVieMinStock=${tpsVieMinStock},nbLignesDeSuite=${nbLignesDeSuite},
+			associatedAnalyzer=${associatedAnalyzer}"
 		method="get">
+		<!-- action="#" -->
+		<input type="text" name="idAgent" th:value="*{agent.getId()}"/><br />
+		<h4>Veuillez indiquer le nom de l'Application observée</h4>
+		<input type="text" name="appName" th:value="*{agent.getAppName()}" /><br />
+		<h4>Veuillez indiquer le chemin d'accès au logs</h4>
+		<input type="text" name="logPath" th:value="*{agent.getLogPath()}" /><br />
+		<h4>Veuillez indiquer l'addresse du serveur de reception</h4>
+		<input type="text" name="outputPath" th:value="*{agent.getOutputPath()}" /><br />
+		<h4>Veuillez indiquer l'expression de début de log</h4>
+		<input type="text" name="regexDebut"
+			th:value="*{agent.getRegexDebutLog()}" /><br />
+		<h4>Veuillez indiquer l'expression de fin de log</h4>
+		<input type="text" name="regexFin" th:value="*{agent.getRegexFinLog()}" /><br />
+		<h4>Veuillez indiquer la durée minimum de rafraichissement (en ms)</h4>
+		<input type="text" name="tpsVieMinStock"
+			th:value="*{agent.getTpsVieMinStock()}" /><br />
+		<h4>Veuillez indiquer le nombre de lignes maximum d'un log</h4>
+		<input type="text" name="nbLignesDeSuite"
+			th:value="*{agent.getNbLignesDeSuite()}" /><br />
+		<h4>Veuillez indiquer le type d'analyzer associé</h4>
+		<input type="text" name="associatedAnalyzer"
+			th:value="*{agent.getAssociatedAnalyzer()}" /><br />
 
 
 		<button type="submit">Mettre à jour les paramètres</button>
