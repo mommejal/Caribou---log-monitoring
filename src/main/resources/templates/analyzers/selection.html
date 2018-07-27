@@ -29,8 +29,8 @@
 	<br />
 	
 	<form name="nouveau"
-		th:action="@{${target}(res=${selectionnew},isNew=${isNew})}"
-		th:with="selectionnew=${selectionnew},isNew=true" method="get">
+		th:action="@{/analyzers/modif/new(selection=${selectionnew})}"
+		th:with="selection=${selectionnew}" method="get">
 		<!-- action="#" -->
 		<button type="submit">créer :</button>
 		<input name="selectionnew" value=""/> <br /> <br />

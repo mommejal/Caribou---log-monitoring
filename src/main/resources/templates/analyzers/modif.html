@@ -13,7 +13,8 @@
 	<div th:replace="fragments/general :: header">...</div>
 
 	<div layout:fragment="content">
-		<h1 th:utext="${'Modifier les paramètres de <i>' + agent.getAppName()}">...</h1>
+		<h1>Modifier les paramètres de y a pas de nom, faut fusionner les
+			classes</h1>
 
 		<h3
 			th:text="${changement} ? 'Les valeurs ont bien été modifiées' : ''"></h3>
@@ -21,32 +22,47 @@
 
 	</div>
 	<form name="formAddDC"
-		th:action="@{/agents/modifAdd(idAgent=${idAgent},name=${name},
+		th:action="@{/analyzers/modif/add(selection=${selection},name=${name},
 			regexDebut=${regexDebut}, regexFin=${regexFin},type=${type})}"
-		th:with="idAgent=${idAgent},name=${name},nregexDebut=${regexDebut},
+		th:with="selection=${selection},name=${name},nregexDebut=${regexDebut},
 			regexFin=${regexFin},type=${type}"
 		method="get">
 		<!-- action="#" -->
-		<input type="text" name="idAgent" th:value="*{agent.getId()}" disabled/><br />
+		<input type="text" name="selection" th:value="*{nameParam}" /><br />
 		<h4>Veuillez indiquer le nom du DataCatcher :</h4>
-		<input type="text" name="name"/><br />
+		<input type="text" name="name" /><br />
 		<h4>Veuillez indiquer l'expression régulière de début de donnée :</h4>
-		<input type="text" name="regexDebut"/><br />
-		<h4>Veuillez indiquer l'expression régulière de fin de donnée (facultative)s</h4>
+		<input type="text" name="regexDebut" /><br />
+		<h4>Veuillez indiquer l'expression régulière de fin de donnée
+			(facultative)s</h4>
 		<input type="text" name="regexFin" /><br />
-		<h4>Veuillez indiquer le type retourné (ajouter un menu déroulant #ici, dispo : Integer Float, Date))</h4>
-		<input type="text" name="type"/><br />
-		
+		<h4>Veuillez indiquer le type retourné (ajouter un menu déroulant
+			#ici, dispo : Integer Float, Date))</h4>
+		<input type="text" name="type" /><br />
+
 		<button type="submit">Ajouter ce DataCatcher</button>
 	</form>
 	<br />
 	<br />
-	<div th:replace="fragments/monitors :: selectionner">...</div>
+	<th:block if="${nonEmpty}">
+		<form name="form" th:action="@{${target}(name=${name},selection=${selection})}"
+		
+			th:with="name=${name},selection=${selection}" method="get">
+			
+			<input type="text" name="selection" th:value="*{nameParam}" /><br />
+			<select size="1" name="name">
+				<option th:each="elem : ${source}"
+					th:value="${elem.__${getValue}__}" th:text="${elem.__${getText}__}">...</option>
+			</select> <br />
+			<br />
+			<button type="submit" th:text="${TextButton}"></button>
+		</form>
+	</th:block>
 	<br />
 	<br />
-	
+
 	<div th:replace="fragments/general :: footer">...</div>
-	
+
 </body>
 
 </html>

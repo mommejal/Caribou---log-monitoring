@@ -17,7 +17,7 @@ import com.log.loganalyzer.datacatcher.DataCatcher;
 import com.log.loganalyzer.datacatcher.RegexCatcher;
 
 @Controller
-public class LogAnalyzerMonitor extends AbstractMonitor{
+public class LogAnalyzerMonitor extends AbstractMonitor {
 
 	// private static final String DEFAULT_STRING = "RIP_F-ZERO";
 
@@ -27,7 +27,7 @@ public class LogAnalyzerMonitor extends AbstractMonitor{
 	@RequestMapping(value = "/analyzers/selection", method = RequestMethod.GET)
 	@ResponseBody
 	ModelAndView selectAgent(ModelAndView mav) {
-		mav.addObject("nonEmpty",!logAnalyzerBuilder.getCustomedParamLogs().isEmpty());
+		mav.addObject("nonEmpty", !logAnalyzerBuilder.getCustomedParamLogs().isEmpty());
 		mav.addObject("source", logAnalyzerBuilder.getCustomedParamLogs().values());
 		mav.addObject("target", "/agents/modif");
 		mav.addObject("getValue", "getType()");
@@ -37,15 +37,10 @@ public class LogAnalyzerMonitor extends AbstractMonitor{
 		return mav;
 	}
 
-
 	@RequestMapping(value = "/analyzers/modif", method = RequestMethod.GET)
 	@ResponseBody
-	ModelAndView modifParam(ModelAndView mav, @RequestParam(value = "selection", required = true) String type,
-			@RequestParam(value = "isNew", required = false, defaultValue = "false" ) boolean isNew) {
+	ModelAndView modifParam(ModelAndView mav, @RequestParam(value = "res", required = true) String type) {
 
-		if (isNew)
-			logAnalyzerBuilder.getCustomedParamLogs().put(type, new ParamLogAnalyzerCustom(new HashMap<String, DataCatcher>()));
-		
 		ParamLogAnalyzerCustom logAn = logAnalyzerBuilder.getCustomedParamLogs().get(type);
 		if (logAn == null)
 			return problem(mav, "cet id n'est pas reconnu", "/analyzers/selection");
@@ -53,20 +48,23 @@ public class LogAnalyzerMonitor extends AbstractMonitor{
 		mav.addObject("changement", false);
 		mav.addObject("error_message", "");
 		mav.addObject("logAn", logAn);
-		
-		mav.addObject("source", logAn.getDatacatchers());
-		mav.addObject("target", "/agents/modif");
+
+		mav.addObject("nonEmpty", !logAn.getDatacatchers().values().isEmpty());
+
+		mav.addObject("source", logAn.getDatacatchers().values());
+		mav.addObject("target", "/agents/modif/dell");
 		mav.addObject("getValue", "getName()");
 		mav.addObject("getText", "getName()");
-		mav.addObject("TextButton", "selectionner cet analyseur");
-		
+		mav.addObject("TextButton", "suppprimer cet analyseur");
+		mav.addObject("nameParam",type);
+
 		mav.setViewName("analyzers/modif");
 		return mav;
 	}
 
 	@RequestMapping(value = "/analyzers/modif/add", method = RequestMethod.GET)
 	@ResponseBody
-	ModelAndView modifParamPlus(ModelAndView mav, @RequestParam(value = "id", required = true) String id,
+	ModelAndView modifParamPlus(ModelAndView mav, @RequestParam(value = "selection", required = true) String id,
 			@RequestParam(value = "name", required = true) String name,
 			@RequestParam(value = "regexDebut", required = true) String regexDebut,
 			@RequestParam(value = "regexFin", required = false) String regexFin,
@@ -81,28 +79,79 @@ public class LogAnalyzerMonitor extends AbstractMonitor{
 		else
 			dc = new BetweenRegexCatcher(name, regexDebut, regexFin, type);
 		logAn.getDatacatchers().put(dc.getName(), dc);
-		
+
 		mav.addObject("changement", true);
 		mav.addObject("error_message", "");
 		mav.addObject("logAn", logAn);
-		mav.setViewName("analyzers/modifParam");
+
+		mav.addObject("nonEmpty", !logAn.getDatacatchers().values().isEmpty());
+
+		mav.addObject("source", logAn.getDatacatchers().values());
+		mav.addObject("target", "/analyzers/modif/dell");
+		mav.addObject("getValue", "getName()");
+		mav.addObject("getText", "getName()");
+		mav.addObject("TextButton", "suppprimer cet analyseur");
+
+		mav.addObject("nameParam",id);
+
+		mav.setViewName("analyzers/modif");
+		return mav;
+	}
+
+	@RequestMapping(value = "/analyzers/modif/new", method = RequestMethod.GET)
+	@ResponseBody
+	ModelAndView modifParamNew(ModelAndView mav, @RequestParam(value = "selectionnew", required = true) String type) {
+		logAnalyzerBuilder.getCustomedParamLogs().put(type,
+				new ParamLogAnalyzerCustom(new HashMap<String, DataCatcher>()));
+
+		ParamLogAnalyzerCustom logAn = logAnalyzerBuilder.getCustomedParamLogs().get(type);
+		if (logAn == null)
+			return problem(mav, "cet id n'est pas reconnu", "/analyzers/selection");
+
+		mav.addObject("changement", false);
+		mav.addObject("error_message", "");
+		mav.addObject("logAn", logAn);
+
+		mav.addObject("nonEmpty", !logAn.getDatacatchers().values().isEmpty());
+
+		mav.addObject("source", logAn.getDatacatchers().values());
+		mav.addObject("target", "/analyzers/modif/dell");
+		mav.addObject("getValue", "getName()");
+		mav.addObject("getText", "getName()");
+		mav.addObject("TextButton", "suppprimer cet analyseur");
+
+
+		mav.addObject("nameParam",type);
+
+		mav.setViewName("analyzers/modif");
 		return mav;
 	}
 
 	@RequestMapping(value = "/analyzers/modif/dell", method = RequestMethod.GET)
 	@ResponseBody
-	ModelAndView modifParamMoins(ModelAndView mav, @RequestParam(value = "id", required = true) String id,
+	ModelAndView modifParamMoins(ModelAndView mav, @RequestParam(value = "selection", required = true) String id,
 			@RequestParam(value = "name", required = true) String name) {
 
 		ParamLogAnalyzerCustom logAn = logAnalyzerBuilder.getCustomedParamLogs().get(id);
 		if (logAn == null)
 			return problem(mav, "cet id n'est pas reconnu", "/analyzers/selection");
-		boolean del = logAn.getDatacatchers().remove(name)!=null;
+		boolean del = logAn.getDatacatchers().remove(name) != null;
 		
 		mav.addObject("changement", del);
-		mav.addObject("error_message", del ? (name + " a bien été retiré") : "DataCatcher inconnu");
+		mav.addObject("error_message", del ? "supprimé":"");
 		mav.addObject("logAn", logAn);
-		mav.setViewName("analyzers/modifParam");
+		
+		mav.addObject("nonEmpty", !logAn.getDatacatchers().values().isEmpty());
+
+		mav.addObject("source", logAn.getDatacatchers().values());
+		mav.addObject("target", "/analyzers/modif/dell");
+		mav.addObject("getValue", "getName()");
+		mav.addObject("getText", "getName()");
+		mav.addObject("TextButton", "suppprimer cet analyseur");
+
+		mav.addObject("nameParam",id);
+
+		mav.setViewName("analyzers/modif");
 		return mav;
 	}
 }
