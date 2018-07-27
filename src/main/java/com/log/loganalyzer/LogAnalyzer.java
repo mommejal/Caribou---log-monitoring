@@ -5,6 +5,7 @@ import java.util.Collection;
 import com.log.LightLog;
 
 public abstract class LogAnalyzer extends LightLog {
+	// Classe qui a pour but de filtrer les données selon les souhaits de l'utilisateur et qui va etre affiché par thymeleaf
 	
 	protected String type;
 	
@@ -13,8 +14,10 @@ public abstract class LogAnalyzer extends LightLog {
 		this.type = type;
 	}
 
+	//Cette fonction renvoie tous les champs dans lesquels on pourra chercher des informations avec par ex des datacatchers
 	public abstract Collection<String> getAvailableDatas();
 
+	// Renvoie le contenu de l'attribut data du log
 	public abstract Object getData(String data);
 
 	@Override

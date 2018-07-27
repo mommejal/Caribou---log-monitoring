@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="default">
+<head>
+<meta charset="ISO-8859-1">
+<title> Menu Custom Log</title>
+</head>
+<body>		
+		<h1> Ajouter une data à chercher dans un type de log</h1>
+		<form
+		th:action="@{/customlogs/processingUpdateParamCustomLog(type=${type},regexdebut=${regexdebut},regexfin=${regexfin},nameofdatacatcher=${nameofdatacatcher})}"
+		th:with="type=${type},regexdebut=${regexdebut},regexfin=${regexfin},nameofdatacatcher=${nameofdatacatcher}"
+		method="get">
+		Quel est le type du log à modifier ? <br /> 
+		<input 
+			type="text" name="type" th:value="${type}" /><br />
+		Quel est le nom de la data à ajouter ? <br /> 
+		<input 
+			type="text" name="nameofdatacatcher" th:value="${nameofdatacatcher}" /><br />
+		Quel est le regex de debut ? <br /> 
+		<input 
+			type="text" name="regexdebut" th:value="${regexdebut}" /><br />
+		Quel est le regex de fin ? (Optionnel) <br /> 
+		<input 
+			type="text" name="regexfin" th:value="${regexfin}" /><br /> 
+		<button type="submit">Ajouter au log</button>
+	</form>
+</body>
+</html>

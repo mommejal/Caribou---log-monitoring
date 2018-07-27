@@ -7,6 +7,7 @@ import com.log.loganalyzer.datacatcher.DataCatcher;
 import com.log.loganalyzer.datacatcher.RegexCatcher;
 
 public class ParamLogAnalyzerCustom {
+	// Permet à l'utilisateur de configurer comment rechercher les données  qu'il  souhaite pour ses logs
 	Map<String, DataCatcher> datacatchers;
 	
 	public ParamLogAnalyzerCustom(Map<String, DataCatcher> datacatchers) {

@@ -3,14 +3,16 @@ package com.log;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
 public class LightLog {
+	// Une classe la plus légére possible pour prendre le moins de place mémoire possible
 	
 	
 	protected String idlog;
 	protected Collection<String> content;
 	protected String source;
-//	@Id
-//	protected String _id; //C'est L"id de la BDD Je l'ai commenté parce que je cast le dao.find en HashSet
 
 	public LightLog(String id, Collection<String> content, String source) {
 		super();

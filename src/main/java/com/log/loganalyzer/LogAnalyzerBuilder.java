@@ -7,7 +7,7 @@ import java.util.Map;
 import com.log.LightLog;
 
 public class LogAnalyzerBuilder {
-	
+	// Construit des nouveaux types de Log, il suffit d'ajouter à buildLog un case pour créer la bonne classe
 	public Map <String, ParamLogAnalyzerCustom> customedParamLogs;
 	
 	public LogAnalyzer buildLog(LightLog log, String type) {
@@ -40,6 +40,7 @@ public class LogAnalyzerBuilder {
 	}
 	
 	public Collection<String> getAvailableDataByType(String type){
+		//Renvoie les availabledata pour le log de type "type"
 		LightLog tmplightlog = new LightLog();
 		LogAnalyzer tmp = buildLog(tmplightlog, type);
 		return tmp.getAvailableDatas();

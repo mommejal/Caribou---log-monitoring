@@ -7,7 +7,8 @@
 <title>Caribou : Paramètres</title>
 <link rel="stylesheet" href="/css/hello.css" />
 </head>
-
+<style th:include="fragments/general :: mystyle">...
+</style>
 <body>
 
 	<div th:replace="fragments/general :: header">...</div>
@@ -20,7 +21,8 @@
 
 	</div>
 	<form name="formParam"
-		th:action="@{/agents/modifParamAct(idAgent=${agent.getId()})}"
+		th:action="@{/agents/modifParamAct(idAgent=${idAgent})}"
+		th:with="idAgent=${agent.getId()}"
 		method="get">
 
 

@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.appweb.controllers.Displayer;
-import com.bdd.Recherche;
 import com.dao.LogDAO;
 import com.filter.LogFinder;
 import com.log.LightLog;
@@ -22,12 +21,10 @@ import com.log.loganalyzer.LogAnalyzerBuilder;
 
 @Controller
 public class Afficher_Listes_Logs extends Displayer {
+	// Classe responsable de l'affichage de tableaux de logs et de la recherche à l'intérieur de celui ci 
 	
 	@Autowired
 	LogAnalyzerBuilder builder;
-	
-	@Autowired
-	Recherche recherche;
 	
 	@Autowired
 	LogFinder logfinder;
@@ -66,7 +63,12 @@ public class Afficher_Listes_Logs extends Displayer {
 			@RequestParam(required = false, defaultValue = "") String selectedregexp,
 			@RequestParam(required = false, defaultValue = "Content") String selectedattribut) {
 		logfinder.filterBy(selectedattribut, selectedregexp);
-		mav = formater(mav, "FirstLogAnalyzer", selectedregexp, selectedattribut,logfinder.getLogCache());
+	    try {
+	    	mav = formater(mav, "FirstLogAnalyzer", selectedregexp, selectedattribut,logfinder.getLogCache());
+	    } catch(Exception e) {
+	        System.out.println("Erreur du formatage de log, l'attribut sélectionné est il correct ?");
+	    }
+		
 		mav.setViewName("/AffLogs/afficher_listes_logs");
 		return mav;
 	}

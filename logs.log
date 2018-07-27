@@ -482,3 +482,4033 @@ Payload: {
           "xParameter" : "1286.0"
         }, {
           "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.0140406772517279,
+          "yParameter" : "0.0",
+          "xParameter" : "789.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.999109184372408,
+          "yParameter" : "1.0",
+          "xParameter" : "1396.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.12278617816848,
+          "yParameter" : "1.0",
+          "xParameter" : "986.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.999109184372408,
+          "yParameter" : "1.0",
+          "xParameter" : "1395.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00220164769192743,
+          "yParameter" : "0.0",
+          "xParameter" : "428.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 1.00018649534003,
+          "yParameter" : "1.0",
+          "xParameter" : "1411.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.12278617816848,
+          "yParameter" : "1.0",
+          "xParameter" : "987.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.762794417233867,
+          "yParameter" : "1.0",
+          "xParameter" : "1244.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.90079594007412,
+          "yParameter" : "0.0",
+          "xParameter" : "1333.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.87455446331594,
+          "yParameter" : "0.0",
+          "xParameter" : "1320.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00176753543983321,
+          "yParameter" : "0.0",
+          "xParameter" : "79.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 1.00018649534003,
+          "yParameter" : "1.0",
+          "xParameter" : "1408.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00177997371461192,
+          "yParameter" : "0.0",
+          "xParameter" : "133.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.87455446331594,
+          "yParameter" : "0.0",
+          "xParameter" : "1322.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.681843631438988,
+          "yParameter" : "1.0",
+          "xParameter" : "1222.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.844867520256805,
+          "yParameter" : "0.0",
+          "xParameter" : "1319.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.0017694856478534,
+          "yParameter" : "0.0",
+          "xParameter" : "86.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00216049527527451,
+          "yParameter" : "1.0",
+          "xParameter" : "281.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.722986733766066,
+          "yParameter" : "1.0",
+          "xParameter" : "1234.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.722986733766066,
+          "yParameter" : "1.0",
+          "xParameter" : "1231.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00176753543983321,
+          "yParameter" : "0.0",
+          "xParameter" : "82.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00216049527527451,
+          "yParameter" : "1.0",
+          "xParameter" : "278.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.991556594470342,
+          "yParameter" : "0.0",
+          "xParameter" : "1427.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00561326999243206,
+          "yParameter" : "0.0",
+          "xParameter" : "669.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00177412875917571,
+          "yParameter" : "0.0",
+          "xParameter" : "114.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00203505440677543,
+          "yParameter" : "1.0",
+          "xParameter" : "134.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00518733826336726,
+          "yParameter" : "0.0",
+          "xParameter" : "649.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00185236965326507,
+          "yParameter" : "0.0",
+          "xParameter" : "271.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00177412875917571,
+          "yParameter" : "0.0",
+          "xParameter" : "109.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00203505440677543,
+          "yParameter" : "1.0",
+          "xParameter" : "139.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.0017657972606977,
+          "yParameter" : "0.0",
+          "xParameter" : "71.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00186466769832949,
+          "yParameter" : "0.0",
+          "xParameter" : "278.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00176753543983321,
+          "yParameter" : "0.0",
+          "xParameter" : "76.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00505324368555515,
+          "yParameter" : "1.0",
+          "xParameter" : "591.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00185236965326507,
+          "yParameter" : "0.0",
+          "xParameter" : "272.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.0291125997445041,
+          "yParameter" : "0.0",
+          "xParameter" : "872.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00561326999243206,
+          "yParameter" : "0.0",
+          "xParameter" : "668.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00246472637161588,
+          "yParameter" : "0.0",
+          "xParameter" : "477.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.999109184372408,
+          "yParameter" : "1.0",
+          "xParameter" : "1397.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.995017425654647,
+          "yParameter" : "0.0",
+          "xParameter" : "1428.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.921409727690891,
+          "yParameter" : "1.0",
+          "xParameter" : "1296.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00212604645708814,
+          "yParameter" : "1.0",
+          "xParameter" : "252.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00176053978548285,
+          "yParameter" : "0.0",
+          "xParameter" : "14.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00189394670451903,
+          "yParameter" : "0.0",
+          "xParameter" : "310.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.0017716737482355,
+          "yParameter" : "0.0",
+          "xParameter" : "106.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00225844600956315,
+          "yParameter" : "1.0",
+          "xParameter" : "334.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.942196512218658,
+          "yParameter" : "1.0",
+          "xParameter" : "1311.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.598008427752713,
+          "yParameter" : "1.0",
+          "xParameter" : "1194.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00229082760529109,
+          "yParameter" : "1.0",
+          "xParameter" : "337.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.0133268815688902,
+          "yParameter" : "1.0",
+          "xParameter" : "742.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.921409727690891,
+          "yParameter" : "1.0",
+          "xParameter" : "1306.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00177997371461192,
+          "yParameter" : "0.0",
+          "xParameter" : "132.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00283203028729806,
+          "yParameter" : "1.0",
+          "xParameter" : "446.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.0324030635582833,
+          "yParameter" : "0.0",
+          "xParameter" : "878.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.0324030635582833,
+          "yParameter" : "0.0",
+          "xParameter" : "877.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00201176250832735,
+          "yParameter" : "1.0",
+          "xParameter" : "59.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.0017716737482355,
+          "yParameter" : "0.0",
+          "xParameter" : "105.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00518733826336726,
+          "yParameter" : "0.0",
+          "xParameter" : "652.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.0147125884702374,
+          "yParameter" : "1.0",
+          "xParameter" : "744.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00175956218518081,
+          "yParameter" : "0.0",
+          "xParameter" : "5.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.617958909939048,
+          "yParameter" : "0.0",
+          "xParameter" : "1244.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.0375895168411505,
+          "yParameter" : "1.0",
+          "xParameter" : "861.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00207694083715482,
+          "yParameter" : "1.0",
+          "xParameter" : "209.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.617958909939048,
+          "yParameter" : "0.0",
+          "xParameter" : "1241.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00790060998346054,
+          "yParameter" : "0.0",
+          "xParameter" : "710.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.0245713834874409,
+          "yParameter" : "1.0",
+          "xParameter" : "815.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00191131582618698,
+          "yParameter" : "0.0",
+          "xParameter" : "313.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.0375895168411505,
+          "yParameter" : "1.0",
+          "xParameter" : "860.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 1.00075755148553,
+          "yParameter" : "1.0",
+          "xParameter" : "1418.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.999109184372408,
+          "yParameter" : "1.0",
+          "xParameter" : "1401.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.076941086730791,
+          "yParameter" : "0.0",
+          "xParameter" : "983.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.0375895168411505,
+          "yParameter" : "1.0",
+          "xParameter" : "854.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00209868033349359,
+          "yParameter" : "1.0",
+          "xParameter" : "237.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.0556083019695406,
+          "yParameter" : "0.0",
+          "xParameter" : "938.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.0418546933011028,
+          "yParameter" : "1.0",
+          "xParameter" : "866.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.106207977408398,
+          "yParameter" : "0.0",
+          "xParameter" : "1011.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.0375895168411505,
+          "yParameter" : "1.0",
+          "xParameter" : "855.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00216049527527451,
+          "yParameter" : "1.0",
+          "xParameter" : "287.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.0375895168411505,
+          "yParameter" : "1.0",
+          "xParameter" : "859.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.0172116959979098,
+          "yParameter" : "0.0",
+          "xParameter" : "815.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.0375895168411505,
+          "yParameter" : "1.0",
+          "xParameter" : "857.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.0109865972012043,
+          "yParameter" : "1.0",
+          "xParameter" : "713.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.09542680243422,
+          "yParameter" : "0.0",
+          "xParameter" : "1007.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00189394670451903,
+          "yParameter" : "0.0",
+          "xParameter" : "309.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00218093120815221,
+          "yParameter" : "1.0",
+          "xParameter" : "292.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 1.00103827595459,
+          "yParameter" : "1.0",
+          "xParameter" : "1434.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.00200472082843417,
+          "yParameter" : "0.0",
+          "xParameter" : "362.0"
+        }, {
+          "type" : "com.vermeg.projection.api.input.FactorTableElement",
+          "factorValue" : 0.085701874058135,
+          "yParameter" : "0.0",
+       
+--------------------------------------
+10:37:36,074 INFO  [stdout] (default task-144) ***************************************************
+10:37:36,074 INFO  [stdout] (default task-144) FR
+10:37:36,074 INFO  [stdout] (default task-144) ***************************************************
+10:37:36,250 INFO  [stdout] (default task-144) AXA-EIP_1310_FISCAL_OPT----------------------------- reserveAtTerm after Tax: 288394.2049080842
+10:37:36,382 INFO  [stdout] (default task-144) AXA-EIP_1310_FISCAL_OPT----------------------------- reserveAtTerm after Tax: 288425.40262420534
+10:37:36,512 INFO  [stdout] (default task-144) AXA-EIP_1310_FISCAL_OPT----------------------------- reserveAtTerm after Tax: 267400.88718496024
+10:37:36,645 INFO  [stdout] (default task-144) AXA-EIP_1310_FISCAL_OPT----------------------------- reserveAtTerm after Tax: 267409.590766026
+10:37:36,646 INFO  [org.apache.cxf.interceptor.LoggingOutInterceptor] (default task-144) Outbound Message
+---------------------------
+ID: 1026
+Response-Code: 200
+Content-Type: application/json
+Headers: {Content-Type=[application/json], Date=[Mon, 11 Jun 2018 08:37:36 GMT]}
+Payload: 7242.716684075985
+--------------------------------------
+10:37:36,704 INFO  [stdout] (default task-145) juin 11, 2018 10:37:36:703 |Palmyra : INFO |RestLogger-[default task-145]: |125dbfdc-49ba-4cd5-9844-6c919c9ba488| SalesFlow:broker1: The request [ http://FISCAL-OPTIMIZATION:58080/fiscal-optimization/services/rest/fiscal-opt ] has ended in 0.1465902904 seconds with status :200
+10:37:36,736 INFO  [stdout] (default task-145) juin 11, 2018 10:37:36:735 |Palmyra : INFO |RestLogger-[default task-145]: |125dbfdc-49ba-4cd5-9844-6c919c9ba488| SalesFlow:broker1: The request [ http://SOLIFE:31080/solife/services/api/strategy-definitions/FREE_EIP/compute-rates ] has ended in 0.0022281949 seconds with status :200
+10:37:36,746 INFO  [stdout] (default task-145) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:36,753 INFO  [stdout] (default task-145) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:36,759 INFO  [stdout] (default task-145) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:36,764 INFO  [stdout] (default task-145) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:36,770 INFO  [stdout] (default task-145) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:36,775 INFO  [stdout] (default task-145) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:36,781 INFO  [stdout] (default task-145) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:36,786 INFO  [stdout] (default task-145) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:36,792 INFO  [stdout] (default task-145) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:36,797 INFO  [stdout] (default task-145) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:36,803 INFO  [stdout] (default task-145) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:36,808 INFO  [stdout] (default task-145) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:36,814 INFO  [stdout] (default task-145) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:36,819 INFO  [stdout] (default task-145) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:36,825 INFO  [stdout] (default task-145) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:36,831 INFO  [stdout] (default task-145) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:36,836 INFO  [stdout] (default task-145) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:36,842 INFO  [stdout] (default task-145) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:36,848 INFO  [stdout] (default task-145) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:36,854 INFO  [stdout] (default task-145) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:36,859 INFO  [stdout] (default task-145) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:36,865 INFO  [stdout] (default task-145) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:36,872 INFO  [stdout] (default task-145) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:36,877 INFO  [stdout] (default task-145) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:36,883 INFO  [stdout] (default task-145) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:36,888 INFO  [stdout] (default task-145) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:36,894 INFO  [stdout] (default task-145) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:36,899 INFO  [stdout] (default task-145) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:36,905 INFO  [stdout] (default task-145) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:36,911 INFO  [stdout] (default task-145) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:37,042 INFO  [org.apache.cxf.interceptor.LoggingOutInterceptor] (default task-145) Outbound Message
+---------------------------
+ID: 1024
+Response-Code: 200
+Content-Type: application/json
+Headers: {Content-Type=[application/json], Date=[Mon, 11 Jun 2018 08:37:37 GMT]}
+Payload: {
+  "type" : "com.vermeg.webservice.SalesFlowResponse",
+  "data" : {
+    "type" : "com.vermeg.webservice.SalesFlowIdentifier",
+    "identifier" : 640007026
+  }
+}
+--------------------------------------
+10:37:37,084 INFO  [org.apache.cxf.interceptor.LoggingInInterceptor] (default task-147) Inbound Message
+----------------------------
+ID: 1027
+Address: http://SALES-FLOW:18080/SalesFlow/services/rest/salesflow/640007026/package-offers/current/freeze
+Encoding: ISO-8859-1
+Http-Method: POST
+Content-Type: application/json
+Headers: {Accept=[application/json], accept-encoding=[UTF-8,deflate], Authorization=[Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJPMy15R25uN1IweVQzYjNxTkZUR2FIYVFtVWV0NXZRWUJnS1RsTmRnRnd3In0.eyJqdGkiOiJkODNlM2I3Ni0xOWFmLTRjNWUtYjA4NC0yN2ZkNzcwYzBmMDMiLCJleHAiOjE1Mjg3MDY1NTcsIm5iZiI6MCwiaWF0IjoxNTI4NzA2MjU3LCJpc3MiOiJodHRwOi8vU0VDVVJJVFk6OTA4MC9hdXRoL3JlYWxtcy9SZWFsbUFYQSIsImF1ZCI6InB1YmxpYy1jbGllbnQiLCJzdWIiOiI0YTkzNWJjYi0yOGZiLTQwZTUtYjFlYi01ZjQ1YjM4YWJhN2MiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJwdWJsaWMtY2xpZW50IiwiYXV0aF90aW1lIjowLCJzZXNzaW9uX3N0YXRlIjoiOTNmODhmMTMtYTkzYy00OWI1LThjZjktMGNkNjExMDk2ZGM0IiwiYWNyIjoiMSIsImNsaWVudF9zZXNzaW9uIjoiNDYwNmY5ZjAtOGNmMC00ZWFjLTg0ZGQtOTEwN2ViYjg3NmI2IiwiYWxsb3dlZC1vcmlnaW5zIjpbXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIk1pZC1PZmZpY2VyIiwiYWRtaW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJ2aWV3LXByb2ZpbGUiXX19LCJyb2xlcyI6WyJNaWQtT2ZmaWNlciIsIm9mZmxpbmVfYWNjZXNzIiwiYWRtaW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdLCJuYW1lIjoiIiwiZ3JvdXBzIjpbXSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYnJva2VyMSJ9.yFk-eMCxaEiSVaaIKR-UNVEmOSI3NZl749FO4GMtIQpCryiRTSjpRqQ-nYfDNpb5G0Xfqagnx4TzORtZ5wLoNnTjREPDZaS3NNtdPSjutdvDbtvxl2N-SA5o5qL7sPfuReIVjtAP1ivfD4ORYK5heQDPhQ-PTY5QGXUC4HHBwoAD6_4OdISt-DYVVrXtSQo7-FMb3-tpv6qhxqPRJVBVchA-HAmb0aXRU6fMwr_By9tifqTOcO-gXYP3hQWOFk8_ZbxGt5SfhUnDt_SQH7e4qthfTcgSbPVEbRGfF8eGo57_755ycvLMqbGKCKp9otIQMNbmg_X8zEvx8dCMITy7ZA], cache-control=[no-cache], connection=[Keep-Alive], Content-Length=[0], content-type=[application/json], correlationid=[125dbfdc-49ba-4cd5-9844-6c919c9ba488, 125dbfdc-49ba-4cd5-9844-6c919c9ba488], host=[SALES-FLOW:18080], pragma=[no-cache], user-agent=[Apache-CXF/3.1.7], user-profile=[FR]}
+--------------------------------------
+10:37:37,085 INFO  [stdout] (default task-147) ***************************************************
+10:37:37,085 INFO  [stdout] (default task-147) FR
+10:37:37,085 INFO  [stdout] (default task-147) ***************************************************
+10:37:38,079 INFO  [stdout] (default task-147) juin 11, 2018 10:37:38:079 |Palmyra : INFO |RestLogger-[default task-147]: |125dbfdc-49ba-4cd5-9844-6c919c9ba488| SalesFlow:broker1: The request [ http://SOLIFE:31080/solife/services/api/subscriptions/validate ] has ended in 0.0781551187 seconds with status :200
+10:37:38,136 INFO  [stdout] (default task-147) juin 11, 2018 10:37:38:136 |Palmyra : DEBUG |InvocationLogger-[default task-147]: |125dbfdc-49ba-4cd5-9844-6c919c9ba488| SalesFlow:broker1: URL (POST) >> http://DOCUMENT-MANAGEMENT:48080/DocumentManagement/services/rest/trigger-event
+10:37:38,136 INFO  [stdout] (default task-147) juin 11, 2018 10:37:38:136 |Palmyra : DEBUG |InvocationLogger-[default task-147]: |125dbfdc-49ba-4cd5-9844-6c919c9ba488| SalesFlow:broker1: REQUEST  >> {
+10:37:38,136 INFO  [stdout] (default task-147)   "type" : "com.vermeg.pni.dm.ws.RequestContext",
+10:37:38,136 INFO  [stdout] (default task-147)   "eventSubType" : "CREATE_OFFER",
+10:37:38,136 INFO  [stdout] (default task-147)   "direction" : "OUTBOUND",
+10:37:38,137 INFO  [stdout] (default task-147)   "commercialProductId" : "AXA-EIP_1310",
+10:37:38,137 INFO  [stdout] (default task-147)   "eventType" : "CREATE_OFFER",
+10:37:38,137 INFO  [stdout] (default task-147)   "linkedObjects" : [ {
+10:37:38,137 INFO  [stdout] (default task-147)     "type" : "com.vermeg.pni.dm.ws.Objectreference",
+10:37:38,137 INFO  [stdout] (default task-147)     "referenceType" : "PARTNER_ID",
+10:37:38,137 INFO  [stdout] (default task-147)     "identifier" : "00131126"
+10:37:38,137 INFO  [stdout] (default task-147)   }, {
+10:37:38,137 INFO  [stdout] (default task-147)     "type" : "com.vermeg.pni.dm.ws.Objectreference",
+10:37:38,137 INFO  [stdout] (default task-147)     "referenceType" : "PACKAGE-OFFER",
+10:37:38,137 INFO  [stdout] (default task-147)     "identifier" : "630008032"
+10:37:38,137 INFO  [stdout] (default task-147)   }, {
+10:37:38,137 INFO  [stdout] (default task-147)     "type" : "com.vermeg.pni.dm.ws.Objectreference",
+10:37:38,137 INFO  [stdout] (default task-147)     "referenceType" : "LANG",
+10:37:38,137 INFO  [stdout] (default task-147)     "identifier" : "FR"
+10:37:38,137 INFO  [stdout] (default task-147)   } ]
+10:37:38,137 INFO  [stdout] (default task-147) }
+10:37:39,568 INFO  [stdout] (default task-147) juin 11, 2018 10:37:39:568 |Palmyra : INFO |RestLogger-[default task-147]: |125dbfdc-49ba-4cd5-9844-6c919c9ba488| SalesFlow:broker1: The request [ http://DOCUMENT-MANAGEMENT:48080/DocumentManagement/services/rest/trigger-event ] has ended in 0.1427352706 seconds with status :200
+10:37:39,569 INFO  [stdout] (default task-147) juin 11, 2018 10:37:39:569 |Palmyra : DEBUG |InvocationLogger-[default task-147]: |125dbfdc-49ba-4cd5-9844-6c919c9ba488| SalesFlow:broker1: POST URL End >> http://DOCUMENT-MANAGEMENT:48080/DocumentManagement/services/rest/trigger-event
+10:37:39,569 INFO  [stdout] (default task-147) juin 11, 2018 10:37:39:569 |Palmyra : DEBUG |InvocationLogger-[default task-147]: |125dbfdc-49ba-4cd5-9844-6c919c9ba488| SalesFlow:broker1: Requesting URL End Status>> 200
+10:37:39,571 INFO  [stdout] (default task-147) juin 11, 2018 10:37:39:571 |Palmyra : DEBUG |InvocationLogger-[default task-147]: |125dbfdc-49ba-4cd5-9844-6c919c9ba488| SalesFlow:broker1: /RESPONSE: {"type":"com.vermeg.pni.dm.ws.Report"}
+10:37:39,574 INFO  [org.apache.cxf.interceptor.LoggingOutInterceptor] (default task-147) Outbound Message
+---------------------------
+ID: 1027
+Response-Code: 200
+Content-Type: application/json
+Headers: {Content-Type=[application/json], Date=[Mon, 11 Jun 2018 08:37:39 GMT]}
+Payload: {
+  "type" : "com.vermeg.salesflowapi.FreezeResponse",
+  "data" : {
+    "type" : "com.vermeg.salesflowapi.FreezePackageOffer",
+    "identifier" : "630008032"
+  }
+}
+--------------------------------------
+10:37:39,610 INFO  [org.apache.cxf.interceptor.LoggingInInterceptor] (default task-152) Inbound Message
+----------------------------
+ID: 1028
+Address: http://SALES-FLOW:18080/SalesFlow/services/rest/extractions
+Encoding: ISO-8859-1
+Http-Method: POST
+Content-Type: application/json
+Headers: {Accept=[*/*], Authorization=[Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJPMy15R25uN1IweVQzYjNxTkZUR2FIYVFtVWV0NXZRWUJnS1RsTmRnRnd3In0.eyJqdGkiOiIzM2NhOTU2ZC0yNjc0LTQ0YzYtOWE4Yi1kOGM5MjFlOWNiNWMiLCJleHAiOjE1Mjg3MDY1NTksIm5iZiI6MCwiaWF0IjoxNTI4NzA2MjU5LCJpc3MiOiJodHRwOi8vU0VDVVJJVFk6OTA4MC9hdXRoL3JlYWxtcy9SZWFsbUFYQSIsImF1ZCI6InB1YmxpYy1jbGllbnQiLCJzdWIiOiI0YTkzNWJjYi0yOGZiLTQwZTUtYjFlYi01ZjQ1YjM4YWJhN2MiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJwdWJsaWMtY2xpZW50IiwiYXV0aF90aW1lIjowLCJzZXNzaW9uX3N0YXRlIjoiODZkNTU2ZjktOTgyNi00YTBhLTllOGYtN2RmZGZiNmYyN2RlIiwiYWNyIjoiMSIsImNsaWVudF9zZXNzaW9uIjoiZDgyZDI3ZGUtNzE5My00NGU2LWI3YTAtMGQ3NjA1OWI5MDQyIiwiYWxsb3dlZC1vcmlnaW5zIjpbXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIk1pZC1PZmZpY2VyIiwiYWRtaW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJ2aWV3LXByb2ZpbGUiXX19LCJyb2xlcyI6WyJNaWQtT2ZmaWNlciIsIm9mZmxpbmVfYWNjZXNzIiwiYWRtaW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdLCJuYW1lIjoiIiwiZ3JvdXBzIjpbXSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYnJva2VyMSJ9.VTJcPBfDxyhEkARtQKGL9JksN2u3W1A2zPC0zm-jWxJTk3JeQoxVZu24F5hUGtDQbDLOZehRK9r_pGdloxDyIAxn-6Ta5PNeGGJovNPRy1dWqoGP7kcbnXORTpzImUbRVpR4cnw74BueFRqB8vzqNe7CvdTgxujxb0lF-8_HTqO5WSnBWd59L-3byrzV7Tuv98p5Diq09QF0moH_Dcr1QvrnVzW3sX2zPtf-bOTJka1v-AIoOsw-MjeK_WUmMrzmNxsSwK0bNxawZPJQMLpFP6JIXLKirsKXfIHvaobw9XB6mal0BsfMddayx1Zi3DfoiKHWd-4BmV2R3XY2hO9M7A], Cache-Control=[no-cache], connection=[keep-alive], Content-Length=[110], content-type=[application/json], correlationId=[9f9473ea-bc99-4b23-af47-80365002f17a], Host=[SALES-FLOW:18080], Pragma=[no-cache], User-Agent=[Apache-CXF/3.1.7], User-Profile=[FR]}
+Payload: {"businessObjectId":"630008032","businessObjectType":"PACKAGE-OFFER","dataExtractionConfigID":"PACKAGE-OFFER"}
+--------------------------------------
+10:37:39,611 INFO  [stdout] (default task-152) ***************************************************
+10:37:39,611 INFO  [stdout] (default task-152) FR
+10:37:39,612 INFO  [stdout] (default task-152) ***************************************************
+10:37:39,616 INFO  [org.apache.cxf.interceptor.LoggingInInterceptor] (default task-148) Inbound Message
+----------------------------
+ID: 1029
+Address: http://SALES-FLOW:18080/SalesFlow/services/rest/package-offers/630008032/documents
+Http-Method: GET
+Content-Type: 
+Headers: {Accept=[*/*], accept-encoding=[UTF-8,deflate], Authorization=[Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJPMy15R25uN1IweVQzYjNxTkZUR2FIYVFtVWV0NXZRWUJnS1RsTmRnRnd3In0.eyJqdGkiOiI2MTVkNjNjMy03YmMzLTQ5YzItYWEwYy1mNDRmYmUyNWQ5MTQiLCJleHAiOjE1Mjg3MDY1NTksIm5iZiI6MCwiaWF0IjoxNTI4NzA2MjU5LCJpc3MiOiJodHRwOi8vU0VDVVJJVFk6OTA4MC9hdXRoL3JlYWxtcy9SZWFsbUFYQSIsImF1ZCI6InB1YmxpYy1jbGllbnQiLCJzdWIiOiI0YTkzNWJjYi0yOGZiLTQwZTUtYjFlYi01ZjQ1YjM4YWJhN2MiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJwdWJsaWMtY2xpZW50IiwiYXV0aF90aW1lIjowLCJzZXNzaW9uX3N0YXRlIjoiOTNmODhmMTMtYTkzYy00OWI1LThjZjktMGNkNjExMDk2ZGM0IiwiYWNyIjoiMSIsImNsaWVudF9zZXNzaW9uIjoiNDYwNmY5ZjAtOGNmMC00ZWFjLTg0ZGQtOTEwN2ViYjg3NmI2IiwiYWxsb3dlZC1vcmlnaW5zIjpbXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIk1pZC1PZmZpY2VyIiwiYWRtaW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJ2aWV3LXByb2ZpbGUiXX19LCJyb2xlcyI6WyJNaWQtT2ZmaWNlciIsIm9mZmxpbmVfYWNjZXNzIiwiYWRtaW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdLCJuYW1lIjoiIiwiZ3JvdXBzIjpbXSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYnJva2VyMSJ9.iMA6fAXylInIVtJNSSF0d7j0Kn8qsXzgZgL11k_-cD7Wly5UubrjWy35M3U4vpxhrCaCFleblxUilxuqpbXamnjGkfYDaOtU9RY_tEGqA7uvdxqOk5GXTgU5o0hYXltUMbAvGgiEYXZ-6L4kyHOd_pWNLyEy1TqwaQl5H2JNHgG55z5WCELPAEyfKt1GJnXytme1Neb2UBYPMDXOr_vrF2Klat3oHbOQHBUd9oMS9cNmOJSvEn2lEm4gXaHRW1hUXe5RIoBw5_sTI2CU3XHzGKG_dOBIo9v4dk4jQlbzyRbWPAcgc0HxT35XjmdEkKERTE4ZRqbbgZ7PVzIWXmchfg], cache-control=[no-cache], connection=[Keep-Alive], Content-Type=[null], correlationid=[125dbfdc-49ba-4cd5-9844-6c919c9ba488, 125dbfdc-49ba-4cd5-9844-6c919c9ba488], host=[SALES-FLOW:18080], pragma=[no-cache], user-agent=[Apache-CXF/3.1.7], user-profile=[FR]}
+--------------------------------------
+10:37:39,617 INFO  [stdout] (default task-148) ***************************************************
+10:37:39,617 INFO  [stdout] (default task-148) FR
+10:37:39,617 INFO  [stdout] (default task-148) ***************************************************
+10:37:39,640 INFO  [stdout] (default task-152) juin 11, 2018 10:37:39:640 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL >> http://SOLIFE:31080/solife/services/api/thirdparties/00131126
+10:37:39,652 INFO  [stdout] (default task-152) juin 11, 2018 10:37:39:652 |Palmyra : INFO |RestLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: The request [ http://SOLIFE:31080/solife/services/api/thirdparties/00131126 ] has ended in 8.452501E-4 seconds with status :200
+10:37:39,653 INFO  [stdout] (default task-152) juin 11, 2018 10:37:39:653 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL End >> http://SOLIFE:31080/solife/services/api/thirdparties/00131126
+10:37:39,653 INFO  [stdout] (default task-152) juin 11, 2018 10:37:39:653 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL End Status>> 200
+10:37:39,665 INFO  [stdout] (default task-152) juin 11, 2018 10:37:39:665 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL >> http://PACK-MANAGER:28080/PackManager/services/rest/forms/400298246
+10:37:39,847 INFO  [stdout] (default task-148) juin 11, 2018 10:37:39:847 |Palmyra : INFO |RestLogger-[default task-148]: |125dbfdc-49ba-4cd5-9844-6c919c9ba488| SalesFlow:broker1: The request [ http://DOCUMENT-MANAGEMENT:48080/DocumentManagement/services/rest/documents?propositions=630008032 ] has ended in 0.0215299551 seconds with status :200
+10:37:39,851 INFO  [org.apache.cxf.interceptor.LoggingOutInterceptor] (default task-148) Outbound Message
+---------------------------
+ID: 1029
+Response-Code: 200
+Content-Type: application/json
+Headers: {Content-Type=[application/json], Date=[Mon, 11 Jun 2018 08:37:39 GMT]}
+Payload: {
+  "type" : "com.vermeg.pni.dm.ws.DocumentResponse",
+  "data" : {
+    "type" : "com.vermeg.pni.dm.ws.Documents",
+    "document" : [ {
+      "type" : "com.vermeg.pni.dm.ws.Document",
+      "documentType" : "PSII_202",
+      "status" : "REQUESTED",
+      "direction" : "OUTBOUND",
+      "identifier" : "890001",
+      "linkedObjects" : [ {
+        "type" : "com.vermeg.pni.dm.ws.Objectreference",
+        "referenceType" : "PACKAGE-OFFER",
+        "identifier" : "630008032"
+      }, {
+        "type" : "com.vermeg.pni.dm.ws.Objectreference",
+        "referenceType" : "LANG",
+        "identifier" : "FR"
+      }, {
+        "type" : "com.vermeg.pni.dm.ws.Objectreference",
+        "referenceType" : "PARTNER_ID",
+        "identifier" : "00131126"
+      } ],
+      "generatedDocument" : {
+        "type" : "com.vermeg.pni.dm.ws.GeneratedDocument",
+        "signable" : false
+      }
+    } ]
+  }
+}
+--------------------------------------
+10:37:39,893 INFO  [org.apache.cxf.interceptor.LoggingInInterceptor] (default task-153) Inbound Message
+----------------------------
+ID: 1030
+Address: http://SALES-FLOW:18080/SalesFlow/services/rest/package-offers/630008032/documents
+Http-Method: GET
+Content-Type: 
+Headers: {Accept=[*/*], accept-encoding=[UTF-8,deflate], Authorization=[Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJPMy15R25uN1IweVQzYjNxTkZUR2FIYVFtVWV0NXZRWUJnS1RsTmRnRnd3In0.eyJqdGkiOiI4NjIxZmE4NC02NjBkLTQwZjUtODc1Zi1lMDRmYTI0YmUxYTQiLCJleHAiOjE1Mjg3MDY1NTksIm5iZiI6MCwiaWF0IjoxNTI4NzA2MjU5LCJpc3MiOiJodHRwOi8vU0VDVVJJVFk6OTA4MC9hdXRoL3JlYWxtcy9SZWFsbUFYQSIsImF1ZCI6InB1YmxpYy1jbGllbnQiLCJzdWIiOiI0YTkzNWJjYi0yOGZiLTQwZTUtYjFlYi01ZjQ1YjM4YWJhN2MiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJwdWJsaWMtY2xpZW50IiwiYXV0aF90aW1lIjowLCJzZXNzaW9uX3N0YXRlIjoiOTNmODhmMTMtYTkzYy00OWI1LThjZjktMGNkNjExMDk2ZGM0IiwiYWNyIjoiMSIsImNsaWVudF9zZXNzaW9uIjoiNDYwNmY5ZjAtOGNmMC00ZWFjLTg0ZGQtOTEwN2ViYjg3NmI2IiwiYWxsb3dlZC1vcmlnaW5zIjpbXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIk1pZC1PZmZpY2VyIiwiYWRtaW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJ2aWV3LXByb2ZpbGUiXX19LCJyb2xlcyI6WyJNaWQtT2ZmaWNlciIsIm9mZmxpbmVfYWNjZXNzIiwiYWRtaW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdLCJuYW1lIjoiIiwiZ3JvdXBzIjpbXSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYnJva2VyMSJ9.EkFdqB0w7WmrHuUL7DOnxyD4EVpyMaRT0C7R_7U-L08f-3b8MW0H-DIZ78rWuSAVL1IK2TLvmAZuQof07Mmj-xo717YrM08LvbUdVxPYPA48N59UxIL5GHgbKDF49Dj2qQD-CbTZ8IEVyEH51kxPt1V8kDfYgL5Gg5KrKl2AcB9LfgpQUqrWjkGqPWfuilOt91CNqgHmmVb5hgemRVMu2oyhLOeRJJ22uxe7tVMidOyskVya9VJmLaVPQWOTYC0dHPexGNblAXNmWaQUK7-cRz82AAhMgsgyHjbK-3O9SuRBGBPeE1P6gllzCN2hx-TOIUseomas2Pm_O2sOFZLo6w], cache-control=[no-cache], connection=[Keep-Alive], Content-Type=[null], correlationid=[125dbfdc-49ba-4cd5-9844-6c919c9ba488, 125dbfdc-49ba-4cd5-9844-6c919c9ba488], host=[SALES-FLOW:18080], pragma=[no-cache], user-agent=[Apache-CXF/3.1.7], user-profile=[FR]}
+--------------------------------------
+10:37:39,894 INFO  [stdout] (default task-153) ***************************************************
+10:37:39,894 INFO  [stdout] (default task-153) FR
+10:37:39,895 INFO  [stdout] (default task-153) ***************************************************
+10:37:39,939 INFO  [stdout] (default task-152) juin 11, 2018 10:37:39:939 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL End >> http://PACK-MANAGER:28080/PackManager/services/rest/forms/400298246
+10:37:39,940 INFO  [stdout] (default task-152) juin 11, 2018 10:37:39:940 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL End Status>> 200
+10:37:39,958 INFO  [stdout] (default task-152) juin 11, 2018 10:37:39:958 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL >> http://PACK-MANAGER:28080/PackManager/services/rest/forms/400298245
+10:37:39,964 INFO  [stdout] (default task-153) juin 11, 2018 10:37:39:964 |Palmyra : INFO |RestLogger-[default task-153]: |125dbfdc-49ba-4cd5-9844-6c919c9ba488| SalesFlow:broker1: The request [ http://DOCUMENT-MANAGEMENT:48080/DocumentManagement/services/rest/documents?propositions=630008032 ] has ended in 0.0061189287 seconds with status :200
+10:37:39,968 INFO  [org.apache.cxf.interceptor.LoggingOutInterceptor] (default task-153) Outbound Message
+---------------------------
+ID: 1030
+Response-Code: 200
+Content-Type: application/json
+Headers: {Content-Type=[application/json], Date=[Mon, 11 Jun 2018 08:37:39 GMT]}
+Payload: {
+  "type" : "com.vermeg.pni.dm.ws.DocumentResponse",
+  "data" : {
+    "type" : "com.vermeg.pni.dm.ws.Documents",
+    "document" : [ {
+      "type" : "com.vermeg.pni.dm.ws.Document",
+      "documentType" : "PSII_202",
+      "status" : "REQUESTED",
+      "direction" : "OUTBOUND",
+      "identifier" : "890001",
+      "linkedObjects" : [ {
+        "type" : "com.vermeg.pni.dm.ws.Objectreference",
+        "referenceType" : "PACKAGE-OFFER",
+        "identifier" : "630008032"
+      }, {
+        "type" : "com.vermeg.pni.dm.ws.Objectreference",
+        "referenceType" : "LANG",
+        "identifier" : "FR"
+      }, {
+        "type" : "com.vermeg.pni.dm.ws.Objectreference",
+        "referenceType" : "PARTNER_ID",
+        "identifier" : "00131126"
+      } ],
+      "generatedDocument" : {
+        "type" : "com.vermeg.pni.dm.ws.GeneratedDocument",
+        "signable" : false
+      }
+    } ]
+  }
+}
+--------------------------------------
+10:37:40,269 INFO  [stdout] (default task-152) juin 11, 2018 10:37:40:268 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL End >> http://PACK-MANAGER:28080/PackManager/services/rest/forms/400298245
+10:37:40,269 INFO  [stdout] (default task-152) juin 11, 2018 10:37:40:269 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL End Status>> 200
+10:37:40,272 INFO  [stdout] (default task-152) juin 11, 2018 10:37:40:272 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL >> http://PACK-MANAGER:28080/PackManager/services/rest/forms/400298245
+10:37:40,441 INFO  [stdout] (default task-152) juin 11, 2018 10:37:40:441 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL End >> http://PACK-MANAGER:28080/PackManager/services/rest/forms/400298245
+10:37:40,442 INFO  [stdout] (default task-152) juin 11, 2018 10:37:40:442 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL End Status>> 200
+10:37:40,450 INFO  [stdout] (default task-152) juin 11, 2018 10:37:40:450 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: URL (POST) >> http://PACK-MANAGER:28080/PackManager/services/rest/products/AXA-EIP_1310/packages/Gestion_libre/initialize-package-definition
+10:37:40,450 INFO  [stdout] (default task-152) juin 11, 2018 10:37:40:450 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: REQUEST  >> {"type":"com.Form","identifier":"400298245","definitionIdentifier":"300002","questions":[{"type":"com.Question","identifier":"language","answerType":"String","label":"Langue de l'offre","editable":true,"mandatory":true,"answer":{"type":"com.Answer","label":"Français","answerValue":"FR"}},{"type":"com.Question","identifier":"companyName","answerType":"String","label":"Nom de la société","editable":true,"mandatory":false,"answer":{"type":"com.Answer"}},{"type":"com.Question","identifier":"daBirthDate","answerType":"Date","label":"Date de naissance assuré","editable":true,"mandatory":true,"answer":{"type":"com.Answer","answerValue":"1980-01-01"}},{"type":"com.Question","identifier":"eFiscalPeriod","answerType":"String","label":"Clôture fiscale","editable":true,"mandatory":true,"answer":{"type":"com.Answer","label":"Décembre","answerValue":"A.JAN-DEC"}},{"type":"com.Question","identifier":"bRetroactivity","answerType":"Boolean","label":"Rétroactivité","editable":true,"mandatory":true,"answer":{"type":"com.Answer","answerValue":"false"}},{"type":"com.Question","identifier":"AgeTerm","answerType":"Numeric","label":"Age au terme","editable":true,"mandatory":true,"answer":{"type":"com.Answer","answerValue":"67"}},{"type":"com.Question","identifier":"Eprofession","answerType":"String","label":"Profession","editable":true,"mandatory":true,"answer":{"type":"com.Answer","label":"agriculteur","answerValue":"agriculteur"}},{"type":"com.Question","identifier":"refIncome","answerType":"Amount","label":"Revenu professionnel annuel brut de l'assuré","editable":true,"mandatory":true,"answer":{"type":"com.Answer","answerValue":"50000"}},{"type":"com.Question","identifier":"amtInternalProvision4BS","answerType":"Amount","label":"Provision interne transférée (pour Backservice)","editable":true,"mandatory":false,"answer":{"type":"com.Answer","answerValue":"1000"}},{"type":"com.Question","identifier":"Smoker","answerType":"Boolean","label":"Fumeur au cours des 12 derniers mois","editable":true,"mandatory":true,"answer":{"type":"com.Answer","answerValue":"false"}},{"type":"com.Question","identifier":"TechSettings","answerType":"Boolean","label":"Adaptation des paramètres techniques","editable":true,"mandatory":true,"answer":{"type":"com.Answer","answerValue":"false"}},{"type":"com.Question","identifier":"pCommissionratePA","answerType":"Percentage","label":"Chargements objectif annuel","editable":true,"mandatory":true,"answer":{"type":"com.Answer","answerValue":"0.06"}},{"type":"com.Question","identifier":"pCommissionRatePU","answerType":"Percentage","label":"Chargements versements complémentaires","editable":true,"mandatory":true,"answer":{"type":"com.Answer","answerValue":"0.06"}},{"type":"com.Question","identifier":"CommissionRateRiders","answerType":"Percentage","label":"Commission assurance(s) accessoire(s)","editable":true,"mandatory":true,"answer":{"type":"com.Answer","answerValue":"0.15"}},{"type":"com.Question","identifier":"amtAnnualGoal","answerType":"Amount","label":"Objectif annuel ","editable":true,"mandatory":false,"answer":{"type":"com.Answer","answerValue":"6623.05"}},{"type":"com.Question","identifier":"amtBackService","answerType":"Amount","label":"Versement complémentaire ","editable":true,"mandatory":false,"answer":{"type":"com.Answer","answerValue":"50084.72"}}]}
+10:37:40,532 INFO  [stdout] (default task-152) juin 11, 2018 10:37:40:532 |Palmyra : INFO |RestLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: The request [ http://PACK-MANAGER:28080/PackManager/services/rest/products/AXA-EIP_1310/packages/Gestion_libre/initialize-package-definition ] has ended in 0.0078434062 seconds with status :200
+10:37:40,533 INFO  [stdout] (default task-152) juin 11, 2018 10:37:40:532 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: POST URL End >> http://PACK-MANAGER:28080/PackManager/services/rest/products/AXA-EIP_1310/packages/Gestion_libre/initialize-package-definition
+10:37:40,533 INFO  [stdout] (default task-152) juin 11, 2018 10:37:40:533 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL End Status>> 200
+10:37:40,562 INFO  [stdout] (default task-152) juin 11, 2018 10:37:40:562 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL >> http://SOLIFE:31080/solife/services/api/distributionpartners/00131126
+10:37:40,763 INFO  [stdout] (default task-152) juin 11, 2018 10:37:40:763 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL End >> http://SOLIFE:31080/solife/services/api/distributionpartners/00131126
+10:37:40,764 INFO  [stdout] (default task-152) juin 11, 2018 10:37:40:764 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL End Status>> 200
+10:37:40,831 INFO  [stdout] (default task-152) juin 11, 2018 10:37:40:831 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL >> http://PACK-MANAGER:28080/PackManager/services/rest/forms/400298246
+10:37:41,098 INFO  [stdout] (default task-152) juin 11, 2018 10:37:41:097 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL End >> http://PACK-MANAGER:28080/PackManager/services/rest/forms/400298246
+10:37:41,098 INFO  [stdout] (default task-152) juin 11, 2018 10:37:41:098 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL End Status>> 200
+10:37:41,226 INFO  [stdout] (default task-152) juin 11, 2018 10:37:41:226 |Palmyra : INFO |RestLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: The request [ http://PACK-MANAGER:28080/PackManager/services/rest/products/AXA-EIP_1310/packages/Gestion_libre/initialize ] has ended in 0.00692602 seconds with status :200
+10:37:41,290 INFO  [stdout] (default task-152) juin 11, 2018 10:37:41:290 |Palmyra : INFO |RestLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: The request [ http://SOLIFE:31080/solife/services/api/strategy-definitions/FREE_EIP/compute-rates ] has ended in 0.0022564166 seconds with status :200
+10:37:41,294 INFO  [stdout] (default task-152) juin 11, 2018 10:37:41:294 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL >> http://PACK-MANAGER:28080/PackManager/services/rest/forms/400298246
+10:37:41,414 INFO  [stdout] (default task-152) juin 11, 2018 10:37:41:413 |Palmyra : INFO |RestLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: The request [ http://PACK-MANAGER:28080/PackManager/services/rest/forms/400298246 ] has ended in 0.0116819401 seconds with status :200
+10:37:41,414 INFO  [stdout] (default task-152) juin 11, 2018 10:37:41:414 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL End >> http://PACK-MANAGER:28080/PackManager/services/rest/forms/400298246
+10:37:41,414 INFO  [stdout] (default task-152) juin 11, 2018 10:37:41:414 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL End Status>> 200
+10:37:41,435 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,442 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,448 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,454 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,459 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,466 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,472 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,478 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,483 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,489 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,494 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,500 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,507 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,513 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,518 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,524 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,529 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,536 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,542 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,548 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,554 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,560 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,565 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,571 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,576 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,582 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,588 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,593 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,599 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,604 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,645 INFO  [stdout] (default task-152) juin 11, 2018 10:37:41:645 |Palmyra : INFO |RestLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: The request [ http://SOLIFE:31080/solife/services/api/strategy-definitions/FREE_EIP/compute-rates ] has ended in 0.0023658963 seconds with status :200
+10:37:41,649 INFO  [stdout] (default task-152) juin 11, 2018 10:37:41:649 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL >> http://PACK-MANAGER:28080/PackManager/services/rest/forms/400298246
+10:37:41,766 INFO  [stdout] (default task-152) juin 11, 2018 10:37:41:766 |Palmyra : INFO |RestLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: The request [ http://PACK-MANAGER:28080/PackManager/services/rest/forms/400298246 ] has ended in 0.0113216246 seconds with status :200
+10:37:41,766 INFO  [stdout] (default task-152) juin 11, 2018 10:37:41:766 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL End >> http://PACK-MANAGER:28080/PackManager/services/rest/forms/400298246
+10:37:41,767 INFO  [stdout] (default task-152) juin 11, 2018 10:37:41:767 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL End Status>> 200
+10:37:41,789 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,795 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,801 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,806 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,812 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,818 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,823 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,829 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,835 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,840 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,847 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,853 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,859 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,864 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,870 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,875 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,882 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,888 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,893 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,899 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,905 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,910 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,916 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,922 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,927 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,933 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,938 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,945 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,952 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,957 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:41,995 INFO  [stdout] (default task-152) juin 11, 2018 10:37:41:994 |Palmyra : INFO |RestLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: The request [ http://SOLIFE:31080/solife/services/api/strategy-definitions/FREE_EIP/compute-rates ] has ended in 0.0020972984 seconds with status :200
+10:37:41,998 INFO  [stdout] (default task-152) juin 11, 2018 10:37:41:998 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL >> http://PACK-MANAGER:28080/PackManager/services/rest/forms/400298246
+10:37:42,114 INFO  [stdout] (default task-152) juin 11, 2018 10:37:42:114 |Palmyra : INFO |RestLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: The request [ http://PACK-MANAGER:28080/PackManager/services/rest/forms/400298246 ] has ended in 0.01128526 seconds with status :200
+10:37:42,115 INFO  [stdout] (default task-152) juin 11, 2018 10:37:42:114 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL End >> http://PACK-MANAGER:28080/PackManager/services/rest/forms/400298246
+10:37:42,115 INFO  [stdout] (default task-152) juin 11, 2018 10:37:42:115 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL End Status>> 200
+10:37:42,135 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:42,141 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:42,147 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:42,153 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:42,158 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:42,164 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:42,169 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:42,175 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:42,180 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:42,186 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:42,191 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:42,198 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:42,203 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:42,209 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:42,215 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:42,220 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:42,225 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:42,230 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:42,236 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:42,241 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:42,247 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:42,252 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:42,258 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:42,263 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:42,268 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:42,274 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:42,279 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:42,285 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:42,290 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:42,295 INFO  [stdout] (default task-152) endDate: Thu Jan 31 00:00:00 CET 2047
+10:37:42,308 INFO  [stdout] (default task-152) juin 11, 2018 10:37:42:308 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL >> http://FISCAL-OPTIMIZATION:58080/fiscal-optimization/services/rest/fiscal-opt/FOTPD1010002
+10:37:42,514 INFO  [stdout] (default task-152) juin 11, 2018 10:37:42:514 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL End >> http://FISCAL-OPTIMIZATION:58080/fiscal-optimization/services/rest/fiscal-opt/FOTPD1010002
+10:37:42,515 INFO  [stdout] (default task-152) juin 11, 2018 10:37:42:515 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL End Status>> 200
+10:37:42,518 INFO  [stdout] (default task-152) juin 11, 2018 10:37:42:518 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL >> http://SOLIFE:31080/solife/services/api/thirdparties/000001965105418
+10:37:42,562 INFO  [stdout] (default task-152) juin 11, 2018 10:37:42:562 |Palmyra : INFO |RestLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: The request [ http://SOLIFE:31080/solife/services/api/thirdparties/000001965105418 ] has ended in 0.0040508011 seconds with status :200
+10:37:42,563 INFO  [stdout] (default task-152) juin 11, 2018 10:37:42:562 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL End >> http://SOLIFE:31080/solife/services/api/thirdparties/000001965105418
+10:37:42,563 INFO  [stdout] (default task-152) juin 11, 2018 10:37:42:563 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL End Status>> 200
+10:37:42,576 INFO  [stdout] (default task-152) juin 11, 2018 10:37:42:575 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL >> http://FISCAL-OPTIMIZATION:58080/fiscal-optimization/services/rest/fiscal-opt/FOTPD1010002/details
+10:37:42,742 INFO  [stdout] (default task-152) juin 11, 2018 10:37:42:742 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL End >> http://FISCAL-OPTIMIZATION:58080/fiscal-optimization/services/rest/fiscal-opt/FOTPD1010002/details
+10:37:42,743 INFO  [stdout] (default task-152) juin 11, 2018 10:37:42:743 |Palmyra : DEBUG |InvocationLogger-[default task-152]: |9f9473ea-bc99-4b23-af47-80365002f17a| SalesFlow:fr_user: Requesting URL End Status>> 200
+10:37:42,743 INFO  [org.apache.cxf.interceptor.LoggingInInterceptor] (default task-151) Inbound Message
+----------------------------
+ID: 1031
+Address: http://SALES-FLOW:18080/SalesFlow/services/rest/package-offers/630008032
+Http-Method: GET
+Content-Type: 
+Headers: {Accept=[*/*], accept-encoding=[UTF-8,deflate], Authorization=[Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJPMy15R25uN1IweVQzYjNxTkZUR2FIYVFtVWV0NXZRWUJnS1RsTmRnRnd3In0.eyJqdGkiOiIxNzczYjQyYy0yMGQ5LTQzNDctYmEyMy02MmNkOGYzMGRjMWIiLCJleHAiOjE1Mjg3MDY1NjIsIm5iZiI6MCwiaWF0IjoxNTI4NzA2MjYyLCJpc3MiOiJodHRwOi8vU0VDVVJJVFk6OTA4MC9hdXRoL3JlYWxtcy9SZWFsbUFYQSIsImF1ZCI6InB1YmxpYy1jbGllbnQiLCJzdWIiOiI0YTkzNWJjYi0yOGZiLTQwZTUtYjFlYi01ZjQ1YjM4YWJhN2MiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJwdWJsaWMtY2xpZW50IiwiYXV0aF90aW1lIjowLCJzZXNzaW9uX3N0YXRlIjoiOTNmODhmMTMtYTkzYy00OWI1LThjZjktMGNkNjExMDk2ZGM0IiwiYWNyIjoiMSIsImNsaWVudF9zZXNzaW9uIjoiNDYwNmY5ZjAtOGNmMC00ZWFjLTg0ZGQtOTEwN2ViYjg3NmI2IiwiYWxsb3dlZC1vcmlnaW5zIjpbXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIk1pZC1PZmZpY2VyIiwiYWRtaW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJ2aWV3LXByb2ZpbGUiXX19LCJyb2xlcyI6WyJNaWQtT2ZmaWNlciIsIm9mZmxpbmVfYWNjZXNzIiwiYWRtaW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdLCJuYW1lIjoiIiwiZ3JvdXBzIjpbXSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYnJva2VyMSJ9.YWxL80RPnXMeiRcVNWn2xa28Hx7zk66K7y4BVu7nZPktnSN3fWanWuwyqrFVtsRZ2-JQ-bFCfLOake7aqeMNzuJ-BJjkIj9IN8V1VwQOh_zLOwTiTiRJGcXvRCdAcMTAhbD04ou_lbUvS377_n1N7OaQkGw1sfJ7SAWTK-0f_LdVapDcgKYiPz15RUcBsrP8u25Her7aQkGJD09KDGNYl3PcBMxu2zmaE0nKltwsZq5xk4O6NxtV6HpTLnrO-k1t2ho3lObfK5o6cPggtRILgX6UarKI6yRBS-6D5Ty3WfDKBPNitGqDZD20HUvUwKgy23mz2m4Jcm-LttPiU9a7aQ], cache-control=[no-cache], connection=[Keep-Alive], Content-Type=[null], correlationid=[805a4226-2df9-4f0a-b790-b7d0503f8d97, 805a4226-2df9-4f0a-b790-b7d0503f8d97], host=[SALES-FLOW:18080], pragma=[no-cache], user-agent=[Apache-CXF/3.1.7], user-profile=[FR]}
+--------------------------------------
+10:37:42,744 INFO  [stdout] (default task-151) ***************************************************
+10:37:42,744 INFO  [stdout] (default task-151) FR
+10:37:42,745 INFO  [stdout] (default task-151) ***************************************************
+10:37:42,830 INFO  [stdout] (default task-151) juin 11, 2018 10:37:42:829 |Palmyra : INFO |RestLogger-[default task-151]: |805a4226-2df9-4f0a-b790-b7d0503f8d97| SalesFlow:broker1: The request [ http://FISCAL-OPTIMIZATION:58080/fiscal-optimization/services/rest/fiscal-opt/FOTPD1010002 ] has ended in 0.0072274096 seconds with status :200
+10:37:42,848 INFO  [stdout] (default task-151) juin 11, 2018 10:37:42:848 |Palmyra : DEBUG |InvocationLogger-[default task-151]: |805a4226-2df9-4f0a-b790-b7d0503f8d97| SalesFlow:broker1: Requesting URL >> http://PACK-MANAGER:28080/PackManager/services/rest/forms/400298246
+10:37:42,967 INFO  [stdout] (default task-151) juin 11, 2018 10:37:42:966 |Palmyra : INFO |RestLogger-[default task-151]: |805a4226-2df9-4f0a-b790-b7d0503f8d97| SalesFlow:broker1: The request [ http://PACK-MANAGER:28080/PackManager/services/rest/forms/400298246 ] has ended in 0.0115201612 seconds with status :200
+10:37:42,967 INFO  [stdout] (default task-151) juin 11, 2018 10:37:42:967 |Palmyra : DEBUG |InvocationLogger-[default task-151]: |805a4226-2df9-4f0a-b790-b7d0503f8d97| SalesFlow:broker1: Requesting URL End >> http://PACK-MANAGER:28080/PackManager/services/rest/forms/400298246
+10:37:42,967 INFO  [stdout] (default task-151) juin 11, 2018 10:37:42:967 |Palmyra : DEBUG |InvocationLogger-[default task-151]: |805a4226-2df9-4f0a-b790-b7d0503f8d97| SalesFlow:broker1: Requesting URL End Status>> 200
+10:37:42,983 INFO  [stdout] (default task-151) juin 11, 2018 10:37:42:983 |Palmyra : DEBUG |InvocationLogger-[default task-151]: |805a4226-2df9-4f0a-b790-b7d0503f8d97| SalesFlow:broker1: Requesting URL >> http://PACK-MANAGER:28080/PackManager/services/rest/forms/400298245
+10:37:43,009 INFO  [stdout] (default task-151) juin 11, 2018 10:37:43:008 |Palmyra : INFO |RestLogger-[default task-151]: |805a4226-2df9-4f0a-b790-b7d0503f8d97| SalesFlow:broker1: The request [ http://PACK-MANAGER:28080/PackManager/services/rest/forms/400298245 ] has ended in 0.0022073603 seconds with status :200
+10:37:43,009 INFO  [stdout] (default task-151) juin 11, 2018 10:37:43:009 |Palmyra : DEBUG |InvocationLogger-[default task-151]: |805a4226-2df9-4f0a-b790-b7d0503f8d97| SalesFlow:broker1: Requesting URL End >> http://PACK-MANAGER:28080/PackManager/services/rest/forms/400298245
+10:37:43,010 INFO  [stdout] (default task-151) juin 11, 2018 10:37:43:010 |Palmyra : DEBUG |InvocationLogger-[default task-151]: |805a4226-2df9-4f0a-b790-b7d0503f8d97| SalesFlow:broker1: Requesting URL End Status>> 200
+10:37:43,130 INFO  [stdout] (default task-151) juin 11, 2018 10:37:43:130 |Palmyra : INFO |RestLogger-[default task-151]: |805a4226-2df9-4f0a-b790-b7d0503f8d97| SalesFlow:broker1: The request [ http://FISCAL-OPTIMIZATION:58080/fiscal-optimization/services/rest/fiscal-opt/FOTPD1010002 ] has ended in 0.0059770508 seconds with status :200
+10:37:43,150 INFO  [org.apache.cxf.interceptor.LoggingOutInterceptor] (default task-151) Outbound Message
+---------------------------
+ID: 1031
+Response-Code: 200
+Content-Type: application/json
+Headers: {Content-Type=[application/json], Date=[Mon, 11 Jun 2018 08:37:43 GMT]}
+Messages: (message truncated to 49152 bytes)
+
+Payload: {
+  "type" : "com.vermeg.salesflowapi.PackageOfferResponse",
+  "data" : {
+    "type" : "com.vermeg.salesflowapi.PackageOffer",
+    "pricingMode" : "premium",
+    "taxCountry" : "BE",
+    "referenceCurrency" : "EUR",
+    "contractLanguage" : "FR",
+    "commercialProductCode" : "AXA-EIP_1310",
+    "offerForm" : {
+      "type" : "com.Form",
+      "definitionIdentifier" : "330001",
+      "identifier" : "400298246",
+      "questions" : [ {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 0,
+        "mandatory" : true,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daBirthDate|Investment-1|Global",
+        "label" : "Date de naissance assuré",
+        "identifier" : "daBirthDate",
+        "editable" : true,
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "1980-01-01"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 1,
+        "mandatory" : true,
+        "answerType" : "Numeric",
+        "definitionIdentifier" : "AgeTerm|Investment-1|Global",
+        "label" : "Age au terme",
+        "identifier" : "AgeTerm",
+        "editable" : true,
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "67"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 2,
+        "mandatory" : true,
+        "answerType" : "String",
+        "definitionIdentifier" : "eFiscalPeriod|Investment-1|Global",
+        "label" : "Clôture fiscale",
+        "identifier" : "eFiscalPeriod",
+        "editable" : true,
+        "answer" : {
+          "type" : "com.Answer",
+          "label" : "Décembre",
+          "answerValue" : "A.JAN-DEC"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 3,
+        "mandatory" : true,
+        "answerType" : "Boolean",
+        "definitionIdentifier" : "bRetroactivity|Investment-1|Global",
+        "label" : "Rétroactivité",
+        "identifier" : "bRetroactivity",
+        "editable" : true,
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "false"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 4,
+        "mandatory" : false,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daOverrideBeginDate|Investment-1|Global",
+        "label" : "overrideBeginDate",
+        "identifier" : "daOverrideBeginDate",
+        "editable" : true,
+        "answer" : {
+          "type" : "com.Answer"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 5,
+        "mandatory" : true,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daRidersBeginDate|Investment-1|Global",
+        "label" : "daRidersBeginDate",
+        "identifier" : "daRidersBeginDate",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "2018-06-11"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 6,
+        "mandatory" : true,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daBeginDate|Investment-1|Global",
+        "label" : "Date effet",
+        "identifier" : "daBeginDate",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "2018-06-11"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 7,
+        "mandatory" : true,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daReferenceDate|Investment-1|Global",
+        "label" : "Fiscal period reference date",
+        "identifier" : "daReferenceDate",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "2019-01-01"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 8,
+        "mandatory" : true,
+        "answerType" : "Amount",
+        "definitionIdentifier" : "refIncome|Investment-1|Global",
+        "label" : "Revenu professionnel annuel brut de l'assuré",
+        "identifier" : "refIncome",
+        "editable" : true,
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "50000"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Global",
+        "form$order" : 9,
+        "mandatory" : false,
+        "answerType" : "Amount",
+        "definitionIdentifier" : "amtInternalProvision4BS|null|Global",
+        "label" : "Provision interne transférée (pour Backservice)",
+        "identifier" : "amtInternalProvision4BS",
+        "editable" : true,
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "1000"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 10,
+        "mandatory" : true,
+        "answerType" : "String",
+        "definitionIdentifier" : "FREQUENCY|Investment-1|Global",
+        "label" : "Périodicité",
+        "identifier" : "FREQUENCY",
+        "editable" : true,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "true",
+          "expressionOrder" : 0,
+          "behaviorImpact" : "possibleValues",
+          "possibleValues" : [ {
+            "type" : "com.Answer",
+            "behaviorExpression$order" : 0,
+            "answerValue" : "ANN"
+          }, {
+            "type" : "com.Answer",
+            "behaviorExpression$order" : 1,
+            "answerValue" : "QUA"
+          }, {
+            "type" : "com.Answer",
+            "behaviorExpression$order" : 2,
+            "answerValue" : "MON"
+          } ]
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "label" : "Annuelle",
+          "answerValue" : "ANN"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 11,
+        "mandatory" : true,
+        "answerType" : "String",
+        "definitionIdentifier" : "strIssuingMonthInit|Investment-1|Global",
+        "label" : "initialIssuingMonth",
+        "identifier" : "strIssuingMonthInit",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "label" : "Juin",
+          "answerValue" : "JUN"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 12,
+        "mandatory" : true,
+        "answerType" : "String",
+        "definitionIdentifier" : "eMonth|Investment-1|Global",
+        "label" : "Echéance",
+        "identifier" : "eMonth",
+        "editable" : true,
+        "answer" : {
+          "type" : "com.Answer",
+          "label" : "Juin",
+          "answerValue" : "JUN"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 13,
+        "mandatory" : true,
+        "answerType" : "Numeric",
+        "definitionIdentifier" : "initIssuingMonth|Investment-1|Global",
+        "label" : "Mois d'échéance",
+        "identifier" : "initIssuingMonth",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "6"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 14,
+        "mandatory" : true,
+        "answerType" : "Numeric",
+        "definitionIdentifier" : "issuingMonth|Investment-1|Global",
+        "label" : "Echéance",
+        "identifier" : "issuingMonth",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "6"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 15,
+        "mandatory" : true,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daIssuingDate|Investment-1|Global",
+        "label" : "Echéance",
+        "identifier" : "daIssuingDate",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "2019-06-01"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 16,
+        "mandatory" : true,
+        "answerType" : "Numeric",
+        "definitionIdentifier" : "legalPensionAge|Investment-1|Global",
+        "label" : "Legal pension age",
+        "identifier" : "legalPensionAge",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "67"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 17,
+        "mandatory" : true,
+        "answerType" : "Numeric",
+        "definitionIdentifier" : "contractDuration|Investment-1|Global",
+        "label" : "Contract duration",
+        "identifier" : "contractDuration",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "332"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 18,
+        "mandatory" : false,
+        "answerType" : "Amount",
+        "definitionIdentifier" : "amtAnnualGoal|Investment-1|Global",
+        "label" : "Objectif annuel ",
+        "identifier" : "amtAnnualGoal",
+        "editable" : true,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "6623.05"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 19,
+        "mandatory" : true,
+        "answerType" : "Boolean",
+        "definitionIdentifier" : "prorateFirstYear|Investment-1|Global",
+        "label" : "Prorata premier objectif",
+        "identifier" : "prorateFirstYear",
+        "editable" : true,
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "false"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 20,
+        "mandatory" : false,
+        "answerType" : "Amount",
+        "definitionIdentifier" : "amtProrata|Investment-1|Global",
+        "label" : "Objectif première année",
+        "identifier" : "amtProrata",
+        "editable" : true,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "prorateFirstYear == true",
+          "behaviorImpact" : "MANDATORY"
+        }, {
+          "type" : "com.BehaviorExpression",
+          "expression" : "prorateFirstYear == true",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 21,
+        "mandatory" : true,
+        "answerType" : "Amount",
+        "definitionIdentifier" : "amtProrataBegin|Investment-1|Global",
+        "label" : "Objectif première année",
+        "identifier" : "amtProrataBegin",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "6623.05"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : true,
+        "scope" : "Investment-1|Global",
+        "form$order" : 22,
+        "mandatory" : false,
+        "answerType" : "Amount",
+        "definitionIdentifier" : "amtBackService|Investment-1|Global",
+        "label" : "Versement complémentaire ",
+        "identifier" : "amtBackService",
+        "editable" : true,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "50084.72"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 23,
+        "mandatory" : true,
+        "answerType" : "Amount",
+        "definitionIdentifier" : "amtInvestedPremium|Investment-1|Global",
+        "label" : "First invested amount",
+        "identifier" : "amtInvestedPremium",
+        "editable" : true,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "500.0"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 24,
+        "mandatory" : true,
+        "answerType" : "Boolean",
+        "definitionIdentifier" : "prorateLastYear|Investment-1|Global",
+        "label" : "Prorata dernier objectif",
+        "identifier" : "prorateLastYear",
+        "editable" : true,
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "false"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 25,
+        "mandatory" : true,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daTermDate|Investment-1|Global",
+        "label" : "Term Date",
+        "identifier" : "daTermDate",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "2047-01-31"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 26,
+        "mandatory" : true,
+        "answerType" : "Amount",
+        "definitionIdentifier" : "amtProrataEnd|Investment-1|Global",
+        "label" : "Prorata end",
+        "identifier" : "amtProrataEnd",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "551.93"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : true,
+        "scope" : "Investment-1|Global",
+        "form$order" : 27,
+        "mandatory" : true,
+        "answerType" : "Amount",
+        "definitionIdentifier" : "amtYieldEIP|Investment-1|Global",
+        "label" : "Avantage fiscal estimé",
+        "identifier" : "amtYieldEIP",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "16774.158366"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 28,
+        "mandatory" : true,
+        "answerType" : "Boolean",
+        "definitionIdentifier" : "TechSettings|Investment-1|Global",
+        "label" : "Adaptation des paramètres techniques",
+        "identifier" : "TechSettings",
+        "editable" : true,
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "false"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 29,
+        "mandatory" : true,
+        "answerType" : "Percentage",
+        "definitionIdentifier" : "pCommissionratePA|Investment-1|Global",
+        "label" : "Chargements objectif annuel",
+        "identifier" : "pCommissionratePA",
+        "editable" : true,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "TechSettings == true",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "0.06"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 30,
+        "mandatory" : true,
+        "answerType" : "Percentage",
+        "definitionIdentifier" : "pCommissionRatePU|Investment-1|Global",
+        "label" : "Chargements versements complémentaires",
+        "identifier" : "pCommissionRatePU",
+        "editable" : true,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "TechSettings == true",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "0.06"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 31,
+        "mandatory" : true,
+        "answerType" : "Percentage",
+        "definitionIdentifier" : "CommissionRateRiders|Investment-1|Global",
+        "label" : "Commission assurance(s) accessoire(s)",
+        "identifier" : "CommissionRateRiders",
+        "editable" : true,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "TechSettings == true",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "0.15"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 32,
+        "mandatory" : true,
+        "answerType" : "Percentage",
+        "definitionIdentifier" : "dTaxAvantage|Investment-1|Global",
+        "label" : "dTaxAvantage",
+        "identifier" : "dTaxAvantage",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "0.2958"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 33,
+        "mandatory" : true,
+        "answerType" : "Percentage",
+        "definitionIdentifier" : "dTaxINAMI|Investment-1|Global",
+        "label" : "dTaxINAMI",
+        "identifier" : "dTaxINAMI",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "0.0355"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 34,
+        "mandatory" : true,
+        "answerType" : "Percentage",
+        "definitionIdentifier" : "dTaxSolidarite|Investment-1|Global",
+        "label" : "dTaxSolidarite",
+        "identifier" : "dTaxSolidarite",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "0.02"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 35,
+        "mandatory" : true,
+        "answerType" : "Percentage",
+        "definitionIdentifier" : "dTaxFictiveAnnuity|Investment-1|Global",
+        "label" : "dTaxFictiveAnnuity",
+        "identifier" : "dTaxFictiveAnnuity",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "0.1111"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 36,
+        "mandatory" : true,
+        "answerType" : "Percentage",
+        "definitionIdentifier" : "dTaxTerm|Investment-1|Global",
+        "label" : "dTaxTerm",
+        "identifier" : "dTaxTerm",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "0.1"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 37,
+        "mandatory" : true,
+        "answerType" : "Percentage",
+        "definitionIdentifier" : "dTaxCommunal|Investment-1|Global",
+        "label" : "dTaxCommunal",
+        "identifier" : "dTaxCommunal",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "0.07"
+        }
+      } ]
+    },
+    "fiscalOptimizationData" : {
+      "type" : "com.vermeg.fiscalopt.api.output.FODataOutput",
+      "thirdPartyId" : "000001965105418",
+      "identifier" : "FOTPD1010002",
+      "form" : {
+        "type" : "com.Form",
+        "definitionIdentifier" : "110002",
+        "identifier" : "400298247",
+        "questions" : [ {
+          "type" : "com.Question",
+          "summary" : false,
+          "form$order" : 0,
+          "mandatory" : true,
+          "answerType" : "Date",
+          "definitionIdentifier" : "daBirthDate|null",
+          "label" : "Date de naissance assuré",
+          "identifier" : "daBirthDate",
+          "editable" : true,
+          "behaviorExpressions" : [ {
+            "type" : "com.BehaviorExpression",
+            "expression" : "false",
+            "behaviorImpact" : "VISIBLE"
+          } ],
+          "answer" : {
+            "type" : "com.Answer",
+            "answerValue" : "1980-01-01"
+          }
+        }, {
+          "type" : "com.Question",
+          "summary" : false,
+          "form$order" : 1,
+          "mandatory" : true,
+          "answerType" : "String",
+          "definitionIdentifier" : "eMaritalStatus|null",
+          "label" : "Etat civil",
+          "identifier" : "eMaritalStatus",
+          "editable" : true,
+          "answer" : {
+            "type" : "com.Answer",
+            "label" : "Célibataire",
+            "answerValue" : "1"
+          }
+        }, {
+          "type" : "com.Question",
+          "summary" : false,
+          "form$order" : 2,
+          "mandatory" : true,
+          "answerType" : "Numeric",
+          "definitionIdentifier" : "iRetirementAge(Y)|null",
+          "label" : "Retirement Age (In Years)",
+          "identifier" : "iRetirementAge(Y)",
+          "editable" : true,
+          "behaviorExpressions" : [ {
+            "type" : "com.BehaviorExpression",
+            "expression" : "false",
+            "behaviorImpact" : "VISIBLE"
+          } ],
+          "answer" : {
+            "type" : "com.Answer",
+            "answerValue" : "67"
+          }
+        }, {
+          "type" : "com.Question",
+          "summary" : false,
+          "form$order" : 3,
+          "mandatory" : true,
+          "answerType" : "Date",
+          "definitionIdentifier" : "daEffectiveDate|null",
+          "label" : "Effective date",
+          "identifier" : "daEffectiveDate",
+          "editable" : true,
+          "behaviorExpressions" : [ {
+            "type" : "com.BehaviorExpression",
+            "expression" : "false",
+            "behaviorImpact" : "VISIBLE"
+          } ],
+          "answer" : {
+            "type" : "com.Answer",
+            "answerValue" : "2018-06-11"
+          }
+        }, {
+          "type" : "com.Question",
+          "summary" : false,
+          "form$order" : 4,
+          "mandatory" : true,
+          "answerType" : "Date",
+          "definitionIdentifier" : "daTermDate|null",
+          "label" : "Term Date",
+          "identifier" : "daTermDate",
+          "editable" : true,
+          "behaviorExpressions" : [ {
+            "type" : "com.BehaviorExpression",
+            "expression" : "false",
+            "behaviorImpact" : "VISIBLE"
+          } ],
+          "answer" : {
+            "type" : "com.Answer",
+            "answerValue" : "2047-01-31"
+          }
+        }, {
+          "type" : "com.Question",
+          "summary" : false,
+          "form$order" : 5,
+          "mandatory" : true,
+          "answerType" : "Amount",
+          "definitionIdentifier" : "amtAnnualGrossSalary|null",
+          "label" : "Annual gross salary",
+          "identifier" : "amtAnnualGrossSalary",
+          "editable" : true,
+          "behaviorExpressions" : [ {
+            "type" : "com.BehaviorExpression",
+            "expression" : "false",
+            "behaviorImpact" : "VISIBLE"
+          } ],
+          "answer" : {
+            "type" : "com.Answer",
+            "answerValue" : "50000"
+          }
+        }, {
+          "type" : "com.Question",
+          "summary" : false,
+          "form$order" : 6,
+          "mandatory" : true,
+          "answerType" : "Boolean",
+          "definitionIdentifier" : "bSalarySplit|null",
+          "label" : "Salary split",
+          "identifier" : "bSalarySplit",
+          "editable" : true,
+          "answer" : {
+            "type" : "com.Answer",
+            "answerValue" : "true"
+          }
+        }, {
+          "type" : "com.Question",
+          "summary" : false,
+          "form$order" : 7,
+          "mandatory" : false,
+          "answerType" : "Amount",
+          "definitionIdentifier" : "amtOtherSalaries|null",
+          "label" : "Autres revenus",
+          "identifier" : "amtOtherSalaries",
+          "editable" : true,
+          "behaviorExpressions" : [ {
+            "type" : "com.BehaviorExpression",
+            "expression" : "bSalarySplit==true",
+            "behaviorImpact" : "VISIBLE"
+          }, {
+            "type" : "com.BehaviorExpression",
+            "expression" : "bSalarySplit==true",
+            "behaviorImpact" : "MANDATORY"
+          } ],
+          "answer" : {
+            "type" : "com.Answer",
+            "answerValue" : "1500"
+          }
+        }, {
+          "type" : "com.Question",
+          "summary" : false,
+          "form$order" : 8,
+          "mandatory" : false,
+          "answerType" : "Boolean",
+          "definitionIdentifier" : "bPastCareer|null",
+          "label" : "Carrière passée",
+          "identifier" : "bPastCareer",
+          "editable" : true,
+          "behaviorExpressions" : [ {
+            "type" : "com.BehaviorExpression",
+            "expression" : "false",
+            "behaviorImpact" : "VISIBLE"
+          }, {
+            "type" : "com.BehaviorExpression",
+            "expression" : "false",
+            "behaviorImpact" : "MANDATORY"
+          } ],
+          "answer" : {
+            "type" : "com.Answer",
+            "answerValue" : "false"
+          }
+        }, {
+          "type" : "com.Question",
+          "summary" : false,
+          "form$order" : 9,
+          "mandatory" : true,
+          "answerType" : "Boolean",
+          "definitionIdentifier" : "bCatchUpPastCareer|null",
+          "label" : "Carrière passée",
+          "identifier" : "bCatchUpPastCareer",
+          "editable" : true,
+          "answer" : {
+            "type" : "com.Answer",
+            "answerValue" : "true"
+          }
+        }, {
+          "type" : "com.Question",
+          "summary" : false,
+          "form$order" : 10,
+          "mandatory" : false,
+          "answerType" : "Date",
+          "definitionIdentifier" : "daPastCreerStartDate|null",
+          "label" : "Date de début de carrière",
+          "identifier" : "daPastCreerStartDate",
+          "editable" : true,
+          "behaviorExpressions" : [ {
+            "type" : "com.BehaviorExpression",
+            "expression" : "bCatchUpPastCareer==true",
+            "behaviorImpact" : "MANDATORY"
+          }, {
+            "type" : "com.BehaviorExpression",
+            "expression" : "bCatchUpPastCareer==true",
+            "behaviorImpact" : "VISIBLE"
+          } ],
+          "answer" : {
+            "type" : "com.Answer",
+            "answerValue" : "2010-01-01"
+          }
+        }, {
+          "type" : "com.Question",
+          "summary" : false,
+          "form$order" : 11,
+          "mandatory" : false,
+          "answerType" : "Date",
+          "definitionIdentifier" : "daCurrentEmpEnrollDate|null",
+          "label" : "Date de début de carrière dans l’entreprise",
+          "identifier" : "daCurrentEmpEnrollDate",
+          "editable" : true,
+          "behaviorExpressions" : [ {
+            "type" : "com.BehaviorExpression",
+            "expression" : "bCatchUpPastCareer==true",
+            "behaviorImpact" : "MANDATORY"
+          }, {
+            "type" : "com.BehaviorExpression",
+            "expression" : "bCatchUpPastCareer==true",
+            "behaviorImpact" : "VISIBLE"
+          } ],
+          "answer" : {
+            "type" : "com.Answer",
+            "answerValue" : "2012-01-01"
+          }
+        }, {
+          "type" : "com.Question",
+          "summary" : false,
+          "form$order" : 12,
+          "mandatory" : true,
+          "answerType" : "Boolean",
+          "definitionIdentifier" : "bPresenceOfTrasfExtProvision|null",
+          "label" : "Do you wish to transfer external provisions?",
+          "identifier" : "bPresenceOfTrasfExtProvision",
+          "editable" : true,
+          "behaviorExpressions" : [ {
+            "type" : "com.BehaviorExpression",
+            "expression" : "false",
+            "behaviorImpact" : "VISIBLE"
+          } ],
+          "answer" : {
+            "type" : "com.Answer",
+            "answerValue" : "false"
+          }
+        }, {
+          "type" : "com.Question",
+          "summary" : false,
+          "form$order" : 13,
+          "mandatory" : false,
+          "answerType" : "Amount",
+          "definitionIdentifier" : "amtExternalProvisonAmt|null",
+          "label" : "External provison amount",
+          "identifier" : "amtExternalProvisonAmt",
+          "editable" : true,
+          "behaviorExpressions" : [ {
+            "type" : "com.BehaviorExpression",
+            "expression" : "false",
+            "behaviorImpact" : "VISIBLE"
+          }, {
+            "type" : "com.BehaviorExpression",
+            "expression" : "false",
+            "behaviorImpact" : "MANDATORY"
+          } ],
+          "answer" : {
+            "type" : "com.Answer",
+            "answerValue" : "1000"
+          }
+        }, {
+          "type" : "com.Question",
+          "summary" : false,
+          "form$order" : 14,
+          "mandatory" : true,
+          "answerType" : "Boolean",
+          "definitionIdentifier" : "bPresenceOfExtraContract|null",
+          "label" : "Do you have other extra legal contracts?",
+          "identifier" : "bPresenceOfExtraContract",
+          "editable" : true,
+          "behaviorExpressions" : [ {
+            "type" : "com.BehaviorExpression",
+            "expression" : "false",
+            "behaviorImpact" : "VISIBLE"
+          } ],
+          "answer" : {
+            "type" : "com.Answer",
+            "answerValue" : "false"
+          }
+        } ]
+      }
+    },
+    "totalFirstPremium" : {
+      "type" : "com.vermeg.salesflowapi.Amount",
+      "value" : 2578.17,
+      "currency" : "EUR"
+    },
+    "riskCoverages" : [ {
+      "type" : "com.vermeg.salesflowapi.PackageRiskCoverage",
+      "packageOffer$order" : 0,
+      "pricing" : {
+        "type" : "com.vermeg.salesflowapi.CoveragePricingInformation",
+        "financingBasedOnInvestment" : false,
+        "valueType" : "Numeric",
+        "periodicity" : "MON",
+        "insuredCapital" : {
+          "type" : "com.vermeg.salesflowapi.Amount",
+          "value" : 0.0,
+          "currency" : "EUR"
+        },
+        "premium" : {
+          "type" : "com.vermeg.salesflowapi.Amount",
+          "value" : 0.0,
+          "currency" : "EUR"
+        }
+      },
+      "questions" : [ {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "RSK_DEATH_INV_RESERVE_AXA-2|Coverage",
+        "form$order" : 38,
+        "packageRiskCoverage$order" : 0,
+        "mandatory" : true,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daBeginDate|RSK_DEATH_INV_RESERVE_AXA-2|Coverage",
+        "label" : "Date effet",
+        "identifier" : "daBeginDate",
+        "editable" : false,
+        "form" : {
+          "type" : "com.Form",
+          "code" : "1093190"
+        },
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        }, {
+          "type" : "com.BehaviorExpression",
+          "expression" : "daRidersBeginDate",
+          "behaviorImpact" : "FORMULA"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "2018-06-11"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "RSK_DEATH_INV_RESERVE_AXA-2|Coverage",
+        "form$order" : 39,
+        "packageRiskCoverage$order" : 1,
+        "mandatory" : true,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daBirthDate|RSK_DEATH_INV_RESERVE_AXA-2|Coverage",
+        "label" : "Date de naissance assuré",
+        "identifier" : "daBirthDate",
+        "editable" : false,
+        "form" : {
+          "type" : "com.Form",
+          "code" : "1093190"
+        },
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "daBirthDate",
+          "behaviorImpact" : "FORMULA"
+        }, {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "1980-01-01"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "RSK_DEATH_INV_RESERVE_AXA-2|Coverage",
+        "form$order" : 40,
+        "packageRiskCoverage$order" : 2,
+        "mandatory" : true,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daIssuingDate|RSK_DEATH_INV_RESERVE_AXA-2|Coverage",
+        "label" : "Echéance",
+        "identifier" : "daIssuingDate",
+        "editable" : false,
+        "form" : {
+          "type" : "com.Form",
+          "code" : "1093190"
+        },
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "daIssuingDate",
+          "behaviorImpact" : "FORMULA"
+        }, {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "2019-06-01"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "RSK_DEATH_INV_RESERVE_AXA-2|Coverage",
+        "form$order" : 41,
+        "packageRiskCoverage$order" : 3,
+        "mandatory" : true,
+        "answerType" : "Numeric",
+        "definitionIdentifier" : "contractDuration|RSK_DEATH_INV_RESERVE_AXA-2|Coverage",
+        "label" : "Contract duration",
+        "identifier" : "contractDuration",
+        "editable" : false,
+        "form" : {
+          "type" : "com.Form",
+          "code" : "1093190"
+        },
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        }, {
+          "type" : "com.BehaviorExpression",
+          "expression" : "contractDuration",
+          "behaviorImpact" : "FORMULA"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "332"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "RSK_DEATH_INV_RESERVE_AXA-2|Coverage",
+        "form$order" : 42,
+        "packageRiskCoverage$order" : 4,
+        "mandatory" : true,
+        "answerType" : "Amount",
+        "definitionIdentifier" : "amtAnnualGoal|RSK_DEATH_INV_RESERVE_AXA-2|Coverage",
+        "label" : "Objectif annuel ",
+        "identifier" : "amtAnnualGoal",
+        "editable" : false,
+        "form" : {
+          "type" : "com.Form",
+          "code" : "1093190"
+        },
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "amtAnnualGoal",
+          "behaviorImpact" : "FORMULA"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "6623.05"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "RSK_DEATH_INV_RESERVE_AXA-2|Coverage",
+        "form$order" : 43,
+        "packageRiskCoverage$order" : 5,
+        "mandatory" : true,
+        "answerType" : "Amount",
+        "definitionIdentifier" : "amtBackService|RSK_DEATH_INV_RESERVE_AXA-2|Coverage",
+        "label" : "Versement complémentaire ",
+        "identifier" : "amtBackService",
+        "editable" : false,
+        "form" : {
+          "type" : "com.Form",
+          "code" : "1093190"
+        },
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "amtBackService",
+          "behaviorImpact" : "FORMULA"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "50084.72"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "RSK_DEATH_INV_RESERVE_AXA-2|Coverage",
+        "form$order" : 44,
+        "packageRiskCoverage$order" : 6,
+        "mandatory" : true,
+        "answerType" : "Amount",
+        "definitionIdentifier" : "amtProjectionsDeathCapital|RSK_DEATH_INV_RESERVE_AXA-2|Coverage",
+        "label" : "Capital",
+        "identifier" : "amtProjectionsDeathCapital",
+        "editable" : false,
+        "form" : {
+          "type" : "com.Form",
+          "code" : "1093190"
+        },
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "100000.0"
+        }
+      } ],
+      "coverageDescription" : {
+        "type" : "com.vermeg.salesflowapi.CoverageDescription",
+        "position" : 2,
+        "coveredRiskType" : "RESERVE",
+        "identifier" : "RSK_DEATH_INV_RESERVE_AXA",
+        "riskTypes" : [ {
+          "type" : "com.vermeg.salesflowapi.RiskType",
+          "name" : "DEATH_INV_RESERVE"
+        } ]
+      }
+    }, {
+      "type" : "com.vermeg.salesflowapi.PackageRiskCoverage",
+      "packageOffer$order" : 1,
+      "pricing" : {
+        "type" : "com.vermeg.salesflowapi.CoveragePricingInformation",
+        "financingBasedOnInvestment" : false,
+        "valueType" : "Numeric",
+        "periodicity" : "MON",
+        "insuredCapital" : {
+          "type" : "com.vermeg.salesflowapi.Amount",
+          "value" : 0.0,
+          "currency" : "EUR"
+        },
+        "premium" : {
+          "type" : "com.vermeg.salesflowapi.Amount",
+          "value" : 0.0,
+          "currency" : "EUR"
+        }
+      },
+      "questions" : [ {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "RSK_TERM_INV_AXA-3|Coverage",
+        "form$order" : 45,
+        "packageRiskCoverage$order" : 0,
+        "mandatory" : true,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daBeginDate|RSK_TERM_INV_AXA-3|Coverage",
+        "label" : "Date effet",
+        "identifier" : "daBeginDate",
+        "editable" : false,
+        "form" : {
+          "type" : "com.Form",
+          "code" : "1093190"
+        },
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "daRidersBeginDate",
+          "behaviorImpact" : "FORMULA"
+        }, {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "2018-06-11"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "RSK_TERM_INV_AXA-3|Coverage",
+        "form$order" : 46,
+        "packageRiskCoverage$order" : 1,
+        "mandatory" : true,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daBirthDate|RSK_TERM_INV_AXA-3|Coverage",
+        "label" : "Date de naissance assuré",
+        "identifier" : "daBirthDate",
+        "editable" : false,
+        "form" : {
+          "type" : "com.Form",
+          "code" : "1093190"
+        },
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "daBirthDate",
+          "behaviorImpact" : "FORMULA"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "1980-01-01"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "RSK_TERM_INV_AXA-3|Coverage",
+        "form$order" : 47,
+        "packageRiskCoverage$order" : 2,
+        "mandatory" : true,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daIssuingDate|RSK_TERM_INV_AXA-3|Coverage",
+        "label" : "Echéance",
+        "identifier" : "daIssuingDate",
+        "editable" : false,
+        "form" : {
+          "type" : "com.Form",
+          "code" : "1093190"
+        },
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "daIssuingDate",
+          "behaviorImpact" : "FORMULA"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "2019-06-01"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "RSK_TERM_INV_AXA-3|Coverage",
+        "form$order" : 48,
+        "packageRiskCoverage$order" : 3,
+        "mandatory" : true,
+        "answerType" : "Numeric",
+        "definitionIdentifier" : "contractDuration|RSK_TERM_INV_AXA-3|Coverage",
+        "label" : "Contract duration",
+        "identifier" : "contractDuration",
+        "editable" : false,
+        "form" : {
+          "type" : "com.Form",
+          "code" : "1093190"
+        },
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "contractDuration",
+          "behaviorImpact" : "FORMULA"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "332"
+        }
+      } ],
+      "coverageDescription" : {
+        "type" : "com.vermeg.salesflowapi.CoverageDescription",
+        "position" : 3,
+        "coveredRiskType" : "RESERVE",
+        "identifier" : "RSK_TERM_INV_AXA",
+        "riskTypes" : [ {
+          "type" : "com.vermeg.salesflowapi.RiskType",
+          "name" : "LIFE_AT_TERM"
+        } ]
+      }
+    }, {
+      "type" : "com.vermeg.salesflowapi.PackageRiskCoverage",
+      "packageOffer$order" : 2,
+      "pricing" : {
+        "type" : "com.vermeg.salesflowapi.CoveragePricingInformation",
+        "financingBasedOnInvestment" : false,
+        "valueType" : "Numeric",
+        "periodicity" : "MON",
+        "insuredCapital" : {
+          "type" : "com.vermeg.salesflowapi.Amount",
+          "value" : 0.0,
+          "currency" : "EUR"
+        },
+        "premium" : {
+          "type" : "com.vermeg.salesflowapi.Amount",
+          "value" : 0.0,
+          "currency" : "EUR"
+        }
+      },
+      "questions" : [ {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "RSK_ACCIDENT_INV_EIP-4|Coverage",
+        "form$order" : 49,
+        "packageRiskCoverage$order" : 0,
+        "mandatory" : true,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daBeginDate|RSK_ACCIDENT_INV_EIP-4|Coverage",
+        "label" : "Date effet",
+        "identifier" : "daBeginDate",
+        "editable" : false,
+        "form" : {
+          "type" : "com.Form",
+          "code" : "1093190"
+        },
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "daRidersBeginDate",
+          "behaviorImpact" : "FORMULA"
+        }, {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "2018-06-11"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "RSK_ACCIDENT_INV_EIP-4|Coverage",
+        "form$order" : 50,
+        "packageRiskCoverage$order" : 1,
+        "mandatory" : true,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daBirthDate|RSK_ACCIDENT_INV_EIP-4|Coverage",
+        "label" : "Date de naissance assuré",
+        "identifier" : "daBirthDate",
+        "editable" : false,
+        "form" : {
+          "type" : "com.Form",
+          "code" : "1093190"
+        },
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "daBirthDate",
+          "behaviorImpact" : "FORMULA"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "1980-01-01"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "RSK_ACCIDENT_INV_EIP-4|Coverage",
+        "form$order" : 51,
+        "packageRiskCoverage$order" : 2,
+        "mandatory" : true,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daIssuingDate|RSK_ACCIDENT_INV_EIP-4|Coverage",
+        "label" : "Echéance",
+        "identifier" : "daIssuingDate",
+        "editable" : false,
+        "form" : {
+          "type" : "com.Form",
+          "code" : "1093190"
+        },
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "daIssuingDate",
+          "behaviorImpact" : "FORMULA"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "2019-06-01"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "RSK_ACCIDENT_INV_EIP-4|Coverage",
+        "form$order" : 52,
+        "packageRiskCoverage$order" : 3,
+        "mand
+--------------------------------------
+10:37:43,368 INFO  [org.apache.cxf.interceptor.LoggingInInterceptor] (default task-155) Inbound Message
+----------------------------
+ID: 1032
+Address: http://SALES-FLOW:18080/SalesFlow/services/rest/package-offers/630008032
+Http-Method: GET
+Content-Type: 
+Headers: {Accept=[*/*], accept-encoding=[UTF-8,deflate], Authorization=[Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJPMy15R25uN1IweVQzYjNxTkZUR2FIYVFtVWV0NXZRWUJnS1RsTmRnRnd3In0.eyJqdGkiOiI5ZGE4MTllMC04OTBmLTRmNTUtOTBhMi00YmU0YzQzOWJlYTUiLCJleHAiOjE1Mjg3MDY1NjMsIm5iZiI6MCwiaWF0IjoxNTI4NzA2MjYzLCJpc3MiOiJodHRwOi8vU0VDVVJJVFk6OTA4MC9hdXRoL3JlYWxtcy9SZWFsbUFYQSIsImF1ZCI6InB1YmxpYy1jbGllbnQiLCJzdWIiOiI0YTkzNWJjYi0yOGZiLTQwZTUtYjFlYi01ZjQ1YjM4YWJhN2MiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJwdWJsaWMtY2xpZW50IiwiYXV0aF90aW1lIjowLCJzZXNzaW9uX3N0YXRlIjoiOTNmODhmMTMtYTkzYy00OWI1LThjZjktMGNkNjExMDk2ZGM0IiwiYWNyIjoiMSIsImNsaWVudF9zZXNzaW9uIjoiNDYwNmY5ZjAtOGNmMC00ZWFjLTg0ZGQtOTEwN2ViYjg3NmI2IiwiYWxsb3dlZC1vcmlnaW5zIjpbXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIk1pZC1PZmZpY2VyIiwiYWRtaW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJ2aWV3LXByb2ZpbGUiXX19LCJyb2xlcyI6WyJNaWQtT2ZmaWNlciIsIm9mZmxpbmVfYWNjZXNzIiwiYWRtaW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdLCJuYW1lIjoiIiwiZ3JvdXBzIjpbXSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYnJva2VyMSJ9.ln5w8d3Hn6PWoYXDyRWudzvtFhcjJT6eUV7bi3xg5m1EoXZLsqkL21ekY-JeFpac9n8rOLWqCfVGZYDar5bx9jOWG2pGKan0MnxioJg_gzI1IfnDMCzjNqxb-nm42rxfuwD1LuidJHp3wENW7i6oh0cpfrpR5Zy0GgxynkWgNGVO63LapS6d90RI5_f07xyKirr-Jn4plE8ANkZmTWqnlbnkSCynx5NUckiW0m1iBIh0igLwnFtcvo9nDW2TjSH6_jtHNQvN58r3yNAgnj_cxw-kZUuFAR4Vcetv3_wvE_oUI-pymtXZe_HegmeaugCBhxTNw4v7FKjFarRo4N32fw], cache-control=[no-cache], connection=[Keep-Alive], Content-Type=[null], correlationid=[805a4226-2df9-4f0a-b790-b7d0503f8d97, 805a4226-2df9-4f0a-b790-b7d0503f8d97], host=[SALES-FLOW:18080], pragma=[no-cache], user-agent=[Apache-CXF/3.1.7], user-profile=[FR]}
+--------------------------------------
+10:37:43,369 INFO  [stdout] (default task-155) ***************************************************
+10:37:43,369 INFO  [stdout] (default task-155) FR
+10:37:43,369 INFO  [stdout] (default task-155) ***************************************************
+10:37:43,438 INFO  [stdout] (default task-155) juin 11, 2018 10:37:43:438 |Palmyra : INFO |RestLogger-[default task-155]: |805a4226-2df9-4f0a-b790-b7d0503f8d97| SalesFlow:broker1: The request [ http://FISCAL-OPTIMIZATION:58080/fiscal-optimization/services/rest/fiscal-opt/FOTPD1010002 ] has ended in 0.0057839844 seconds with status :200
+10:37:43,459 INFO  [stdout] (default task-155) juin 11, 2018 10:37:43:459 |Palmyra : DEBUG |InvocationLogger-[default task-155]: |805a4226-2df9-4f0a-b790-b7d0503f8d97| SalesFlow:broker1: Requesting URL >> http://PACK-MANAGER:28080/PackManager/services/rest/forms/400298246
+10:37:43,582 INFO  [stdout] (default task-155) juin 11, 2018 10:37:43:582 |Palmyra : INFO |RestLogger-[default task-155]: |805a4226-2df9-4f0a-b790-b7d0503f8d97| SalesFlow:broker1: The request [ http://PACK-MANAGER:28080/PackManager/services/rest/forms/400298246 ] has ended in 0.0119592582 seconds with status :200
+10:37:43,583 INFO  [stdout] (default task-155) juin 11, 2018 10:37:43:583 |Palmyra : DEBUG |InvocationLogger-[default task-155]: |805a4226-2df9-4f0a-b790-b7d0503f8d97| SalesFlow:broker1: Requesting URL End >> http://PACK-MANAGER:28080/PackManager/services/rest/forms/400298246
+10:37:43,583 INFO  [stdout] (default task-155) juin 11, 2018 10:37:43:583 |Palmyra : DEBUG |InvocationLogger-[default task-155]: |805a4226-2df9-4f0a-b790-b7d0503f8d97| SalesFlow:broker1: Requesting URL End Status>> 200
+10:37:43,595 INFO  [stdout] (default task-155) juin 11, 2018 10:37:43:595 |Palmyra : DEBUG |InvocationLogger-[default task-155]: |805a4226-2df9-4f0a-b790-b7d0503f8d97| SalesFlow:broker1: Requesting URL >> http://PACK-MANAGER:28080/PackManager/services/rest/forms/400298245
+10:37:43,618 INFO  [stdout] (default task-155) juin 11, 2018 10:37:43:618 |Palmyra : INFO |RestLogger-[default task-155]: |805a4226-2df9-4f0a-b790-b7d0503f8d97| SalesFlow:broker1: The request [ http://PACK-MANAGER:28080/PackManager/services/rest/forms/400298245 ] has ended in 0.0020242415 seconds with status :200
+10:37:43,619 INFO  [stdout] (default task-155) juin 11, 2018 10:37:43:619 |Palmyra : DEBUG |InvocationLogger-[default task-155]: |805a4226-2df9-4f0a-b790-b7d0503f8d97| SalesFlow:broker1: Requesting URL End >> http://PACK-MANAGER:28080/PackManager/services/rest/forms/400298245
+10:37:43,619 INFO  [stdout] (default task-155) juin 11, 2018 10:37:43:619 |Palmyra : DEBUG |InvocationLogger-[default task-155]: |805a4226-2df9-4f0a-b790-b7d0503f8d97| SalesFlow:broker1: Requesting URL End Status>> 200
+10:37:43,723 INFO  [stdout] (default task-155) juin 11, 2018 10:37:43:722 |Palmyra : INFO |RestLogger-[default task-155]: |805a4226-2df9-4f0a-b790-b7d0503f8d97| SalesFlow:broker1: The request [ http://FISCAL-OPTIMIZATION:58080/fiscal-optimization/services/rest/fiscal-opt/FOTPD1010002 ] has ended in 0.0057329752 seconds with status :200
+10:37:43,742 INFO  [org.apache.cxf.interceptor.LoggingOutInterceptor] (default task-155) Outbound Message
+---------------------------
+ID: 1032
+Response-Code: 200
+Content-Type: application/json
+Headers: {Content-Type=[application/json], Date=[Mon, 11 Jun 2018 08:37:43 GMT]}
+Messages: (message truncated to 49152 bytes)
+
+Payload: {
+  "type" : "com.vermeg.salesflowapi.PackageOfferResponse",
+  "data" : {
+    "type" : "com.vermeg.salesflowapi.PackageOffer",
+    "pricingMode" : "premium",
+    "taxCountry" : "BE",
+    "referenceCurrency" : "EUR",
+    "contractLanguage" : "FR",
+    "commercialProductCode" : "AXA-EIP_1310",
+    "offerForm" : {
+      "type" : "com.Form",
+      "definitionIdentifier" : "330001",
+      "identifier" : "400298246",
+      "questions" : [ {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 0,
+        "mandatory" : true,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daBirthDate|Investment-1|Global",
+        "label" : "Date de naissance assuré",
+        "identifier" : "daBirthDate",
+        "editable" : true,
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "1980-01-01"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 1,
+        "mandatory" : true,
+        "answerType" : "Numeric",
+        "definitionIdentifier" : "AgeTerm|Investment-1|Global",
+        "label" : "Age au terme",
+        "identifier" : "AgeTerm",
+        "editable" : true,
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "67"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 2,
+        "mandatory" : true,
+        "answerType" : "String",
+        "definitionIdentifier" : "eFiscalPeriod|Investment-1|Global",
+        "label" : "Clôture fiscale",
+        "identifier" : "eFiscalPeriod",
+        "editable" : true,
+        "answer" : {
+          "type" : "com.Answer",
+          "label" : "Décembre",
+          "answerValue" : "A.JAN-DEC"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 3,
+        "mandatory" : true,
+        "answerType" : "Boolean",
+        "definitionIdentifier" : "bRetroactivity|Investment-1|Global",
+        "label" : "Rétroactivité",
+        "identifier" : "bRetroactivity",
+        "editable" : true,
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "false"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 4,
+        "mandatory" : false,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daOverrideBeginDate|Investment-1|Global",
+        "label" : "overrideBeginDate",
+        "identifier" : "daOverrideBeginDate",
+        "editable" : true,
+        "answer" : {
+          "type" : "com.Answer"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 5,
+        "mandatory" : true,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daRidersBeginDate|Investment-1|Global",
+        "label" : "daRidersBeginDate",
+        "identifier" : "daRidersBeginDate",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "2018-06-11"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 6,
+        "mandatory" : true,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daBeginDate|Investment-1|Global",
+        "label" : "Date effet",
+        "identifier" : "daBeginDate",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "2018-06-11"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 7,
+        "mandatory" : true,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daReferenceDate|Investment-1|Global",
+        "label" : "Fiscal period reference date",
+        "identifier" : "daReferenceDate",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "2019-01-01"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 8,
+        "mandatory" : true,
+        "answerType" : "Amount",
+        "definitionIdentifier" : "refIncome|Investment-1|Global",
+        "label" : "Revenu professionnel annuel brut de l'assuré",
+        "identifier" : "refIncome",
+        "editable" : true,
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "50000"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Global",
+        "form$order" : 9,
+        "mandatory" : false,
+        "answerType" : "Amount",
+        "definitionIdentifier" : "amtInternalProvision4BS|null|Global",
+        "label" : "Provision interne transférée (pour Backservice)",
+        "identifier" : "amtInternalProvision4BS",
+        "editable" : true,
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "1000"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 10,
+        "mandatory" : true,
+        "answerType" : "String",
+        "definitionIdentifier" : "FREQUENCY|Investment-1|Global",
+        "label" : "Périodicité",
+        "identifier" : "FREQUENCY",
+        "editable" : true,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "true",
+          "expressionOrder" : 0,
+          "behaviorImpact" : "possibleValues",
+          "possibleValues" : [ {
+            "type" : "com.Answer",
+            "behaviorExpression$order" : 0,
+            "answerValue" : "ANN"
+          }, {
+            "type" : "com.Answer",
+            "behaviorExpression$order" : 1,
+            "answerValue" : "QUA"
+          }, {
+            "type" : "com.Answer",
+            "behaviorExpression$order" : 2,
+            "answerValue" : "MON"
+          } ]
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "label" : "Annuelle",
+          "answerValue" : "ANN"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 11,
+        "mandatory" : true,
+        "answerType" : "String",
+        "definitionIdentifier" : "strIssuingMonthInit|Investment-1|Global",
+        "label" : "initialIssuingMonth",
+        "identifier" : "strIssuingMonthInit",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "label" : "Juin",
+          "answerValue" : "JUN"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 12,
+        "mandatory" : true,
+        "answerType" : "String",
+        "definitionIdentifier" : "eMonth|Investment-1|Global",
+        "label" : "Echéance",
+        "identifier" : "eMonth",
+        "editable" : true,
+        "answer" : {
+          "type" : "com.Answer",
+          "label" : "Juin",
+          "answerValue" : "JUN"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 13,
+        "mandatory" : true,
+        "answerType" : "Numeric",
+        "definitionIdentifier" : "initIssuingMonth|Investment-1|Global",
+        "label" : "Mois d'échéance",
+        "identifier" : "initIssuingMonth",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "6"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 14,
+        "mandatory" : true,
+        "answerType" : "Numeric",
+        "definitionIdentifier" : "issuingMonth|Investment-1|Global",
+        "label" : "Echéance",
+        "identifier" : "issuingMonth",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "6"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 15,
+        "mandatory" : true,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daIssuingDate|Investment-1|Global",
+        "label" : "Echéance",
+        "identifier" : "daIssuingDate",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "2019-06-01"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 16,
+        "mandatory" : true,
+        "answerType" : "Numeric",
+        "definitionIdentifier" : "legalPensionAge|Investment-1|Global",
+        "label" : "Legal pension age",
+        "identifier" : "legalPensionAge",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "67"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 17,
+        "mandatory" : true,
+        "answerType" : "Numeric",
+        "definitionIdentifier" : "contractDuration|Investment-1|Global",
+        "label" : "Contract duration",
+        "identifier" : "contractDuration",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "332"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 18,
+        "mandatory" : false,
+        "answerType" : "Amount",
+        "definitionIdentifier" : "amtAnnualGoal|Investment-1|Global",
+        "label" : "Objectif annuel ",
+        "identifier" : "amtAnnualGoal",
+        "editable" : true,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "6623.05"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 19,
+        "mandatory" : true,
+        "answerType" : "Boolean",
+        "definitionIdentifier" : "prorateFirstYear|Investment-1|Global",
+        "label" : "Prorata premier objectif",
+        "identifier" : "prorateFirstYear",
+        "editable" : true,
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "false"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 20,
+        "mandatory" : false,
+        "answerType" : "Amount",
+        "definitionIdentifier" : "amtProrata|Investment-1|Global",
+        "label" : "Objectif première année",
+        "identifier" : "amtProrata",
+        "editable" : true,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "prorateFirstYear == true",
+          "behaviorImpact" : "MANDATORY"
+        }, {
+          "type" : "com.BehaviorExpression",
+          "expression" : "prorateFirstYear == true",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 21,
+        "mandatory" : true,
+        "answerType" : "Amount",
+        "definitionIdentifier" : "amtProrataBegin|Investment-1|Global",
+        "label" : "Objectif première année",
+        "identifier" : "amtProrataBegin",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "6623.05"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : true,
+        "scope" : "Investment-1|Global",
+        "form$order" : 22,
+        "mandatory" : false,
+        "answerType" : "Amount",
+        "definitionIdentifier" : "amtBackService|Investment-1|Global",
+        "label" : "Versement complémentaire ",
+        "identifier" : "amtBackService",
+        "editable" : true,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "50084.72"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 23,
+        "mandatory" : true,
+        "answerType" : "Amount",
+        "definitionIdentifier" : "amtInvestedPremium|Investment-1|Global",
+        "label" : "First invested amount",
+        "identifier" : "amtInvestedPremium",
+        "editable" : true,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "500.0"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 24,
+        "mandatory" : true,
+        "answerType" : "Boolean",
+        "definitionIdentifier" : "prorateLastYear|Investment-1|Global",
+        "label" : "Prorata dernier objectif",
+        "identifier" : "prorateLastYear",
+        "editable" : true,
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "false"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 25,
+        "mandatory" : true,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daTermDate|Investment-1|Global",
+        "label" : "Term Date",
+        "identifier" : "daTermDate",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "2047-01-31"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 26,
+        "mandatory" : true,
+        "answerType" : "Amount",
+        "definitionIdentifier" : "amtProrataEnd|Investment-1|Global",
+        "label" : "Prorata end",
+        "identifier" : "amtProrataEnd",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "551.93"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : true,
+        "scope" : "Investment-1|Global",
+        "form$order" : 27,
+        "mandatory" : true,
+        "answerType" : "Amount",
+        "definitionIdentifier" : "amtYieldEIP|Investment-1|Global",
+        "label" : "Avantage fiscal estimé",
+        "identifier" : "amtYieldEIP",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "16774.158366"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 28,
+        "mandatory" : true,
+        "answerType" : "Boolean",
+        "definitionIdentifier" : "TechSettings|Investment-1|Global",
+        "label" : "Adaptation des paramètres techniques",
+        "identifier" : "TechSettings",
+        "editable" : true,
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "false"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 29,
+        "mandatory" : true,
+        "answerType" : "Percentage",
+        "definitionIdentifier" : "pCommissionratePA|Investment-1|Global",
+        "label" : "Chargements objectif annuel",
+        "identifier" : "pCommissionratePA",
+        "editable" : true,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "TechSettings == true",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "0.06"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 30,
+        "mandatory" : true,
+        "answerType" : "Percentage",
+        "definitionIdentifier" : "pCommissionRatePU|Investment-1|Global",
+        "label" : "Chargements versements complémentaires",
+        "identifier" : "pCommissionRatePU",
+        "editable" : true,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "TechSettings == true",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "0.06"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 31,
+        "mandatory" : true,
+        "answerType" : "Percentage",
+        "definitionIdentifier" : "CommissionRateRiders|Investment-1|Global",
+        "label" : "Commission assurance(s) accessoire(s)",
+        "identifier" : "CommissionRateRiders",
+        "editable" : true,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "TechSettings == true",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "0.15"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 32,
+        "mandatory" : true,
+        "answerType" : "Percentage",
+        "definitionIdentifier" : "dTaxAvantage|Investment-1|Global",
+        "label" : "dTaxAvantage",
+        "identifier" : "dTaxAvantage",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "0.2958"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 33,
+        "mandatory" : true,
+        "answerType" : "Percentage",
+        "definitionIdentifier" : "dTaxINAMI|Investment-1|Global",
+        "label" : "dTaxINAMI",
+        "identifier" : "dTaxINAMI",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "0.0355"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 34,
+        "mandatory" : true,
+        "answerType" : "Percentage",
+        "definitionIdentifier" : "dTaxSolidarite|Investment-1|Global",
+        "label" : "dTaxSolidarite",
+        "identifier" : "dTaxSolidarite",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "0.02"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 35,
+        "mandatory" : true,
+        "answerType" : "Percentage",
+        "definitionIdentifier" : "dTaxFictiveAnnuity|Investment-1|Global",
+        "label" : "dTaxFictiveAnnuity",
+        "identifier" : "dTaxFictiveAnnuity",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "0.1111"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 36,
+        "mandatory" : true,
+        "answerType" : "Percentage",
+        "definitionIdentifier" : "dTaxTerm|Investment-1|Global",
+        "label" : "dTaxTerm",
+        "identifier" : "dTaxTerm",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "0.1"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "Investment-1|Global",
+        "form$order" : 37,
+        "mandatory" : true,
+        "answerType" : "Percentage",
+        "definitionIdentifier" : "dTaxCommunal|Investment-1|Global",
+        "label" : "dTaxCommunal",
+        "identifier" : "dTaxCommunal",
+        "editable" : false,
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "0.07"
+        }
+      } ]
+    },
+    "fiscalOptimizationData" : {
+      "type" : "com.vermeg.fiscalopt.api.output.FODataOutput",
+      "thirdPartyId" : "000001965105418",
+      "identifier" : "FOTPD1010002",
+      "form" : {
+        "type" : "com.Form",
+        "definitionIdentifier" : "110002",
+        "identifier" : "400298247",
+        "questions" : [ {
+          "type" : "com.Question",
+          "summary" : false,
+          "form$order" : 0,
+          "mandatory" : true,
+          "answerType" : "Date",
+          "definitionIdentifier" : "daBirthDate|null",
+          "label" : "Date de naissance assuré",
+          "identifier" : "daBirthDate",
+          "editable" : true,
+          "behaviorExpressions" : [ {
+            "type" : "com.BehaviorExpression",
+            "expression" : "false",
+            "behaviorImpact" : "VISIBLE"
+          } ],
+          "answer" : {
+            "type" : "com.Answer",
+            "answerValue" : "1980-01-01"
+          }
+        }, {
+          "type" : "com.Question",
+          "summary" : false,
+          "form$order" : 1,
+          "mandatory" : true,
+          "answerType" : "String",
+          "definitionIdentifier" : "eMaritalStatus|null",
+          "label" : "Etat civil",
+          "identifier" : "eMaritalStatus",
+          "editable" : true,
+          "answer" : {
+            "type" : "com.Answer",
+            "label" : "Célibataire",
+            "answerValue" : "1"
+          }
+        }, {
+          "type" : "com.Question",
+          "summary" : false,
+          "form$order" : 2,
+          "mandatory" : true,
+          "answerType" : "Numeric",
+          "definitionIdentifier" : "iRetirementAge(Y)|null",
+          "label" : "Retirement Age (In Years)",
+          "identifier" : "iRetirementAge(Y)",
+          "editable" : true,
+          "behaviorExpressions" : [ {
+            "type" : "com.BehaviorExpression",
+            "expression" : "false",
+            "behaviorImpact" : "VISIBLE"
+          } ],
+          "answer" : {
+            "type" : "com.Answer",
+            "answerValue" : "67"
+          }
+        }, {
+          "type" : "com.Question",
+          "summary" : false,
+          "form$order" : 3,
+          "mandatory" : true,
+          "answerType" : "Date",
+          "definitionIdentifier" : "daEffectiveDate|null",
+          "label" : "Effective date",
+          "identifier" : "daEffectiveDate",
+          "editable" : true,
+          "behaviorExpressions" : [ {
+            "type" : "com.BehaviorExpression",
+            "expression" : "false",
+            "behaviorImpact" : "VISIBLE"
+          } ],
+          "answer" : {
+            "type" : "com.Answer",
+            "answerValue" : "2018-06-11"
+          }
+        }, {
+          "type" : "com.Question",
+          "summary" : false,
+          "form$order" : 4,
+          "mandatory" : true,
+          "answerType" : "Date",
+          "definitionIdentifier" : "daTermDate|null",
+          "label" : "Term Date",
+          "identifier" : "daTermDate",
+          "editable" : true,
+          "behaviorExpressions" : [ {
+            "type" : "com.BehaviorExpression",
+            "expression" : "false",
+            "behaviorImpact" : "VISIBLE"
+          } ],
+          "answer" : {
+            "type" : "com.Answer",
+            "answerValue" : "2047-01-31"
+          }
+        }, {
+          "type" : "com.Question",
+          "summary" : false,
+          "form$order" : 5,
+          "mandatory" : true,
+          "answerType" : "Amount",
+          "definitionIdentifier" : "amtAnnualGrossSalary|null",
+          "label" : "Annual gross salary",
+          "identifier" : "amtAnnualGrossSalary",
+          "editable" : true,
+          "behaviorExpressions" : [ {
+            "type" : "com.BehaviorExpression",
+            "expression" : "false",
+            "behaviorImpact" : "VISIBLE"
+          } ],
+          "answer" : {
+            "type" : "com.Answer",
+            "answerValue" : "50000"
+          }
+        }, {
+          "type" : "com.Question",
+          "summary" : false,
+          "form$order" : 6,
+          "mandatory" : true,
+          "answerType" : "Boolean",
+          "definitionIdentifier" : "bSalarySplit|null",
+          "label" : "Salary split",
+          "identifier" : "bSalarySplit",
+          "editable" : true,
+          "answer" : {
+            "type" : "com.Answer",
+            "answerValue" : "true"
+          }
+        }, {
+          "type" : "com.Question",
+          "summary" : false,
+          "form$order" : 7,
+          "mandatory" : false,
+          "answerType" : "Amount",
+          "definitionIdentifier" : "amtOtherSalaries|null",
+          "label" : "Autres revenus",
+          "identifier" : "amtOtherSalaries",
+          "editable" : true,
+          "behaviorExpressions" : [ {
+            "type" : "com.BehaviorExpression",
+            "expression" : "bSalarySplit==true",
+            "behaviorImpact" : "VISIBLE"
+          }, {
+            "type" : "com.BehaviorExpression",
+            "expression" : "bSalarySplit==true",
+            "behaviorImpact" : "MANDATORY"
+          } ],
+          "answer" : {
+            "type" : "com.Answer",
+            "answerValue" : "1500"
+          }
+        }, {
+          "type" : "com.Question",
+          "summary" : false,
+          "form$order" : 8,
+          "mandatory" : false,
+          "answerType" : "Boolean",
+          "definitionIdentifier" : "bPastCareer|null",
+          "label" : "Carrière passée",
+          "identifier" : "bPastCareer",
+          "editable" : true,
+          "behaviorExpressions" : [ {
+            "type" : "com.BehaviorExpression",
+            "expression" : "false",
+            "behaviorImpact" : "MANDATORY"
+          }, {
+            "type" : "com.BehaviorExpression",
+            "expression" : "false",
+            "behaviorImpact" : "VISIBLE"
+          } ],
+          "answer" : {
+            "type" : "com.Answer",
+            "answerValue" : "false"
+          }
+        }, {
+          "type" : "com.Question",
+          "summary" : false,
+          "form$order" : 9,
+          "mandatory" : true,
+          "answerType" : "Boolean",
+          "definitionIdentifier" : "bCatchUpPastCareer|null",
+          "label" : "Carrière passée",
+          "identifier" : "bCatchUpPastCareer",
+          "editable" : true,
+          "answer" : {
+            "type" : "com.Answer",
+            "answerValue" : "true"
+          }
+        }, {
+          "type" : "com.Question",
+          "summary" : false,
+          "form$order" : 10,
+          "mandatory" : false,
+          "answerType" : "Date",
+          "definitionIdentifier" : "daPastCreerStartDate|null",
+          "label" : "Date de début de carrière",
+          "identifier" : "daPastCreerStartDate",
+          "editable" : true,
+          "behaviorExpressions" : [ {
+            "type" : "com.BehaviorExpression",
+            "expression" : "bCatchUpPastCareer==true",
+            "behaviorImpact" : "VISIBLE"
+          }, {
+            "type" : "com.BehaviorExpression",
+            "expression" : "bCatchUpPastCareer==true",
+            "behaviorImpact" : "MANDATORY"
+          } ],
+          "answer" : {
+            "type" : "com.Answer",
+            "answerValue" : "2010-01-01"
+          }
+        }, {
+          "type" : "com.Question",
+          "summary" : false,
+          "form$order" : 11,
+          "mandatory" : false,
+          "answerType" : "Date",
+          "definitionIdentifier" : "daCurrentEmpEnrollDate|null",
+          "label" : "Date de début de carrière dans l’entreprise",
+          "identifier" : "daCurrentEmpEnrollDate",
+          "editable" : true,
+          "behaviorExpressions" : [ {
+            "type" : "com.BehaviorExpression",
+            "expression" : "bCatchUpPastCareer==true",
+            "behaviorImpact" : "VISIBLE"
+          }, {
+            "type" : "com.BehaviorExpression",
+            "expression" : "bCatchUpPastCareer==true",
+            "behaviorImpact" : "MANDATORY"
+          } ],
+          "answer" : {
+            "type" : "com.Answer",
+            "answerValue" : "2012-01-01"
+          }
+        }, {
+          "type" : "com.Question",
+          "summary" : false,
+          "form$order" : 12,
+          "mandatory" : true,
+          "answerType" : "Boolean",
+          "definitionIdentifier" : "bPresenceOfTrasfExtProvision|null",
+          "label" : "Do you wish to transfer external provisions?",
+          "identifier" : "bPresenceOfTrasfExtProvision",
+          "editable" : true,
+          "behaviorExpressions" : [ {
+            "type" : "com.BehaviorExpression",
+            "expression" : "false",
+            "behaviorImpact" : "VISIBLE"
+          } ],
+          "answer" : {
+            "type" : "com.Answer",
+            "answerValue" : "false"
+          }
+        }, {
+          "type" : "com.Question",
+          "summary" : false,
+          "form$order" : 13,
+          "mandatory" : false,
+          "answerType" : "Amount",
+          "definitionIdentifier" : "amtExternalProvisonAmt|null",
+          "label" : "External provison amount",
+          "identifier" : "amtExternalProvisonAmt",
+          "editable" : true,
+          "behaviorExpressions" : [ {
+            "type" : "com.BehaviorExpression",
+            "expression" : "false",
+            "behaviorImpact" : "VISIBLE"
+          }, {
+            "type" : "com.BehaviorExpression",
+            "expression" : "false",
+            "behaviorImpact" : "MANDATORY"
+          } ],
+          "answer" : {
+            "type" : "com.Answer",
+            "answerValue" : "1000"
+          }
+        }, {
+          "type" : "com.Question",
+          "summary" : false,
+          "form$order" : 14,
+          "mandatory" : true,
+          "answerType" : "Boolean",
+          "definitionIdentifier" : "bPresenceOfExtraContract|null",
+          "label" : "Do you have other extra legal contracts?",
+          "identifier" : "bPresenceOfExtraContract",
+          "editable" : true,
+          "behaviorExpressions" : [ {
+            "type" : "com.BehaviorExpression",
+            "expression" : "false",
+            "behaviorImpact" : "VISIBLE"
+          } ],
+          "answer" : {
+            "type" : "com.Answer",
+            "answerValue" : "false"
+          }
+        } ]
+      }
+    },
+    "totalFirstPremium" : {
+      "type" : "com.vermeg.salesflowapi.Amount",
+      "value" : 2578.17,
+      "currency" : "EUR"
+    },
+    "riskCoverages" : [ {
+      "type" : "com.vermeg.salesflowapi.PackageRiskCoverage",
+      "packageOffer$order" : 0,
+      "pricing" : {
+        "type" : "com.vermeg.salesflowapi.CoveragePricingInformation",
+        "financingBasedOnInvestment" : false,
+        "valueType" : "Numeric",
+        "periodicity" : "MON",
+        "insuredCapital" : {
+          "type" : "com.vermeg.salesflowapi.Amount",
+          "value" : 0.0,
+          "currency" : "EUR"
+        },
+        "premium" : {
+          "type" : "com.vermeg.salesflowapi.Amount",
+          "value" : 0.0,
+          "currency" : "EUR"
+        }
+      },
+      "questions" : [ {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "RSK_DEATH_INV_RESERVE_AXA-2|Coverage",
+        "form$order" : 38,
+        "packageRiskCoverage$order" : 0,
+        "mandatory" : true,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daBeginDate|RSK_DEATH_INV_RESERVE_AXA-2|Coverage",
+        "label" : "Date effet",
+        "identifier" : "daBeginDate",
+        "editable" : false,
+        "form" : {
+          "type" : "com.Form",
+          "code" : "1104873"
+        },
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "daRidersBeginDate",
+          "behaviorImpact" : "FORMULA"
+        }, {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "2018-06-11"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "RSK_DEATH_INV_RESERVE_AXA-2|Coverage",
+        "form$order" : 39,
+        "packageRiskCoverage$order" : 1,
+        "mandatory" : true,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daBirthDate|RSK_DEATH_INV_RESERVE_AXA-2|Coverage",
+        "label" : "Date de naissance assuré",
+        "identifier" : "daBirthDate",
+        "editable" : false,
+        "form" : {
+          "type" : "com.Form",
+          "code" : "1104873"
+        },
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        }, {
+          "type" : "com.BehaviorExpression",
+          "expression" : "daBirthDate",
+          "behaviorImpact" : "FORMULA"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "1980-01-01"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "RSK_DEATH_INV_RESERVE_AXA-2|Coverage",
+        "form$order" : 40,
+        "packageRiskCoverage$order" : 2,
+        "mandatory" : true,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daIssuingDate|RSK_DEATH_INV_RESERVE_AXA-2|Coverage",
+        "label" : "Echéance",
+        "identifier" : "daIssuingDate",
+        "editable" : false,
+        "form" : {
+          "type" : "com.Form",
+          "code" : "1104873"
+        },
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        }, {
+          "type" : "com.BehaviorExpression",
+          "expression" : "daIssuingDate",
+          "behaviorImpact" : "FORMULA"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "2019-06-01"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "RSK_DEATH_INV_RESERVE_AXA-2|Coverage",
+        "form$order" : 41,
+        "packageRiskCoverage$order" : 3,
+        "mandatory" : true,
+        "answerType" : "Numeric",
+        "definitionIdentifier" : "contractDuration|RSK_DEATH_INV_RESERVE_AXA-2|Coverage",
+        "label" : "Contract duration",
+        "identifier" : "contractDuration",
+        "editable" : false,
+        "form" : {
+          "type" : "com.Form",
+          "code" : "1104873"
+        },
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        }, {
+          "type" : "com.BehaviorExpression",
+          "expression" : "contractDuration",
+          "behaviorImpact" : "FORMULA"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "332"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "RSK_DEATH_INV_RESERVE_AXA-2|Coverage",
+        "form$order" : 42,
+        "packageRiskCoverage$order" : 4,
+        "mandatory" : true,
+        "answerType" : "Amount",
+        "definitionIdentifier" : "amtAnnualGoal|RSK_DEATH_INV_RESERVE_AXA-2|Coverage",
+        "label" : "Objectif annuel ",
+        "identifier" : "amtAnnualGoal",
+        "editable" : false,
+        "form" : {
+          "type" : "com.Form",
+          "code" : "1104873"
+        },
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "amtAnnualGoal",
+          "behaviorImpact" : "FORMULA"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "6623.05"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "RSK_DEATH_INV_RESERVE_AXA-2|Coverage",
+        "form$order" : 43,
+        "packageRiskCoverage$order" : 5,
+        "mandatory" : true,
+        "answerType" : "Amount",
+        "definitionIdentifier" : "amtBackService|RSK_DEATH_INV_RESERVE_AXA-2|Coverage",
+        "label" : "Versement complémentaire ",
+        "identifier" : "amtBackService",
+        "editable" : false,
+        "form" : {
+          "type" : "com.Form",
+          "code" : "1104873"
+        },
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "amtBackService",
+          "behaviorImpact" : "FORMULA"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "50084.72"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "RSK_DEATH_INV_RESERVE_AXA-2|Coverage",
+        "form$order" : 44,
+        "packageRiskCoverage$order" : 6,
+        "mandatory" : true,
+        "answerType" : "Amount",
+        "definitionIdentifier" : "amtProjectionsDeathCapital|RSK_DEATH_INV_RESERVE_AXA-2|Coverage",
+        "label" : "Capital",
+        "identifier" : "amtProjectionsDeathCapital",
+        "editable" : false,
+        "form" : {
+          "type" : "com.Form",
+          "code" : "1104873"
+        },
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "100000.0"
+        }
+      } ],
+      "coverageDescription" : {
+        "type" : "com.vermeg.salesflowapi.CoverageDescription",
+        "position" : 2,
+        "coveredRiskType" : "RESERVE",
+        "identifier" : "RSK_DEATH_INV_RESERVE_AXA",
+        "riskTypes" : [ {
+          "type" : "com.vermeg.salesflowapi.RiskType",
+          "name" : "DEATH_INV_RESERVE"
+        } ]
+      }
+    }, {
+      "type" : "com.vermeg.salesflowapi.PackageRiskCoverage",
+      "packageOffer$order" : 1,
+      "pricing" : {
+        "type" : "com.vermeg.salesflowapi.CoveragePricingInformation",
+        "financingBasedOnInvestment" : false,
+        "valueType" : "Numeric",
+        "periodicity" : "MON",
+        "insuredCapital" : {
+          "type" : "com.vermeg.salesflowapi.Amount",
+          "value" : 0.0,
+          "currency" : "EUR"
+        },
+        "premium" : {
+          "type" : "com.vermeg.salesflowapi.Amount",
+          "value" : 0.0,
+          "currency" : "EUR"
+        }
+      },
+      "questions" : [ {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "RSK_TERM_INV_AXA-3|Coverage",
+        "form$order" : 45,
+        "packageRiskCoverage$order" : 0,
+        "mandatory" : true,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daBeginDate|RSK_TERM_INV_AXA-3|Coverage",
+        "label" : "Date effet",
+        "identifier" : "daBeginDate",
+        "editable" : false,
+        "form" : {
+          "type" : "com.Form",
+          "code" : "1104873"
+        },
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "daRidersBeginDate",
+          "behaviorImpact" : "FORMULA"
+        }, {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "2018-06-11"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "RSK_TERM_INV_AXA-3|Coverage",
+        "form$order" : 46,
+        "packageRiskCoverage$order" : 1,
+        "mandatory" : true,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daBirthDate|RSK_TERM_INV_AXA-3|Coverage",
+        "label" : "Date de naissance assuré",
+        "identifier" : "daBirthDate",
+        "editable" : false,
+        "form" : {
+          "type" : "com.Form",
+          "code" : "1104873"
+        },
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "daBirthDate",
+          "behaviorImpact" : "FORMULA"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "1980-01-01"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "RSK_TERM_INV_AXA-3|Coverage",
+        "form$order" : 47,
+        "packageRiskCoverage$order" : 2,
+        "mandatory" : true,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daIssuingDate|RSK_TERM_INV_AXA-3|Coverage",
+        "label" : "Echéance",
+        "identifier" : "daIssuingDate",
+        "editable" : false,
+        "form" : {
+          "type" : "com.Form",
+          "code" : "1104873"
+        },
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "daIssuingDate",
+          "behaviorImpact" : "FORMULA"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "2019-06-01"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "RSK_TERM_INV_AXA-3|Coverage",
+        "form$order" : 48,
+        "packageRiskCoverage$order" : 3,
+        "mandatory" : true,
+        "answerType" : "Numeric",
+        "definitionIdentifier" : "contractDuration|RSK_TERM_INV_AXA-3|Coverage",
+        "label" : "Contract duration",
+        "identifier" : "contractDuration",
+        "editable" : false,
+        "form" : {
+          "type" : "com.Form",
+          "code" : "1104873"
+        },
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "contractDuration",
+          "behaviorImpact" : "FORMULA"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "332"
+        }
+      } ],
+      "coverageDescription" : {
+        "type" : "com.vermeg.salesflowapi.CoverageDescription",
+        "position" : 3,
+        "coveredRiskType" : "RESERVE",
+        "identifier" : "RSK_TERM_INV_AXA",
+        "riskTypes" : [ {
+          "type" : "com.vermeg.salesflowapi.RiskType",
+          "name" : "LIFE_AT_TERM"
+        } ]
+      }
+    }, {
+      "type" : "com.vermeg.salesflowapi.PackageRiskCoverage",
+      "packageOffer$order" : 2,
+      "pricing" : {
+        "type" : "com.vermeg.salesflowapi.CoveragePricingInformation",
+        "financingBasedOnInvestment" : false,
+        "valueType" : "Numeric",
+        "periodicity" : "MON",
+        "insuredCapital" : {
+          "type" : "com.vermeg.salesflowapi.Amount",
+          "value" : 0.0,
+          "currency" : "EUR"
+        },
+        "premium" : {
+          "type" : "com.vermeg.salesflowapi.Amount",
+          "value" : 0.0,
+          "currency" : "EUR"
+        }
+      },
+      "questions" : [ {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "RSK_ACCIDENT_INV_EIP-4|Coverage",
+        "form$order" : 49,
+        "packageRiskCoverage$order" : 0,
+        "mandatory" : true,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daBeginDate|RSK_ACCIDENT_INV_EIP-4|Coverage",
+        "label" : "Date effet",
+        "identifier" : "daBeginDate",
+        "editable" : false,
+        "form" : {
+          "type" : "com.Form",
+          "code" : "1104873"
+        },
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "daRidersBeginDate",
+          "behaviorImpact" : "FORMULA"
+        }, {
+          "type" : "com.BehaviorExpression",
+          "expression" : "false",
+          "behaviorImpact" : "VISIBLE"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "2018-06-11"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "RSK_ACCIDENT_INV_EIP-4|Coverage",
+        "form$order" : 50,
+        "packageRiskCoverage$order" : 1,
+        "mandatory" : true,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daBirthDate|RSK_ACCIDENT_INV_EIP-4|Coverage",
+        "label" : "Date de naissance assuré",
+        "identifier" : "daBirthDate",
+        "editable" : false,
+        "form" : {
+          "type" : "com.Form",
+          "code" : "1104873"
+        },
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "daBirthDate",
+          "behaviorImpact" : "FORMULA"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "1980-01-01"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "RSK_ACCIDENT_INV_EIP-4|Coverage",
+        "form$order" : 51,
+        "packageRiskCoverage$order" : 2,
+        "mandatory" : true,
+        "answerType" : "Date",
+        "definitionIdentifier" : "daIssuingDate|RSK_ACCIDENT_INV_EIP-4|Coverage",
+        "label" : "Echéance",
+        "identifier" : "daIssuingDate",
+        "editable" : false,
+        "form" : {
+          "type" : "com.Form",
+          "code" : "1104873"
+        },
+        "behaviorExpressions" : [ {
+          "type" : "com.BehaviorExpression",
+          "expression" : "daIssuingDate",
+          "behaviorImpact" : "FORMULA"
+        } ],
+        "answer" : {
+          "type" : "com.Answer",
+          "answerValue" : "2019-06-01"
+        }
+      }, {
+        "type" : "com.Question",
+        "summary" : false,
+        "scope" : "RSK_ACCIDENT_INV_EIP-4|Coverage",
+        "form$order" : 52,
+        "packageRiskCoverage$order" : 3,
+        "mand
+--------------------------------------
+10:37:44,132 INFO  [org.apache.cxf.interceptor.LoggingInInterceptor] (default task-156) Inbound Message
+----------------------------
+ID: 1033
+Address: http://SALES-FLOW:18080/SalesFlow/services/rest/package-offers/630008032/make-proposal
+Encoding: ISO-8859-1
+Http-Method: POST
+Content-Type: application/json
+Headers: {Accept=[application/json], accept-encoding=[UTF-8,deflate], Authorization=[Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJPMy15R25uN1IweVQzYjNxTkZUR2FIYVFtVWV0NXZRWUJnS1RsTmRnRnd3In0.eyJqdGkiOiI5ZTY3ODc3Zi1hYzkxLTQ2NWMtOGEwOC0yNGIwNGRkYTczOWIiLCJleHAiOjE1Mjg3MDY1NjQsIm5iZiI6MCwiaWF0IjoxNTI4NzA2MjY0LCJpc3MiOiJodHRwOi8vU0VDVVJJVFk6OTA4MC9hdXRoL3JlYWxtcy9SZWFsbUFYQSIsImF1ZCI6InB1YmxpYy1jbGllbnQiLCJzdWIiOiI0YTkzNWJjYi0yOGZiLTQwZTUtYjFlYi01ZjQ1YjM4YWJhN2MiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJwdWJsaWMtY2xpZW50IiwiYXV0aF90aW1lIjowLCJzZXNzaW9uX3N0YXRlIjoiOTNmODhmMTMtYTkzYy00OWI1LThjZjktMGNkNjExMDk2ZGM0IiwiYWNyIjoiMSIsImNsaWVudF9zZXNzaW9uIjoiNDYwNmY5ZjAtOGNmMC00ZWFjLTg0ZGQtOTEwN2ViYjg3NmI2IiwiYWxsb3dlZC1vcmlnaW5zIjpbXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIk1pZC1PZmZpY2VyIiwiYWRtaW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJ2aWV3LXByb2ZpbGUiXX19LCJyb2xlcyI6WyJNaWQtT2ZmaWNlciIsIm9mZmxpbmVfYWNjZXNzIiwiYWRtaW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdLCJuYW1lIjoiIiwiZ3JvdXBzIjpbXSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYnJva2VyMSJ9.rRCrzUVPmca-qn8jSkiUdM-KcnhOzB-iY8YmhhKVM2ohQaUdArtt1Y9w81b4tsH3vDuzil92VOAqk0bMx9Ma0jzR5JJZBO_AkhyVogh_ce3PsBKY7MeO7duLYCwhiNccKJUd354mq-7IledvKyd_QToKVphgrjc5Xtgm_nb-oZzgv7v2__lds7zBxJNMyf5KLDqcmOL3OU-ra_uTjQw1O4fNJ7NyUYsdry45R_P2mPmM06QzEyJ3QL12Nvysl0BDWusKj9nnaNFPiYgm-2EIDdIM05Uh_LstBfVvFE1pwaNQvwo_o1HoBurAYCuo1OHUd5leGMRCbuB_b9inEEkn0g], cache-control=[no-cache], connection=[Keep-Alive], Content-Length=[0], content-type=[application/json], correlationid=[805a4226-2df9-4f0a-b790-b7d0503f8d97, 805a4226-2df9-4f0a-b790-b7d0503f8d97], host=[SALES-FLOW:18080], pragma=[no-cache], user-agent=[Apache-CXF/3.1.7], user-profile=[FR]}
+--------------------------------------
+10:37:44,133 INFO  [stdout] (default task-156) ***************************************************
+10:37:44,133 INFO  [stdout] (default task-156) FR
+10:37:44,133 INFO  [stdout] (default task-156) ***************************************************
+10:37:44,155 INFO  [org.apache.cxf.interceptor.LoggingOutInterceptor] (default task-156) Outbound Message
+---------------------------
+ID: 1033
+Response-Code: 200
+Content-Type: application/json
+Headers: {Content-Type=[application/json], Date=[Mon, 11 Jun 2018 08:37:44 GMT]}
+Payload: {
+  "type" : "com.vermeg.salesflowapi.MakeProposalResponse",
+  "data" : {
+    "type" : "com.vermeg.salesflowapi.MakeProposalPackageOffer",
+    "identifier" : "630008032"
+  }
+}
+--------------------------------------
+10:37:44,194 INFO  [org.apache.cxf.interceptor.LoggingInInterceptor] (default task-154) Inbound Message
+----------------------------
+ID: 1034
+Address: http://SALES-FLOW:18080/SalesFlow/services/rest/package-offers/630008032/documents
+Http-Method: GET
+Content-Type: 
+Headers: {Accept=[*/*], accept-encoding=[UTF-8,deflate], Authorization=[Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJPMy15R25uN1IweVQzYjNxTkZUR2FIYVFtVWV0NXZRWUJnS1RsTmRnRnd3In0.eyJqdGkiOiI1ZjYwODlkZi00NjllLTQyNjQtYjJmZC0zMmIxY2M4ZmNkMTciLCJleHAiOjE1Mjg3MDY1NjQsIm5iZiI6MCwiaWF0IjoxNTI4NzA2MjY0LCJpc3MiOiJodHRwOi8vU0VDVVJJVFk6OTA4MC9hdXRoL3JlYWxtcy9SZWFsbUFYQSIsImF1ZCI6InB1YmxpYy1jbGllbnQiLCJzdWIiOiI0YTkzNWJjYi0yOGZiLTQwZTUtYjFlYi01ZjQ1YjM4YWJhN2MiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJwdWJsaWMtY2xpZW50IiwiYXV0aF90aW1lIjowLCJzZXNzaW9uX3N0YXRlIjoiOTNmODhmMTMtYTkzYy00OWI1LThjZjktMGNkNjExMDk2ZGM0IiwiYWNyIjoiMSIsImNsaWVudF9zZXNzaW9uIjoiNDYwNmY5ZjAtOGNmMC00ZWFjLTg0ZGQtOTEwN2ViYjg3NmI2IiwiYWxsb3dlZC1vcmlnaW5zIjpbXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIk1pZC1PZmZpY2VyIiwiYWRtaW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJ2aWV3LXByb2ZpbGUiXX19LCJyb2xlcyI6WyJNaWQtT2ZmaWNlciIsIm9mZmxpbmVfYWNjZXNzIiwiYWRtaW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdLCJuYW1lIjoiIiwiZ3JvdXBzIjpbXSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYnJva2VyMSJ9.HFDLHadpflEXzI7kvVwcRWyNscfog65qbHVii99coxy2hQp_uWyHpdXXufMKXlp16B1FxjcvZQMHC5w4C_iYglj9NoljEN6ZIoXlJZ4ExxFdH6c03JzVwt9qyWT_OUkWhd7qRHg7aZuf771Lokrk9-KbqoU21oUc36ojUyCc5Ta2A4Y0Nm_L6m9Wee_qT-3ILWiTyMcvOsFCIXOzYJLvA33U5ji46GlfO9RutcIQYUdXOPYXTbElTxmp_bVGkzPtNKgRaDkdobWvSAjUeHSSsuPbCU0OAPJZj-gJHNzxtzw-vTBy6YxUtLxVAAE7NuOHBeaSJ0IapS7ErEC45fPCrQ], cache-control=[no-cache], connection=[Keep-Alive], Content-Type=[null], correlationid=[805a4226-2df9-4f0a-b790-b7d0503f8d97, 805a4226-2df9-4f0a-b790-b7d0503f8d97], host=[SALES-FLOW:18080], pragma=[no-cache], user-agent=[Apache-CXF/3.1.7], user-profile=[FR]}
+--------------------------------------
+10:37:44,195 INFO  [stdout] (default task-154) ***************************************************
+10:37:44,195 INFO  [stdout] (default task-154) FR
+10:37:44,195 INFO  [stdout] (default task-154) ***************************************************
+10:37:44,260 INFO  [stdout] (default task-154) juin 11, 2018 10:37:44:259 |Palmyra : INFO |RestLogger-[default task-154]: |805a4226-2df9-4f0a-b790-b7d0503f8d97| SalesFlow:broker1: The request [ http://DOCUMENT-MANAGEMENT:48080/DocumentManagement/services/rest/documents?propositions=630008032 ] has ended in 0.0057263463 seconds with status :200
+10:37:44,263 INFO  [org.apache.cxf.interceptor.LoggingOutInterceptor] (default task-154) Outbound Message
+---------------------------
+ID: 1034
+Response-Code: 200
+Content-Type: application/json
+Headers: {Content-Type=[application/json], Date=[Mon, 11 Jun 2018 08:37:44 GMT]}
+Payload: {
+  "type" : "com.vermeg.pni.dm.ws.DocumentResponse",
+  "data" : {
+    "type" : "com.vermeg.pni.dm.ws.Documents",
+    "document" : [ {
+      "type" : "com.vermeg.pni.dm.ws.Document",
+      "documentType" : "PSII_202",
+      "status" : "REQUESTED",
+      "direction" : "OUTBOUND",
+      "identifier" : "890001",
+      "linkedObjects" : [ {
+        "type" : "com.vermeg.pni.dm.ws.Objectreference",
+        "referenceType" : "PARTNER_ID",
+        "identifier" : "00131126"
+      }, {
+        "type" : "com.vermeg.pni.dm.ws.Objectreference",
+        "referenceType" : "PACKAGE-OFFER",
+        "identifier" : "630008032"
+      }, {
+        "type" : "com.vermeg.pni.dm.ws.Objectreference",
+        "referenceType" : "LANG",
+        "identifier" : "FR"
+      } ],
+      "generatedDocument" : {
+        "type" : "com.vermeg.pni.dm.ws.GeneratedDocument",
+        "signable" : false
+      }
+    } ]
+  }
+}
+--------------------------------------
+10:37:44,303 INFO  [org.apache.cxf.interceptor.LoggingInInterceptor] (default task-157) Inbound Message
+----------------------------
+ID: 1035
+Address: http://SALES-FLOW:18080/SalesFlow/services/rest/package-offers/630008032/medical-decisions/
+Http-Method: GET
+Content-Type: 
+Headers: {Accept=[*/*], accept-encoding=[UTF-8,deflate], Authorization=[Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJPMy15R25uN1IweVQzYjNxTkZUR2FIYVFtVWV0NXZRWUJnS1RsTmRnRnd3In0.eyJqdGkiOiIwOWZlZDU2ZC0wMzQyLTQ2YjEtYTU3My1mZmRmMGRjYWY5NjIiLCJleHAiOjE1Mjg3MDY1NjQsIm5iZiI6MCwiaWF0IjoxNTI4NzA2MjY0LCJpc3MiOiJodHRwOi8vU0VDVVJJVFk6OTA4MC9hdXRoL3JlYWxtcy9SZWFsbUFYQSIsImF1ZCI6InB1YmxpYy1jbGllbnQiLCJzdWIiOiI0YTkzNWJjYi0yOGZiLTQwZTUtYjFlYi01ZjQ1YjM4YWJhN2MiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJwdWJsaWMtY2xpZW50IiwiYXV0aF90aW1lIjowLCJzZXNzaW9uX3N0YXRlIjoiOTNmODhmMTMtYTkzYy00OWI1LThjZjktMGNkNjExMDk2ZGM0IiwiYWNyIjoiMSIsImNsaWVudF9zZXNzaW9uIjoiNDYwNmY5ZjAtOGNmMC00ZWFjLTg0ZGQtOTEwN2ViYjg3NmI2IiwiYWxsb3dlZC1vcmlnaW5zIjpbXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIk1pZC1PZmZpY2VyIiwiYWRtaW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJ2aWV3LXByb2ZpbGUiXX19LCJyb2xlcyI6WyJNaWQtT2ZmaWNlciIsIm9mZmxpbmVfYWNjZXNzIiwiYWRtaW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdLCJuYW1lIjoiIiwiZ3JvdXBzIjpbXSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYnJva2VyMSJ9.BXvEQRDwGMv8XPs9t3xIEN7vj9As750BtH7KgaQzy1z7-6xdhx8dLUWJrSqeQuzdUTANsqztz2TrcyQyI8yXrUb3_HP7ghS_Gowsib2t_gKRhoVJBcVjazQLwn_rsHoseIfOrr3Wltcc4kTHZ14JRfpzbcD72Ucah-UjxrG-Jcbiwv-eSkpqRwrO8YnwF8WfjJesht0zviz-QZeJ6ySFrJjWaAGMyo3kkaf5W2J3O8n5TaT5Xic4yT8DnDSuM-jWLRmUevsenav8X8dzD-7QfdyFH9Nmw7CXHxA-zEnt9ORJi4E3hDaYnulGFo2j17YjsNsw5VG7dz6P3IUFDFOQ3w], cache-control=[no-cache], connection=[Keep-Alive], Content-Type=[null], correlationid=[805a4226-2df9-4f0a-b790-b7d0503f8d97, 805a4226-2df9-4f0a-b790-b7d0503f8d97], host=[SALES-FLOW:18080], pragma=[no-cache], user-agent=[Apache-CXF/3.1.7], user-profile=[FR]}
+--------------------------------------
+10:37:44,304 INFO  [stdout] (default task-157) ***************************************************
+10:37:44,304 INFO  [stdout] (default task-157) FR
+10:37:44,305 INFO  [stdout] (default task-157) ***************************************************
+10:37:44,312 INFO  [org.apache.cxf.interceptor.LoggingOutInterceptor] (default task-157) Outbound Message
+---------------------------
+ID: 1035
+Response-Code: 200
+Content-Type: application/json
+Headers: {Content-Type=[application/json], Date=[Mon, 11 Jun 2018 08:37:44 GMT]}
+Payload: {
+  "type" : "com.vermeg.salesflow.acceptance.ws.MedicalDecisionByInsuredResponse",
+  "data" : {
+    "type" : "com.vermeg.salesflow.acceptance.ws.MedicalDecision"
+  }
+}
+--------------------------------------
+10:37:44,354 INFO  [org.apache.cxf.interceptor.LoggingInInterceptor] (default task-149) Inbound Message
+----------------------------
+ID: 1036
+Address: http://SALES-FLOW:18080/SalesFlow/services/rest/package-offers/630008032/documents
+Http-Method: GET
+Content-Type: 
+Headers: {Accept=[*/*], accept-encoding=[UTF-8,deflate], Authorization=[Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJPMy15R25uN1IweVQzYjNxTkZUR2FIYVFtVWV0NXZRWUJnS1RsTmRnRnd3In0.eyJqdGkiOiJiNjNjMTg3Zi03YWQ0LTRiYTAtOTE1Yi03ZjYyZDRmNmE1OTUiLCJleHAiOjE1Mjg3MDY1NjQsIm5iZiI6MCwiaWF0IjoxNTI4NzA2MjY0LCJpc3MiOiJodHRwOi8vU0VDVVJJVFk6OTA4MC9hdXRoL3JlYWxtcy9SZWFsbUFYQSIsImF1ZCI6InB1YmxpYy1jbGllbnQiLCJzdWIiOiI0YTkzNWJjYi0yOGZiLTQwZTUtYjFlYi01ZjQ1YjM4YWJhN2MiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJwdWJsaWMtY2xpZW50IiwiYXV0aF90aW1lIjowLCJzZXNzaW9uX3N0YXRlIjoiOTNmODhmMTMtYTkzYy00OWI1LThjZjktMGNkNjExMDk2ZGM0IiwiYWNyIjoiMSIsImNsaWVudF9zZXNzaW9uIjoiNDYwNmY5ZjAtOGNmMC00ZWFjLTg0ZGQtOTEwN2ViYjg3NmI2IiwiYWxsb3dlZC1vcmlnaW5zIjpbXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIk1pZC1PZmZpY2VyIiwiYWRtaW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJ2aWV3LXByb2ZpbGUiXX19LCJyb2xlcyI6WyJNaWQtT2ZmaWNlciIsIm9mZmxpbmVfYWNjZXNzIiwiYWRtaW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdLCJuYW1lIjoiIiwiZ3JvdXBzIjpbXSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYnJva2VyMSJ9.z_JwRzgENJIesLO7-j_tALzpH0zcKwADS0w6eUkazJml40Z7keOJ2rUh5Nkr-6b7rrAKHCd26KDxu6NmggJUOVUyBCc7pqxl26BMuwE3b3EpLro0itmNow0c5-Iedc2ziNbWbimzyxyi0ytHg69mxiKX82bh1GY76Jqs4CSbq7_SQMUxwK7WvdR1vC8V_uIrrUJ9p_0uraToEDc7SczY5Iz0psovKvdfcH86NXrhp0HhqnQ6ob1LEU-90rhl9dklZGc_nsqA_FTGv1s4a8HoPz28hV_NA-oSIgxtyUpI9XLV5AHjhoKMoaBU6lojGZj8kRGybIOs0drmklawOxQY5w], cache-control=[no-cache], connection=[Keep-Alive], Content-Type=[null], correlationid=[805a4226-2df9-4f0a-b790-b7d0503f8d97, 805a4226-2df9-4f0a-b790-b7d0503f8d97], host=[SALES-FLOW:18080], pragma=[no-cache], user-agent=[Apache-CXF/3.1.7], user-profile=[FR]}
+--------------------------------------
+10:37:44,355 INFO  [stdout] (default task-149) ***************************************************
+10:37:44,355 INFO  [stdout] (default task-149) FR
+10:37:44,355 INFO  [stdout] (default task-149) ***************************************************
+10:37:44,426 INFO  [stdout] (default task-149) juin 11, 2018 10:37:44:426 |Palmyra : INFO |RestLogger-[default task-149]: |805a4226-2df9-4f0a-b790-b7d0503f8d97| SalesFlow:broker1: The request [ http://DOCUMENT-MANAGEMENT:48080/DocumentManagement/services/rest/documents?propositions=630008032 ] has ended in 0.0063164302 seconds with status :200
+10:37:44,430 INFO  [org.apache.cxf.interceptor.LoggingOutInterceptor] (default task-149) Outbound Message
+---------------------------
+ID: 1036
+Response-Code: 200
+Content-Type: application/json
+Headers: {Content-Type=[application/json], Date=[Mon, 11 Jun 2018 08:37:44 GMT]}
+Payload: {
+  "type" : "com.vermeg.pni.dm.ws.DocumentResponse",
+  "data" : {
+    "type" : "com.vermeg.pni.dm.ws.Documents",
+    "document" : [ {
+      "type" : "com.vermeg.pni.dm.ws.Document",
+      "documentType" : "PSII_202",
+      "status" : "REQUESTED",
+      "direction" : "OUTBOUND",
+      "identifier" : "890001",
+      "linkedObjects" : [ {
+        "type" : "com.vermeg.pni.dm.ws.Objectreference",
+        "referenceType" : "PARTNER_ID",
+        "identifier" : "00131126"
+      }, {
+        "type" : "com.vermeg.pni.dm.ws.Objectreference",
+        "referenceType" : "LANG",
+        "identifier" : "FR"
+      }, {
+        "type" : "com.vermeg.pni.dm.ws.Objectreference",
+        "referenceType" : "PACKAGE-OFFER",
+        "identifier" : "630008032"
+      } ],
+      "generatedDocument" : {
+        "type" : "com.vermeg.pni.dm.ws.GeneratedDocument",
+        "signable" : false
+      }
+    } ]
+  }
+}
+--------------------------------------
+10:37:44,469 INFO  [org.apache.cxf.interceptor.LoggingInInterceptor] (default task-160) Inbound Message
+----------------------------
+ID: 1037
+Address: http://SALES-FLOW:18080/SalesFlow/services/rest/package-offers?offerIdentifier=630008032
+Http-Method: GET

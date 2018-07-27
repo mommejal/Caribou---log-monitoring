@@ -19,8 +19,6 @@ import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
 import com.agent.paramagent.ParamAgentToManage;
 import com.alarm.Alarm;
-import com.bdd.ParametresRecherche;
-import com.bdd.Recherche;
 import com.dao.LogDAO;
 import com.filter.LogFinder;
 import com.google.gson.Gson;
@@ -31,14 +29,15 @@ import com.log.loganalyzer.LogAnalyzerBuilder;
 @Configuration
 @ComponentScan(basePackages= {"com" ,"com.appweb.controllers"})
 public class MvcConfig extends WebMvcConfigurerAdapter {
+	// Classe de configuration, elle contient les différentes créations de Bean et les classes de mise en forme de Thymeleaf
 
 	@Autowired
 	LogDAO dao;
 	
-	@Bean
-	public ParametresRecherche getParametresRecherche() {
-		return new ParametresRecherche();
-	}
+//	@Bean
+//	public ParametresRecherche getParametresRecherche() {
+//		return new ParametresRecherche();
+//	}
 	
 	@Bean
 	public LogFinder getLogFinder() {
@@ -50,10 +49,10 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 		return new ModelAndView("listeLogs");
 	}
 
-	@Bean
-	Recherche getRecherche() {
-		return new Recherche(dao);
-	}
+//	@Bean
+//	Recherche getRecherche() {
+//		return new Recherche(dao);
+//	}
 
 	@Bean
 	public Gson getGson() {
