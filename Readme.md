@@ -1,9 +1,11 @@
-# Caribou : architecture de monitoring pour micro-services
+[English version below]
+
+# Caribou : architecture de monitoring pour micro-services 
 
 ## Problematique
 
-* Récupérer, centraliser et traiter les logs générés par les micro-services.
-Les logs doivent être récupérés dynamiquement par une application web utilisant AJAX. Il s'agit à terme de pouvoir traiter les logs d'exceptions, du garbage collector et enfin des logs de l'OS.
+* RÃ©cupÃ©rer, centraliser et traiter les logs gÃ©nÃ©rÃ©s par les micro-services.
+Les logs doivent Ãªtre rÃ©cupÃ©rÃ©s dynamiquement par une application web utilisant AJAX. Il s'agit Ã  terme de pouvoir traiter les logs d'exceptions, du garbage collector et enfin des logs de l'OS.
 
 
 ## Etat de l'art
@@ -11,9 +13,9 @@ Les logs doivent être récupérés dynamiquement par une application web utilisant 
 La gestion des logs est un enjeu de plus en plus grand pour les entreprises. Dans le cas du monitoring de micro-services, cela permet d'isoler le plus rapidement possible les problemes au sein de l'application. 
 
 * Stack ELK
-  Maintenant appelé Elastic stack, comprend :
-  * Elasticsearch, qui permet le sotckage  et l'indexation des requÃªtes. Il est basé sur le moteur de recherche Apache Lucene et a pour principales caractéristiques l'utilisation d'une base de données NoSQL, une forte scalabilité, l'utilisation d'une API REST et des temps de réponse compris entre 20ms et 300ms.
-  * Logstash, qui assure l'analyse, le filtrage et le découpage des logs
+  Maintenant appelÃ© Elastic stack, comprend :
+  * Elasticsearch, qui permet le sotckage  et l'indexation des requÃƒÂªtes. Il est basÃ© sur le moteur de recherche Apache Lucene et a pour principales caractÃ©ristiques l'utilisation d'une base de donnÃ©es NoSQL, une forte scalabilitÃ©, l'utilisation d'une API REST et des temps de rÃ©ponse compris entre 20ms et 300ms.
+  * Logstash, qui assure l'analyse, le filtrage et le dÃ©coupage des logs
   * Kibana est un dashboard permettant l'affichage des logs. 
 
 * Splunk
@@ -23,30 +25,71 @@ La gestion des logs est un enjeu de plus en plus grand pour les entreprises. Dan
 
 ## Architecture
 
-Notre proposition d'architecture est pensée pour être la plus propre et modulable possible avec l'idée de "screaming architecture" en tête. Nous avons fait un schéma UML le plus parlant possible pour que l'organisation de ce projet reste claire. Ainsi, le projet se sépare en plusieurs parties distinctes :
+Notre proposition d'architecture est pensÃ©e pour Ãªtre la plus propre et modulable possible avec l'idÃ©e de "screaming architecture" en tÃªte. Nous avons fait un schÃ©ma UML le plus parlant possible pour que l'organisation de ce projet reste claire. Ainsi, le projet se sÃ©pare en plusieurs parties distinctes :
 
 * Gestion des agents :
 
-Caribou peut soutenir plusieurs agents fonctionnant en parallèle et retient la source de chaque log.
+Caribou peut soutenir plusieurs agents fonctionnant en parallÃ¨le et retient la source de chaque log.
 
 * Gestion des logs :
 
-L'application permet d'afficher et de trier les logs selon des expressions régulières entierement choisies par l'utilisateur. Des types de logs peuvent etre préconfigurés mais l'utilisateur peut aussi créer un log personnalisé
+L'application permet d'afficher et de trier les logs selon des expressions rÃ©guliÃ¨res entierement choisies par l'utilisateur. Des types de logs peuvent etre prÃ©configurÃ©s mais l'utilisateur peut aussi crÃ©er un log personnalisÃ©
 
 * Application web :
 
-Bien que Caribou fonctionne en local pour l'instant, une application web a déjà été codée avec spring MVC pour la partie Controller et Thymeleaf pour la partie de gestion des templates. Différents onglets permettent de gérer les différents paramètres.
+Bien que Caribou fonctionne en local pour l'instant, une application web a dÃ©jÃ  Ã©tÃ© codÃ©e avec spring MVC pour la partie Controller et Thymeleaf pour la partie de gestion des templates. DiffÃ©rents onglets permettent de gÃ©rer les diffÃ©rents paramÃ¨tres.
 
-* Base de données : 
+* Base de donnÃ©es : 
 
-Les logs sont stockés sous une forme minimale LightLog pour économiser de l'espace dans une base de données de type NoSQL orientée documents MongoDB mais on peut facilement implémenter un autre type de base de données.
+Les logs sont stockÃ©s sous une forme minimale LightLog pour Ã©conomiser de l'espace dans une base de donnÃ©es de type NoSQL orientÃ©e documents MongoDB mais on peut facilement implÃ©menter un autre type de base de donnÃ©es.
 
 ## Installation et lancement
 
-Après une installation de Java 8 (ou plus) et Mango en règle il est nécessaire de 
+AprÃ¨s une installation de Java 8 (ou plus) et Mango en rÃ¨gle il est nÃ©cessaire de 
 * faire une installation Maven depuis le fichier pom.xml, 
-* de créer une base de donnée Mango,
-* d'éxecuter `Caribou/target/java -jar Caribou-X.X.X-SNAPSHOT.jar`
+* de crÃ©er une base de donnÃ©e Mango,
+* d'Ã©xecuter `Caribou/target/java -jar Caribou-X.X.X-SNAPSHOT.jar`
 
-Vous pouvez ensuite créer des objects Agents sur les machines où se trouvent les logs à récupérer et d'appliquer leur méthode run(). Le fichier CAribou/TestAgnt.java contient un exemple lançant 2 Agents et des simulateurs de micro-services.
+Vous pouvez ensuite crÃ©er des objects Agents sur les machines oÃ¹ se trouvent les logs Ã  rÃ©cupÃ©rer et d'appliquer leur mÃ©thode run(). Le fichier Caribou/TestAgent.java contient un exemple lanÃ§ant 2 Agents et des simulateurs de micro-services.
+
+# Caribou : architecture of a monitoring solution for micro-services 
+
+## Objectives
+
+* Recover, centralize and process logs generated by micro-services
+
+The logs should be recovered dynamically by the app possible using AJAX. The goal is to process exceptions, garbage collector and operating systems logs.
+
+
+## Architecture
+
+This architecture follows the "screaming architecture" paradigm to be the cleanest and most readable and modulable possible. The UML diagramm is the clearest possible.
+The project splits into distinct parts :
+
+* Agent management :
+
+Caribou is able to sustain multiple agents running at the same time whilst remembering its source
+
+* Logs management :
+
+The application allow the user to sort and display logs using personalisez or preset regular expressions.
+
+* Web application  :
+
+Even though Caribou works only locally for now, a web app was already implemented with Spring MVC for the Controller Part and Thymeleaf for the templates management part. Different tabs allow the management of the settings.
+
+* Database : 
+
+Logs are stored in a minimal form called LightLog to save space in a noSQL document oriented database but any other database plugin could be impemented.
+
+## Installation and launch
+
+After having installed Java 8 and Mango on yhe machine, it is required to :
+* execute a mvn install on the pom.xml
+* launch MongoDB
+* execute `Caribou/target/java -jar Caribou-X.X.X-SNAPSHOT.jar`
+
+You may then create Agent objects on the machines where the logs to recover are located and apply the method run. The file Caribou/TestAgent.java contains an example launching two Agents et micro-services simulators.
+
+
 
